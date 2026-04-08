@@ -56,14 +56,20 @@ function Heatmap({ entries, color }) {
 /* ── Image grid with local state for instant delete ──────── */
 function ImageGrid({ images: initialImages, color, projectId, date, onImageDeleted }) {
   const [images, setImages] = useState(initialImages);
+  const [view, setView] = useState('all'); // 'all' | 'before' | 'after'
   const [lbIdx, setLbIdx] = useState(null);
+
+  // Sync when parent refreshes new uploads
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  if (initialImages.length > images.length) setImages(initialImages);
 
   const before = images.filter(i=>i.type==='before');
   const after  = images.filter(i=>i.type==='after');
-  const ordered = [...before, ...after];
+  const hasBoth = before.length > 0 && after.length > 0;
+
+  const displayed = view==='before' ? before : view==='after' ? after : [...before,...after];
 
   function handleDelete(url) {
-    // Instant local removal — no waiting
     setImages(prev => prev.filter(i => i.url !== url));
     setLbIdx(null);
     if (onImageDeleted) onImageDeleted(url);
@@ -71,44 +77,50 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
 
   if (!images.length) return null;
 
-  const Group = ({imgs, label, tagBg, offset}) => {
-    if (!imgs.length) return null;
-    return (
-      <div style={{marginBottom:label==='Before'&&after.length?14:0}}>
-        <div style={{fontSize:10,fontWeight:800,letterSpacing:'0.09em',textTransform:'uppercase',marginBottom:8,
-          color:label==='Before'?'#FBBF24':'#22C55E'}}>
-          {label} · {imgs.length}
-        </div>
-        <div style={{display:'grid',gridTemplateColumns:imgs.length===1?'1fr':'1fr 1fr',gap:8}}>
-          {imgs.map((img,idx)=>(
-            <div key={img.url} onClick={()=>setLbIdx(offset+idx)}
-              style={{position:'relative',borderRadius:14,overflow:'hidden',
-                aspectRatio:imgs.length===1?'16/9':'4/3',background:'var(--s3)',cursor:'pointer',
-                boxShadow:'0 2px 12px rgba(0,0,0,0.15)',transition:'transform 0.15s'}}>
-              <img src={img.url} alt={label} loading="lazy"
-                style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}
-                onError={e=>{e.target.style.display='none';}}
-              />
-              <div style={{position:'absolute',top:7,left:7,background:tagBg,
-                color:'#fff',fontSize:9,fontWeight:800,letterSpacing:'0.08em',
-                textTransform:'uppercase',padding:'3px 8px',borderRadius:9999}}>
-                {label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
+  const tagBg = (type) => type==='before' ? 'rgba(251,191,36,0.88)' : 'rgba(34,197,94,0.88)';
 
   return (
     <div>
-      <Group imgs={before} label="Before" tagBg="rgba(251,191,36,0.88)" offset={0}/>
-      <Group imgs={after}  label="After"  tagBg="rgba(34,197,94,0.88)"  offset={before.length}/>
+      {/* Toggle buttons — only show if both types exist */}
+      {hasBoth && (
+        <div style={{display:'flex',gap:6,marginBottom:12,background:'var(--s3)',
+          padding:3,borderRadius:12,border:'1px solid var(--bdr)'}}>
+          {[{k:'all',label:`All (${images.length})`},{k:'before',label:`Before (${before.length})`},{k:'after',label:`After (${after.length})`}].map(({k,label})=>(
+            <button key={k} onClick={()=>setView(k)} style={{
+              flex:1,padding:'7px 4px',borderRadius:9,border:'none',cursor:'pointer',
+              fontFamily:'inherit',fontSize:11,fontWeight:700,transition:'all 0.18s',
+              background:view===k ? (k==='before'?'#FBBF24':k==='after'?'#22C55E':color) : 'transparent',
+              color:view===k ? '#fff' : 'var(--t3)',
+              boxShadow:view===k?'0 1px 6px rgba(0,0,0,0.15)':'none',
+            }}>{label}</button>
+          ))}
+        </div>
+      )}
+
+      {/* Image grid */}
+      <div style={{display:'grid',gridTemplateColumns:displayed.length===1?'1fr':'1fr 1fr',gap:8}}>
+        {displayed.map((img,idx)=>(
+          <div key={img.url} onClick={()=>setLbIdx(idx)}
+            style={{position:'relative',borderRadius:14,overflow:'hidden',
+              aspectRatio:displayed.length===1?'16/9':'4/3',background:'var(--s3)',
+              cursor:'pointer',boxShadow:'0 2px 12px rgba(0,0,0,0.15)'}}>
+            <img src={img.url} alt={img.type} loading="lazy"
+              style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}
+              onError={e=>{e.target.style.display='none';}}
+            />
+            <div style={{position:'absolute',top:7,left:7,background:tagBg(img.type),
+              color:'#fff',fontSize:9,fontWeight:800,letterSpacing:'0.08em',
+              textTransform:'uppercase',padding:'3px 8px',borderRadius:9999}}>
+              {img.type}
+            </div>
+          </div>
+        ))}
+      </div>
+
       {lbIdx !== null && (
         <Lightbox
-          images={ordered}
-          startIndex={Math.min(lbIdx, ordered.length-1)}
+          images={displayed}
+          startIndex={Math.min(lbIdx, displayed.length-1)}
           onClose={()=>setLbIdx(null)}
           onDelete={handleDelete}
           projectId={projectId}
@@ -214,14 +226,17 @@ function EntryCard({ entry, categories, color, projectId, onRefresh }) {
 
 /* ── Photos tab with local delete state ───────────────────── */
 function PhotosTab({ entries: initialEntries, color, projectId }) {
-  const [entries, setEntries] = useState(initialEntries);
+  const [deletedUrls, setDeletedUrls] = useState(new Set());
   const [lb, setLb] = useState(null);
 
+  // Filter out deleted images from live prop data
+  const entries = initialEntries.map(e => ({
+    ...e,
+    images: (e.images||[]).filter(i => !deletedUrls.has(i.url))
+  }));
+
   function handleDelete(url) {
-    setEntries(prev => prev.map(e => ({
-      ...e,
-      images: (e.images||[]).filter(i => i.url !== url)
-    })));
+    setDeletedUrls(prev => new Set([...prev, url]));
     setLb(null);
   }
 
