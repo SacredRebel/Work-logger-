@@ -1,24 +1,28 @@
 {
+  "categories": [
+    {"id":"development","name":"Development","color":"#5E5CE6","icon":"💻"},
+    {"id":"design","name":"Design","color":"#FF375F","icon":"🎨"},
+    {"id":"meetings","name":"Meetings","color":"#FF9F0A","icon":"🤝"},
+    {"id":"admin","name":"Admin","color":"#30D158","icon":"📋"},
+    {"id":"client","name":"Client Work","color":"#0A84FF","icon":"👔"},
+    {"id":"research","name":"Research","color":"#BF5AF2","icon":"🔍"},
+    {"id":"general","name":"General","color":"#98989D","icon":"⚡"},
+    {"id":"painting","name":"Painting","color":"#FF6B35","icon":"🖌️"}
+  ],
+  "projects": [
+    {"id":"shared-house-painting","name":"Shared House Painting","color":"#FF6B35","startDate":"2026-04-07"}
+  ],
   "entries": [
-    {"id":"1","date":"2026-04-07","hours":7.5,"category":"development","tasks":"OAuth system build + 3 bug fixes","notes":"Solid deep work session. Finally got the token refresh working smoothly. Best flow state in weeks.","startHour":9,"endHour":16.5,"beforePhoto":"","afterPhoto":""},
-    {"id":"2","date":"2026-04-06","hours":3,"category":"meetings","tasks":"Sprint planning + client sync call","notes":"Good alignment on Q2 goals. Client approved the new dashboard direction.","startHour":10,"endHour":13,"beforePhoto":"","afterPhoto":""},
-    {"id":"3","date":"2026-04-06","hours":4,"category":"development","tasks":"API endpoint refactoring","notes":"Cleaned up a lot of technical debt. Much cleaner now.","startHour":14,"endHour":18,"beforePhoto":"","afterPhoto":""},
-    {"id":"4","date":"2026-04-05","hours":6,"category":"design","tasks":"Mobile UI redesign — dashboard screens","notes":"Really happy with the new navigation pattern. The bottom sheet approach feels much more natural.","startHour":9,"endHour":15,"beforePhoto":"","afterPhoto":""},
-    {"id":"5","date":"2026-04-04","hours":8,"category":"client","tasks":"Full day client integration work","notes":"Long day but very productive. Got all three endpoints connected and tested.","startHour":8,"endHour":16,"beforePhoto":"","afterPhoto":""},
-    {"id":"6","date":"2026-04-03","hours":5,"category":"research","tasks":"Competitor analysis + feature research","notes":"Found great patterns in Timery and Hours app. Will incorporate the visual timeline idea.","startHour":10,"endHour":15,"beforePhoto":"","afterPhoto":""},
-    {"id":"7","date":"2026-04-02","hours":4.5,"category":"development","tasks":"Database schema updates + migrations","notes":"","startHour":13,"endHour":17.5,"beforePhoto":"","afterPhoto":""},
-    {"id":"8","date":"2026-04-01","hours":7,"category":"development","tasks":"New feature — user profiles system","notes":"Great flow state. Built the whole thing in one session including tests.","startHour":9,"endHour":16,"beforePhoto":"","afterPhoto":""},
-    {"id":"9","date":"2026-03-31","hours":2,"category":"admin","tasks":"Invoicing + Q2 project planning","notes":"","startHour":9,"endHour":11,"beforePhoto":"","afterPhoto":""},
-    {"id":"10","date":"2026-03-31","hours":5,"category":"client","tasks":"Client site deployment and QA testing","notes":"Smooth deploy. Client was happy. Caught two edge cases in testing.","startHour":12,"endHour":17,"beforePhoto":"","afterPhoto":""},
-    {"id":"11","date":"2026-03-28","hours":6,"category":"design","tasks":"Brand identity work — logo variations","notes":"Explored 8 different directions. Narrowed down to 3 strong candidates.","startHour":10,"endHour":16,"beforePhoto":"","afterPhoto":""},
-    {"id":"12","date":"2026-03-27","hours":8,"category":"development","tasks":"Full day coding — new dashboard feature","notes":"Best day this month. 8 clean, focused hours. Got the whole thing shipped.","startHour":8,"endHour":16,"beforePhoto":"","afterPhoto":""},
-    {"id":"13","date":"2026-03-26","hours":3.5,"category":"meetings","tasks":"Team standup, retrospective, planning","notes":"Retrospective was really valuable. Identified 3 process improvements.","startHour":9,"endHour":12.5,"beforePhoto":"","afterPhoto":""},
-    {"id":"14","date":"2026-03-26","hours":3,"category":"learning","tasks":"React patterns + Next.js 15 deep dive","notes":"Learned a lot about server components and the new App Router patterns.","startHour":14,"endHour":17,"beforePhoto":"","afterPhoto":""},
-    {"id":"15","date":"2026-03-25","hours":7,"category":"development","tasks":"API integration and comprehensive testing","notes":"","startHour":9,"endHour":16,"beforePhoto":"","afterPhoto":""},
-    {"id":"16","date":"2026-03-24","hours":5,"category":"client","tasks":"Client presentation prep + delivery","notes":"Went really well — they loved the new direction. Approved budget for phase 2.","startHour":10,"endHour":15,"beforePhoto":"","afterPhoto":""},
-    {"id":"17","date":"2026-03-21","hours":6.5,"category":"development","tasks":"Performance optimization deep work","notes":"Cut load time by 40%. Fixed the slow query that was killing the dashboard.","startHour":9,"endHour":15.5,"beforePhoto":"","afterPhoto":""},
-    {"id":"18","date":"2026-03-20","hours":4,"category":"research","tasks":"AI tooling research + prototyping","notes":"Explored LiteLLM and OpenClaw integration patterns.","startHour":13,"endHour":17,"beforePhoto":"","afterPhoto":""},
-    {"id":"19","date":"2026-03-19","hours":7.5,"category":"development","tasks":"Major refactor — eliminated technical debt","notes":"Really needed this cleanup. Code feels much cleaner and maintainable now.","startHour":8,"endHour":15.5,"beforePhoto":"","afterPhoto":""},
-    {"id":"20","date":"2026-03-18","hours":5,"category":"design","tasks":"UI component library — updated design tokens","notes":"Standardized the spacing scale and color system. Will save hours going forward.","startHour":10,"endHour":15,"beforePhoto":"","afterPhoto":""}
+    {
+      "date": "2026-04-07",
+      "project": "shared-house-painting",
+      "category": "painting",
+      "hours": 7.25,
+      "rate": 50,
+      "earned": 362.50,
+      "tasks": "Day 1 — Room prep & window frame sanding",
+      "notes": "Arrived 9 AM, started 9:30 AM. Pushed all furniture to center of room and covered with plastic wrap and tape. Cleaned windows. Sanded bottom and top window frames in upper room. Removed carpet in corners. Sanded door frames and general wood trim around room. General prep work for painting. Done by 6 PM.\n\nBreaks: 2× smoke (30 min each) + lunch (45 min) = 1h 45min excluded.\n\n💰 7.25 hrs × $50 = $362.50",
+      "images": []
+    }
   ]
 }
