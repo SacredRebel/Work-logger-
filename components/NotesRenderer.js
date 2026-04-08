@@ -1,50 +1,21 @@
-// Renders structured sections or falls back to plain text gracefully
 export default function NotesRenderer({ sections, notes, accentColor }) {
-  const color = accentColor || '#FF6B35';
-
+  const c = accentColor || '#F97316';
   if (sections && sections.length > 0) {
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
         {sections.map((sec, i) => (
           <div key={i}>
-            {/* Section title */}
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 8,
-              marginBottom: 8,
-            }}>
-              <div style={{ width: 3, height: 14, background: color, borderRadius: 2, flexShrink: 0 }} />
-              <span style={{
-                fontSize: 11,
-                fontWeight: 800,
-                textTransform: 'uppercase',
-                letterSpacing: '0.09em',
-                color: color,
-              }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 9 }}>
+              <div style={{ width: 3, height: 13, background: c, borderRadius: 2, flexShrink: 0 }} />
+              <span style={{ fontSize: 10, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.10em', color: c }}>
                 {sec.title}
               </span>
             </div>
-            {/* Items */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6, paddingLeft: 11 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 7, paddingLeft: 10 }}>
               {sec.items.map((item, j) => (
-                <div key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-                  <div style={{
-                    width: 5,
-                    height: 5,
-                    borderRadius: '50%',
-                    background: color,
-                    opacity: 0.5,
-                    flexShrink: 0,
-                    marginTop: 6,
-                  }} />
-                  <span style={{
-                    fontSize: 14,
-                    lineHeight: 1.6,
-                    color: 'var(--text2)',
-                  }}>
-                    {item}
-                  </span>
+                <div key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: 9 }}>
+                  <div style={{ width: 4, height: 4, borderRadius: '50%', background: c, opacity: 0.45, flexShrink: 0, marginTop: 7 }} />
+                  <span style={{ fontSize: 13, lineHeight: 1.65, color: 'var(--t2)', fontWeight: 450 }}>{item}</span>
                 </div>
               ))}
             </div>
@@ -53,15 +24,6 @@ export default function NotesRenderer({ sections, notes, accentColor }) {
       </div>
     );
   }
-
-  // Fallback: plain text
-  if (notes) {
-    return (
-      <p style={{ fontSize: 14, lineHeight: 1.65, color: 'var(--text2)', whiteSpace: 'pre-wrap' }}>
-        {notes}
-      </p>
-    );
-  }
-
+  if (notes) return <p style={{ fontSize: 13, lineHeight: 1.7, color: 'var(--t2)', whiteSpace: 'pre-wrap' }}>{notes}</p>;
   return null;
 }

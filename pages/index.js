@@ -3,14 +3,20 @@ import Layout from '../components/Layout';
 import NotesRenderer from '../components/NotesRenderer';
 import { useLogs, todayStr, fmtDate, fmtShort, totalHours, getCatStyle, getStreak, getLast84Days, heatLevel, getWeekRange } from '../lib/data';
 
+const DAY_LABELS = ['M','T','W','T','F','S','S'];
+
 function Heatmap({ entries }) {
   const days = getLast84Days(entries);
   const today = todayStr();
   return (
-    <div className="heatmap-wrap">
-      <div className="heatmap-grid">
+    <div className="heatmap">
+      <div className="hm-grid">
         {days.map(d => (
-          <div key={d.date} className={`hm-cell hm-${heatLevel(d.hours)}${d.date === today ? ' hm-today' : ''}`} title={`${fmtShort(d.date)}: ${d.hours}h`} />
+          <div
+            key={d.date}
+            className={`hm-cell hm-${heatLevel(d.hours)}${d.date === today ? ' hm-today' : ''}`}
+            title={`${fmtShort(d.date)}: ${d.hours}h`}
+          />
         ))}
       </div>
     </div>
@@ -20,23 +26,36 @@ function Heatmap({ entries }) {
 function WeekMini({ entries, categories }) {
   const today = todayStr();
   const { start } = getWeekRange(today);
-  const labels = ['M','T','W','T','F','S','S'];
-  const days = Array.from({length:7},(_,i) => {
-    const d = new Date(start+'T12:00:00');
-    d.setDate(d.getDate()+i);
+  const days = DAY_LABELS.map((_, i) => {
+    const d = new Date(start + 'T12:00:00');
+    d.setDate(d.getDate() + i);
     return d.toISOString().split('T')[0];
   });
+  const maxH = Math.max(...days.map(date => {
+    const e = entries.find(e => e.date === date);
+    return e ? parseFloat(e.hours) || 0 : 0;
+  }), 1);
+
   return (
-    <div style={{display:'grid',gridTemplateColumns:'repeat(7,1fr)',gap:6,alignItems:'flex-end',height:80}}>
-      {days.map((date,i) => {
+    <div className="wbars">
+      {days.map((date, i) => {
         const entry = entries.find(e => e.date === date);
-        const h = entry ? parseFloat(entry.hours)||0 : 0;
+        const h = entry ? parseFloat(entry.hours) || 0 : 0;
         const cat = entry ? getCatStyle(categories, entry.category) : null;
         const isToday = date === today;
+        const pct = h / maxH;
         return (
-          <div key={date} style={{display:'flex',flexDirection:'column',alignItems:'center',gap:4,height:'100%',justifyContent:'flex-end'}}>
-            <div style={{width:'100%',height:h?`${Math.max((h/8)*60,6)}px`:'4px',background:cat?cat.color:'var(--bg3)',borderRadius:'6px 6px 3px 3px',opacity:isToday?1:.72,transition:'height .3s'}} />
-            <span style={{fontSize:10,fontWeight:isToday?700:500,color:isToday?'var(--accent)':'var(--text3)'}}>{labels[i]}</span>
+          <div key={date} className="wbar-col">
+            {h > 0 && <span style={{ fontSize: 9, fontWeight: 700, color: cat?.color || 'var(--t4)' }}>{h}h</span>}
+            <div
+              className="wbar"
+              style={{
+                height: h ? `${Math.max(pct * 64, 5)}px` : '3px',
+                background: cat ? cat.color : 'var(--bg4)',
+                opacity: isToday ? 1 : 0.75,
+              }}
+            />
+            <span className={`wbar-lbl${isToday ? ' today' : ''}`}>{DAY_LABELS[i]}</span>
           </div>
         );
       })}
@@ -46,39 +65,41 @@ function WeekMini({ entries, categories }) {
 
 function EntryCard({ entry, categories }) {
   const [open, setOpen] = useState(false);
-  const [lightbox, setLightbox] = useState(null);
+  const [lb, setLb] = useState(null);
   const cat = getCatStyle(categories, entry.category);
-  const hours = parseFloat(entry.hours)||0;
+  const h = parseFloat(entry.hours) || 0;
 
   return (
-    <div className="entry-card fade-up">
-      <div className="entry-header" onClick={() => setOpen(o => !o)}>
-        <div className="hours-badge" style={{background:cat.color}}>
-          <span className="hb-val">{hours.toFixed(1)}</span>
-          <span className="hb-lbl">hrs</span>
+    <div className="ecard fu">
+      <div className="ecard-hdr" onClick={() => setOpen(o => !o)}>
+        <div className="hrs-badge" style={{ background: cat.color }}>
+          <span className="hv">{h % 1 === 0 ? h : h.toFixed(1)}</span>
+          <span className="hl">HRS</span>
         </div>
-        <div className="entry-info">
-          <div className="entry-date">{fmtDate(entry.date)}</div>
-          <div className="entry-tasks">{entry.tasks||'No summary'}</div>
+        <div className="ecard-info">
+          <div className="ecard-date">{fmtDate(entry.date)}</div>
+          <div className="ecard-task">{entry.tasks || 'No summary'}</div>
         </div>
-        <span style={{color:'var(--text4)',fontSize:20,transition:'transform .2s',transform:open?'rotate(90deg)':'none',flexShrink:0}}>›</span>
+        <span className={`chevron${open ? ' open' : ''}`}>›</span>
       </div>
 
       {open && (
-        <div className="entry-body">
-          <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',flexWrap:'wrap',gap:8}}>
-            <span className="chip" style={{background:cat.color+'22',color:cat.color}}>{cat.icon} {cat.name}</span>
-            {entry.earned && (
-              <span style={{fontSize:13,fontWeight:700,color:'#30D158'}}>💰 ${entry.earned.toFixed(2)}</span>
+        <div className="ecard-body">
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
+            <span className="chip" style={{ background: cat.color + '20', color: cat.color }}>
+              {cat.icon} {cat.name}
+            </span>
+            {entry.earned > 0 && (
+              <span className="earned-pill">💰 ${Number(entry.earned).toFixed(2)}</span>
             )}
           </div>
           <NotesRenderer sections={entry.sections} notes={entry.notes} accentColor={cat.color} />
-          {entry.images && entry.images.length > 0 && (
+          {entry.images?.length > 0 && (
             <div className="ba-grid">
-              {entry.images.map((img,idx) => (
-                <div key={idx} className="ba-item" onClick={() => setLightbox(img.url)}>
+              {entry.images.map((img, idx) => (
+                <div key={idx} className="ba-item" onClick={() => setLb(img.url)}>
                   <img src={img.url} alt={img.type} loading="lazy" />
-                  <span className="ba-badge">{img.type==='before'?'Before':'After'}</span>
+                  <span className="ba-tag">{img.type === 'before' ? 'Before' : 'After'}</span>
                 </div>
               ))}
             </div>
@@ -86,10 +107,10 @@ function EntryCard({ entry, categories }) {
         </div>
       )}
 
-      {lightbox && (
-        <div className="lightbox-overlay" onClick={() => setLightbox(null)}>
-          <button className="lightbox-close" onClick={() => setLightbox(null)}>✕</button>
-          <img src={lightbox} className="lightbox-img" alt="Preview" />
+      {lb && (
+        <div className="lb-over" onClick={() => setLb(null)}>
+          <button className="lb-close">✕</button>
+          <img src={lb} className="lb-img" alt="Preview" />
         </div>
       )}
     </div>
@@ -103,74 +124,69 @@ export default function Home() {
   const todayEntry = entries.find(e => e.date === today);
   const weekEntries = entries.filter(e => e.date >= ws && e.date <= we);
   const streak = getStreak(entries);
-  const todayH = todayEntry ? parseFloat(todayEntry.hours)||0 : 0;
+  const todayH = todayEntry ? parseFloat(todayEntry.hours) || 0 : 0;
   const weekH = totalHours(weekEntries);
-  const recent = [...entries].sort((a,b) => b.date.localeCompare(a.date)).slice(0,5);
-  const hour = new Date().getHours();
-  const greet = hour<12?'Good morning':hour<17?'Good afternoon':'Good evening';
-  const dateLabel = new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
+  const totalEarned = entries.reduce((s, e) => s + (Number(e.earned) || 0), 0);
+  const recent = [...entries].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 6);
 
-  // Total earned across all entries
-  const totalEarned = entries.reduce((s,e) => s+(e.earned||0), 0);
+  const hour = new Date().getHours();
+  const greet = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+  const dateLabel = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
 
   return (
-    <Layout title={greet+' 👋'} subtitle={dateLabel}>
+    <Layout title={greet} subtitle={dateLabel}>
       {loading ? (
-        <div>
-          <div className="stats-row">{[1,2,3].map(i=><div key={i} className="stat-tile skeleton" style={{height:76}}/>)}</div>
-          <div className="skeleton" style={{height:110,marginBottom:20,borderRadius:16}}/>
-          <div className="skeleton" style={{height:100,marginBottom:24,borderRadius:16}}/>
-          <div className="skeleton" style={{height:180,borderRadius:16}}/>
-        </div>
+        <>
+          <div className="tiles">{[0,1,2].map(i => <div key={i} className="skel" style={{ height: 74 }} />)}</div>
+          <div className="skel" style={{ height: 60, marginBottom: 18 }} />
+          <div className="skel" style={{ height: 118, marginBottom: 18 }} />
+          <div className="skel" style={{ height: 96, marginBottom: 18 }} />
+          <div className="skel" style={{ height: 200 }} />
+        </>
       ) : (
         <>
-          <div className="stats-row">
-            <div className="stat-tile">
-              <span className="stat-val stat-accent">{todayH.toFixed(1)}h</span>
-              <span className="stat-lbl">Today</span>
-            </div>
-            <div className="stat-tile">
-              <span className="stat-val">{weekH.toFixed(1)}h</span>
-              <span className="stat-lbl">This week</span>
-            </div>
-            <div className="stat-tile">
-              <span className="stat-val">{streak}</span>
-              <span className="stat-lbl">🔥 Streak</span>
-            </div>
+          {/* Stat tiles */}
+          <div className="tiles">
+            <div className="tile"><span className="tile-val accent">{todayH % 1 === 0 ? todayH : todayH.toFixed(1)}h</span><span className="tile-lbl">Today</span></div>
+            <div className="tile"><span className="tile-val">{weekH % 1 === 0 ? weekH : weekH.toFixed(1)}h</span><span className="tile-lbl">This week</span></div>
+            <div className="tile"><span className="tile-val">{streak}</span><span className="tile-lbl">🔥 Streak</span></div>
           </div>
 
-          {/* Total earned banner */}
+          {/* Total earned */}
           {totalEarned > 0 && (
-            <div style={{background:'linear-gradient(135deg,#1a2e1a,#0d1f0d)',border:'1px solid #30D15830',borderRadius:16,padding:'14px 16px',marginBottom:20,display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+            <div className="earn-banner">
               <div>
-                <div style={{fontSize:11,fontWeight:700,color:'#30D15899',textTransform:'uppercase',letterSpacing:'.08em',marginBottom:3}}>Total Earned</div>
-                <div style={{fontSize:26,fontWeight:800,color:'#30D158',letterSpacing:'-.04em'}}>${totalEarned.toFixed(2)}</div>
+                <div className="earn-label">Total Earned</div>
+                <div className="earn-val">${totalEarned.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
               </div>
-              <span style={{fontSize:28}}>💰</span>
+              <span style={{ fontSize: 30 }}>💰</span>
             </div>
           )}
 
-          <div className="card card-p" style={{marginBottom:20}}>
-            <div className="sec-label">This Week</div>
-            <WeekMini entries={weekEntries} categories={categories}/>
+          {/* Week chart */}
+          <div className="card card-p" style={{ marginBottom: 18 }}>
+            <div className="lbl">This Week</div>
+            <WeekMini entries={weekEntries} categories={categories} />
           </div>
 
-          <div className="card card-p" style={{marginBottom:24}}>
-            <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:10}}>
-              <div className="sec-label" style={{marginBottom:0}}>Activity</div>
-              <span style={{fontSize:12,color:'var(--text3)'}}>Last 12 weeks</span>
+          {/* Heatmap */}
+          <div className="card card-p" style={{ marginBottom: 24 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
+              <div className="lbl" style={{ marginBottom: 0 }}>Activity</div>
+              <span style={{ fontSize: 11, color: 'var(--t3)', fontWeight: 500 }}>12 weeks</span>
             </div>
-            <Heatmap entries={entries}/>
+            <Heatmap entries={entries} />
           </div>
 
-          <div className="sec-label">Recent</div>
-          {recent.length===0 ? (
+          {/* Recent entries */}
+          <div className="lbl">Recent Entries</div>
+          {recent.length === 0 ? (
             <div className="empty">
-              <div className="empty-icon">📋</div>
+              <div className="empty-ico">🖌️</div>
               <div className="empty-title">No entries yet</div>
-              <div className="empty-sub">Tell me your hours and tasks — I'll log it right here.</div>
+              <div className="empty-sub">Tell me your hours and what you worked on — I'll log it instantly.</div>
             </div>
-          ) : recent.map(e => <EntryCard key={e.date} entry={e} categories={categories}/>)}
+          ) : recent.map(e => <EntryCard key={e.date} entry={e} categories={categories} />)}
         </>
       )}
     </Layout>

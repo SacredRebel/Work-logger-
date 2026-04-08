@@ -1,162 +1,173 @@
-import { useState } from 'react';
-import dynamic from 'next/dynamic';
+import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
-import { useLogs, todayStr, fmtShort, totalHours, getCatStyle, getWeekRange } from '../lib/data';
+import { useLogs, todayStr, totalHours, getCatStyle, getWeekRange } from '../lib/data';
 
-const Charts = dynamic(() => import('../components/Charts'), { ssr: false });
-
-function getLast7Days() {
-  const today = new Date(); today.setHours(12, 0, 0, 0);
-  return Array.from({ length: 7 }, (_, i) => {
-    const d = new Date(today); d.setDate(today.getDate() - 6 + i);
-    return d.toISOString().split('T')[0];
-  });
+function getLast7() {
+  const t = new Date(); t.setHours(12,0,0,0);
+  return Array.from({length:7},(_,i)=>{ const d=new Date(t); d.setDate(t.getDate()-6+i); return d.toISOString().split('T')[0]; });
+}
+function getLast30() {
+  const t = new Date(); t.setHours(12,0,0,0);
+  return Array.from({length:30},(_,i)=>{ const d=new Date(t); d.setDate(t.getDate()-29+i); return d.toISOString().split('T')[0]; });
 }
 
-function getLast30Days() {
-  const today = new Date(); today.setHours(12, 0, 0, 0);
-  return Array.from({ length: 30 }, (_, i) => {
-    const d = new Date(today); d.setDate(today.getDate() - 29 + i);
-    return d.toISOString().split('T')[0];
-  });
+function BarChart({ data, maxH }) {
+  const peak = Math.max(...data.map(d => d.h), maxH, 1);
+  return (
+    <div className="bchart">
+      {data.map((d, i) => (
+        <div key={i} className="bchart-col">
+          {d.h > 0 && <span style={{ fontSize: 8, fontWeight: 700, color: d.color || 'var(--accent)', marginBottom: 1 }}>{d.h}</span>}
+          <div
+            className="bchart-bar"
+            style={{
+              height: d.h ? `${Math.max((d.h / peak) * 96, 4)}px` : '2px',
+              background: d.color || 'var(--accent)',
+              opacity: d.h ? 1 : 0.2,
+            }}
+          />
+          <span className="bchart-lbl">{d.label}</span>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default function Stats() {
   const { entries, categories, loading } = useLogs();
   const [period, setPeriod] = useState('week');
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
 
   const today = todayStr();
-  const days = period === 'week' ? getLast7Days() : getLast30Days();
+  const days = period === 'week' ? getLast7() : getLast30();
 
-  // Build bar chart data
   const barData = days.map(date => {
     const entry = entries.find(e => e.date === date);
-    const h = entry ? parseFloat(entry.hours) || 0 : 0;
-    const d = new Date(date + 'T12:00:00');
+    const h = entry ? parseFloat(entry.hours)||0 : 0;
+    const cat = entry ? getCatStyle(categories, entry.category) : null;
+    const d = new Date(date+'T12:00:00');
     const label = period === 'week'
-      ? d.toLocaleDateString('en-US', { weekday: 'short' })
-      : d.getDate() % 5 === 0 ? d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '';
-    return { label, hours: parseFloat(h.toFixed(1)), date };
+      ? d.toLocaleDateString('en-US',{weekday:'narrow'})
+      : (d.getDate()===1||d.getDate()%7===1 ? `${d.getDate()}` : '');
+    return { label, h: parseFloat(h.toFixed(1)), color: cat?.color, date };
   });
 
   const periodEntries = entries.filter(e => days.includes(e.date));
-  const periodTotal = totalHours(periodEntries);
-  const periodDays = periodEntries.length;
-  const avgHours = periodDays > 0 ? periodTotal / periodDays : 0;
-  const bestEntry = [...periodEntries].sort((a, b) => (parseFloat(b.hours) || 0) - (parseFloat(a.hours) || 0))[0];
-  const bestHours = bestEntry ? parseFloat(bestEntry.hours) || 0 : 0;
+  const periodH = totalHours(periodEntries);
+  const loggedDays = periodEntries.length;
+  const avgH = loggedDays > 0 ? periodH / loggedDays : 0;
+  const bestH = Math.max(...periodEntries.map(e => parseFloat(e.hours)||0), 0);
+  const periodEarned = periodEntries.reduce((s,e) => s+(Number(e.earned)||0), 0);
 
-  // Category pie data
   const catMap = {};
   periodEntries.forEach(e => {
-    const id = e.category || 'general';
-    catMap[id] = (catMap[id] || 0) + (parseFloat(e.hours) || 0);
+    const id = e.category||'general';
+    catMap[id] = (catMap[id]||0) + (parseFloat(e.hours)||0);
   });
-  const pieData = Object.entries(catMap).map(([id, hours]) => {
+  const catList = Object.entries(catMap).map(([id,hours]) => {
     const cat = getCatStyle(categories, id);
-    return { name: cat.name, hours: parseFloat(hours.toFixed(1)), color: cat.color, icon: cat.icon };
-  }).sort((a, b) => b.hours - a.hours);
+    return { ...cat, hours: parseFloat(hours.toFixed(1)) };
+  }).sort((a,b) => b.hours-a.hours);
 
-  // All-time stats
-  const allTotal = totalHours(entries);
+  const allH = totalHours(entries);
   const allDays = entries.length;
-  const allAvg = allDays > 0 ? allTotal / allDays : 0;
+  const allEarned = entries.reduce((s,e) => s+(Number(e.earned)||0), 0);
+
+  if (!mounted || loading) return (
+    <Layout title="Analytics">
+      <div className="skel" style={{ height: 44, marginBottom: 18 }} />
+      <div className="skel" style={{ height: 84, marginBottom: 18 }} />
+      <div className="skel" style={{ height: 160, marginBottom: 18 }} />
+      <div className="skel" style={{ height: 200 }} />
+    </Layout>
+  );
 
   return (
     <Layout title="Analytics">
-      {loading ? (
-        <div>
-          <div className="skeleton" style={{ height: 44, width: 200, borderRadius: 12, marginBottom: 20 }} />
-          <div className="skeleton" style={{ height: 220, borderRadius: 16, marginBottom: 20 }} />
-          <div className="skeleton" style={{ height: 200, borderRadius: 16 }} />
+      {/* Period toggle */}
+      <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom: 18 }}>
+        <div className="ptog" style={{ flex: 1, marginRight: 12 }}>
+          <button className={`pbtn${period==='week'?' on':''}`} onClick={()=>setPeriod('week')}>7 Days</button>
+          <button className={`pbtn${period==='month'?' on':''}`} onClick={()=>setPeriod('month')}>30 Days</button>
         </div>
-      ) : (
-        <>
-          {/* Period toggle */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
-            <div className="period-toggle">
-              <button className={`period-btn ${period === 'week' ? 'active' : ''}`} onClick={() => setPeriod('week')}>7 Days</button>
-              <button className={`period-btn ${period === 'month' ? 'active' : ''}`} onClick={() => setPeriod('month')}>30 Days</button>
-            </div>
-            <div style={{ textAlign: 'right' }}>
-              <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: '-0.03em' }}>{periodTotal.toFixed(1)}h</div>
-              <div style={{ fontSize: 12, color: 'var(--text3)' }}>total hours</div>
-            </div>
+        <div style={{ textAlign:'right' }}>
+          <div style={{ fontSize: 22, fontWeight: 800, letterSpacing:'-0.04em', color:'var(--t1)' }}>{periodH.toFixed(1)}h</div>
+          <div style={{ fontSize: 11, color:'var(--t3)' }}>total</div>
+        </div>
+      </div>
+
+      {/* Summary strip */}
+      <div className="stat-strip" style={{ marginBottom: 18 }}>
+        <div className="tile"><span className="tile-val" style={{fontSize:18}}>{avgH.toFixed(1)}h</span><span className="tile-lbl">Avg/day</span></div>
+        <div className="tile"><span className="tile-val" style={{fontSize:18}}>{bestH.toFixed(1)}h</span><span className="tile-lbl">Best day</span></div>
+        <div className="tile"><span className="tile-val" style={{fontSize:18}}>{loggedDays}</span><span className="tile-lbl">Days logged</span></div>
+      </div>
+
+      {/* Earned this period */}
+      {periodEarned > 0 && (
+        <div className="earn-banner" style={{ marginBottom: 18 }}>
+          <div>
+            <div className="earn-label">Earned ({period === 'week' ? '7 days' : '30 days'})</div>
+            <div className="earn-val">${periodEarned.toLocaleString('en-US',{minimumFractionDigits:2})}</div>
           </div>
+          <span style={{ fontSize: 28 }}>💰</span>
+        </div>
+      )}
 
-          {/* Summary stats */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10, marginBottom: 20 }}>
-            <div className="stat-tile">
-              <span className="stat-val" style={{ fontSize: 20 }}>{avgHours.toFixed(1)}h</span>
-              <span className="stat-lbl">Avg/day</span>
-            </div>
-            <div className="stat-tile">
-              <span className="stat-val" style={{ fontSize: 20 }}>{bestHours.toFixed(1)}h</span>
-              <span className="stat-lbl">Best day</span>
-            </div>
-            <div className="stat-tile">
-              <span className="stat-val" style={{ fontSize: 20 }}>{periodDays}</span>
-              <span className="stat-lbl">Days logged</span>
-            </div>
+      {/* Bar chart */}
+      <div className="card card-p" style={{ marginBottom: 18 }}>
+        <div className="lbl">Hours Per Day</div>
+        <BarChart data={barData} />
+      </div>
+
+      {/* Category breakdown */}
+      {catList.length > 0 && (
+        <div className="card card-p" style={{ marginBottom: 18 }}>
+          <div className="lbl">By Category</div>
+          <div className="cat-row">
+            {catList.map(cat => {
+              const pct = periodH > 0 ? (cat.hours / periodH) * 100 : 0;
+              return (
+                <div key={cat.name}>
+                  <div className="cat-item">
+                    <div className="cat-dot" style={{ background: cat.color }} />
+                    <span className="cat-name">{cat.icon} {cat.name}</span>
+                    <span className="cat-hrs" style={{ color: cat.color }}>{cat.hours}h · {pct.toFixed(0)}%</span>
+                  </div>
+                  <div className="cat-track">
+                    <div className="cat-fill" style={{ width:`${pct}%`, background: cat.color }} />
+                  </div>
+                </div>
+              );
+            })}
           </div>
+        </div>
+      )}
 
-          {/* Bar chart */}
-          <div className="card card-p" style={{ marginBottom: 20 }}>
-            <div className="sec-label">Hours per day</div>
-            <Charts.WeekBarChart data={barData} />
-          </div>
-
-          {/* Category breakdown */}
-          {pieData.length > 0 && (
-            <div className="card card-p" style={{ marginBottom: 20 }}>
-              <div className="sec-label">By Category</div>
-              <Charts.CategoryPieChart data={pieData} />
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 16 }}>
-                {pieData.map(cat => {
-                  const pct = periodTotal > 0 ? (cat.hours / periodTotal) * 100 : 0;
-                  return (
-                    <div key={cat.name}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 5 }}>
-                        <span style={{ fontSize: 13, fontWeight: 600 }}>{cat.icon} {cat.name}</span>
-                        <span style={{ fontSize: 13, fontWeight: 700, color: cat.color }}>{cat.hours}h · {pct.toFixed(0)}%</span>
-                      </div>
-                      <div style={{ height: 5, background: 'var(--bg3)', borderRadius: 3, overflow: 'hidden' }}>
-                        <div style={{ height: '100%', width: `${pct}%`, background: cat.color, borderRadius: 3 }} />
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
+      {/* All time */}
+      <div className="card card-p">
+        <div className="lbl">All Time</div>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:12, textAlign:'center' }}>
+          {[
+            { val: `${allH.toFixed(0)}h`, lbl: 'Total hours', accent: true },
+            { val: allDays, lbl: 'Days logged' },
+            { val: `$${allEarned.toFixed(0)}`, lbl: 'Total earned', green: true },
+          ].map(({ val, lbl, accent, green }) => (
+            <div key={lbl}>
+              <div style={{ fontSize: 22, fontWeight: 800, letterSpacing:'-0.04em', color: accent?'var(--accent)':green?'var(--green)':'var(--t1)' }}>{val}</div>
+              <div style={{ fontSize: 11, color:'var(--t3)', marginTop:3 }}>{lbl}</div>
             </div>
-          )}
+          ))}
+        </div>
+      </div>
 
-          {/* All time */}
-          <div className="card card-p" style={{ marginBottom: 20 }}>
-            <div className="sec-label">All Time</div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12 }}>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: 24, fontWeight: 800, letterSpacing: '-0.04em', color: 'var(--accent)' }}>{allTotal.toFixed(0)}h</div>
-                <div style={{ fontSize: 11, color: 'var(--text3)', marginTop: 2 }}>Total hours</div>
-              </div>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: 24, fontWeight: 800, letterSpacing: '-0.04em' }}>{allDays}</div>
-                <div style={{ fontSize: 11, color: 'var(--text3)', marginTop: 2 }}>Days logged</div>
-              </div>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: 24, fontWeight: 800, letterSpacing: '-0.04em' }}>{allAvg.toFixed(1)}h</div>
-                <div style={{ fontSize: 11, color: 'var(--text3)', marginTop: 2 }}>Avg/day</div>
-              </div>
-            </div>
-          </div>
-
-          {entries.length === 0 && (
-            <div className="empty">
-              <div className="empty-icon">📊</div>
-              <div className="empty-title">No data yet</div>
-              <div className="empty-sub">Log some hours and your stats will show up here.</div>
-            </div>
-          )}
-        </>
+      {entries.length === 0 && (
+        <div className="empty">
+          <div className="empty-ico">📊</div>
+          <div className="empty-title">No data yet</div>
+          <div className="empty-sub">Log some work and your stats will appear here.</div>
+        </div>
       )}
     </Layout>
   );
