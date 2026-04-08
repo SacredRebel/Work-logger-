@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import NotesRenderer from '../../components/NotesRenderer';
+import PhotoUploader from '../../components/PhotoUploader';
 import { useLogs, fmtDate, fmtShort, totalHours, totalEarned, getCatStyle, getStreak, getWeekRange, todayStr } from '../../lib/data';
 
 function MiniHeatmap({ entries, color }) {
@@ -148,6 +149,12 @@ function EntryCard({ entry, categories, color }) {
           )}
           <NotesRenderer sections={entry.sections} notes={entry.notes} accentColor={color}/>
           <ImagesSection images={entry.images} accentColor={color}/>
+          <PhotoUploader
+            projectId={entry.project}
+            date={entry.date}
+            accentColor={color}
+            onUploaded={() => window.location.reload()}
+          />
         </div>
       )}
     </div>
