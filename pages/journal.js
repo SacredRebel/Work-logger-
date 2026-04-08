@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Layout from '../components/Layout';
+import NotesRenderer from '../components/NotesRenderer';
 import { useLogs, fmtDate, getCatStyle, totalHours } from '../lib/data';
 
 async function exportPDF(entries, categories, label) {
@@ -95,12 +96,13 @@ function EntryCard({ entry, categories, onExport }) {
               <p style={{ fontSize: 14, fontWeight: 600, color: 'var(--text1)' }}>{entry.tasks}</p>
             </div>
           )}
-          {entry.notes && (
-            <div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--text4)', textTransform: 'uppercase', letterSpacing: '.08em', marginBottom: 4 }}>Notes</div>
-              <p className="entry-notes">{entry.notes}</p>
+          {entry.earned && (
+            <div style={{background:'#30D15815',borderRadius:10,padding:'10px 14px',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+              <span style={{fontSize:13,fontWeight:700,color:'var(--text3)'}}>Earned today</span>
+              <span style={{fontSize:17,fontWeight:800,color:'#30D158'}}>💰 ${entry.earned.toFixed(2)}</span>
             </div>
           )}
+          <NotesRenderer sections={entry.sections} notes={entry.notes} accentColor={cat.color} />
 
           {/* Before / After photos */}
           {(beforeImg || afterImg) && (

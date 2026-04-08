@@ -17,11 +17,49 @@
       "date": "2026-04-07",
       "project": "shared-house-painting",
       "category": "painting",
-      "hours": 7.25,
+      "hours": 7,
       "rate": 50,
-      "earned": 362.50,
+      "earned": 350,
       "tasks": "Day 1 — Room prep & window frame sanding",
-      "notes": "Arrived 9 AM, started 9:30 AM. Pushed all furniture to center of room and covered with plastic wrap and tape. Cleaned windows. Sanded bottom and top window frames in upper room. Removed carpet in corners. Sanded door frames and general wood trim around room. General prep work for painting. Done by 6 PM.\n\nBreaks: 2× smoke (30 min each) + lunch (45 min) = 1h 45min excluded.\n\n💰 7.25 hrs × $50 = $362.50",
+      "sections": [
+        {
+          "title": "Schedule",
+          "items": [
+            "Arrived on site at 9:00 AM",
+            "Started working at 9:30 AM",
+            "Wrapped up at 6:00 PM"
+          ]
+        },
+        {
+          "title": "Work Completed",
+          "items": [
+            "Moved all furniture to center of room",
+            "Covered furniture with plastic wrap and taped down",
+            "Cleaned all windows",
+            "Sanded bottom window frames",
+            "Sanded top window frames in upper room",
+            "Removed carpet in corners",
+            "Sanded door frames and general wood trim throughout room"
+          ]
+        },
+        {
+          "title": "Breaks",
+          "items": [
+            "2× smoke breaks — 30 min each",
+            "Lunch break — 1 hour",
+            "Total break time: 2 hours (excluded from billable)"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "Focus: Room prep and surface prep for painting",
+            "9 hrs on site − 2 hrs breaks = 7 hrs billable",
+            "Rate: $50/hr",
+            "Earned today: $350.00"
+          ]
+        }
+      ],
       "images": []
     }
   ]
