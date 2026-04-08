@@ -54,7 +54,7 @@ function Heatmap({ entries, color }) {
 }
 
 /* ── Image grid with lightbox ─────────────────────────────── */
-function ImageGrid({ images, color }) {
+function ImageGrid({ images, color, projectId, date, onDelete }) {
   const [lbIdx, setLbIdx] = useState(null);
   if (!images || images.length === 0) return null;
 
@@ -106,6 +106,9 @@ function ImageGrid({ images, color }) {
           images={[...before,...after]}
           startIndex={lbIdx}
           onClose={()=>setLbIdx(null)}
+          onDelete={url => { if(onDelete) onDelete(url); setLbIdx(null); }}
+          projectId={projectId}
+          date={date}
         />
       )}
     </div>
@@ -190,7 +193,7 @@ function EntryCard({ entry, categories, color, projectId, onRefresh }) {
             </div>
           )}
           <NotesRenderer sections={entry.sections} notes={entry.notes} accentColor={color}/>
-          <ImageGrid images={images} color={color}/>
+          <ImageGrid images={images} color={color} projectId={projectId} date={entry.date} onDelete={url=>{if(onRefresh)onRefresh();}} />
           <div style={{borderTop:'1px solid var(--bdr)',paddingTop:14}}>
             <PhotoUploader projectId={projectId} date={entry.date} accentColor={color} onUploaded={onRefresh}/>
           </div>
@@ -201,7 +204,7 @@ function EntryCard({ entry, categories, color, projectId, onRefresh }) {
 }
 
 /* ── Photos tab ───────────────────────────────────────────── */
-function PhotosTab({ entries, color }) {
+function PhotosTab({ entries, color, projectId }) {
   const [lbEntry, setLbEntry] = useState(null); // {images, startIdx}
   const byDate = {};
   entries.forEach(e=>{
@@ -236,7 +239,7 @@ function PhotosTab({ entries, color }) {
               </div>
               <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8}}>
                 {list.map((img,idx)=>(
-                  <div key={idx} onClick={()=>setLbEntry({images:allOrdered,startIdx:offset+idx})}
+                  <div key={idx} onClick={()=>setLbEntry({images:allOrdered,startIdx:offset+idx,date})}
                     style={{position:'relative',borderRadius:14,overflow:'hidden',aspectRatio:'4/3',
                       background:'var(--s3)',cursor:'pointer',boxShadow:`0 2px 12px rgba(0,0,0,0.12)`}}>
                     <img src={img.url} alt={label} loading="lazy"
@@ -275,7 +278,14 @@ function PhotosTab({ entries, color }) {
       })}
 
       {lbEntry && (
-        <Lightbox images={lbEntry.images} startIndex={lbEntry.startIdx} onClose={()=>setLbEntry(null)}/>
+        <Lightbox
+          images={lbEntry.images}
+          startIndex={lbEntry.startIdx}
+          onClose={()=>setLbEntry(null)}
+          onDelete={url => { setLbEntry(null); }}
+          projectId={id}
+          date={lbEntry.date}
+        />
       )}
     </div>
   );
@@ -395,7 +405,7 @@ export default function ProjectDetail() {
             <EntryCard key={e.date} entry={e} categories={categories} color={color} projectId={id} onRefresh={refresh}/>
           ))
         )}
-        {tab==='photos'&&<PhotosTab entries={pEntries} color={color}/>}
+        {tab==='photos'&&<PhotosTab entries={pEntries} color={color} projectId={id}/>}
       </main>
 
       <nav className="bnav">
