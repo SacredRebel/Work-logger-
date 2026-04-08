@@ -1,22 +1,29 @@
 {
-  "categories": [
-    {"id":"development","name":"Development","color":"#5E5CE6","icon":"💻"},
-    {"id":"design","name":"Design","color":"#FF375F","icon":"🎨"},
-    {"id":"meetings","name":"Meetings","color":"#FF9F0A","icon":"🤝"},
-    {"id":"admin","name":"Admin","color":"#30D158","icon":"📋"},
-    {"id":"client","name":"Client Work","color":"#0A84FF","icon":"👔"},
-    {"id":"research","name":"Research","color":"#BF5AF2","icon":"🔍"},
-    {"id":"general","name":"General","color":"#98989D","icon":"⚡"},
-    {"id":"painting","name":"Painting","color":"#FF6B35","icon":"🖌️"}
-  ],
   "projects": [
-    {"id":"shared-house-painting","name":"Shared House Painting","color":"#FF6B35","startDate":"2026-04-07"}
+    {
+      "id": "shared-house-painting",
+      "name": "Shared House Painting",
+      "client": "Shared House",
+      "color": "#F97316",
+      "icon": "🏠",
+      "rate": 50,
+      "startDate": "2026-04-07",
+      "status": "active",
+      "description": "Interior painting job — upper room prep, window frames, door frames, full paint"
+    }
+  ],
+  "categories": [
+    {"id":"painting","name":"Painting","color":"#F97316","icon":"🖌️"},
+    {"id":"prep","name":"Prep Work","color":"#FBBF24","icon":"🔧"},
+    {"id":"client","name":"Client Work","color":"#0A84FF","icon":"👔"},
+    {"id":"admin","name":"Admin","color":"#22C55E","icon":"📋"},
+    {"id":"general","name":"General","color":"#98989D","icon":"⚡"}
   ],
   "entries": [
     {
       "date": "2026-04-07",
       "project": "shared-house-painting",
-      "category": "painting",
+      "category": "prep",
       "hours": 7,
       "rate": 50,
       "earned": 350,
@@ -27,14 +34,15 @@
           "items": [
             "Arrived on site at 9:00 AM",
             "Started working at 9:30 AM",
-            "Wrapped up at 6:00 PM"
+            "Wrapped up at 6:00 PM",
+            "2 hrs breaks excluded (2× smoke + lunch)"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
             "Moved all furniture to center of room",
-            "Covered furniture with plastic wrap and taped down",
+            "Covered furniture with plastic wrap and tape",
             "Cleaned all windows",
             "Sanded bottom window frames",
             "Sanded top window frames in upper room",
@@ -43,24 +51,21 @@
           ]
         },
         {
-          "title": "Breaks",
-          "items": [
-            "2× smoke breaks — 30 min each",
-            "Lunch break — 1 hour",
-            "Total break time: 2 hours (excluded from billable)"
-          ]
-        },
-        {
           "title": "Summary",
           "items": [
-            "Focus: Room prep and surface prep for painting",
             "9 hrs on site − 2 hrs breaks = 7 hrs billable",
-            "Rate: $50/hr",
-            "Earned today: $350.00"
+            "Rate $50/hr — Earned $350.00",
+            "Focus: full surface prep, ready for paint"
           ]
         }
       ],
-      "images": []
+      "images": [
+        {"type":"after","url":"/images/shared-house-painting/2026-04-07-1.jpg","caption":"Room overview — furniture covered"},
+        {"type":"after","url":"/images/shared-house-painting/2026-04-07-2.jpg","caption":"Second angle — plastic wrap setup"},
+        {"type":"after","url":"/images/shared-house-painting/2026-04-07-3.jpg","caption":"Side view — carpet removed in corners"},
+        {"type":"after","url":"/images/shared-house-painting/2026-04-07-4.jpg","caption":"Window frames sanded"},
+        {"type":"after","url":"/images/shared-house-painting/2026-04-07-5.jpg","caption":"Upper clerestory windows"}
+      ]
     }
   ]
 }
