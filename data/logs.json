@@ -9,40 +9,15 @@
       "rate": 50,
       "startDate": "2026-04-07",
       "status": "active",
-      "description": "Interior painting job — upper room prep, window frames, door frames, full paint"
+      "description": "Interior painting job — office room prep, window frames, door frames, full paint"
     }
   ],
   "categories": [
-    {
-      "id": "painting",
-      "name": "Painting",
-      "color": "#F97316",
-      "icon": "🖌️"
-    },
-    {
-      "id": "prep",
-      "name": "Prep Work",
-      "color": "#FBBF24",
-      "icon": "🔧"
-    },
-    {
-      "id": "client",
-      "name": "Client Work",
-      "color": "#0A84FF",
-      "icon": "👔"
-    },
-    {
-      "id": "admin",
-      "name": "Admin",
-      "color": "#22C55E",
-      "icon": "📋"
-    },
-    {
-      "id": "general",
-      "name": "General",
-      "color": "#98989D",
-      "icon": "⚡"
-    }
+    {"id":"painting","name":"Painting","color":"#F97316","icon":"🖌️"},
+    {"id":"prep","name":"Prep Work","color":"#FBBF24","icon":"🔧"},
+    {"id":"client","name":"Client Work","color":"#0A84FF","icon":"👔"},
+    {"id":"admin","name":"Admin","color":"#22C55E","icon":"📋"},
+    {"id":"general","name":"General","color":"#98989D","icon":"⚡"}
   ],
   "entries": [
     {
@@ -52,8 +27,14 @@
       "hours": 7,
       "rate": 50,
       "earned": 350,
-      "tasks": "Day 1 — Room prep & window frame sanding",
+      "tasks": "Day 1 — Office room prep & wood trim sanding",
       "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Office room — upstairs"
+          ]
+        },
         {
           "title": "Schedule",
           "items": [
@@ -66,13 +47,13 @@
         {
           "title": "Work Completed",
           "items": [
-            "Moved all furniture to center of room",
+            "Moved all furniture to center of office room",
             "Covered furniture with plastic wrap and tape",
-            "Cleaned all windows",
+            "Cleaned all windows in office room",
             "Sanded bottom window frames",
-            "Sanded top window frames in upper room",
+            "Sanded top window frames — upper office room",
             "Removed carpet in corners",
-            "Sanded door frames and general wood trim throughout room"
+            "Sanded door frames and general wood trim throughout office room"
           ]
         },
         {
@@ -80,37 +61,60 @@
           "items": [
             "9 hrs on site − 2 hrs breaks = 7 hrs billable",
             "Rate $50/hr — Earned $350.00",
-            "Focus: full surface prep, ready for paint"
+            "Focus: full surface prep in office room, ready for paint"
           ]
         }
       ],
       "images": [
-        {
-          "type": "after",
-          "url": "/images/chers-house-painting-job/2026-04-07-1775629361228-1.jpeg",
-          "caption": ""
-        },
-        {
-          "type": "after",
-          "url": "/images/chers-house-painting-job/2026-04-07-1775629373826-2.jpeg",
-          "caption": ""
-        },
-        {
-          "type": "after",
-          "url": "/images/chers-house-painting-job/2026-04-07-1775629388093-3.jpeg",
-          "caption": ""
-        },
-        {
-          "type": "after",
-          "url": "/images/chers-house-painting-job/2026-04-07-1775629401158-4.jpeg",
-          "caption": ""
-        },
-        {
-          "type": "after",
-          "url": "/images/chers-house-painting-job/2026-04-07-1775629413685-5.jpeg",
-          "caption": ""
-        }
+        {"type":"after","url":"/images/chers-house-painting-job/2026-04-07-1775629361228-1.jpeg","caption":"Office room — furniture covered"},
+        {"type":"after","url":"/images/chers-house-painting-job/2026-04-07-1775629373826-2.jpeg","caption":"Office room — second angle"},
+        {"type":"after","url":"/images/chers-house-painting-job/2026-04-07-1775629388093-3.jpeg","caption":"Office room — side view, carpet removed"},
+        {"type":"after","url":"/images/chers-house-painting-job/2026-04-07-1775629401158-4.jpeg","caption":"Window frames sanded"},
+        {"type":"after","url":"/images/chers-house-painting-job/2026-04-07-1775629413685-5.jpeg","caption":"Upper clerestory windows — office room"}
       ]
+    },
+    {
+      "date": "2026-04-08",
+      "project": "chers-house-painting-job",
+      "category": "prep",
+      "hours": 0,
+      "rate": 50,
+      "earned": 0,
+      "tasks": "Day 2 — Finishing sanding & prep in office room",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Office room — upstairs"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started at 10:00 AM",
+            "End time TBD — log will be updated at end of day"
+          ]
+        },
+        {
+          "title": "Today's Plan",
+          "items": [
+            "Finish all remaining sanding in the office room",
+            "Sand all wood trim throughout the room",
+            "Sand all door frames",
+            "Sand all window frames",
+            "Clean up sanded surfaces",
+            "Final prep — room fully ready for paint after today"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "🟡 In progress — started 10:00 AM",
+            "Hours and earnings will be updated at end of day"
+          ]
+        }
+      ],
+      "images": []
     }
   ]
 }
