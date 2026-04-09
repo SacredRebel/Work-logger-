@@ -59,9 +59,13 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
   const [view, setView] = useState('all'); // 'all' | 'before' | 'after'
   const [lbIdx, setLbIdx] = useState(null);
 
-  // Sync when parent refreshes new uploads
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  if (initialImages.length > images.length) setImages(initialImages);
+  // Sync whenever parent images change (new uploads or deletes from server)
+  const initKey = initialImages.map(i=>i.url).join(',');
+  const localKey = images.map(i=>i.url).join(',');
+  if (initKey !== localKey && initialImages.length >= images.length) {
+    // Parent has fresher or equal data — use it (preserves local deletes if parent is shorter)
+    setImages(initialImages);
+  }
 
   const before = images.filter(i=>i.type==='before');
   const after  = images.filter(i=>i.type==='after');
@@ -215,7 +219,11 @@ function EntryCard({ entry, categories, color, projectId, onRefresh }) {
               onImageDeleted={onRefresh}
             />
             <div style={{borderTop:'1px solid var(--bdr)',paddingTop:14}}>
-              <PhotoUploader projectId={projectId} date={entry.date} accentColor={color} onUploaded={onRefresh}/>
+              <PhotoUploader projectId={projectId} date={entry.date} accentColor={color} onUploaded={(newImgs) => {
+                // Immediately add new images to entry so they show without waiting for refresh
+                entry.images = [...(entry.images||[]), ...newImgs];
+                onRefresh();
+              }}/>
             </div>
           </div>
         </div>
