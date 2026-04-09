@@ -301,15 +301,15 @@
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Break: 11:40 AM \u2014 lunch & smoke",
-            "Back at it: TBD",
+            "Break: 11:40 AM \u2014 lunch & smoke (40 min)",
+            "Back at it: 12:20 PM",
             "End time: TBD"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe1 On break since 11:40 AM",
+            "\ud83d\udfe2 Back at it since 12:20 PM",
             "Hours and earnings to be finalized at end of day"
           ]
         }
