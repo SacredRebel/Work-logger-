@@ -5,11 +5,11 @@
       "name": "Cher's House Painting Job",
       "client": "Cher",
       "color": "#F97316",
-      "icon": "\ud83c\udfe0",
+      "icon": "🏠",
       "rate": 50,
       "startDate": "2026-04-07",
       "status": "active",
-      "description": "Interior painting job \u2014 office room prep, window frames, door frames, full paint"
+      "description": "Interior painting job — office room prep, window frames, door frames, full paint"
     }
   ],
   "categories": [
@@ -17,31 +17,31 @@
       "id": "painting",
       "name": "Painting",
       "color": "#F97316",
-      "icon": "\ud83d\udd8c\ufe0f"
+      "icon": "🖌️"
     },
     {
       "id": "prep",
       "name": "Prep Work",
       "color": "#FBBF24",
-      "icon": "\ud83d\udd27"
+      "icon": "🔧"
     },
     {
       "id": "client",
       "name": "Client Work",
       "color": "#0A84FF",
-      "icon": "\ud83d\udc54"
+      "icon": "👔"
     },
     {
       "id": "admin",
       "name": "Admin",
       "color": "#22C55E",
-      "icon": "\ud83d\udccb"
+      "icon": "📋"
     },
     {
       "id": "general",
       "name": "General",
       "color": "#98989D",
-      "icon": "\u26a1"
+      "icon": "⚡"
     }
   ],
   "entries": [
@@ -52,12 +52,12 @@
       "hours": 7,
       "rate": 50,
       "earned": 350,
-      "tasks": "Day 1 \u2014 Office room prep & wood trim sanding",
+      "tasks": "Day 1 — Office room prep & wood trim sanding",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Office room \u2014 upstairs"
+            "Office room — upstairs"
           ]
         },
         {
@@ -66,7 +66,7 @@
             "Arrived on site at 9:00 AM",
             "Started working at 9:30 AM",
             "Wrapped up at 6:00 PM",
-            "2 hrs breaks excluded (2\u00d7 smoke + lunch)"
+            "2 hrs breaks excluded (2× smoke + lunch)"
           ]
         },
         {
@@ -76,7 +76,7 @@
             "Covered furniture with plastic wrap and tape",
             "Cleaned all windows in office room",
             "Sanded bottom window frames",
-            "Sanded top window frames \u2014 upper office room",
+            "Sanded top window frames — upper office room",
             "Removed carpet in corners",
             "Sanded door frames and general wood trim throughout office room",
             "Removed all plastic covers from electrical outlets and light switches in the room"
@@ -85,8 +85,8 @@
         {
           "title": "Summary",
           "items": [
-            "9 hrs on site \u2212 2 hrs breaks = 7 hrs billable",
-            "Rate $50/hr \u2014 Earned $350.00",
+            "9 hrs on site − 2 hrs breaks = 7 hrs billable",
+            "Rate $50/hr — Earned $350.00",
             "Focus: full surface prep in office room, ready for paint"
           ]
         }
@@ -95,17 +95,17 @@
         {
           "type": "after",
           "url": "/images/chers-house-painting-job/2026-04-07-1775629361228-1.jpeg",
-          "caption": "Office room \u2014 furniture covered"
+          "caption": "Office room — furniture covered"
         },
         {
           "type": "after",
           "url": "/images/chers-house-painting-job/2026-04-07-1775629373826-2.jpeg",
-          "caption": "Office room \u2014 second angle"
+          "caption": "Office room — second angle"
         },
         {
           "type": "after",
           "url": "/images/chers-house-painting-job/2026-04-07-1775629388093-3.jpeg",
-          "caption": "Office room \u2014 side view, carpet removed"
+          "caption": "Office room — side view, carpet removed"
         },
         {
           "type": "after",
@@ -115,7 +115,7 @@
         {
           "type": "after",
           "url": "/images/chers-house-painting-job/2026-04-07-1775629413685-5.jpeg",
-          "caption": "Upper clerestory windows \u2014 office room"
+          "caption": "Upper clerestory windows — office room"
         }
       ]
     },
@@ -126,12 +126,12 @@
       "hours": 7,
       "rate": 50,
       "earned": 350,
-      "tasks": "Day 2 \u2014 Office room finish, hallway trim, full bathroom prep",
+      "tasks": "Day 2 — Office room finish, hallway trim, full bathroom prep",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Office room (upstairs) \u2192 Hallway \u2192 Bathroom (off office room)"
+            "Office room (upstairs) → Hallway → Bathroom (off office room)"
           ]
         },
         {
@@ -145,18 +145,18 @@
           ]
         },
         {
-          "title": "Morning \u2014 Office Room & Hallway",
+          "title": "Morning — Office Room & Hallway",
           "items": [
             "Finished all remaining sanding in the office room",
             "Sanded all wood trim throughout the office room",
-            "Finished window frames \u2014 detailed corners with new sanding tool",
+            "Finished window frames — detailed corners with new sanding tool",
             "Sanded all door frames in office room",
             "Removed all plastic covers from outlets and light switches",
-            "Moved into hallway \u2014 sanded all bottom trim"
+            "Moved into hallway — sanded all bottom trim"
           ]
         },
         {
-          "title": "Afternoon \u2014 Full Bathroom Prep",
+          "title": "Afternoon — Full Bathroom Prep",
           "items": [
             "Moved all furniture to center of bathroom",
             "Removed all items from bathroom walls (lights, mirrors, fixtures)",
@@ -172,10 +172,10 @@
         {
           "title": "Summary",
           "items": [
-            "7 hrs billable \u00d7 $50/hr = $350.00 earned",
-            "Office room: 100% prepped \u2705",
-            "Hallway trim: sanded \u2705",
-            "Bathroom: fully prepped and ready for paint \u2705"
+            "7 hrs billable × $50/hr = $350.00 earned",
+            "Office room: 100% prepped ✅",
+            "Hallway trim: sanded ✅",
+            "Bathroom: fully prepped and ready for paint ✅"
           ]
         }
       ],
@@ -289,30 +289,76 @@
       "hours": 0,
       "rate": 50,
       "earned": 0,
-      "tasks": "Day 3 \u2014 Painting begins",
+      "tasks": "Day 3 — Painting begins",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house \u2014 continuing from Day 2"
+            "Cher's house — continuing from Day 2"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "End time TBD \u2014 updating at end of day"
+            "End time TBD — updating at end of day"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 started 9:30 AM",
+            "🟢 In progress — started 9:30 AM",
             "Hours and earnings to be finalized at end of day"
           ]
         }
       ],
-      "images": []
+      "images": [
+        {
+          "type": "before",
+          "url": "/images/chers-house-painting-job/2026-04-09-before-1775752382720-0.jpg",
+          "caption": ""
+        },
+        {
+          "type": "before",
+          "url": "/images/chers-house-painting-job/2026-04-09-before-1775752382721-1.jpg",
+          "caption": ""
+        },
+        {
+          "type": "before",
+          "url": "/images/chers-house-painting-job/2026-04-09-before-1775752382724-7.jpg",
+          "caption": ""
+        },
+        {
+          "type": "before",
+          "url": "/images/chers-house-painting-job/2026-04-09-before-1775752382722-2.jpg",
+          "caption": ""
+        },
+        {
+          "type": "before",
+          "url": "/images/chers-house-painting-job/2026-04-09-before-1775752382723-4.jpg",
+          "caption": ""
+        },
+        {
+          "type": "before",
+          "url": "/images/chers-house-painting-job/2026-04-09-before-1775752382724-6.jpg",
+          "caption": ""
+        },
+        {
+          "type": "before",
+          "url": "/images/chers-house-painting-job/2026-04-09-before-1775752382725-8.jpg",
+          "caption": ""
+        },
+        {
+          "type": "before",
+          "url": "/images/chers-house-painting-job/2026-04-09-before-1775752382722-3.jpg",
+          "caption": ""
+        },
+        {
+          "type": "before",
+          "url": "/images/chers-house-painting-job/2026-04-09-before-1775752382723-5.jpg",
+          "caption": ""
+        }
+      ]
     }
   ]
 }
