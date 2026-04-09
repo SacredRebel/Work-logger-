@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 
-function compressImage(file, maxPx = 1200, quality = 0.82) {
+function compressImage(file, maxPx = 1100, quality = 0.76) {
   return new Promise((resolve, reject) => {
     const img = new Image();
     const url = URL.createObjectURL(file);
