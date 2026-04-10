@@ -5,11 +5,11 @@
       "name": "Cher's House Painting Job",
       "client": "Cher",
       "color": "#F97316",
-      "icon": "🏠",
+      "icon": "\ud83c\udfe0",
       "rate": 50,
       "startDate": "2026-04-07",
       "status": "active",
-      "description": "Interior painting job — office room prep, window frames, door frames, full paint"
+      "description": "Interior painting job \u2014 office room prep, window frames, door frames, full paint"
     }
   ],
   "categories": [
@@ -17,31 +17,31 @@
       "id": "painting",
       "name": "Painting",
       "color": "#F97316",
-      "icon": "🖌️"
+      "icon": "\ud83d\udd8c\ufe0f"
     },
     {
       "id": "prep",
       "name": "Prep Work",
       "color": "#FBBF24",
-      "icon": "🔧"
+      "icon": "\ud83d\udd27"
     },
     {
       "id": "client",
       "name": "Client Work",
       "color": "#0A84FF",
-      "icon": "👔"
+      "icon": "\ud83d\udc54"
     },
     {
       "id": "admin",
       "name": "Admin",
       "color": "#22C55E",
-      "icon": "📋"
+      "icon": "\ud83d\udccb"
     },
     {
       "id": "general",
       "name": "General",
       "color": "#98989D",
-      "icon": "⚡"
+      "icon": "\u26a1"
     }
   ],
   "entries": [
@@ -52,12 +52,12 @@
       "hours": 7,
       "rate": 50,
       "earned": 350,
-      "tasks": "Day 1 — Office room prep & wood trim sanding",
+      "tasks": "Day 1 \u2014 Office room prep & wood trim sanding",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Office room — upstairs"
+            "Office room \u2014 upstairs"
           ]
         },
         {
@@ -66,7 +66,7 @@
             "Arrived on site at 9:00 AM",
             "Started working at 9:30 AM",
             "Wrapped up at 6:00 PM",
-            "2 hrs breaks excluded (2× smoke + lunch)"
+            "2 hrs breaks excluded (2\u00d7 smoke + lunch)"
           ]
         },
         {
@@ -76,7 +76,7 @@
             "Covered furniture with plastic wrap and tape",
             "Cleaned all windows in office room",
             "Sanded bottom window frames",
-            "Sanded top window frames — upper office room",
+            "Sanded top window frames \u2014 upper office room",
             "Removed carpet in corners",
             "Sanded door frames and general wood trim throughout office room",
             "Removed all plastic covers from electrical outlets and light switches in the room"
@@ -85,8 +85,8 @@
         {
           "title": "Summary",
           "items": [
-            "9 hrs on site − 2 hrs breaks = 7 hrs billable",
-            "Rate $50/hr — Earned $350.00",
+            "9 hrs on site \u2212 2 hrs breaks = 7 hrs billable",
+            "Rate $50/hr \u2014 Earned $350.00",
             "Focus: full surface prep in office room, ready for paint"
           ]
         }
@@ -95,17 +95,17 @@
         {
           "type": "after",
           "url": "/images/chers-house-painting-job/2026-04-07-1775629361228-1.jpeg",
-          "caption": "Office room — furniture covered"
+          "caption": "Office room \u2014 furniture covered"
         },
         {
           "type": "after",
           "url": "/images/chers-house-painting-job/2026-04-07-1775629373826-2.jpeg",
-          "caption": "Office room — second angle"
+          "caption": "Office room \u2014 second angle"
         },
         {
           "type": "after",
           "url": "/images/chers-house-painting-job/2026-04-07-1775629388093-3.jpeg",
-          "caption": "Office room — side view, carpet removed"
+          "caption": "Office room \u2014 side view, carpet removed"
         },
         {
           "type": "after",
@@ -115,7 +115,7 @@
         {
           "type": "after",
           "url": "/images/chers-house-painting-job/2026-04-07-1775629413685-5.jpeg",
-          "caption": "Upper clerestory windows — office room"
+          "caption": "Upper clerestory windows \u2014 office room"
         }
       ]
     },
@@ -126,12 +126,12 @@
       "hours": 7,
       "rate": 50,
       "earned": 350,
-      "tasks": "Day 2 — Office room finish, hallway trim, full bathroom prep",
+      "tasks": "Day 2 \u2014 Office room finish, hallway trim, full bathroom prep",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Office room (upstairs) → Hallway → Bathroom (off office room)"
+            "Office room (upstairs) \u2192 Hallway \u2192 Bathroom (off office room)"
           ]
         },
         {
@@ -145,18 +145,18 @@
           ]
         },
         {
-          "title": "Morning — Office Room & Hallway",
+          "title": "Morning \u2014 Office Room & Hallway",
           "items": [
             "Finished all remaining sanding in the office room",
             "Sanded all wood trim throughout the office room",
-            "Finished window frames — detailed corners with new sanding tool",
+            "Finished window frames \u2014 detailed corners with new sanding tool",
             "Sanded all door frames in office room",
             "Removed all plastic covers from outlets and light switches",
-            "Moved into hallway — sanded all bottom trim"
+            "Moved into hallway \u2014 sanded all bottom trim"
           ]
         },
         {
-          "title": "Afternoon — Full Bathroom Prep",
+          "title": "Afternoon \u2014 Full Bathroom Prep",
           "items": [
             "Moved all furniture to center of bathroom",
             "Removed all items from bathroom walls (lights, mirrors, fixtures)",
@@ -172,10 +172,10 @@
         {
           "title": "Summary",
           "items": [
-            "7 hrs billable × $50/hr = $350.00 earned",
-            "Office room: 100% prepped ✅",
-            "Hallway trim: sanded ✅",
-            "Bathroom: fully prepped and ready for paint ✅"
+            "7 hrs billable \u00d7 $50/hr = $350.00 earned",
+            "Office room: 100% prepped \u2705",
+            "Hallway trim: sanded \u2705",
+            "Bathroom: fully prepped and ready for paint \u2705"
           ]
         }
       ],
@@ -289,22 +289,22 @@
       "hours": 7.5,
       "rate": 50,
       "earned": 375,
-      "tasks": "Day 3 — Bathroom prep, hallway trim & taping",
+      "tasks": "Day 3 \u2014 Bathroom prep, hallway trim & taping",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Upstairs bathroom → Office bathroom → Hallway & stairs"
+            "Upstairs bathroom \u2192 Office bathroom \u2192 Hallway & stairs"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Break 1: 11:40 AM — lunch & smoke (40 min) — back 12:20 PM",
-            "Break 2: 1:40 PM — smoke (20 min) — back 2:00 PM",
+            "Break 1: 11:40 AM \u2014 lunch & smoke (40 min) \u2014 back 12:20 PM",
+            "Break 2: 1:40 PM \u2014 smoke (20 min) \u2014 back 2:00 PM",
             "Finished: 6:00 PM",
-            "On site: 8.5 hrs — breaks: 1 hr — billable: 7.5 hrs"
+            "On site: 8.5 hrs \u2014 breaks: 1 hr \u2014 billable: 7.5 hrs"
           ]
         },
         {
@@ -333,10 +333,10 @@
         {
           "title": "Summary",
           "items": [
-            "7.5 hrs billable × $50/hr = $375.00 earned",
-            "Upstairs bathroom: prepped and taped ✅",
-            "Office bathroom ceiling: washed ✅",
-            "Hallway & stairs: sanded, taped, railings covered ✅"
+            "7.5 hrs billable \u00d7 $50/hr = $375.00 earned",
+            "Upstairs bathroom: prepped and taped \u2705",
+            "Office bathroom ceiling: washed \u2705",
+            "Hallway & stairs: sanded, taped, railings covered \u2705"
           ]
         }
       ],
@@ -432,6 +432,46 @@
           "caption": ""
         }
       ]
+    },
+    {
+      "date": "2026-04-10",
+      "project": "chers-house-painting-job",
+      "category": "prep",
+      "hours": 0,
+      "rate": 50,
+      "earned": 0,
+      "tasks": "Day 4 \u2014 Hallway finish & 3 upstairs doors sanding",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Hallway \u2192 Upstairs doors"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 9:45 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Today's Plan",
+          "items": [
+            "Finish hallway \u2014 patching and full prep",
+            "Sand all 3 upstairs doors",
+            "Continue as needed"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83d\udfe2 In progress \u2014 started 9:45 AM",
+            "Hours and earnings to be finalized at end of day"
+          ]
+        }
+      ],
+      "images": []
     }
   ]
 }
