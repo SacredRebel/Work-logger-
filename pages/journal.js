@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Layout from '../components/Layout';
 import NotesRenderer from '../components/NotesRenderer';
 import { useLogs, fmtDate, getCatStyle, totalHours } from '../lib/data';
+import { computePayStatus, PayBadge } from '../lib/billing';
 
 async function makePDF(entries, categories, label) {
   const { jsPDF } = await import('jspdf');
@@ -37,7 +38,7 @@ async function makePDF(entries, categories, label) {
   doc.save(`worklog-${new Date().toISOString().split('T')[0]}.pdf`);
 }
 
-function EntryCard({ entry, categories }) {
+function EntryCard({ entry, categories, payStatus }) {
   const [open, setOpen] = useState(false);
   const [lb, setLb] = useState(null);
   const cat = getCatStyle(categories, entry.category);
@@ -117,7 +118,7 @@ function EntryCard({ entry, categories }) {
 }
 
 export default function Journal() {
-  const { entries, categories, loading } = useLogs();
+  const { entries, categories, projects, loading } = useLogs();
   const [q, setQ] = useState('');
   const [cat, setCat] = useState('all');
 

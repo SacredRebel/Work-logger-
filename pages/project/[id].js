@@ -5,6 +5,7 @@ import NotesRenderer from '../../components/NotesRenderer';
 import PhotoUploader from '../../components/PhotoUploader';
 import Lightbox from '../../components/Lightbox';
 import BillingTab from '../../components/BillingTab';
+import { computePayStatus, PayBadge } from '../../lib/billing';
 import { useLogs, fmtDate, fmtShort, totalHours, totalEarned, getCatStyle, getStreak, getWeekRange, todayStr } from '../../lib/data';
 
 /* ── Heatmap ─────────────────────────────────────────────── */
@@ -137,7 +138,7 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
 }
 
 /* ── Entry card — expand/collapse inline, NO navigation ──── */
-function EntryCard({ entry, categories, color, projectId, onRefresh }) {
+function EntryCard({ entry, categories, color, projectId, onRefresh, payStatus }) {
   const [open, setOpen] = useState(false);
   const cat = getCatStyle(categories, entry.category);
   const h = parseFloat(entry.hours)||0;
@@ -183,6 +184,7 @@ function EntryCard({ entry, categories, color, projectId, onRefresh }) {
               ${Number(entry.earned).toFixed(0)}
             </span>
           )}
+          {payStatus && <PayBadge status={payStatus} small={true}/>}
           {/* Animated chevron */}
           <div style={{width:28,height:28,borderRadius:9,background:'var(--s3)',border:'1px solid var(--bdr)',
             display:'flex',alignItems:'center',justifyContent:'center',
@@ -211,7 +213,13 @@ function EntryCard({ entry, categories, color, projectId, onRefresh }) {
                 <span style={{fontSize:16,fontWeight:800,color:'#22C55E'}}>💰 ${Number(entry.earned).toFixed(2)}</span>
               </div>
             )}
-            <NotesRenderer sections={entry.sections} notes={entry.notes} accentColor={color}/>
+            {payStatus && (
+            <div style={{display:'flex',alignItems:'center',gap:8}}>
+              <span style={{fontSize:12,color:'var(--t3)',fontWeight:600}}>Payment status:</span>
+              <PayBadge status={payStatus}/>
+            </div>
+          )}
+          <NotesRenderer sections={entry.sections} notes={entry.notes} accentColor={color}/>
             <ImageGrid
               images={entry.images||[]}
               color={color}
@@ -369,6 +377,7 @@ export default function ProjectDetail() {
   const weekH = totalHours(pEntries.filter(e=>e.date>=ws&&e.date<=we));
   const color = project.color;
   const totalImgs = pEntries.reduce((s,e)=>s+(e.images||[]).length,0);
+  const payStatusMap = computePayStatus(project.payments, pEntries);
 
   return (
     <div className="app">
@@ -449,7 +458,7 @@ export default function ProjectDetail() {
             <div className="empty-sub">Tell me what you worked on and I'll add the first entry.</div>
           </div>
         ):pEntries.map(e=>(
-          <EntryCard key={e.date} entry={e} categories={categories} color={color} projectId={id} onRefresh={refresh}/>
+          <EntryCard key={e.date} entry={e} categories={categories} color={color} projectId={id} onRefresh={refresh} payStatus={payStatusMap[e.date]}/>
         )))}
 
         {tab==='photos'&&<PhotosTab entries={pEntries} color={color} projectId={id}/>}

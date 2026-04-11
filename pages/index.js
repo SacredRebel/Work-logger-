@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Layout from '../components/Layout';
 import { useLogs, totalHours, totalEarned, fmtShort, todayStr, getWeekRange } from '../lib/data';
+import { computePayStatus } from '../lib/billing';
 
 function statusBadge(status) {
   const map = {
@@ -74,6 +75,22 @@ function ProjectCard({ project, entries, onOpen }) {
         </div>
 
         {/* Stats */}
+        {(() => {
+          const outstanding = Math.max(0, earned - (project.payments||[]).reduce((s,p)=>s+p.amount,0));
+          const allPaid = outstanding === 0 && earned > 0;
+          return (
+            <div style={{marginBottom:10,display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+              <span style={{fontSize:11,color:'var(--t3)',fontWeight:500}}>{days} day{days!==1?'s':''} · {hrs.toFixed(1)}h</span>
+              {earned > 0 && (
+                <span style={{fontSize:11,fontWeight:800,padding:'3px 10px',borderRadius:9999,
+                  background:allPaid?'rgba(34,197,94,0.15)':'rgba(251,191,36,0.15)',
+                  color:allPaid?'#22C55E':'#FBBF24'}}>
+                  {allPaid ? '✅ Fully paid' : `🔴 $${outstanding.toFixed(0)} owed`}
+                </span>
+              )}
+            </div>
+          );
+        })()}
         <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:8,marginBottom:16}}>
           {[
             {val:`${hrs.toFixed(1)}h`,lbl:'Total hrs',c:project.color},
