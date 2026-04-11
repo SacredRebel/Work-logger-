@@ -10,6 +10,17 @@
       "startDate": "2026-04-07",
       "status": "active",
       "description": "Interior painting job \u2014 office room prep, window frames, door frames, full paint"
+    },
+    {
+      "id": "helping-sparrow-camper",
+      "name": "Helping Sparrow \u2014 Camper",
+      "client": "Sparrow",
+      "color": "#8B5CF6",
+      "icon": "\ud83d\ude90",
+      "rate": 0,
+      "startDate": "2026-04-11",
+      "status": "completed",
+      "description": "Helped Sparrow get her bed situated in her camper"
     }
   ],
   "categories": [
@@ -510,6 +521,40 @@
           "caption": ""
         }
       ]
+    },
+    {
+      "date": "2026-04-11",
+      "project": "helping-sparrow-camper",
+      "category": "general",
+      "hours": 2.5,
+      "rate": 0,
+      "earned": 100,
+      "tasks": "Helped Sparrow get her camper bed situated",
+      "sections": [
+        {
+          "title": "Schedule",
+          "items": [
+            "Arrived: 9:00 AM",
+            "Done: 11:30 AM",
+            "Total time: 2.5 hours"
+          ]
+        },
+        {
+          "title": "Work Done",
+          "items": [
+            "Helped Sparrow get her bed into her camper",
+            "Got the camper bed fully situated and set up"
+          ]
+        },
+        {
+          "title": "Payment",
+          "items": [
+            "Paid $100 cash by Sparrow \u2014 unprompted, out of the blue",
+            "Not an hourly job \u2014 flat gift payment"
+          ]
+        }
+      ],
+      "images": []
     }
   ]
 }
