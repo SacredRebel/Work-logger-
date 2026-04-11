@@ -206,20 +206,10 @@ function EntryCard({ entry, categories, color, projectId, onRefresh, payStatus, 
       }}>
         <div style={{overflow:'hidden'}}>
           <div style={{borderTop:`1px solid ${color}20`,padding:'16px 16px 18px',display:'flex',flexDirection:'column',gap:16}}>
-            {entry.earned>0&&(
-              <div style={{background:'rgba(34,197,94,0.08)',border:'1px solid rgba(34,197,94,0.18)',
-                borderRadius:10,padding:'11px 14px',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
-                <span style={{fontSize:12,fontWeight:600,color:'var(--t3)'}}>Earned today</span>
-                <span style={{fontSize:16,fontWeight:800,color:'#22C55E'}}>💰 ${Number(entry.earned).toFixed(2)}</span>
-              </div>
-            )}
-            {payStatus && (
-            <div style={{display:'flex',alignItems:'center',gap:8}}>
-              <span style={{fontSize:12,color:'var(--t3)',fontWeight:600}}>Payment status:</span>
-              <PayBadge status={payStatus}/>
-            </div>
-          )}
-          <NotesRenderer sections={entry.sections} notes={entry.notes} accentColor={color}/>
+            {/* Notes */}
+            <NotesRenderer sections={entry.sections} notes={entry.notes} accentColor={color}/>
+
+            {/* Images */}
             <ImageGrid
               images={entry.images||[]}
               color={color}
@@ -227,9 +217,73 @@ function EntryCard({ entry, categories, color, projectId, onRefresh, payStatus, 
               date={entry.date}
               onImageDeleted={onRefresh}
             />
+
+            {/* Payment section — always shown if entry has an earned amount */}
+            {entry.earned > 0 && (()=>{
+              const dayPay = getPaymentsForDay(payments||[], allEntries||[], entry.date);
+              const hasCoverage = dayPay.covered > 0 && dayPay.payments.length > 0;
+              return (
+                <div style={{borderRadius:14,overflow:'hidden',border:`1px solid ${payStatus==='paid'?'rgba(34,197,94,0.25)':payStatus==='partial'?'rgba(251,191,36,0.25)':'rgba(239,68,68,0.2)'}`}}>
+                  {/* Header */}
+                  <div style={{padding:'10px 14px',background:'var(--s2)',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid var(--bdr)'}}>
+                    <span style={{fontSize:11,fontWeight:800,color:'var(--t3)',textTransform:'uppercase',letterSpacing:'0.08em'}}>💳 Payment</span>
+                    <PayBadge status={payStatus} small={true}/>
+                  </div>
+                  <div style={{padding:'12px 14px',display:'flex',flexDirection:'column',gap:10}}>
+                    {/* Amount due row */}
+                    <div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+                      <span style={{fontSize:12,color:'var(--t3)',fontWeight:600}}>Amount due</span>
+                      <span style={{fontSize:15,fontWeight:800,color:'var(--t1)',fontFamily:'var(--mono)'}}>
+                        ${Number(entry.earned).toFixed(2)}
+                      </span>
+                    </div>
+                    {/* Payment details */}
+                    {hasCoverage ? (
+                      <div style={{borderTop:'1px solid var(--bdr)',paddingTop:10,display:'flex',flexDirection:'column',gap:8}}>
+                        {dayPay.payments.map((p,i)=>(
+                          <div key={i}>
+                            <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:6}}>
+                              <div style={{display:'flex',alignItems:'center',gap:6}}>
+                                <span style={{fontSize:11,fontWeight:700,padding:'3px 9px',borderRadius:9999,
+                                  background:'rgba(34,197,94,0.12)',color:'#22C55E'}}>
+                                  {p.method}
+                                </span>
+                                <span style={{fontSize:11,color:'var(--t3)'}}>
+                                  {new Date(p.date+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}
+                                </span>
+                              </div>
+                              <span style={{fontSize:14,fontWeight:800,color:'#22C55E',fontFamily:'var(--mono)'}}>
+                                +${p.amount.toFixed(2)}
+                              </span>
+                            </div>
+                            {p.note && (
+                              <div style={{fontSize:11,color:'var(--t4)',lineHeight:1.55,paddingLeft:2}}>{p.note}</div>
+                            )}
+                          </div>
+                        ))}
+                        {payStatus==='partial' && dayPay.outstanding > 0 && (
+                          <div style={{borderTop:'1px solid var(--bdr)',paddingTop:8,display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+                            <span style={{fontSize:12,fontWeight:600,color:'#FBBF24'}}>Still outstanding</span>
+                            <span style={{fontSize:14,fontWeight:800,color:'#FBBF24',fontFamily:'var(--mono)'}}>
+                              ${dayPay.outstanding.toFixed(2)}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <div style={{borderTop:'1px solid var(--bdr)',paddingTop:10,
+                        fontSize:12,color:'var(--t4)',lineHeight:1.5}}>
+                        Not yet paid · will update when payment received
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })()}
+
+            {/* Upload photos */}
             <div style={{borderTop:'1px solid var(--bdr)',paddingTop:14}}>
               <PhotoUploader projectId={projectId} date={entry.date} accentColor={color} onUploaded={(newImgs) => {
-                // Immediately add new images to entry so they show without waiting for refresh
                 entry.images = [...(entry.images||[]), ...newImgs];
                 onRefresh();
               }}/>
