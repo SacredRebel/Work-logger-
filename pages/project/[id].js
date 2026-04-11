@@ -5,7 +5,7 @@ import NotesRenderer from '../../components/NotesRenderer';
 import PhotoUploader from '../../components/PhotoUploader';
 import Lightbox from '../../components/Lightbox';
 import BillingTab from '../../components/BillingTab';
-import { computePayStatus, PayBadge } from '../../lib/billing';
+import { computePayStatus, PayBadge, getPaymentsForDay } from '../../lib/billing';
 import { useLogs, fmtDate, fmtShort, totalHours, totalEarned, getCatStyle, getStreak, getWeekRange, todayStr } from '../../lib/data';
 
 /* ── Heatmap ─────────────────────────────────────────────── */
@@ -138,7 +138,7 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
 }
 
 /* ── Entry card — expand/collapse inline, NO navigation ──── */
-function EntryCard({ entry, categories, color, projectId, onRefresh, payStatus }) {
+function EntryCard({ entry, categories, color, projectId, onRefresh, payStatus, payments, allEntries }) {
   const [open, setOpen] = useState(false);
   const cat = getCatStyle(categories, entry.category);
   const h = parseFloat(entry.hours)||0;
@@ -458,7 +458,7 @@ export default function ProjectDetail() {
             <div className="empty-sub">Tell me what you worked on and I'll add the first entry.</div>
           </div>
         ):pEntries.map(e=>(
-          <EntryCard key={e.date} entry={e} categories={categories} color={color} projectId={id} onRefresh={refresh} payStatus={payStatusMap[e.date]}/>
+          <EntryCard key={e.date} entry={e} categories={categories} color={color} projectId={id} onRefresh={refresh} payStatus={payStatusMap[e.date]} payments={project.payments} allEntries={pEntries}/>
         )))}
 
         {tab==='photos'&&<PhotosTab entries={pEntries} color={color} projectId={id}/>}
