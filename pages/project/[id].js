@@ -209,15 +209,6 @@ function EntryCard({ entry, categories, color, projectId, onRefresh, payStatus, 
             {/* Notes */}
             <NotesRenderer sections={entry.sections} notes={entry.notes} accentColor={color}/>
 
-            {/* Images */}
-            <ImageGrid
-              images={entry.images||[]}
-              color={color}
-              projectId={projectId}
-              date={entry.date}
-              onImageDeleted={onRefresh}
-            />
-
             {/* Payment section — always shown if entry has an earned amount */}
             {entry.earned > 0 && (()=>{
               const dayPay = getPaymentsForDay(payments||[], allEntries||[], entry.date);
@@ -280,6 +271,15 @@ function EntryCard({ entry, categories, color, projectId, onRefresh, payStatus, 
                 </div>
               );
             })()}
+
+            {/* Images */}
+            <ImageGrid
+              images={entry.images||[]}
+              color={color}
+              projectId={projectId}
+              date={entry.date}
+              onImageDeleted={onRefresh}
+            />
 
             {/* Upload photos */}
             <div style={{borderTop:'1px solid var(--bdr)',paddingTop:14}}>
