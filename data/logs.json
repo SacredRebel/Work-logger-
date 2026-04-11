@@ -15,8 +15,8 @@
           "id": "pay-001",
           "amount": 444,
           "date": "2026-04-01",
-          "note": "Advance payment before job started",
-          "method": "cash"
+          "method": "ACH Transfer",
+          "note": "Advance payment before job started \u2014 covered Day 1 ($350) + $94 toward Day 2"
         }
       ]
     },
@@ -35,8 +35,8 @@
           "id": "pay-s001",
           "amount": 100,
           "date": "2026-04-11",
-          "note": "Cash \u2014 paid on the spot",
-          "method": "cash"
+          "method": "Cash",
+          "note": "Paid on the spot by Sparrow \u2014 unprompted"
         }
       ]
     }

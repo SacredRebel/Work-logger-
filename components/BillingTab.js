@@ -143,11 +143,13 @@ export default function BillingTab({ project, entries, onMarkPaid }) {
                 style={{ width: '100%', padding: '10px 12px', borderRadius: 10, border: '1px solid var(--bdr)',
                   background: 'var(--s2)', color: 'var(--t1)', fontFamily: 'inherit', fontSize: 13,
                   fontWeight: 600, outline: 'none' }}>
-                <option value="cash">Cash</option>
-                <option value="venmo">Venmo</option>
-                <option value="zelle">Zelle</option>
-                <option value="check">Check</option>
-                <option value="other">Other</option>
+                <option value="Cash">Cash</option>
+                <option value="ACH Transfer">ACH Transfer</option>
+                <option value="Venmo">Venmo</option>
+                <option value="Zelle">Zelle</option>
+                <option value="Check">Check</option>
+                <option value="PayPal">PayPal</option>
+                <option value="Other">Other</option>
               </select>
             </div>
           </div>
@@ -156,7 +158,7 @@ export default function BillingTab({ project, entries, onMarkPaid }) {
               letterSpacing: '0.08em', marginBottom: 6 }}>Note (optional)</div>
             <input
               type="text"
-              placeholder="e.g. Week 1 payment"
+              placeholder="e.g. Week 1 — Days 3,4,5"
               value={payNote}
               onChange={e => setPayNote(e.target.value)}
               style={{ width: '100%', padding: '10px 12px', borderRadius: 10, border: '1px solid var(--bdr)',
@@ -183,19 +185,31 @@ export default function BillingTab({ project, entries, onMarkPaid }) {
           <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--t4)', textTransform: 'uppercase',
             letterSpacing: '0.08em', marginBottom: 10 }}>Payment History</div>
           {payments.map((p, i) => (
-            <div key={p.id} style={{ background: 'var(--s1)', border: '1px solid rgba(34,197,94,0.2)',
-              borderRadius: 12, padding: '12px 14px', marginBottom: 8,
-              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-              boxShadow: 'var(--shd)' }}>
-              <div>
-                <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--t1)' }}>{p.note}</div>
-                <div style={{ fontSize: 11, color: 'var(--t3)', marginTop: 2 }}>
-                  {fmtShort(p.date)} · {p.method}
+            <div key={p.id} style={{ background: 'var(--s1)', border: '1px solid rgba(34,197,94,0.22)',
+              borderRadius: 14, padding: '14px', marginBottom: 8, boxShadow: 'var(--shd)' }}>
+              {/* Top row — amount + method badge */}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                <div style={{ fontSize: 22, fontWeight: 800, color: '#22C55E', letterSpacing: '-0.04em', fontFamily: 'var(--mono)' }}>
+                  +${p.amount.toFixed(2)}
                 </div>
+                <span style={{ fontSize: 11, fontWeight: 700, padding: '4px 10px', borderRadius: 9999,
+                  background: 'rgba(34,197,94,0.12)', color: '#22C55E', letterSpacing: '0.02em' }}>
+                  {p.method}
+                </span>
               </div>
-              <div style={{ fontSize: 16, fontWeight: 800, color: '#22C55E', letterSpacing: '-0.02em' }}>
-                +${p.amount.toFixed(2)}
+              {/* Date row */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: p.note ? 8 : 0 }}>
+                <span style={{ fontSize: 12, color: 'var(--t3)', fontWeight: 600 }}>
+                  📅 {new Date(p.date + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'short', month: 'long', day: 'numeric', year: 'numeric' })}
+                </span>
               </div>
+              {/* Note */}
+              {p.note && (
+                <div style={{ fontSize: 12, color: 'var(--t3)', lineHeight: 1.5, paddingTop: 8,
+                  borderTop: '1px solid var(--bdr)', marginTop: 0 }}>
+                  {p.note}
+                </div>
+              )}
             </div>
           ))}
         </div>
