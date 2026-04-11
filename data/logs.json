@@ -9,7 +9,16 @@
       "rate": 50,
       "startDate": "2026-04-07",
       "status": "active",
-      "description": "Interior painting job \u2014 office room prep, window frames, door frames, full paint"
+      "description": "Interior painting job \u2014 office room prep, window frames, door frames, full paint",
+      "payments": [
+        {
+          "id": "pay-001",
+          "amount": 444,
+          "date": "2026-04-01",
+          "note": "Advance payment before job started",
+          "method": "cash"
+        }
+      ]
     },
     {
       "id": "helping-sparrow-camper",
@@ -20,7 +29,16 @@
       "rate": 0,
       "startDate": "2026-04-11",
       "status": "completed",
-      "description": "Helped Sparrow get her bed situated in her camper"
+      "description": "Helped Sparrow get her bed situated in her camper",
+      "payments": [
+        {
+          "id": "pay-s001",
+          "amount": 100,
+          "date": "2026-04-11",
+          "note": "Cash \u2014 paid on the spot",
+          "method": "cash"
+        }
+      ]
     }
   ],
   "categories": [
@@ -554,7 +572,9 @@
           ]
         }
       ],
-      "images": []
+      "images": [],
+      "paid": true,
+      "paidDate": "2026-04-11"
     },
     {
       "date": "2026-04-11",

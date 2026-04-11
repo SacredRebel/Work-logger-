@@ -32,6 +32,15 @@ export default async function handler(req, res) {
     }
   }
 
+  // Add payment to project
+  if (action === 'add-payment') {
+    const proj = current.projects.find(p => p.id === payload.projectId);
+    if (proj) {
+      proj.payments = proj.payments || [];
+      proj.payments.push(payload.payment);
+    }
+  }
+
   // Update hours/earned/notes at end of day
   if (action === 'update-entry') {
     const idx = current.entries.findIndex(e => e.date === payload.date && e.project === payload.project);

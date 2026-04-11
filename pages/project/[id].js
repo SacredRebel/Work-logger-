@@ -4,6 +4,7 @@ import Link from 'next/link';
 import NotesRenderer from '../../components/NotesRenderer';
 import PhotoUploader from '../../components/PhotoUploader';
 import Lightbox from '../../components/Lightbox';
+import BillingTab from '../../components/BillingTab';
 import { useLogs, fmtDate, fmtShort, totalHours, totalEarned, getCatStyle, getStreak, getWeekRange, todayStr } from '../../lib/data';
 
 /* ── Heatmap ─────────────────────────────────────────────── */
@@ -429,7 +430,7 @@ export default function ProjectDetail() {
         {/* Tabs */}
         <div style={{display:'flex',background:'var(--s2)',borderRadius:14,padding:'3px',gap:2,
           marginBottom:18,border:'1px solid var(--bdr)'}}>
-          {[{key:'log',label:`Work Log (${pEntries.length})`},{key:'photos',label:`Photos${totalImgs>0?` (${totalImgs})`:''}`}].map(({key,label})=>(
+          {[{key:'log',label:`Work Log (${pEntries.length})`},{key:'photos',label:`Photos${totalImgs>0?` (${totalImgs})`:''}`},{key:'billing',label:'💰 Billing'}].map(({key,label})=>(
             <button key={key} onClick={()=>setTab(key)} style={{
               flex:1,padding:'8px 0',borderRadius:11,fontSize:12,fontWeight:700,
               fontFamily:'inherit',border:'none',cursor:'pointer',
@@ -452,6 +453,7 @@ export default function ProjectDetail() {
         )))}
 
         {tab==='photos'&&<PhotosTab entries={pEntries} color={color} projectId={id}/>}
+        {tab==='billing'&&<BillingTab project={project} entries={pEntries} onMarkPaid={refresh}/>}
       </main>
 
       <nav className="bnav">
