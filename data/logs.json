@@ -580,10 +580,10 @@
       "date": "2026-04-11",
       "project": "chers-house-painting-job",
       "category": "prep",
-      "hours": 0,
+      "hours": 6.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 5 \u2014 Finish sanding second side of door",
+      "earned": 325,
+      "tasks": "Day 5 \u2014 Sanding the door (almost complete)",
       "sections": [
         {
           "title": "Location",
@@ -595,22 +595,25 @@
           "title": "Schedule",
           "items": [
             "Started: 12:00 PM",
-            "End time: TBD"
+            "Finished: 6:30 PM",
+            "No breaks",
+            "Billable: 6.5 hours"
           ]
         },
         {
-          "title": "Today's Plan",
+          "title": "Work Completed",
           "items": [
-            "Finish sanding second side of the upstairs door",
-            "Yesterday: completed first side \u2705",
-            "Today: complete second side"
+            "Continued sanding the upstairs door",
+            "Almost finished \u2014 one surface remaining",
+            "Final surface to be completed Monday"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 started 12:00 PM",
-            "Hours and earnings to be finalized at end of day"
+            "6.5 hrs \u00d7 $50/hr = $325.00 earned",
+            "Door: ~95% complete \u2705",
+            "Remaining: 1 surface \u2014 Monday"
           ]
         }
       ],
