@@ -89,6 +89,17 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
       <img src={img.url} alt={img.type} loading="lazy"
         style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}
         onError={e=>{e.target.style.display='none';}}/>
+      {/* Before/After corner badge */}
+      <div style={{position:'absolute',top:6,
+        left: img.type==='before' ? 6 : 'auto',
+        right: img.type==='after'  ? 6 : 'auto',
+        background: img.type==='before' ? 'rgba(251,191,36,0.92)' : 'rgba(34,197,94,0.92)',
+        backdropFilter:'blur(4px)',
+        color:'#fff',fontSize:8,fontWeight:900,letterSpacing:'0.10em',
+        textTransform:'uppercase',padding:'3px 7px',borderRadius:9999,
+        boxShadow:'0 1px 4px rgba(0,0,0,0.2)'}}>
+        {img.type==='before' ? 'Before' : 'After'}
+      </div>
     </div>
   );
 
@@ -361,9 +372,15 @@ function PhotosTab({ entries: initialEntries, color, projectId }) {
                     <img src={img.url} alt={label} loading="lazy"
                       style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}
                       onError={e=>{e.target.style.display='none';}}/>
-                    <div style={{position:'absolute',top:7,left:7,background:tagBg,
-                      color:'#fff',fontSize:9,fontWeight:800,letterSpacing:'0.08em',
-                      textTransform:'uppercase',padding:'3px 8px',borderRadius:9999}}>
+                    <div style={{position:'absolute',
+                      left: label==='Before' ? 7 : 'auto',
+                      right: label==='After'  ? 7 : 'auto',
+                      top:7,
+                      background:tagBg,
+                      backdropFilter:'blur(4px)',
+                      color:'#fff',fontSize:8,fontWeight:900,letterSpacing:'0.10em',
+                      textTransform:'uppercase',padding:'3px 7px',borderRadius:9999,
+                      boxShadow:'0 1px 4px rgba(0,0,0,0.2)'}}>
                       {label}
                     </div>
                   </div>
