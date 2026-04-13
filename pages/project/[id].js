@@ -55,83 +55,94 @@ function Heatmap({ entries, color }) {
   );
 }
 
-/* ── Image grid with local state for instant delete ──────── */
+/* ── Image grid — grouped, Before left / After right ──────── */
 function ImageGrid({ images: initialImages, color, projectId, date, onImageDeleted }) {
   const [images, setImages] = useState(initialImages);
-  const [view, setView] = useState('all'); // 'all' | 'before' | 'after'
-  const [lbIdx, setLbIdx] = useState(null);
+  const [lb, setLb] = useState(null);
 
-  // Sync whenever parent images change (new uploads or deletes from server)
   const initKey = initialImages.map(i=>i.url).join(',');
   const localKey = images.map(i=>i.url).join(',');
-  if (initKey !== localKey && initialImages.length >= images.length) {
-    // Parent has fresher or equal data — use it (preserves local deletes if parent is shorter)
-    setImages(initialImages);
-  }
-
-  const before = images.filter(i=>i.type==='before');
-  const after  = images.filter(i=>i.type==='after');
-  const hasBoth = before.length > 0 && after.length > 0;
-
-  const displayed = view==='before' ? before : view==='after' ? after : [...before,...after];
+  if (initKey !== localKey && initialImages.length >= images.length) setImages(initialImages);
 
   function handleDelete(url) {
     setImages(prev => prev.filter(i => i.url !== url));
-    setLbIdx(null);
+    setLb(null);
     if (onImageDeleted) onImageDeleted(url);
   }
 
   if (!images.length) return null;
 
-  const tagBg = (type) => type==='before' ? 'rgba(251,191,36,0.88)' : 'rgba(34,197,94,0.88)';
+  // Group by image.group or image.caption
+  const groupMap = {};
+  images.forEach(img => {
+    const key = img.group || img.caption || 'Photos';
+    if (!groupMap[key]) groupMap[key] = { before: [], after: [] };
+    if (img.type === 'before') groupMap[key].before.push(img);
+    else groupMap[key].after.push(img);
+  });
+  const groups = Object.entries(groupMap);
+
+  const Thumb = ({img, onClick, border}) => (
+    <div onClick={onClick} style={{position:'relative',borderRadius:12,overflow:'hidden',
+      aspectRatio:'4/3',background:'var(--s3)',cursor:'pointer',
+      boxShadow:'0 2px 10px rgba(0,0,0,0.12)',border}}>
+      <img src={img.url} alt={img.type} loading="lazy"
+        style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}
+        onError={e=>{e.target.style.display='none';}}/>
+    </div>
+  );
+
+  const Empty = ({color:c, label}) => (
+    <div style={{aspectRatio:'4/3',borderRadius:12,border:`1.5px dashed ${c}30`,
+      background:`${c}04`,display:'flex',alignItems:'center',justifyContent:'center',
+      flexDirection:'column',gap:4}}>
+      <span style={{fontSize:16,opacity:0.25}}>{label==='before'?'📸':'✅'}</span>
+      <span style={{fontSize:9,color:'var(--t4)',fontWeight:600}}>No {label}</span>
+    </div>
+  );
 
   return (
-    <div>
-      {/* Toggle buttons — only show if both types exist */}
-      {hasBoth && (
-        <div style={{display:'flex',gap:6,marginBottom:12,background:'var(--s3)',
-          padding:3,borderRadius:12,border:'1px solid var(--bdr)'}}>
-          {[{k:'all',label:`All (${images.length})`},{k:'before',label:`Before (${before.length})`},{k:'after',label:`After (${after.length})`}].map(({k,label})=>(
-            <button key={k} onClick={()=>setView(k)} style={{
-              flex:1,padding:'7px 4px',borderRadius:9,border:'none',cursor:'pointer',
-              fontFamily:'inherit',fontSize:11,fontWeight:700,transition:'all 0.18s',
-              background:view===k ? (k==='before'?'#FBBF24':k==='after'?'#22C55E':color) : 'transparent',
-              color:view===k ? '#fff' : 'var(--t3)',
-              boxShadow:view===k?'0 1px 6px rgba(0,0,0,0.15)':'none',
-            }}>{label}</button>
-          ))}
-        </div>
-      )}
-
-      {/* Image grid */}
-      <div style={{display:'grid',gridTemplateColumns:displayed.length===1?'1fr':'1fr 1fr',gap:8}}>
-        {displayed.map((img,idx)=>(
-          <div key={img.url} onClick={()=>setLbIdx(idx)}
-            style={{position:'relative',borderRadius:14,overflow:'hidden',
-              aspectRatio:displayed.length===1?'16/9':'4/3',background:'var(--s3)',
-              cursor:'pointer',boxShadow:'0 2px 12px rgba(0,0,0,0.15)'}}>
-            <img src={img.url} alt={img.type} loading="lazy"
-              style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}
-              onError={e=>{e.target.style.display='none';}}
-            />
-            <div style={{position:'absolute',top:7,left:7,background:tagBg(img.type),
-              color:'#fff',fontSize:9,fontWeight:800,letterSpacing:'0.08em',
-              textTransform:'uppercase',padding:'3px 8px',borderRadius:9999}}>
-              {img.type}
+    <div style={{display:'flex',flexDirection:'column',gap:18}}>
+      {groups.map(([groupName, {before, after}]) => {
+        const allInGroup = [...before,...after];
+        return (
+          <div key={groupName}>
+            {/* Group header */}
+            <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:8}}>
+              <div style={{width:3,height:14,background:color,borderRadius:2}}/>
+              <span style={{fontSize:12,fontWeight:800,color:'var(--t1)'}}>{groupName}</span>
+              <span style={{fontSize:10,color:'var(--t4)'}}>
+                {before.length>0&&`${before.length}B`}
+                {before.length>0&&after.length>0&&' · '}
+                {after.length>0&&`${after.length}A`}
+              </span>
+            </div>
+            {/* Column headers */}
+            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,marginBottom:5}}>
+              <div style={{fontSize:9,fontWeight:800,color:'#FBBF24',textTransform:'uppercase',
+                letterSpacing:'0.08em',textAlign:'center'}}>Before</div>
+              <div style={{fontSize:9,fontWeight:800,color:'#22C55E',textTransform:'uppercase',
+                letterSpacing:'0.08em',textAlign:'center'}}>After</div>
+            </div>
+            {/* Images — before left, after right */}
+            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8}}>
+              <div style={{display:'flex',flexDirection:'column',gap:6}}>
+                {before.length>0
+                  ? before.map((img,i) => <Thumb key={img.url} img={img} border="1.5px solid rgba(251,191,36,0.3)" onClick={()=>setLb({images:allInGroup,startIdx:i})}/>)
+                  : <Empty color="#FBBF24" label="before"/>}
+              </div>
+              <div style={{display:'flex',flexDirection:'column',gap:6}}>
+                {after.length>0
+                  ? after.map((img,i) => <Thumb key={img.url} img={img} border="1.5px solid rgba(34,197,94,0.3)" onClick={()=>setLb({images:allInGroup,startIdx:before.length+i})}/>)
+                  : <Empty color="#22C55E" label="after"/>}
+              </div>
             </div>
           </div>
-        ))}
-      </div>
-
-      {lbIdx !== null && (
-        <Lightbox
-          images={displayed}
-          startIndex={Math.min(lbIdx, displayed.length-1)}
-          onClose={()=>setLbIdx(null)}
-          onDelete={handleDelete}
-          projectId={projectId}
-          date={date}
-        />
+        );
+      })}
+      {lb && (
+        <Lightbox images={lb.images} startIndex={Math.min(lb.startIdx,lb.images.length-1)}
+          onClose={()=>setLb(null)} onDelete={handleDelete} projectId={projectId} date={date}/>
       )}
     </div>
   );
@@ -283,7 +294,7 @@ function EntryCard({ entry, categories, color, projectId, onRefresh, payStatus, 
 
             {/* Upload photos */}
             <div style={{borderTop:'1px solid var(--bdr)',paddingTop:14}}>
-              <PhotoUploader projectId={projectId} date={entry.date} accentColor={color} onUploaded={(newImgs) => {
+              <PhotoUploader projectId={projectId} date={entry.date} accentColor={color} existingGroups={[...new Set((entry.images||[]).map(i=>i.group||i.caption).filter(Boolean))]} onUploaded={(newImgs) => {
                 entry.images = [...(entry.images||[]), ...newImgs];
                 onRefresh();
               }}/>
