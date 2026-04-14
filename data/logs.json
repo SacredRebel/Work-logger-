@@ -830,8 +830,9 @@
           "title": "Schedule",
           "items": [
             "Started: 9:00 AM",
-            "Break: 10:00 AM \u2014 10:20 AM (20 min)",
-            "Back at it: 10:20 AM",
+            "Break 1: 10:00 AM \u2014 10:20 AM (20 min)",
+            "Break 2: 1:40 PM \u2014 2:00 PM (20 min lunch)",
+            "Back at it: 2:00 PM",
             "End time: TBD"
           ]
         },
