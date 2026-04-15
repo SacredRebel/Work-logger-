@@ -815,9 +815,9 @@
       "date": "2026-04-14",
       "project": "chers-house-painting-job",
       "category": "prep",
-      "hours": 9.33,
+      "hours": 9.5,
       "rate": 50,
-      "earned": 466.5,
+      "earned": 475,
       "tasks": "Day 7 \u2014 Door #2 done, Door #3 both sides sanded",
       "sections": [
         {
@@ -830,10 +830,10 @@
           "title": "Schedule",
           "items": [
             "Started: 9:00 AM",
-            "Break 1: 10:00 AM \u2014 10:20 AM (20 min)",
+            "Break 1: 10:00 AM \u2014 10:10 AM (10 min smoke)",
             "Break 2: 1:40 PM \u2014 2:00 PM (20 min lunch)",
             "Finished: 7:00 PM",
-            "On site: 10 hrs \u2014 breaks: 40 min \u2014 billable: 9h 20min"
+            "On site: 10 hrs \u2014 breaks: 30 min \u2014 billable: 9.5 hrs"
           ]
         },
         {
@@ -856,7 +856,7 @@
         {
           "title": "Summary",
           "items": [
-            "9h 20min billable \u00d7 $50/hr = $466.50 earned",
+            "9.5 hrs billable \u00d7 $50/hr = $475.00 earned",
             "Door #2: 100% complete \u2705",
             "Door #3: both sides sanded \u2014 detail hand sanding tomorrow"
           ]
