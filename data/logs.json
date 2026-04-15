@@ -818,7 +818,7 @@
       "hours": 0,
       "rate": 50,
       "earned": 0,
-      "tasks": "Day 7 \u2014 Door #2 complete, working on Door #3 (bedroom)",
+      "tasks": "Day 7 \u2014 Door #2 done, Door #3 side 1 done, working on side 2",
       "sections": [
         {
           "title": "Location",
@@ -841,14 +841,15 @@
           "items": [
             "9:00 AM \u2014 Started finishing Door #2 (2 remaining squares)",
             "10:00 AM \u2014 Door #2 fully complete \u2705",
-            "10:00 AM \u2014 Started on Door #3 (Cher's bedroom door \u2014 downstairs)",
-            "Before pictures taken for Door #3"
+            "10:20 AM \u2014 Started on Door #3 (Cher's bedroom door \u2014 downstairs)",
+            "5:30 PM \u2014 Door #3 side 1 complete \u2705",
+            "5:30 PM \u2014 Now working on Door #3 side 2"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 sanding Door #3",
+            "\ud83d\udfe2 In progress \u2014 sanding Door #3 side 2",
             "Hours and earnings to be finalized at end of day"
           ]
         }
