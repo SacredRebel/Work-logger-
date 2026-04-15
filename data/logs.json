@@ -956,7 +956,8 @@
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Lunch break: 1:40 PM \u2014 TBD",
+            "Lunch break: 1:40 PM \u2014 2:00 PM (20 min)",
+            "Back at it: 2:00 PM",
             "End time: TBD"
           ]
         },
@@ -971,7 +972,7 @@
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe1 Lunch break since 1:40 PM",
+            "\ud83d\udfe2 Back at it since 2:00 PM",
             "Door #3: 100% complete \u2705"
           ]
         }
