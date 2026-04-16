@@ -1067,7 +1067,7 @@
       "hours": 0,
       "rate": 50,
       "earned": 0,
-      "tasks": "Day 9 \u2014 Door #4 side 1 hand sanded, afternoon project TBD",
+      "tasks": "Day 9 \u2014 Door #4 side 1 done, prepping office room ceiling for paint",
       "sections": [
         {
           "title": "Location",
@@ -1090,13 +1090,14 @@
             "9:30 AM \u2014 Started hand sanding Door #4",
             "1:00 PM \u2014 Side 1 fully hand sanded \u2705",
             "1:00 PM \u2014 Lunch break (30 min)",
-            "1:30 PM \u2014 Back at it, switching to new project (TBD)"
+            "1:30 PM \u2014 Moved to office room upstairs",
+            "1:30 PM \u2014 Preparing office room ceiling for painting"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 Back at it since 1:30 PM \u2014 new project TBD",
+            "\ud83d\udfe2 In progress \u2014 prepping office room ceiling for paint",
             "Door #4 side 2: hand sanding continues tomorrow morning"
           ]
         }
