@@ -1064,15 +1064,15 @@
       "date": "2026-04-16",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 8,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 9 \u2014 Door #4 side 1 done, office room ceiling prepped & painting started",
+      "earned": 400,
+      "tasks": "Day 9 \u2014 Door #4 side 1, office ceiling prepped & first coat painted",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house \u2014 Door #4 (upstairs bathroom)"
+            "Cher's house \u2014 Door #4 (upstairs bathroom) & Office room (upstairs)"
           ]
         },
         {
@@ -1080,26 +1080,31 @@
           "items": [
             "Started: 9:30 AM",
             "Lunch break: 1:00 PM \u2014 1:30 PM (30 min)",
-            "Back at it: 1:30 PM",
-            "End time: TBD"
+            "Finished: 6:00 PM",
+            "On site: 8.5 hrs \u2014 breaks: 30 min \u2014 billable: 8 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Morning \u2014 Door #4",
           "items": [
-            "9:30 AM \u2014 Started hand sanding Door #4",
-            "1:00 PM \u2014 Side 1 fully hand sanded \u2705",
-            "1:00 PM \u2014 Lunch break (30 min)",
-            "1:30 PM \u2014 Moved to office room upstairs",
-            "1:30 PM \u2014 Prepping office room ceiling for paint",
-            "4:00 PM \u2014 Started painting office room ceiling \ud83c\udfa8"
+            "Hand sanded side 1 of Door #4 (upstairs bathroom) \u2705",
+            "Side 2 to be completed tomorrow morning"
           ]
         },
         {
-          "title": "Status",
+          "title": "Afternoon \u2014 Office Room Ceiling",
           "items": [
-            "\ud83c\udfa8 Painting in progress \u2014 office room ceiling",
-            "Door #4 side 2: hand sanding continues tomorrow morning"
+            "1:30 PM \u2014 Prepped office room ceiling for paint",
+            "4:00 PM \u2014 Started painting ceiling \ud83c\udfa8",
+            "6:00 PM \u2014 First coat complete \u2705"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "8 hrs billable \u00d7 $50/hr = $400.00 earned",
+            "Door #4 side 1: hand sanded \u2705 \u2014 side 2 tomorrow",
+            "Office room ceiling: first coat done \u2705"
           ]
         }
       ],
