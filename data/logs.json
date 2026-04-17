@@ -1214,7 +1214,7 @@
       "hours": 0,
       "rate": 50,
       "earned": 0,
-      "tasks": "Day 10 \u2014 Office room ceiling coat #2 done, continuing TBD",
+      "tasks": "Day 10 \u2014 Ceiling coat #2 done, finishing Door #4 final side",
       "sections": [
         {
           "title": "Location",
@@ -1233,14 +1233,15 @@
           "title": "Progress",
           "items": [
             "9:30 AM \u2014 Started painting office room ceiling coat #2 \ud83c\udfa8",
-            "11:00 AM \u2014 Coat #2 complete \u2705"
+            "11:00 AM \u2014 Coat #2 complete \u2705 \u2014 office room ceiling done",
+            "11:00 AM \u2014 Started hand sanding Door #4 side 2 (final side)"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 Ceiling coat #2 done \u2014 office room ceiling complete \u2705",
-            "Continuing with next task TBD"
+            "\ud83d\udfe2 In progress \u2014 finishing Door #4 side 2 hand sanding",
+            "Office room ceiling: 100% complete \u2705"
           ]
         }
       ],
