@@ -1329,7 +1329,7 @@
       "hours": 0,
       "rate": 50,
       "earned": 0,
-      "tasks": "Day 11 \u2014 Bathroom walls coat #1 done, break while drying",
+      "tasks": "Day 11 \u2014 Bathroom 2 coats done, now painting office room walls",
       "sections": [
         {
           "title": "Location",
@@ -1341,24 +1341,27 @@
           "title": "Schedule",
           "items": [
             "Started: 9:45 AM",
+            "Break: 11:30 AM \u2014 12:30 PM (1 hour \u2014 smoke & lunch)",
+            "Back at it: 12:30 PM",
             "End time: TBD"
           ]
         },
         {
           "title": "Progress",
           "items": [
-            "9:45 AM \u2014 Started prepping floor in upstairs office bathroom",
-            "10:00 AM \u2014 Floor prep complete \u2705 (15 min)",
+            "9:45 AM \u2014 Prepped floor in upstairs office bathroom",
             "10:00 AM \u2014 Started painting office bathroom walls \ud83c\udfa8",
             "11:30 AM \u2014 Bathroom walls coat #1 complete \u2705",
-            "11:30 AM \u2014 Letting dry, smoke & lunch break"
+            "11:30 AM \u2014 Break (smoke & lunch, 1 hour)",
+            "12:30 PM \u2014 Back at it \u2014 painted office bathroom coat #2 \ud83c\udfa8",
+            "12:30 PM \u2014 Now moving to paint office room walls \ud83c\udfa8"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe1 On break \u2014 letting coat #1 dry",
-            "Next step TBD \u2014 will update shortly"
+            "\ud83c\udfa8 In progress \u2014 painting office room walls",
+            "Office bathroom: coat #2 done \u2705"
           ]
         }
       ],
