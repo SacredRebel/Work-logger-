@@ -1218,15 +1218,15 @@
       "date": "2026-04-17",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 8,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 10 \u2014 Door #4 done, ceiling coat #2 & #3 in progress",
+      "earned": 400,
+      "tasks": "Day 10 \u2014 All 4 doors done, office ceiling 3 coats complete",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house \u2014 Office room (upstairs)"
+            "Cher's house \u2014 Door #4 (upstairs bathroom) & Office room ceiling"
           ]
         },
         {
@@ -1235,24 +1235,39 @@
             "Started: 9:30 AM",
             "Lunch break: 3:00 PM \u2014 3:20 PM (20 min)",
             "Smoke break: 4:45 PM \u2014 4:55 PM (10 min)",
-            "End time: TBD"
+            "Finished: 6:00 PM",
+            "On site: 8.5 hrs \u2014 breaks: 30 min \u2014 billable: 8 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Morning \u2014 Ceiling Coat #2",
           "items": [
-            "9:30 AM \u2014 Started painting office room ceiling coat #2 \ud83c\udfa8",
-            "11:00 AM \u2014 Coat #2 complete \u2705 \u2014 office room ceiling done",
-            "11:00 AM \u2014 Started hand sanding Door #4 side 2 (final side)",
-            "4:45 PM \u2014 Door #4 fully complete \u2705 \u2014 all 4 doors done!",
-            "4:55 PM \u2014 Back upstairs, starting office room ceiling coat #3 \ud83c\udfa8"
+            "9:30 AM \u2014 Painted office room ceiling coat #2 \ud83c\udfa8",
+            "11:00 AM \u2014 Coat #2 complete \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Midday \u2014 Door #4 Final",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 painting office room ceiling coat #3",
-            "All 4 doors: 100% complete \u2705"
+            "11:00 AM \u2014 Started hand sanding Door #4 side 2",
+            "4:45 PM \u2014 Door #4 fully complete \u2705",
+            "All 4 doors 100% done \u2705"
+          ]
+        },
+        {
+          "title": "Afternoon \u2014 Ceiling Coat #3",
+          "items": [
+            "4:55 PM \u2014 Started office room ceiling coat #3 \ud83c\udfa8",
+            "6:00 PM \u2014 Coat #3 complete \u2705",
+            "Office room ceiling fully painted \u2014 3 coats done \u2705"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "8 hrs billable \u00d7 $50/hr = $400.00 earned",
+            "All 4 doors: 100% complete \u2705",
+            "Office room ceiling: 3 coats done \u2705"
           ]
         }
       ],
