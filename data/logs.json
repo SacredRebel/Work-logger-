@@ -158,7 +158,14 @@
           "caption": "Day Work",
           "group": "Day Work"
         }
-      ]
+      ],
+      "timesheet": {
+        "start": "9:30",
+        "end": "18:00",
+        "onSite": 8.5,
+        "breaks": 2.0,
+        "billable": 7.0
+      }
     },
     {
       "date": "2026-04-08",
@@ -341,7 +348,14 @@
           "caption": "Day Work",
           "group": "Day Work"
         }
-      ]
+      ],
+      "timesheet": {
+        "start": "10:00",
+        "end": "18:00",
+        "onSite": 8.0,
+        "breaks": 2.0,
+        "billable": 7.0
+      }
     },
     {
       "date": "2026-04-09",
@@ -510,7 +524,14 @@
           "caption": "Day Work",
           "group": "Day Work"
         }
-      ]
+      ],
+      "timesheet": {
+        "start": "9:30",
+        "end": "18:00",
+        "onSite": 8.5,
+        "breaks": 1.0,
+        "billable": 7.5
+      }
     },
     {
       "date": "2026-04-10",
@@ -595,7 +616,14 @@
           "caption": "Day Work",
           "group": "Day Work"
         }
-      ]
+      ],
+      "timesheet": {
+        "start": "9:45",
+        "end": "18:30",
+        "onSite": 8.75,
+        "breaks": 0.5,
+        "billable": 8.25
+      }
     },
     {
       "date": "2026-04-11",
@@ -693,7 +721,14 @@
           "caption": "Day Work",
           "group": "Day Work"
         }
-      ]
+      ],
+      "timesheet": {
+        "start": "12:00",
+        "end": "18:30",
+        "onSite": 6.5,
+        "breaks": 0.0,
+        "billable": 6.5
+      }
     },
     {
       "date": "2026-04-13",
@@ -816,7 +851,14 @@
           "caption": "Door 2",
           "group": "Door 2"
         }
-      ]
+      ],
+      "timesheet": {
+        "start": "9:00",
+        "end": "19:30",
+        "onSite": 10.5,
+        "breaks": 0.5,
+        "billable": 10.0
+      }
     },
     {
       "date": "2026-04-14",
@@ -942,7 +984,14 @@
           "caption": "Door 3",
           "group": "Door 3"
         }
-      ]
+      ],
+      "timesheet": {
+        "start": "9:00",
+        "end": "19:00",
+        "onSite": 10.0,
+        "breaks": 0.5,
+        "billable": 9.5
+      }
     },
     {
       "date": "2026-04-15",
@@ -1065,7 +1114,14 @@
           "caption": "Door 4",
           "group": "Door 4"
         }
-      ]
+      ],
+      "timesheet": {
+        "start": "9:30",
+        "end": "18:00",
+        "onSite": 8.5,
+        "breaks": 0.5,
+        "billable": 8.0
+      }
     },
     {
       "date": "2026-04-16",
@@ -1212,7 +1268,14 @@
           "caption": "Office ceiling",
           "group": "Office ceiling"
         }
-      ]
+      ],
+      "timesheet": {
+        "start": "9:30",
+        "end": "18:00",
+        "onSite": 8.5,
+        "breaks": 0.5,
+        "billable": 8.0
+      }
     },
     {
       "date": "2026-04-17",
@@ -1320,7 +1383,14 @@
           "caption": "Office ceiling coat 3",
           "group": "Office ceiling coat 3"
         }
-      ]
+      ],
+      "timesheet": {
+        "start": "9:30",
+        "end": "18:00",
+        "onSite": 8.5,
+        "breaks": 0.5,
+        "billable": 8.0
+      }
     },
     {
       "date": "2026-04-18",
@@ -1432,7 +1502,14 @@
           "caption": "Office bathroom",
           "group": "Office bathroom"
         }
-      ]
+      ],
+      "timesheet": {
+        "start": "9:45",
+        "end": "17:00",
+        "onSite": 7.25,
+        "breaks": 1.25,
+        "billable": 6.0
+      }
     }
   ]
 }

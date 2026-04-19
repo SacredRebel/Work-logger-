@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import NotesRenderer from '../../components/NotesRenderer';
+import NotesRenderer, { TimesheetBadge } from '../../components/NotesRenderer';
 import PhotoUploader from '../../components/PhotoUploader';
 import Lightbox from '../../components/Lightbox';
 import BillingTab from '../../components/BillingTab';
@@ -229,6 +229,7 @@ function EntryCard({ entry, categories, color, projectId, onRefresh, payStatus, 
         <div style={{overflow:'hidden'}}>
           <div style={{borderTop:`1px solid ${color}20`,padding:'16px 16px 18px',display:'flex',flexDirection:'column',gap:16}}>
             {/* Notes */}
+            <TimesheetBadge timesheet={entry.timesheet}/>
             <NotesRenderer sections={entry.sections} notes={entry.notes} accentColor={color}/>
 
             {/* Payment section — always shown if entry has an earned amount */}
