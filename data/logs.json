@@ -1326,15 +1326,15 @@
       "date": "2026-04-18",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 6.25,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 11 \u2014 Bathroom 2 coats, ceiling coat #4, office room walls started",
+      "earned": 312.5,
+      "tasks": "Day 11 \u2014 Bathroom 2 coats, ceiling coat #4, office room edges & corners cut in",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house \u2014 Upstairs office bathroom"
+            "Cher's house \u2014 Office bathroom & Office room (upstairs)"
           ]
         },
         {
@@ -1342,28 +1342,41 @@
           "items": [
             "Started: 9:45 AM",
             "Break: 11:30 AM \u2014 12:30 PM (1 hour \u2014 smoke & lunch)",
-            "Back at it: 12:30 PM",
-            "End time: TBD"
+            "Finished: 5:00 PM",
+            "On site: 7.25 hrs \u2014 breaks: 1 hr \u2014 billable: 6.25 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Office Bathroom",
           "items": [
-            "9:45 AM \u2014 Prepped floor in upstairs office bathroom",
-            "10:00 AM \u2014 Started painting office bathroom walls \ud83c\udfa8",
-            "11:30 AM \u2014 Bathroom walls coat #1 complete \u2705",
-            "11:30 AM \u2014 Break (smoke & lunch, 1 hour)",
-            "12:30 PM \u2014 Painted office bathroom coat #2 \u2705",
-            "2:30 PM \u2014 Office ceiling coat #4 complete \u2705",
-            "2:30 PM \u2014 Started painting office room walls \ud83c\udfa8"
+            "9:45 AM \u2014 Prepped floor (15 min)",
+            "10:00 AM \u2014 Coat #1 painted \ud83c\udfa8",
+            "12:30 PM \u2014 Coat #2 painted \ud83c\udfa8",
+            "Office bathroom: 2 coats complete \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Office Room Ceiling",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 painting office room walls",
-            "Office bathroom: 2 coats done \u2705",
-            "Office ceiling: coat #4 done \u2705"
+            "2:30 PM \u2014 Coat #4 painted \ud83c\udfa8 \u2705"
+          ]
+        },
+        {
+          "title": "Office Room Walls \u2014 Cut In",
+          "items": [
+            "2:30 PM \u2014 Started cutting in edges and corners",
+            "Painted all edges, corners, around windows, doors and ceiling",
+            "Detail and precision work done \u2014 walls prepped for full roller coat",
+            "Full wall painting to follow on next session"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "6.25 hrs billable \u00d7 $50/hr = $312.50 earned",
+            "Office bathroom: 2 coats \u2705",
+            "Office ceiling: coat #4 \u2705",
+            "Office room walls: edges & corners cut in \u2705 \u2014 full coat next"
           ]
         }
       ],
