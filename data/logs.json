@@ -1326,9 +1326,9 @@
       "date": "2026-04-18",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 6.25,
+      "hours": 7,
       "rate": 50,
-      "earned": 312.5,
+      "earned": 350,
       "tasks": "Day 11 \u2014 Bathroom 2 coats, ceiling coat #4, office room edges & corners cut in",
       "sections": [
         {
@@ -1341,9 +1341,10 @@
           "title": "Schedule",
           "items": [
             "Started: 9:45 AM",
-            "Break: 11:30 AM \u2014 12:30 PM (1 hour \u2014 smoke & lunch)",
+            "Break 1: 11:30 AM \u2014 12:30 PM (1 hour \u2014 smoke & lunch)",
+            "Break 2: 2:15 PM \u2014 2:30 PM (15 min smoke)",
             "Finished: 5:00 PM",
-            "On site: 7.25 hrs \u2014 breaks: 1 hr \u2014 billable: 6.25 hrs"
+            "On site: 7.25 hrs \u2014 breaks: 1 hr 15 min \u2014 billable: 7 hrs"
           ]
         },
         {
@@ -1373,7 +1374,7 @@
         {
           "title": "Summary",
           "items": [
-            "6.25 hrs billable \u00d7 $50/hr = $312.50 earned",
+            "7 hrs billable \u00d7 $50/hr = $350.00 earned",
             "Office bathroom: 2 coats \u2705",
             "Office ceiling: coat #4 \u2705",
             "Office room walls: edges & corners cut in \u2705 \u2014 full coat next"
