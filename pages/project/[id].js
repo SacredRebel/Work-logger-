@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import NotesRenderer from '../../components/NotesRenderer';
@@ -59,6 +59,10 @@ function Heatmap({ entries, color }) {
 function ImageGrid({ images: initialImages, color, projectId, date, onImageDeleted }) {
   const [images, setImages] = useState(initialImages);
   const [lb, setLb] = useState(null);
+  const [reordering, setReordering] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const dragIdx = useRef(null);
+  const dragType = useRef(null);
 
   const initKey = initialImages.map(i=>i.url).join(',');
   const localKey = images.map(i=>i.url).join(',');
@@ -70,9 +74,42 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
     if (onImageDeleted) onImageDeleted(url);
   }
 
+  async function saveOrder(newImages) {
+    setSaving(true);
+    try {
+      await fetch('/api/update-log', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'reorder-images',
+          payload: { date, project: projectId, images: newImages }
+        })
+      });
+    } catch(e) {}
+    setSaving(false);
+  }
+
+  function moveImage(type, fromIdx, toIdx) {
+    setImages(prev => {
+      const typed = prev.filter(i => i.type === type);
+      const others = prev.filter(i => i.type !== type);
+      const moved = [...typed];
+      const [item] = moved.splice(fromIdx, 1);
+      moved.splice(toIdx, 0, item);
+      // Rebuild: preserve original interleaving order but replace typed array
+      const result = [];
+      let ti = 0;
+      prev.forEach(img => {
+        if (img.type === type) result.push(moved[ti++]);
+        else result.push(img);
+      });
+      saveOrder(result);
+      return result;
+    });
+  }
+
   if (!images.length) return null;
 
-  // Group by image.group or image.caption
   const groupMap = {};
   images.forEach(img => {
     const key = img.group || img.caption || 'Photos';
@@ -82,26 +119,74 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
   });
   const groups = Object.entries(groupMap);
 
-  const Thumb = ({img, onClick, border}) => (
-    <div onClick={onClick} style={{position:'relative',borderRadius:12,overflow:'hidden',
-      aspectRatio:'4/3',background:'var(--s3)',cursor:'pointer',
-      boxShadow:'0 2px 10px rgba(0,0,0,0.12)',border}}>
-      <img src={img.url} alt={img.type} loading="lazy"
-        style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}
-        onError={e=>{e.target.style.display='none';}}/>
-      {/* Before/After corner badge */}
-      <div style={{position:'absolute',top:6,
-        left: img.type==='before' ? 6 : 'auto',
-        right: img.type==='after'  ? 6 : 'auto',
-        background: img.type==='before' ? 'rgba(251,191,36,0.92)' : 'rgba(34,197,94,0.92)',
-        backdropFilter:'blur(4px)',
-        color:'#fff',fontSize:8,fontWeight:900,letterSpacing:'0.10em',
-        textTransform:'uppercase',padding:'3px 7px',borderRadius:9999,
-        boxShadow:'0 1px 4px rgba(0,0,0,0.2)'}}>
-        {img.type==='before' ? 'Before' : 'After'}
+  const SortableThumb = ({img, imgIdx, type, allInGroup, lbOffset, border}) => {
+    const [dragging, setDragging] = useState(false);
+
+    function onTouchStart(e) {
+      if (!reordering) return;
+      dragIdx.current = imgIdx;
+      dragType.current = type;
+      setDragging(true);
+      e.currentTarget.style.opacity = '0.5';
+      e.currentTarget.style.transform = 'scale(0.95)';
+    }
+    function onTouchEnd(e) {
+      if (!reordering) return;
+      setDragging(false);
+      e.currentTarget.style.opacity = '';
+      e.currentTarget.style.transform = '';
+      // Find drop target by touch position
+      const touch = e.changedTouches[0];
+      const el = document.elementFromPoint(touch.clientX, touch.clientY);
+      const target = el?.closest('[data-imgidx]');
+      if (target && target.dataset.imgtype === type) {
+        const toIdx = parseInt(target.dataset.imgidx);
+        if (toIdx !== dragIdx.current) moveImage(type, dragIdx.current, toIdx);
+      }
+      dragIdx.current = null;
+    }
+
+    return (
+      <div
+        data-imgidx={imgIdx}
+        data-imgtype={type}
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+        onClick={() => !reordering && setLb({images:allInGroup, startIdx:lbOffset+imgIdx})}
+        style={{position:'relative',borderRadius:12,overflow:'hidden',aspectRatio:'4/3',
+          background:'var(--s3)',cursor:reordering?'grab':'pointer',
+          boxShadow:'0 2px 10px rgba(0,0,0,0.12)',border,
+          transition:'opacity 0.15s, transform 0.15s',
+          userSelect:'none', WebkitUserSelect:'none'}}>
+        <img src={img.url} alt={img.type} loading="lazy"
+          style={{width:'100%',height:'100%',objectFit:'cover',display:'block',pointerEvents:'none'}}
+          onError={e=>{e.target.style.display='none';}}/>
+        {/* Before/After badge */}
+        <div style={{position:'absolute',top:6,
+          left:type==='before'?6:'auto', right:type==='after'?6:'auto',
+          background:type==='before'?'rgba(251,191,36,0.92)':'rgba(34,197,94,0.92)',
+          backdropFilter:'blur(4px)',color:'#fff',fontSize:8,fontWeight:900,
+          letterSpacing:'0.10em',textTransform:'uppercase',padding:'3px 7px',borderRadius:9999}}>
+          {type==='before'?'Before':'After'}
+        </div>
+        {/* Drag handle — only in reorder mode */}
+        {reordering && (
+          <div style={{position:'absolute',bottom:5,right:5,
+            background:'rgba(0,0,0,0.5)',borderRadius:6,padding:'3px 5px',
+            fontSize:12,color:'rgba(255,255,255,0.9)'}}>⠿</div>
+        )}
+        {/* Order number */}
+        {reordering && (
+          <div style={{position:'absolute',top:6,right:type==='before'?6:'auto',
+            left:type==='after'?6:'auto',
+            background:'rgba(0,0,0,0.6)',color:'#fff',fontSize:10,fontWeight:800,
+            width:20,height:20,borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center'}}>
+            {imgIdx+1}
+          </div>
+        )}
       </div>
-    </div>
-  );
+    );
+  };
 
   const Empty = ({color:c, label}) => (
     <div style={{aspectRatio:'4/3',borderRadius:12,border:`1.5px dashed ${c}30`,
@@ -118,33 +203,50 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
         const allInGroup = [...before,...after];
         return (
           <div key={groupName}>
-            {/* Group header */}
-            <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:8}}>
-              <div style={{width:3,height:14,background:color,borderRadius:2}}/>
-              <span style={{fontSize:12,fontWeight:800,color:'var(--t1)'}}>{groupName}</span>
-              <span style={{fontSize:10,color:'var(--t4)'}}>
-                {before.length>0&&`${before.length}B`}
-                {before.length>0&&after.length>0&&' · '}
-                {after.length>0&&`${after.length}A`}
-              </span>
+            {/* Group header + reorder toggle */}
+            <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:8}}>
+              <div style={{display:'flex',alignItems:'center',gap:8}}>
+                <div style={{width:3,height:14,background:color,borderRadius:2}}/>
+                <span style={{fontSize:12,fontWeight:800,color:'var(--t1)'}}>{groupName}</span>
+                <span style={{fontSize:10,color:'var(--t4)'}}>
+                  {before.length>0&&`${before.length}B`}
+                  {before.length>0&&after.length>0&&' · '}
+                  {after.length>0&&`${after.length}A`}
+                </span>
+              </div>
+              {allInGroup.length > 1 && (
+                <button onClick={()=>setReordering(r=>!r)} style={{
+                  fontSize:10,fontWeight:700,padding:'3px 9px',borderRadius:9999,
+                  border:`1px solid ${reordering?color:'var(--bdr)'}`,
+                  background:reordering?color:'transparent',
+                  color:reordering?'#fff':'var(--t3)',
+                  fontFamily:'inherit',cursor:'pointer',
+                  display:'flex',alignItems:'center',gap:4,
+                }}>
+                  {saving ? '💾 Saving…' : reordering ? '✓ Done' : '⠿ Reorder'}
+                </button>
+              )}
             </div>
+            {reordering && (
+              <div style={{fontSize:11,color:'var(--t3)',marginBottom:8,textAlign:'center'}}>
+                Hold & drag photos to reorder
+              </div>
+            )}
             {/* Column headers */}
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,marginBottom:5}}>
-              <div style={{fontSize:9,fontWeight:800,color:'#FBBF24',textTransform:'uppercase',
-                letterSpacing:'0.08em',textAlign:'center'}}>Before</div>
-              <div style={{fontSize:9,fontWeight:800,color:'#22C55E',textTransform:'uppercase',
-                letterSpacing:'0.08em',textAlign:'center'}}>After</div>
+              <div style={{fontSize:9,fontWeight:800,color:'#FBBF24',textTransform:'uppercase',letterSpacing:'0.08em',textAlign:'center'}}>Before</div>
+              <div style={{fontSize:9,fontWeight:800,color:'#22C55E',textTransform:'uppercase',letterSpacing:'0.08em',textAlign:'center'}}>After</div>
             </div>
-            {/* Images — before left, after right */}
+            {/* Images */}
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8}}>
               <div style={{display:'flex',flexDirection:'column',gap:6}}>
                 {before.length>0
-                  ? before.map((img,i) => <Thumb key={img.url} img={img} border="1.5px solid rgba(251,191,36,0.3)" onClick={()=>setLb({images:allInGroup,startIdx:i})}/>)
+                  ? before.map((img,i)=><SortableThumb key={img.url} img={img} imgIdx={i} type="before" allInGroup={allInGroup} lbOffset={0} border="1.5px solid rgba(251,191,36,0.3)"/>)
                   : <Empty color="#FBBF24" label="before"/>}
               </div>
               <div style={{display:'flex',flexDirection:'column',gap:6}}>
                 {after.length>0
-                  ? after.map((img,i) => <Thumb key={img.url} img={img} border="1.5px solid rgba(34,197,94,0.3)" onClick={()=>setLb({images:allInGroup,startIdx:before.length+i})}/>)
+                  ? after.map((img,i)=><SortableThumb key={img.url} img={img} imgIdx={i} type="after" allInGroup={allInGroup} lbOffset={before.length} border="1.5px solid rgba(34,197,94,0.3)"/>)
                   : <Empty color="#22C55E" label="after"/>}
               </div>
             </div>

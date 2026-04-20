@@ -41,6 +41,12 @@ export default async function handler(req, res) {
     }
   }
 
+  // Reorder images for an entry
+  if (action === 'reorder-images') {
+    const entry = current.entries.find(e => e.date === payload.date && e.project === payload.project);
+    if (entry) entry.images = payload.images;
+  }
+
   // Update hours/earned/notes at end of day
   if (action === 'update-entry') {
     const idx = current.entries.findIndex(e => e.date === payload.date && e.project === payload.project);
