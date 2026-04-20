@@ -1542,25 +1542,32 @@
       "hours": 0,
       "rate": 50,
       "earned": 0,
-      "tasks": "Day 12 \u2014 Continuing painting",
+      "tasks": "Day 12 \u2014 Painting office room walls",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house"
+            "Cher's house \u2014 Office room (upstairs)"
           ]
         },
         {
           "title": "Schedule",
           "items": [
-            "Started: 9:00 AM",
+            "Started: 9:30 AM",
             "End time: TBD"
+          ]
+        },
+        {
+          "title": "Today's Goal",
+          "items": [
+            "Paint the office room walls \ud83c\udfa8",
+            "Edges & corners already cut in from last session"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 started 9:00 AM",
+            "\ud83c\udfa8 In progress \u2014 painting office room walls",
             "Hours to be finalized at end of day"
           ]
         }
