@@ -72,24 +72,30 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
     if (onImageDeleted) onImageDeleted(url);
   }
 
-  async function moveImage(type, fromIdx, direction) {
+  function moveImage(type, fromIdx, direction) {
     const toIdx = fromIdx + direction;
-    setImages(prev => {
-      const typed = prev.filter(i => i.type === type);
-      if (toIdx < 0 || toIdx >= typed.length) return prev;
-      const moved = [...typed];
-      [moved[fromIdx], moved[toIdx]] = [moved[toIdx], moved[fromIdx]];
-      let ti = 0;
-      const result = prev.map(img => img.type === type ? moved[ti++] : img);
-      // Save to GitHub
-      setSaving(true);
-      fetch('/api/update-log', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'reorder-images', payload: { date, project: projectId, images: result } })
-      }).finally(() => setSaving(false));
-      return result;
-    });
+    // Build new array outside of setState
+    const typed = images.filter(i => i.type === type);
+    if (toIdx < 0 || toIdx >= typed.length) return;
+    const moved = [...typed];
+    [moved[fromIdx], moved[toIdx]] = [moved[toIdx], moved[fromIdx]];
+    let ti = 0;
+    const newImages = images.map(img => img.type === type ? moved[ti++] : img);
+    // Update UI immediately
+    setImages(newImages);
+    // Save to GitHub
+    setSaving(true);
+    fetch('/api/update-log', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        action: 'reorder-images',
+        payload: { date, project: projectId, images: newImages }
+      })
+    }).then(r => {
+      if (!r.ok) console.error('Save failed', r.status);
+    }).catch(e => console.error('Save error', e))
+    .finally(() => setSaving(false));
   }
 
   if (!images.length) return null;
@@ -202,14 +208,14 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8}}>
               <div style={{display:'flex',flexDirection:'column',gap:6}}>
                 {before.length>0
-                  ? before.map((img,i)=><Thumb key={img.url} img={img} imgIdx={i} type="before"
+                  ? before.map((img,i)=><Thumb key={img.url+i} img={img} imgIdx={i} type="before"
                       allInGroup={allInGroup} lbOffset={0} total={before.length}
                       border="1.5px solid rgba(251,191,36,0.3)"/>)
                   : <Empty color="#FBBF24" label="before"/>}
               </div>
               <div style={{display:'flex',flexDirection:'column',gap:6}}>
                 {after.length>0
-                  ? after.map((img,i)=><Thumb key={img.url} img={img} imgIdx={i} type="after"
+                  ? after.map((img,i)=><Thumb key={img.url+i} img={img} imgIdx={i} type="after"
                       allInGroup={allInGroup} lbOffset={before.length} total={after.length}
                       border="1.5px solid rgba(34,197,94,0.3)"/>)
                   : <Empty color="#22C55E" label="after"/>}
