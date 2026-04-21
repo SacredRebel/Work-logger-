@@ -1674,12 +1674,12 @@
       "hours": 0,
       "rate": 50,
       "earned": 0,
-      "tasks": "Day 13 \u2014 Office room fine finishing, hallway ceiling prep & continue",
+      "tasks": "Day 13 \u2014 Hallway ceiling done, office room patched, bathroom lower walls painting",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house \u2014 Office room & Hallway"
+            "Cher's house \u2014 Hallway, Office room, Office bathroom"
           ]
         },
         {
@@ -1692,16 +1692,24 @@
           ]
         },
         {
-          "title": "Today's Plan",
+          "title": "Completed",
           "items": [
-            "Office room \u2014 patching and fine finishing details",
-            "Hallway \u2014 clearing, prepping and continuing ceiling"
+            "Finished hallway ceiling coat #1 \u2705 \ud83c\udfa8",
+            "Prepped hallway stairs further down with drop cloths",
+            "Patched and finished office room wall touch-ups \u2705",
+            "Prepped office bathroom lower wooden walls for white paint"
+          ]
+        },
+        {
+          "title": "In Progress (1:45 PM \u2192)",
+          "items": [
+            "1:45 PM \u2014 Started painting office bathroom lower wooden walls (white) \ud83c\udfa8"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 started 9:30 AM",
+            "\ud83c\udfa8 In progress \u2014 painting office bathroom lower wooden walls",
             "Hours to be finalized at end of day"
           ]
         }
