@@ -61,10 +61,14 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
   const [lb, setLb] = useState(null);
   const [reordering, setReordering] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [saved, setSaved] = useState(false);
 
+  // Sync new uploads from parent
   const initKey = initialImages.map(i=>i.url).join(',');
   const localKey = images.map(i=>i.url).join(',');
-  if (initKey !== localKey && initialImages.length >= images.length) setImages(initialImages);
+  if (!reordering && initKey !== localKey && initialImages.length >= images.length) {
+    setImages(initialImages);
+  }
 
   function handleDelete(url) {
     setImages(prev => prev.filter(i => i.url !== url));
@@ -72,30 +76,38 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
     if (onImageDeleted) onImageDeleted(url);
   }
 
+  // Move instantly — NO network call yet
   function moveImage(type, fromIdx, direction) {
     const toIdx = fromIdx + direction;
-    // Build new array outside of setState
-    const typed = images.filter(i => i.type === type);
-    if (toIdx < 0 || toIdx >= typed.length) return;
-    const moved = [...typed];
-    [moved[fromIdx], moved[toIdx]] = [moved[toIdx], moved[fromIdx]];
-    let ti = 0;
-    const newImages = images.map(img => img.type === type ? moved[ti++] : img);
-    // Update UI immediately
-    setImages(newImages);
-    // Save to GitHub
+    setImages(prev => {
+      const typed = prev.filter(i => i.type === type);
+      if (toIdx < 0 || toIdx >= typed.length) return prev;
+      const moved = [...typed];
+      [moved[fromIdx], moved[toIdx]] = [moved[toIdx], moved[fromIdx]];
+      let ti = 0;
+      return prev.map(img => img.type === type ? moved[ti++] : img);
+    });
+  }
+
+  // Save only when Done is tapped
+  async function saveOrder() {
     setSaving(true);
-    fetch('/api/update-log', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        action: 'reorder-images',
-        payload: { date, project: projectId, images: newImages }
-      })
-    }).then(r => {
-      if (!r.ok) console.error('Save failed', r.status);
-    }).catch(e => console.error('Save error', e))
-    .finally(() => setSaving(false));
+    try {
+      const res = await fetch('/api/update-log', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'reorder-images',
+          payload: { date, project: projectId, images }
+        })
+      });
+      if (res.ok) {
+        setSaved(true);
+        setTimeout(() => setSaved(false), 2000);
+      }
+    } catch(e) { console.error(e); }
+    setSaving(false);
+    setReordering(false);
   }
 
   if (!images.length) return null;
@@ -113,7 +125,8 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
     <div style={{position:'relative',borderRadius:12,overflow:'hidden',aspectRatio:'4/3',
       background:'var(--s3)',boxShadow:'0 2px 10px rgba(0,0,0,0.12)',border}}>
       <img src={img.url} alt={img.type} loading="lazy"
-        style={{width:'100%',height:'100%',objectFit:'cover',display:'block',cursor:'pointer'}}
+        style={{width:'100%',height:'100%',objectFit:'cover',display:'block',
+          cursor:reordering?'default':'pointer'}}
         onClick={() => !reordering && setLb({images:allInGroup, startIdx:lbOffset+imgIdx})}
         onError={e=>{e.target.style.display='none';}}/>
       {/* Badge */}
@@ -124,31 +137,33 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
         textTransform:'uppercase',padding:'3px 7px',borderRadius:9999}}>
         {type==='before'?'Before':'After'}
       </div>
-      {/* Reorder arrows */}
+      {/* ↑ position ↓ arrows — only in reorder mode */}
       {reordering && (
-        <div style={{position:'absolute',bottom:0,left:0,right:0,
-          display:'flex',justifyContent:'center',gap:6,padding:'6px',
-          background:'linear-gradient(to top, rgba(0,0,0,0.7), transparent)'}}>
+        <div style={{position:'absolute',inset:0,display:'flex',flexDirection:'column',
+          alignItems:'center',justifyContent:'space-between',padding:'6px 0',
+          background:'rgba(0,0,0,0.35)'}}>
           <button
-            onClick={e=>{e.stopPropagation(); moveImage(type, imgIdx, -1);}}
+            onPointerDown={e=>{e.stopPropagation(); e.preventDefault(); moveImage(type,imgIdx,-1);}}
             disabled={imgIdx===0}
-            style={{width:28,height:28,borderRadius:8,border:'none',cursor:'pointer',
-              background:imgIdx===0?'rgba(255,255,255,0.1)':'rgba(255,255,255,0.85)',
-              color:imgIdx===0?'rgba(255,255,255,0.25)':'#000',
-              fontSize:14,fontWeight:800,display:'flex',alignItems:'center',justifyContent:'center',
-              fontFamily:'inherit'}}>↑</button>
-          <div style={{color:'rgba(255,255,255,0.7)',fontSize:11,fontWeight:700,
-            display:'flex',alignItems:'center',minWidth:16,justifyContent:'center'}}>
-            {imgIdx+1}
+            style={{width:36,height:36,borderRadius:10,border:'none',
+              background:imgIdx===0?'rgba(255,255,255,0.15)':'rgba(255,255,255,0.9)',
+              color:imgIdx===0?'rgba(255,255,255,0.3)':'#000',
+              fontSize:18,fontWeight:900,cursor:imgIdx===0?'default':'pointer',
+              display:'flex',alignItems:'center',justifyContent:'center',
+              fontFamily:'inherit',lineHeight:1}}>↑</button>
+          <div style={{color:'rgba(255,255,255,0.9)',fontSize:13,fontWeight:800,
+            background:'rgba(0,0,0,0.5)',borderRadius:6,padding:'2px 8px'}}>
+            {imgIdx+1}/{total}
           </div>
           <button
-            onClick={e=>{e.stopPropagation(); moveImage(type, imgIdx, 1);}}
+            onPointerDown={e=>{e.stopPropagation(); e.preventDefault(); moveImage(type,imgIdx,1);}}
             disabled={imgIdx===total-1}
-            style={{width:28,height:28,borderRadius:8,border:'none',cursor:'pointer',
-              background:imgIdx===total-1?'rgba(255,255,255,0.1)':'rgba(255,255,255,0.85)',
-              color:imgIdx===total-1?'rgba(255,255,255,0.25)':'#000',
-              fontSize:14,fontWeight:800,display:'flex',alignItems:'center',justifyContent:'center',
-              fontFamily:'inherit'}}>↓</button>
+            style={{width:36,height:36,borderRadius:10,border:'none',
+              background:imgIdx===total-1?'rgba(255,255,255,0.15)':'rgba(255,255,255,0.9)',
+              color:imgIdx===total-1?'rgba(255,255,255,0.3)':'#000',
+              fontSize:18,fontWeight:900,cursor:imgIdx===total-1?'default':'pointer',
+              display:'flex',alignItems:'center',justifyContent:'center',
+              fontFamily:'inherit',lineHeight:1}}>↓</button>
         </div>
       )}
     </div>
@@ -182,21 +197,31 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
                 </span>
               </div>
               {hasMultiple && (
-                <button onClick={()=>setReordering(r=>!r)} style={{
-                  fontSize:10,fontWeight:700,padding:'4px 10px',borderRadius:9999,
-                  border:`1px solid ${reordering?color:'var(--bdr)'}`,
-                  background:reordering?color:'transparent',
-                  color:reordering?'#fff':'var(--t3)',
-                  fontFamily:'inherit',cursor:'pointer',
-                }}>
-                  {saving?'💾':'↕'} {reordering?'Done':'Reorder'}
-                </button>
+                reordering ? (
+                  <button onPointerDown={e=>{e.stopPropagation(); saveOrder();}} style={{
+                    fontSize:11,fontWeight:800,padding:'5px 12px',borderRadius:9999,
+                    border:'none',background:'#22C55E',color:'#fff',
+                    fontFamily:'inherit',cursor:'pointer',
+                    opacity:saving?0.6:1,minWidth:60,
+                  }}>
+                    {saving?'Saving…':saved?'✓ Saved':'✓ Done'}
+                  </button>
+                ) : (
+                  <button onPointerDown={e=>{e.stopPropagation(); setReordering(true);}} style={{
+                    fontSize:11,fontWeight:700,padding:'5px 12px',borderRadius:9999,
+                    border:`1px solid var(--bdr)`,background:'var(--s2)',color:'var(--t2)',
+                    fontFamily:'inherit',cursor:'pointer',
+                  }}>
+                    ↕ Reorder
+                  </button>
+                )
               )}
             </div>
             {reordering && (
               <div style={{fontSize:11,color:'var(--t3)',marginBottom:8,
-                textAlign:'center',background:'var(--s2)',borderRadius:8,padding:'6px'}}>
-                Tap ↑ ↓ on any photo to move it
+                textAlign:'center',background:'var(--s2)',borderRadius:8,padding:'6px',
+                border:'1px solid var(--bdr)'}}>
+                Tap ↑ ↓ to move · tap <strong>Done</strong> to save
               </div>
             )}
             {/* Column headers */}
