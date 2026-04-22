@@ -61,31 +61,42 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
   const [lb, setLb] = useState(null);
   const [reordering, setReordering] = useState(false);
   const [saving, setSaving] = useState(false);
-  const [saved, setSaved] = useState(false);
 
-  // Sync new uploads from parent (only when not reordering)
-  const initKey = initialImages.map(i=>i.url).join(',');
-  const localKey = images.map(i=>i.url).join(',');
-  if (!reordering && initKey !== localKey && initialImages.length >= images.length) {
+  // Sync new uploads only when not reordering
+  if (!reordering) {
+    const a = initialImages.map(i=>i.url).join();
+    const b = images.map(i=>i.url).join();
+    if (a !== b && initialImages.length >= images.length) {
+      // will trigger re-render correctly via useState
+    }
+  }
+
+  // Keep in sync with parent when not reordering
+  const [lastInit, setLastInit] = useState(initialImages);
+  if (!reordering && initialImages !== lastInit) {
+    setLastInit(initialImages);
     setImages(initialImages);
   }
 
   function handleDelete(url) {
-    setImages(prev => prev.filter(i => i.url !== url));
+    const next = images.filter(i => i.url !== url);
+    setImages(next);
     setLb(null);
     if (onImageDeleted) onImageDeleted(url);
   }
 
-  function moveImage(type, fromIdx, direction) {
-    const toIdx = fromIdx + direction;
-    setImages(prev => {
-      const typed = prev.filter(i => i.type === type);
-      if (toIdx < 0 || toIdx >= typed.length) return prev;
-      const moved = [...typed];
-      [moved[fromIdx], moved[toIdx]] = [moved[toIdx], moved[fromIdx]];
-      let ti = 0;
-      return prev.map(img => img.type === type ? moved[ti++] : img);
-    });
+  function move(type, idx, dir) {
+    // Work on a simple copy of the full array
+    const next = [...images];
+    // Get indices of this type in the full array
+    const typeIndices = [];
+    next.forEach((img, i) => { if (img.type === type) typeIndices.push(i); });
+    const swapA = typeIndices[idx];
+    const swapB = typeIndices[idx + dir];
+    if (swapA === undefined || swapB === undefined) return;
+    // Swap in place
+    [next[swapA], next[swapB]] = [next[swapB], next[swapA]];
+    setImages(next);
   }
 
   async function saveOrder() {
@@ -99,8 +110,6 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
           payload: { date, project: projectId, images }
         })
       });
-      setSaved(true);
-      setTimeout(() => setSaved(false), 2000);
     } catch(e) {}
     setSaving(false);
     setReordering(false);
@@ -108,146 +117,143 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
 
   if (!images.length) return null;
 
-  const groupMap = {};
+  // Group images
+  const groups = {};
   images.forEach(img => {
-    const key = img.group || img.caption || 'Photos';
-    if (!groupMap[key]) groupMap[key] = { before: [], after: [] };
-    if (img.type === 'before') groupMap[key].before.push(img);
-    else groupMap[key].after.push(img);
+    const k = img.group || img.caption || 'Photos';
+    if (!groups[k]) groups[k] = [];
+    groups[k].push(img);
   });
 
-  // Renders a single column (before or after) with reorder controls BELOW each thumb
-  const Column = ({imgs, type, lbOffset, allInGroup}) => (
-    <div style={{display:'flex',flexDirection:'column',gap:reordering?4:6}}>
-      {imgs.map((img, i) => (
-        <div key={img.url+i}>
-          {/* The image — plain, no overlays */}
-          <div
-            style={{position:'relative',borderRadius:12,overflow:'hidden',aspectRatio:'4/3',
-              background:'var(--s3)',boxShadow:'0 2px 10px rgba(0,0,0,0.12)',
-              border:type==='before'?'1.5px solid rgba(251,191,36,0.3)':'1.5px solid rgba(34,197,94,0.3)'}}
-            onClick={() => !reordering && setLb({images:allInGroup,startIdx:lbOffset+i})}>
-            <img src={img.url} alt={type} loading="lazy"
-              style={{width:'100%',height:'100%',objectFit:'cover',display:'block',pointerEvents:'none'}}
-              onError={e=>{e.target.style.display='none';}}/>
-            <div style={{position:'absolute',top:5,
-              left:type==='before'?5:'auto',right:type==='after'?5:'auto',
-              background:type==='before'?'rgba(251,191,36,0.92)':'rgba(34,197,94,0.92)',
-              color:'#fff',fontSize:8,fontWeight:900,letterSpacing:'0.09em',
-              textTransform:'uppercase',padding:'2px 6px',borderRadius:9999}}>
-              {type==='before'?'Before':'After'}
-            </div>
+  // For each group, split into before/after preserving order
+  const renderGroup = (groupName, groupImgs) => {
+    const before = groupImgs.filter(i => i.type === 'before');
+    const after  = groupImgs.filter(i => i.type === 'after');
+    const hasMultiple = before.length > 1 || after.length > 1;
+
+    const ColImg = ({img, type, posInType, totalOfType, globalLbIdx}) => (
+      <div style={{marginBottom: reordering ? 2 : 6}}>
+        {/* Photo */}
+        <div onClick={() => !reordering && setLb({images: groupImgs, startIdx: globalLbIdx})}
+          style={{position:'relative', borderRadius:12, overflow:'hidden', aspectRatio:'4/3',
+            background:'var(--s3)', cursor: reordering ? 'default' : 'pointer',
+            border: type==='before' ? '1.5px solid rgba(251,191,36,0.3)' : '1.5px solid rgba(34,197,94,0.3)',
+            boxShadow:'0 2px 10px rgba(0,0,0,0.10)'}}>
+          <img src={img.url} alt={type} loading="lazy"
+            style={{width:'100%', height:'100%', objectFit:'cover', display:'block', pointerEvents:'none'}}
+            onError={e=>{e.target.style.display='none';}}/>
+          <span style={{position:'absolute', top:5,
+            left: type==='before'?5:'auto', right: type==='after'?5:'auto',
+            background: type==='before'?'rgba(251,191,36,0.90)':'rgba(34,197,94,0.90)',
+            color:'#fff', fontSize:8, fontWeight:900, letterSpacing:'0.09em',
+            textTransform:'uppercase', padding:'2px 6px', borderRadius:9999}}>
+            {type==='before'?'Before':'After'}
+          </span>
+        </div>
+        {/* Arrow controls — completely separate element below photo */}
+        {reordering && totalOfType > 1 && (
+          <div style={{display:'flex', alignItems:'center', justifyContent:'center',
+            gap:10, padding:'6px 0 4px'}}>
+            <button
+              onClick={() => move(type, posInType, -1)}
+              disabled={posInType === 0}
+              style={{width:38, height:38, borderRadius:10,
+                border: '1px solid var(--bdr)',
+                background: posInType===0 ? 'var(--s3)' : 'var(--s1)',
+                color: posInType===0 ? 'var(--t4)' : 'var(--t1)',
+                fontSize:20, fontWeight:700, cursor: posInType===0 ? 'default' : 'pointer',
+                display:'flex', alignItems:'center', justifyContent:'center',
+                boxShadow: posInType===0 ? 'none' : 'var(--shd)',
+                flexShrink:0}}>↑</button>
+            <span style={{fontSize:12, fontWeight:700, color:'var(--t3)'}}>
+              {posInType+1}/{totalOfType}
+            </span>
+            <button
+              onClick={() => move(type, posInType, 1)}
+              disabled={posInType === totalOfType-1}
+              style={{width:38, height:38, borderRadius:10,
+                border: '1px solid var(--bdr)',
+                background: posInType===totalOfType-1 ? 'var(--s3)' : 'var(--s1)',
+                color: posInType===totalOfType-1 ? 'var(--t4)' : 'var(--t1)',
+                fontSize:20, fontWeight:700, cursor: posInType===totalOfType-1 ? 'default' : 'pointer',
+                display:'flex', alignItems:'center', justifyContent:'center',
+                boxShadow: posInType===totalOfType-1 ? 'none' : 'var(--shd)',
+                flexShrink:0}}>↓</button>
           </div>
-          {/* Controls BELOW the image — completely separate from it */}
-          {reordering && (
-            <div style={{display:'flex',alignItems:'center',justifyContent:'center',
-              gap:8,paddingTop:5,paddingBottom:2}}>
-              <button
-                onClick={() => moveImage(type, i, -1)}
-                disabled={i===0}
-                style={{width:36,height:36,borderRadius:9,border:'1px solid var(--bdr)',
-                  background:i===0?'var(--s3)':'var(--s1)',
-                  color:i===0?'var(--t4)':'var(--t1)',
-                  fontSize:18,fontWeight:700,cursor:i===0?'default':'pointer',
-                  display:'flex',alignItems:'center',justifyContent:'center',
-                  boxShadow:i===0?'none':'var(--shd)'}}>↑</button>
-              <span style={{fontSize:11,fontWeight:700,color:'var(--t3)',minWidth:28,textAlign:'center'}}>
-                {i+1}/{imgs.length}
-              </span>
-              <button
-                onClick={() => moveImage(type, i, 1)}
-                disabled={i===imgs.length-1}
-                style={{width:36,height:36,borderRadius:9,border:'1px solid var(--bdr)',
-                  background:i===imgs.length-1?'var(--s3)':'var(--s1)',
-                  color:i===imgs.length-1?'var(--t4)':'var(--t1)',
-                  fontSize:18,fontWeight:700,cursor:i===imgs.length-1?'default':'pointer',
-                  display:'flex',alignItems:'center',justifyContent:'center',
-                  boxShadow:i===imgs.length-1?'none':'var(--shd)'}}>↓</button>
-            </div>
+        )}
+      </div>
+    );
+
+    return (
+      <div key={groupName} style={{marginBottom:18}}>
+        {/* Header */}
+        <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:8}}>
+          <div style={{display:'flex', alignItems:'center', gap:8}}>
+            <div style={{width:3, height:14, background:color, borderRadius:2}}/>
+            <span style={{fontSize:12, fontWeight:800, color:'var(--t1)'}}>{groupName}</span>
+            <span style={{fontSize:10, color:'var(--t4)'}}>
+              {before.length>0&&`${before.length}B`}{before.length&&after.length?' · ':''}{after.length>0&&`${after.length}A`}
+            </span>
+          </div>
+          {hasMultiple && (
+            reordering
+              ? <button onClick={saveOrder} style={{fontSize:11, fontWeight:800, padding:'6px 14px',
+                  borderRadius:9999, border:'none', background:'#22C55E', color:'#fff',
+                  fontFamily:'inherit', cursor:'pointer', opacity:saving?0.6:1}}>
+                  {saving ? 'Saving…' : '✓ Done'}
+                </button>
+              : <button onClick={() => setReordering(true)} style={{fontSize:11, fontWeight:700,
+                  padding:'6px 14px', borderRadius:9999, border:'1px solid var(--bdr)',
+                  background:'var(--s2)', color:'var(--t2)', fontFamily:'inherit', cursor:'pointer'}}>
+                  ↕ Reorder
+                </button>
           )}
         </div>
-      ))}
-    </div>
-  );
 
-  const Empty = ({label}) => (
-    <div style={{aspectRatio:'4/3',borderRadius:12,
-      border:`1.5px dashed ${label==='before'?'rgba(251,191,36,0.3)':'rgba(34,197,94,0.3)'}`,
-      background:'transparent',display:'flex',alignItems:'center',justifyContent:'center',
-      flexDirection:'column',gap:4}}>
-      <span style={{fontSize:16,opacity:0.25}}>{label==='before'?'📸':'✅'}</span>
-      <span style={{fontSize:9,color:'var(--t4)',fontWeight:600}}>No {label}</span>
-    </div>
-  );
+        {reordering && (
+          <div style={{fontSize:11, color:'var(--t3)', marginBottom:10, textAlign:'center',
+            background:'var(--s2)', borderRadius:8, padding:'7px', border:'1px solid var(--bdr)'}}>
+            Tap ↑ ↓ below each photo · tap <strong>Done</strong> to save
+          </div>
+        )}
+
+        {/* Column labels */}
+        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, marginBottom:6}}>
+          <div style={{fontSize:9, fontWeight:800, color:'#FBBF24', textTransform:'uppercase', letterSpacing:'0.08em', textAlign:'center'}}>Before</div>
+          <div style={{fontSize:9, fontWeight:800, color:'#22C55E', textTransform:'uppercase', letterSpacing:'0.08em', textAlign:'center'}}>After</div>
+        </div>
+
+        {/* Two columns */}
+        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:8}}>
+          <div>
+            {before.length > 0
+              ? before.map((img, i) => <ColImg key={img.url+i} img={img} type="before" posInType={i} totalOfType={before.length} globalLbIdx={i}/>)
+              : <div style={{aspectRatio:'4/3', borderRadius:12, border:'1.5px dashed rgba(251,191,36,0.2)',
+                  display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column', gap:4}}>
+                  <span style={{fontSize:16, opacity:0.2}}>📸</span>
+                  <span style={{fontSize:9, color:'var(--t4)', fontWeight:600}}>No before</span>
+                </div>}
+          </div>
+          <div>
+            {after.length > 0
+              ? after.map((img, i) => <ColImg key={img.url+i} img={img} type="after" posInType={i} totalOfType={after.length} globalLbIdx={before.length+i}/>)
+              : <div style={{aspectRatio:'4/3', borderRadius:12, border:'1.5px dashed rgba(34,197,94,0.2)',
+                  display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column', gap:4}}>
+                  <span style={{fontSize:16, opacity:0.2}}>✅</span>
+                  <span style={{fontSize:9, color:'var(--t4)', fontWeight:600}}>No after</span>
+                </div>}
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
-    <div style={{display:'flex',flexDirection:'column',gap:18}}>
-      {Object.entries(groupMap).map(([groupName, {before, after}]) => {
-        const allInGroup = [...before,...after];
-        const hasMultiple = before.length > 1 || after.length > 1;
-        return (
-          <div key={groupName}>
-            {/* Group header */}
-            <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:8}}>
-              <div style={{display:'flex',alignItems:'center',gap:8}}>
-                <div style={{width:3,height:14,background:color,borderRadius:2}}/>
-                <span style={{fontSize:12,fontWeight:800,color:'var(--t1)'}}>{groupName}</span>
-                <span style={{fontSize:10,color:'var(--t4)'}}>
-                  {before.length>0&&`${before.length}B`}
-                  {before.length>0&&after.length>0&&' · '}
-                  {after.length>0&&`${after.length}A`}
-                </span>
-              </div>
-              {hasMultiple && (
-                reordering ? (
-                  <button onClick={saveOrder} style={{
-                    fontSize:11,fontWeight:800,padding:'6px 14px',borderRadius:9999,
-                    border:'none',background:'#22C55E',color:'#fff',
-                    fontFamily:'inherit',cursor:'pointer',opacity:saving?0.6:1,
-                  }}>
-                    {saving?'Saving…':'✓ Done'}
-                  </button>
-                ) : (
-                  <button onClick={()=>setReordering(true)} style={{
-                    fontSize:11,fontWeight:700,padding:'6px 14px',borderRadius:9999,
-                    border:'1px solid var(--bdr)',background:'var(--s2)',color:'var(--t2)',
-                    fontFamily:'inherit',cursor:'pointer',
-                  }}>↕ Reorder</button>
-                )
-              )}
-            </div>
-
-            {reordering && (
-              <div style={{fontSize:11,color:'var(--t3)',marginBottom:10,textAlign:'center',
-                background:'var(--s2)',borderRadius:8,padding:'7px',border:'1px solid var(--bdr)'}}>
-                Tap ↑ ↓ below each photo · <strong>Done</strong> to save
-              </div>
-            )}
-
-            {/* Column headers */}
-            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,marginBottom:6}}>
-              <div style={{fontSize:9,fontWeight:800,color:'#FBBF24',textTransform:'uppercase',letterSpacing:'0.08em',textAlign:'center'}}>Before</div>
-              <div style={{fontSize:9,fontWeight:800,color:'#22C55E',textTransform:'uppercase',letterSpacing:'0.08em',textAlign:'center'}}>After</div>
-            </div>
-
-            {/* Two columns */}
-            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8}}>
-              <div>{before.length>0
-                ? <Column imgs={before} type="before" lbOffset={0} allInGroup={allInGroup}/>
-                : <Empty label="before"/>}
-              </div>
-              <div>{after.length>0
-                ? <Column imgs={after} type="after" lbOffset={before.length} allInGroup={allInGroup}/>
-                : <Empty label="after"/>}
-              </div>
-            </div>
-          </div>
-        );
-      })}
-
+    <div>
+      {Object.entries(groups).map(([name, imgs]) => renderGroup(name, imgs))}
       {lb && (
-        <Lightbox images={lb.images} startIndex={Math.min(lb.startIdx,lb.images.length-1)}
-          onClose={()=>setLb(null)} onDelete={handleDelete} projectId={projectId} date={date}/>
+        <Lightbox images={lb.images} startIndex={Math.min(lb.startIdx, lb.images.length-1)}
+          onClose={() => setLb(null)} onDelete={handleDelete} projectId={projectId} date={date}/>
       )}
     </div>
   );
