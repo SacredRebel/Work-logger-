@@ -1671,10 +1671,10 @@
       "date": "2026-04-21",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 8.25,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 13 \u2014 Bathroom walls done, stairs prepped, hallway ceiling coat #2",
+      "earned": 412.5,
+      "tasks": "Day 13 \u2014 Hallway ceilings, bathroom walls, stairs prepped, hallway coat #2",
       "sections": [
         {
           "title": "Location",
@@ -1688,7 +1688,8 @@
             "Started: 9:30 AM",
             "Break 1: 11:00 AM \u2014 11:30 AM (30 min)",
             "Break 2: 5:00 PM \u2014 5:15 PM (15 min smoke)",
-            "End time: TBD"
+            "Finished: 6:30 PM",
+            "9 hrs total \u2014 45 min breaks \u2014 billable: 8.25 hrs"
           ]
         },
         {
@@ -1703,16 +1704,18 @@
           ]
         },
         {
-          "title": "In Progress",
+          "title": "Completed (cont.)",
           "items": [
-            "\ud83c\udfa8 Painting hallway ceiling coat #2"
+            "Hallway ceiling coat #2 complete \u2705 \ud83c\udfa8"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 painting office bathroom lower wooden walls",
-            "Hours to be finalized at end of day"
+            "8.25 hrs \u00d7 $50/hr = $412.50 earned",
+            "Hallway ceiling: coat #2 done \u2705",
+            "Office bathroom lower walls: painted \u2705",
+            "Stairs & downstairs hallway: drop cloths down \u2705"
           ]
         }
       ],
