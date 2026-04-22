@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import NotesRenderer from '../../components/NotesRenderer';
@@ -62,21 +62,19 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
   const [reordering, setReordering] = useState(false);
   const [saving, setSaving] = useState(false);
 
-  // Sync new uploads only when not reordering
-  if (!reordering) {
-    const a = initialImages.map(i=>i.url).join();
-    const b = images.map(i=>i.url).join();
-    if (a !== b && initialImages.length >= images.length) {
-      // will trigger re-render correctly via useState
-    }
+  // Only sync when new images uploaded — never interfere during reordering
+  const prevUrlCount = useRef(initialImages.length);
+  if (!reordering && initialImages.length > prevUrlCount.current) {
+    prevUrlCount.current = initialImages.length;
+    // Don't call setImages here — use useEffect below
   }
 
-  // Keep in sync with parent when not reordering
-  const [lastInit, setLastInit] = useState(initialImages);
-  if (!reordering && initialImages !== lastInit) {
-    setLastInit(initialImages);
-    setImages(initialImages);
-  }
+  // Safe sync via useEffect — won't fight with reordering state
+  useEffect(() => {
+    if (!reordering && initialImages.length > images.length) {
+      setImages(initialImages);
+    }
+  }, [initialImages.length, reordering]);
 
   function handleDelete(url) {
     const next = images.filter(i => i.url !== url);
