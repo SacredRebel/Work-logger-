@@ -1674,7 +1674,7 @@
       "hours": 0,
       "rate": 50,
       "earned": 0,
-      "tasks": "Day 13 \u2014 Hallway ceiling done, office room patched, bathroom lower walls painting",
+      "tasks": "Day 13 \u2014 Bathroom walls done, stairs prepped, hallway ceiling coat #2",
       "sections": [
         {
           "title": "Location",
@@ -1686,8 +1686,8 @@
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Break: 11:00 AM \u2014 11:30 AM (30 min)",
-            "Back at it: 11:30 AM",
+            "Break 1: 11:00 AM \u2014 11:30 AM (30 min)",
+            "Break 2: 5:00 PM \u2014 5:15 PM (15 min smoke)",
             "End time: TBD"
           ]
         },
@@ -1697,13 +1697,15 @@
             "Finished hallway ceiling coat #1 \u2705 \ud83c\udfa8",
             "Prepped hallway stairs further down with drop cloths",
             "Patched and finished office room wall touch-ups \u2705",
-            "Prepped office bathroom lower wooden walls for white paint"
+            "Prepped office bathroom lower wooden walls for white paint",
+            "Painted office bathroom lower wooden walls (white) \u2705 \ud83c\udfa8",
+            "Covered and prepped stairs & downstairs hallway with drop cloths"
           ]
         },
         {
-          "title": "In Progress (1:45 PM \u2192)",
+          "title": "In Progress",
           "items": [
-            "1:45 PM \u2014 Started painting office bathroom lower wooden walls (white) \ud83c\udfa8"
+            "\ud83c\udfa8 Painting hallway ceiling coat #2"
           ]
         },
         {
