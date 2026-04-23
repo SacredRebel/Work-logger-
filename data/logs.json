@@ -1845,6 +1845,48 @@
         }
       ],
       "images": []
+    },
+    {
+      "date": "2026-04-23",
+      "project": "chers-house-painting-job",
+      "category": "painting",
+      "hours": 0,
+      "rate": 50,
+      "earned": 0,
+      "tasks": "Day 15 \u2014 Clean office bathroom & room, stain all upstairs wood trim & hallway",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Cher's house \u2014 Office bathroom, Office room, Upstairs hallway"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 9:45 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Today's Goals",
+          "items": [
+            "Clean office bathroom completely",
+            "Clean office room completely",
+            "Stain all wood trim in upstairs rooms",
+            "Stain upstairs hallway wood trim",
+            "Have everything fully done by end of day"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83d\udfe2 In progress \u2014 started 9:45 AM",
+            "Hours to be finalized at end of day"
+          ]
+        }
+      ],
+      "images": []
     }
   ]
 }
