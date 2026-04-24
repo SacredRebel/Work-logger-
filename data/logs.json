@@ -1960,6 +1960,8 @@
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
+            "Lunch break: 2:00 PM \u2014 3:00 PM (1 hour)",
+            "Back at it: 3:00 PM",
             "End time: TBD"
           ]
         },
@@ -1974,7 +1976,7 @@
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 staining upstairs hallway trim",
+            "\ud83d\udfe2 Back at it 3:00 PM \u2014 continuing hallway trim & frames staining",
             "Office room: 100% complete \u2705"
           ]
         }
