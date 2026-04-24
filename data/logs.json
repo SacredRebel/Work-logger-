@@ -1850,15 +1850,15 @@
       "date": "2026-04-23",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 7.75,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 15 \u2014 Clean office bathroom & room, stain all upstairs wood trim & hallway",
+      "earned": 387.5,
+      "tasks": "Day 15 \u2014 Office bathroom fully done, office room wood trim staining started",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house \u2014 Office bathroom, Office room, Upstairs hallway"
+            "Cher's house \u2014 Office bathroom & Office room"
           ]
         },
         {
@@ -1867,24 +1867,31 @@
             "Started: 9:45 AM",
             "Break 1: 11:00 AM \u2014 11:30 AM (30 min)",
             "Break 2: 2:00 PM \u2014 3:00 PM (1 hour)",
-            "End time: TBD"
+            "Finished: 7:00 PM",
+            "9.25 hrs total \u2014 1.5 hrs breaks \u2014 billable: 7.75 hrs"
           ]
         },
         {
-          "title": "Today's Goals",
+          "title": "Office Bathroom \u2014 Complete \u2705",
           "items": [
-            "Clean office bathroom completely",
-            "Clean office room completely",
-            "Stain all wood trim in upstairs rooms",
-            "Stain upstairs hallway wood trim",
-            "Have everything fully done by end of day"
+            "Cleaned bathroom completely",
+            "Mounted everything back \u2014 lights, mirror, shower curtains, etc.",
+            "Office bathroom 100% done \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Office Room \u2014 In Progress",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 started 9:45 AM",
-            "Hours to be finalized at end of day"
+            "Started staining wood trim, door frames and window frames",
+            "Office room halfway done \u2014 continuing next session"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "7.75 hrs \u00d7 $50/hr = $387.50 earned",
+            "Office bathroom: 100% complete \u2705",
+            "Office room wood trim: ~50% stained \u2014 continuing next session"
           ]
         }
       ],
