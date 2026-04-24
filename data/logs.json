@@ -1853,7 +1853,7 @@
       "hours": 7.75,
       "rate": 50,
       "earned": 387.5,
-      "tasks": "Day 15 \u2014 Office bathroom fully done, office room wood trim staining started",
+      "tasks": "Day 15 \u2014 Office bathroom complete, office room wood trim staining started",
       "sections": [
         {
           "title": "Location",
@@ -1874,16 +1874,16 @@
         {
           "title": "Office Bathroom \u2014 Complete \u2705",
           "items": [
-            "Cleaned bathroom completely",
-            "Mounted everything back \u2014 lights, mirror, shower curtains, etc.",
-            "Office bathroom 100% done \u2705"
+            "Full cleanup done",
+            "All items mounted back \u2014 lights, mirror, shower curtains, etc.",
+            "Office bathroom 100% complete \u2705"
           ]
         },
         {
           "title": "Office Room \u2014 In Progress",
           "items": [
-            "Started staining wood trim, door frames and window frames",
-            "Office room halfway done \u2014 continuing next session"
+            "Staining wood trim, door frames and window frames \u2014 halfway done",
+            "Continuing tomorrow"
           ]
         },
         {
@@ -1891,7 +1891,7 @@
           "items": [
             "7.75 hrs \u00d7 $50/hr = $387.50 earned",
             "Office bathroom: 100% complete \u2705",
-            "Office room wood trim: ~50% stained \u2014 continuing next session"
+            "Office room wood trim staining: 50% done \u2014 continuing tomorrow"
           ]
         }
       ],
