@@ -1850,9 +1850,9 @@
       "date": "2026-04-23",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 7.75,
+      "hours": 7,
       "rate": 50,
-      "earned": 387.5,
+      "earned": 350,
       "tasks": "Day 15 \u2014 Office bathroom complete, office room wood trim staining started",
       "sections": [
         {
@@ -1868,7 +1868,7 @@
             "Break 1: 11:00 AM \u2014 11:30 AM (30 min)",
             "Break 2: 2:00 PM \u2014 3:00 PM (1 hour)",
             "Finished: 7:00 PM",
-            "9.25 hrs total \u2014 1.5 hrs breaks \u2014 billable: 7.75 hrs"
+            "7 hrs billable"
           ]
         },
         {
@@ -1889,7 +1889,7 @@
         {
           "title": "Summary",
           "items": [
-            "7.75 hrs \u00d7 $50/hr = $387.50 earned",
+            "7 hrs \u00d7 $50/hr = $350.00 earned",
             "Office bathroom: 100% complete \u2705",
             "Office room wood trim staining: 50% done \u2014 continuing tomorrow"
           ]
