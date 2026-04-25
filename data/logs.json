@@ -1999,7 +1999,7 @@
       "hours": 0,
       "rate": 50,
       "earned": 0,
-      "tasks": "Day 17 \u2014 Staining upstairs bedroom trim & frames",
+      "tasks": "Day 17 \u2014 Finishing all upstairs staining, bedroom trim & frames",
       "sections": [
         {
           "title": "Location",
@@ -2018,7 +2018,8 @@
           "title": "Today's Plan",
           "items": [
             "Stain all wood trim in upstairs bedroom",
-            "Stain door and window frames"
+            "Stain door and window frames",
+            "Goal: finish all upstairs work today \u2705"
           ]
         },
         {
