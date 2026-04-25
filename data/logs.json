@@ -1945,15 +1945,15 @@
       "date": "2026-04-24",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 8.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 16 \u2014 Office room trim done, now staining hallway",
+      "earned": 425,
+      "tasks": "Day 16 \u2014 All upstairs trim & frames stained, hallway complete",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house \u2014 Office room & Hallway"
+            "Cher's house \u2014 Office room, Hallway, Upstairs bathroom"
           ]
         },
         {
@@ -1961,23 +1961,33 @@
           "items": [
             "Started: 9:30 AM",
             "Lunch break: 2:00 PM \u2014 3:00 PM (1 hour)",
-            "Back at it: 3:00 PM",
-            "End time: TBD"
+            "Finished: 7:00 PM",
+            "9.5 hrs total \u2014 1 hr break \u2014 billable: 8.5 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "9:30 AM \u2014 Continued staining office room wood trim",
-            "11:00 AM \u2014 Office room wood trim complete \u2705",
-            "11:00 AM \u2014 Moving to upstairs hallway staining"
+            "Finished staining office room wood trim \u2705",
+            "Stained all hallway wood trim & frames \u2705",
+            "Stained all upstairs bathroom trim & frames \u2705",
+            "All upstairs trim and frames complete"
           ]
         },
         {
-          "title": "Status",
+          "title": "Up Next",
           "items": [
-            "\ud83d\udfe2 Back at it 3:00 PM \u2014 continuing hallway trim & frames staining",
-            "Office room: 100% complete \u2705"
+            "Tomorrow: stain bedroom upstairs trim & frames"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "8.5 hrs \u00d7 $50/hr = $425.00 earned",
+            "Office room trim: \u2705",
+            "Hallway trim & frames: \u2705",
+            "Upstairs bathroom trim & frames: \u2705",
+            "Upstairs bedroom: tomorrow"
           ]
         }
       ],
