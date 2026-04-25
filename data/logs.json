@@ -1996,10 +1996,10 @@
       "date": "2026-04-25",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 4.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 17 \u2014 All upstairs staining complete, bedroom/staircase/hallway done",
+      "earned": 225,
+      "tasks": "Day 17 \u2014 All upstairs staining done, office room blinds installed",
       "sections": [
         {
           "title": "Location",
@@ -2011,8 +2011,9 @@
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Lunch break: 1:30 PM \u2014 TBD",
-            "End time: TBD"
+            "Lunch break: 1:30 PM \u2014 2:00 PM (30 min)",
+            "Finished: 2:30 PM",
+            "5 hrs total \u2014 30 min break \u2014 billable: 4.5 hrs"
           ]
         },
         {
@@ -2021,14 +2022,16 @@
             "Upstairs bedroom trim & frames \u2014 stained \u2705",
             "Staircase trim \u2014 stained \u2705",
             "Hallway trim \u2014 stained \u2705",
-            "All upstairs staining complete \u2705"
+            "All upstairs staining complete \u2705",
+            "Installed blinds on office room windows \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83d\udfe1 Lunch break since 1:30 PM",
-            "All upstairs staining done \u2705"
+            "4.5 hrs \u00d7 $50/hr = $225.00 earned",
+            "All upstairs staining: 100% complete \u2705",
+            "Office room blinds: installed \u2705"
           ]
         }
       ],
