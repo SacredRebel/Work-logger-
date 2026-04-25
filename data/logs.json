@@ -1948,7 +1948,7 @@
       "hours": 8.5,
       "rate": 50,
       "earned": 425,
-      "tasks": "Day 16 \u2014 All upstairs trim & frames stained, hallway complete",
+      "tasks": "Day 16 \u2014 Office room trim done, hallway & upstairs bathroom trim & frames stained",
       "sections": [
         {
           "title": "Location",
@@ -1969,24 +1969,23 @@
           "title": "Work Completed",
           "items": [
             "Finished staining office room wood trim \u2705",
-            "Stained all hallway wood trim & frames \u2705",
-            "Stained all upstairs bathroom trim & frames \u2705",
-            "All upstairs trim and frames complete"
+            "Stained all hallway trim and frames \u2705",
+            "Stained all upstairs bathroom trim and frames \u2705"
           ]
         },
         {
           "title": "Up Next",
           "items": [
-            "Tomorrow: stain bedroom upstairs trim & frames"
+            "Tomorrow: stain upstairs bedroom trim and frames"
           ]
         },
         {
           "title": "Summary",
           "items": [
             "8.5 hrs \u00d7 $50/hr = $425.00 earned",
-            "Office room trim: \u2705",
-            "Hallway trim & frames: \u2705",
-            "Upstairs bathroom trim & frames: \u2705",
+            "Office room trim: done \u2705",
+            "Hallway trim & frames: done \u2705",
+            "Upstairs bathroom trim & frames: done \u2705",
             "Upstairs bedroom: tomorrow"
           ]
         }
