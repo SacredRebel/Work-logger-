@@ -2043,6 +2043,45 @@
         }
       ],
       "images": []
+    },
+    {
+      "date": "2026-04-27",
+      "project": "chers-house-painting-job",
+      "category": "painting",
+      "hours": 0,
+      "rate": 50,
+      "earned": 0,
+      "tasks": "Day 18 \u2014 Staining downstairs hallway & bathroom wood trim",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Cher's house \u2014 Downstairs hallway & bathroom"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 9:30 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Progress",
+          "items": [
+            "9:30 AM \u2014 Started staining downstairs hallway wood trim",
+            "Staining downstairs bathroom wood trim"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83d\udfe2 In progress \u2014 started 9:30 AM",
+            "Hours to be finalized at end of day"
+          ]
+        }
+      ],
+      "images": []
     }
   ]
 }
