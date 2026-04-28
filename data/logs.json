@@ -2048,10 +2048,10 @@
       "date": "2026-04-27",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 6.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 18 \u2014 Staining downstairs hallway & bathroom wood trim",
+      "earned": 325,
+      "tasks": "Day 18 \u2014 Downstairs hallway & bathroom wood trim stained",
       "sections": [
         {
           "title": "Location",
@@ -2064,22 +2064,24 @@
           "items": [
             "Started: 9:30 AM",
             "Lunch break: 12:30 PM \u2014 1:00 PM (30 min)",
-            "Back at it: 1:00 PM",
-            "End time: TBD"
+            "Smoke break: 3:00 PM \u2014 3:30 PM (30 min)",
+            "Finished: 5:00 PM",
+            "7.5 hrs total \u2014 1 hr breaks \u2014 billable: 6.5 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "9:30 AM \u2014 Started staining downstairs hallway wood trim",
-            "Staining downstairs bathroom wood trim"
+            "Stained all downstairs hallway wood trim \u2705",
+            "Stained all downstairs bathroom wood trim \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 started 9:30 AM",
-            "Hours to be finalized at end of day"
+            "6.5 hrs \u00d7 $50/hr = $325.00 earned",
+            "Downstairs hallway trim: done \u2705",
+            "Downstairs bathroom trim: done \u2705"
           ]
         }
       ],
