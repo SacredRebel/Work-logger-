@@ -2131,6 +2131,44 @@
         }
       ],
       "images": []
+    },
+    {
+      "date": "2026-04-29",
+      "project": "chers-house-painting-job",
+      "category": "painting",
+      "hours": 0,
+      "rate": 50,
+      "earned": 0,
+      "tasks": "Day 20 \u2014 Laundry room trim & frames painting/staining",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Cher's house \u2014 Laundry room"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 9:30 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Progress",
+          "items": [
+            "9:30 AM \u2014 Started painting/staining laundry room trim and frames \ud83c\udfa8"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83c\udfa8 In progress \u2014 started 9:30 AM",
+            "Hours to be finalized at end of day"
+          ]
+        }
+      ],
+      "images": []
     }
   ]
 }
