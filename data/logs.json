@@ -31,6 +31,13 @@
           "date": "2026-04-25",
           "note": "Cash payment received Apr 25",
           "method": "Cash"
+        },
+        {
+          "id": "pay-003",
+          "amount": 4999,
+          "date": "2026-04-30",
+          "method": "ACH Transfer",
+          "note": "Large payment received"
         }
       ]
     },
@@ -2171,6 +2178,38 @@
             "7 hrs \u00d7 $50/hr = $350.00 earned",
             "Laundry room: 100% complete \u2705",
             "Master bedroom: prep started"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "date": "2026-04-30",
+      "project": "chers-house-painting-job",
+      "category": "painting",
+      "hours": 0,
+      "rate": 50,
+      "earned": 0,
+      "tasks": "Day 21 \u2014 Continuing master bedroom prep & painting",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Cher's house \u2014 Master bedroom"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 10:30 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83c\udfa8 In progress \u2014 started 10:30 AM",
+            "Hours to be finalized at end of day"
           ]
         }
       ],
