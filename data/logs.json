@@ -2187,10 +2187,10 @@
       "date": "2026-04-30",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 21 \u2014 Continuing master bedroom prep & painting",
+      "earned": 250,
+      "tasks": "Day 21 \u2014 Master bedroom sanding, 2 windows + half trim done",
       "sections": [
         {
           "title": "Location",
@@ -2201,15 +2201,31 @@
         {
           "title": "Schedule",
           "items": [
-            "Started: 10:30 AM",
-            "End time: TBD"
+            "Started: 11:30 AM",
+            "Lunch break: 3:00 PM \u2014 3:30 PM (30 min)",
+            "Finished: 5:00 PM",
+            "5.5 hrs total \u2014 30 min break \u2014 billable: 5 hrs"
           ]
         },
         {
-          "title": "Status",
+          "title": "Work Completed",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 started 10:30 AM",
-            "Hours to be finalized at end of day"
+            "Sanded 2 windows and frames \u2705",
+            "Sanded half the master bedroom trim"
+          ]
+        },
+        {
+          "title": "Up Next",
+          "items": [
+            "Tomorrow: finish sanding remaining trim",
+            "Clean master bedroom \u2014 ready for paint"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "5 hrs \u00d7 $50/hr = $250.00 earned",
+            "Master bedroom: sanding ~50% done"
           ]
         }
       ],
