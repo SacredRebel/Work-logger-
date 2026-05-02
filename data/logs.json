@@ -2235,10 +2235,10 @@
       "date": "2026-05-01",
       "project": "chers-house-painting-job",
       "category": "prep",
-      "hours": 0,
+      "hours": 6,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 22 \u2014 Sanding & cleaning master bedroom + bathroom",
+      "earned": 300,
+      "tasks": "Day 22 \u2014 Master bedroom + bathroom sanding & cleaning",
       "sections": [
         {
           "title": "Location",
@@ -2251,25 +2251,24 @@
           "items": [
             "Started: 9:30 AM",
             "Phone call break: 10:30 AM \u2014 12:30 PM (2 hours)",
-            "Back at it: 12:30 PM",
             "Lunch break: 2:30 PM \u2014 3:00 PM (30 min)",
             "Break: 4:00 PM \u2014 4:30 PM (30 min)",
-            "Back at it: 4:30 PM",
-            "End time: TBD"
+            "Finished: 6:30 PM",
+            "9 hrs total \u2014 3 hrs breaks \u2014 billable: 6 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "9:30 AM \u2014 Continuing sanding master bedroom (remaining trim)",
-            "Cleaning master bedroom + bathroom"
+            "Finished sanding master bedroom trim \u2705",
+            "Cleaned master bedroom & bathroom \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 started 9:30 AM",
-            "Hours to be finalized at end of day"
+            "6 hrs \u00d7 $50/hr = $300.00 earned",
+            "Master bedroom & bathroom: sanded & cleaned \u2705"
           ]
         }
       ],
