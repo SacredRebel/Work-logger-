@@ -2273,6 +2273,45 @@
         }
       ],
       "images": []
+    },
+    {
+      "date": "2026-05-02",
+      "project": "chers-house-painting-job",
+      "category": "prep",
+      "hours": 0,
+      "rate": 50,
+      "earned": 0,
+      "tasks": "Day 23 \u2014 Sanding master bedroom windows/frames, then master bathroom",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Cher's house \u2014 Master bedroom & master bathroom"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 10:00 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Today's Plan",
+          "items": [
+            "Continue sanding master bedroom windows and door frames",
+            "Move on to sanding master bathroom"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83d\udfe2 In progress \u2014 started 10:00 AM",
+            "Hours to be finalized at end of day"
+          ]
+        }
+      ],
+      "images": []
     }
   ]
 }
