@@ -2354,10 +2354,10 @@
       "date": "2026-05-04",
       "project": "chers-house-painting-job",
       "category": "prep",
-      "hours": 0,
+      "hours": 5.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 25 \u2014 Master bathroom done, living room taping started",
+      "earned": 275,
+      "tasks": "Day 25 \u2014 Master bathroom done, living room taped, scaffolding set up",
       "sections": [
         {
           "title": "Location",
@@ -2370,24 +2370,25 @@
           "items": [
             "Started: 1:00 PM",
             "Break: 2:45 PM \u2014 3:15 PM (30 min)",
-            "Back at it: 3:15 PM",
-            "End time: TBD"
+            "Finished: 7:00 PM",
+            "6 hrs total \u2014 30 min break \u2014 billable: 5.5 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "Sanded master bathroom cabinets \u2705",
-            "Sanded shower window frame \u2705",
-            "5:00 PM \u2014 Master bathroom sanding complete \u2705",
-            "5:00 PM \u2014 Moved to living room \u2014 taping ceiling edges & wooden trim \ud83c\udfa8"
+            "Sanded master bathroom cabinets & shower window frame \u2705",
+            "Master bathroom sanding 100% complete \u2705",
+            "Taped living room ceiling edges and wooden trim",
+            "Set up scaffolding in living room \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 taping living room ceiling edges & trim",
-            "Master bathroom: sanding done \u2705"
+            "5.5 hrs \u00d7 $50/hr = $275.00 earned",
+            "Master bathroom: 100% sanded \u2705",
+            "Living room: taped + scaffolding up \u2705"
           ]
         }
       ],
