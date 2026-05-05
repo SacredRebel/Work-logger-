@@ -2357,7 +2357,7 @@
       "hours": 0,
       "rate": 50,
       "earned": 0,
-      "tasks": "Day 25 \u2014 Finishing master bathroom sanding & cleanup",
+      "tasks": "Day 25 \u2014 Master bathroom done, living room taping started",
       "sections": [
         {
           "title": "Location",
@@ -2369,23 +2369,25 @@
           "title": "Schedule",
           "items": [
             "Started: 1:00 PM",
-            "Break: 2:45 PM \u2014 TBD",
+            "Break: 2:45 PM \u2014 3:15 PM (30 min)",
+            "Back at it: 3:15 PM",
             "End time: TBD"
           ]
         },
         {
-          "title": "Today's Plan",
+          "title": "Progress",
           "items": [
-            "Sand master bathroom cabinets",
-            "Sand shower window frame",
-            "Cleanup"
+            "Sanded master bathroom cabinets \u2705",
+            "Sanded shower window frame \u2705",
+            "5:00 PM \u2014 Master bathroom sanding complete \u2705",
+            "5:00 PM \u2014 Moved to living room \u2014 taping ceiling edges & wooden trim \ud83c\udfa8"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe1 On break since 2:45 PM",
-            "Hours to be finalized at end of day"
+            "\ud83d\udfe2 In progress \u2014 taping living room ceiling edges & trim",
+            "Master bathroom: sanding done \u2705"
           ]
         }
       ],
