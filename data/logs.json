@@ -2397,11 +2397,11 @@
     {
       "date": "2026-05-05",
       "project": "chers-house-painting-job",
-      "category": "prep",
+      "category": "painting",
       "hours": 0,
       "rate": 50,
       "earned": 0,
-      "tasks": "Day 26 \u2014 Taping, prepping & covering living room floors for painting",
+      "tasks": "Day 26 \u2014 Living room prepped, cutting in ceiling paint",
       "sections": [
         {
           "title": "Location",
@@ -2413,20 +2413,22 @@
           "title": "Schedule",
           "items": [
             "Started: 10:00 AM",
-            "Break: 11:45 AM \u2014 TBD",
+            "Break: 11:45 AM \u2014 1:15 PM (1.5 hours)",
+            "Back at it: 1:15 PM",
             "End time: TBD"
           ]
         },
         {
           "title": "Progress",
           "items": [
-            "10:00 AM \u2014 Taping, prepping and covering living room floors for painting"
+            "10:00 AM \u2014 Taping, prepping & covering living room floors",
+            "1:15 PM \u2014 Started cutting in paint at ceiling \ud83c\udfa8"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe1 On break since 11:45 AM"
+            "\ud83c\udfa8 In progress \u2014 cutting in living room ceiling"
           ]
         }
       ],
