@@ -2398,10 +2398,10 @@
       "date": "2026-05-05",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 7,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 26 \u2014 Living room prepped, cutting in ceiling paint",
+      "earned": 350,
+      "tasks": "Day 26 \u2014 Living room prepped, 2 coats on right corner walls",
       "sections": [
         {
           "title": "Location",
@@ -2415,21 +2415,24 @@
             "Started: 10:00 AM",
             "Break: 11:45 AM \u2014 1:15 PM (1.5 hours)",
             "Lunch: 4:30 PM \u2014 5:30 PM (1 hour)",
-            "Back at it: 5:30 PM",
-            "End time: TBD"
+            "Finished: 7:30 PM",
+            "9.5 hrs total \u2014 2.5 hrs breaks \u2014 billable: 7 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "10:00 AM \u2014 Taping, prepping & covering living room floors",
-            "1:15 PM \u2014 Started cutting in paint at ceiling \ud83c\udfa8"
+            "Taped, prepped & covered living room floors \u2705",
+            "Cut in paint at ceiling edges \ud83c\udfa8",
+            "Painted right corner walls \u2014 2 coats \u2705 \ud83c\udfa8",
+            "Continuing along living room tomorrow"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 cutting in living room ceiling"
+            "7 hrs \u00d7 $50/hr = $350.00 earned",
+            "Living room: prepped + right corner walls 2 coats done \u2705"
           ]
         }
       ],
