@@ -2449,10 +2449,10 @@
       "date": "2026-05-06",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 9,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 27 \u2014 Deck prep, continuing living room painting",
+      "earned": 450,
+      "tasks": "Day 27 \u2014 Deck cleared & prepped, living room painting continued",
       "sections": [
         {
           "title": "Location",
@@ -2465,21 +2465,23 @@
           "items": [
             "Started: 9:00 AM",
             "Lunch: 2:00 PM \u2014 3:00 PM (1 hour)",
-            "Back at it: 3:00 PM",
-            "End time: TBD"
+            "Finished: 7:00 PM",
+            "10 hrs total \u2014 1 hr break \u2014 billable: 9 hrs"
           ]
         },
         {
-          "title": "Today's Plan",
+          "title": "Work Completed",
           "items": [
-            "Clear deck and prep outside for sanding",
-            "Continue painting living room where left off"
+            "Cleared deck and prepped outside for sanding \u2705",
+            "Continued painting living room walls \ud83c\udfa8"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 painting living room walls"
+            "9 hrs \u00d7 $50/hr = $450.00 earned",
+            "Deck: cleared & prepped \u2705",
+            "Living room: painting in progress \ud83c\udfa8"
           ]
         }
       ],
