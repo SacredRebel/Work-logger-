@@ -2486,6 +2486,47 @@
         }
       ],
       "images": []
+    },
+    {
+      "date": "2026-05-07",
+      "project": "chers-house-painting-job",
+      "category": "painting",
+      "hours": 0,
+      "rate": 50,
+      "earned": 0,
+      "tasks": "Day 28 \u2014 Living room, entrance hallway, partial kitchen, touch-ups throughout",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Cher's house \u2014 Living room, entrance hallway, kitchen, throughout"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 9:30 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Today's Plan",
+          "items": [
+            "Continue painting living room",
+            "Paint entrance hallway",
+            "Partial kitchen painting",
+            "Touch up details throughout the house"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83c\udfa8 In progress \u2014 started 9:30 AM",
+            "Hours to be finalized at end of day"
+          ]
+        }
+      ],
+      "images": []
     }
   ]
 }
