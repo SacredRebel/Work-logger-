@@ -2491,10 +2491,10 @@
       "date": "2026-05-07",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 4.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 28 \u2014 Living room, entrance hallway, partial kitchen, touch-ups throughout",
+      "earned": 225,
+      "tasks": "Day 28 \u2014 Hallway/kitchen painted, living room coat #2, touch-ups, putty, tape removed",
       "sections": [
         {
           "title": "Location",
@@ -2507,24 +2507,29 @@
           "items": [
             "Started: 9:30 AM",
             "Break: 11:30 AM \u2014 2:00 PM (2.5 hours)",
-            "Back at it: 2:00 PM",
-            "End time: TBD"
+            "Finished: 4:30 PM",
+            "7 hrs total \u2014 2.5 hrs break \u2014 billable: 4.5 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "9:30 AM \u2014 Painted entrance hallway \u2705",
+            "Painted entrance hallway \u2705",
             "Painted partial kitchen \u2705",
-            "Touch-ups throughout \u2705",
-            "11:30 AM \u2014 Break (2.5 hours)",
-            "2:00 PM \u2014 Back at it: touch-ups upstairs + removing tape in living room"
+            "Touch-ups throughout house \u2705",
+            "Detailed touch-ups upstairs \u2705",
+            "Living room walls \u2014 coat #2 \u2705 \ud83c\udfa8",
+            "Patched holes & cracks with putty throughout \u2705",
+            "Removed tape from all frames and trim \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 touch-ups upstairs & removing tape in living room"
+            "4.5 hrs \u00d7 $50/hr = $225.00 earned",
+            "Living room: coat #2 done \u2705",
+            "All tape removed \u2705",
+            "Holes & cracks patched \u2705"
           ]
         }
       ],
