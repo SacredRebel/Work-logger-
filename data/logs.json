@@ -2608,6 +2608,8 @@
           "title": "Schedule",
           "items": [
             "Started: 11:30 AM",
+            "Break: 1:30 PM \u2014 4:00 PM (2.5 hours)",
+            "Back at it: 4:00 PM",
             "End time: TBD"
           ]
         },
@@ -2622,8 +2624,7 @@
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 started 11:30 AM",
-            "Hours to be finalized at end of day"
+            "\ud83d\udfe2 Back at it since 4:00 PM"
           ]
         }
       ],
