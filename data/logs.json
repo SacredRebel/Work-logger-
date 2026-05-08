@@ -67,6 +67,26 @@
           "note": "Paid on the spot by Sparrow \u2014 unprompted"
         }
       ]
+    },
+    {
+      "id": "helping-friend-rugs",
+      "name": "Helping Friend \u2014 Unloading Rugs",
+      "client": "Friend",
+      "color": "#8B5CF6",
+      "icon": "\ud83d\ude9a",
+      "rate": 0,
+      "startDate": "2026-05-07",
+      "status": "completed",
+      "description": "Helped friend's crew unload rugs & rocks from U-Haul into room for sale",
+      "payments": [
+        {
+          "id": "pay-f001",
+          "amount": 90,
+          "date": "2026-05-07",
+          "method": "Venmo",
+          "note": "Paid on the spot by friend"
+        }
+      ]
     }
   ],
   "categories": [
@@ -2530,6 +2550,40 @@
             "Living room: coat #2 done \u2705",
             "All tape removed \u2705",
             "Holes & cracks patched \u2705"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "date": "2026-05-07",
+      "project": "helping-friend-rugs",
+      "category": "general",
+      "hours": 3.5,
+      "rate": 0,
+      "earned": 90,
+      "tasks": "Helped unload rugs & rocks from U-Haul into room",
+      "sections": [
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 6:00 PM",
+            "Finished: 9:30 PM",
+            "Total: 3.5 hours"
+          ]
+        },
+        {
+          "title": "Work Done",
+          "items": [
+            "Helped friend's crew unload U-Haul truck",
+            "Carried rugs and rocks from truck into room",
+            "Setting up for sale event"
+          ]
+        },
+        {
+          "title": "Payment",
+          "items": [
+            "Paid $90 via Venmo \u2014 on the spot"
           ]
         }
       ],
