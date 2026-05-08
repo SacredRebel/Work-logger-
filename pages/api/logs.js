@@ -7,11 +7,15 @@ export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate')
   res.setHeader('Access-Control-Allow-Origin', '*')
 
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET'])
+    return res.status(405).end()
+  }
+
   const token = process.env.GITHUB_TOKEN
 
-  // ── GET — always fetch from GitHub API (never CDN) ─────────
-  if (req.method === 'GET') {
-    if (!token) return res.status(503).json({ error: 'GITHUB_TOKEN not set' })
+  // Try GitHub API first (no cache)
+  if (token) {
     try {
       const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE}?ref=${BRANCH}&t=${Date.now()}`
       const r = await fetch(url, {
@@ -22,15 +26,23 @@ export default async function handler(req, res) {
         },
         cache: 'no-store',
       })
-      if (!r.ok) throw new Error(`GitHub ${r.status}`)
-      const { content } = await r.json()
-      const data = JSON.parse(Buffer.from(content, 'base64').toString('utf8'))
-      return res.status(200).json(data)
-    } catch (e) {
-      return res.status(500).json({ error: e.message, entries: [], projects: [], categories: [] })
-    }
+      if (r.ok) {
+        const { content } = await r.json()
+        const data = JSON.parse(Buffer.from(content, 'base64').toString('utf8'))
+        return res.status(200).json(data)
+      }
+    } catch (e) {}
   }
 
-  res.setHeader('Allow', ['GET'])
-  res.status(405).end()
+  // Fallback — raw GitHub CDN (may be slightly cached but always works)
+  try {
+    const url = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${FILE}?t=${Date.now()}`
+    const r = await fetch(url, { cache: 'no-store' })
+    if (r.ok) {
+      const data = await r.json()
+      return res.status(200).json(data)
+    }
+  } catch (e) {}
+
+  return res.status(500).json({ error: 'Could not load data', entries: [], projects: [], categories: [] })
 }
