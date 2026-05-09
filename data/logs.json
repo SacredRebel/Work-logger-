@@ -2593,10 +2593,10 @@
       "date": "2026-05-08",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 4,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 29 \u2014 Living room cleanup, then staining trim & frames",
+      "earned": 200,
+      "tasks": "Day 29 \u2014 Living room cleaned up, trim & frames staining started",
       "sections": [
         {
           "title": "Location",
@@ -2609,22 +2609,24 @@
           "items": [
             "Started: 11:30 AM",
             "Break: 1:30 PM \u2014 4:00 PM (2.5 hours)",
-            "Back at it: 4:00 PM",
-            "End time: TBD"
+            "Finished: 6:00 PM",
+            "6.5 hrs total \u2014 2.5 hrs break \u2014 billable: 4 hrs"
           ]
         },
         {
-          "title": "Today's Plan",
+          "title": "Work Completed",
           "items": [
-            "Remove all tape, tarps and cardboard from living room",
-            "Clean up living room",
-            "Stain trim and frames in living room"
+            "Removed all tape, tarps and cardboard from living room \u2705",
+            "Cleaned up living room \u2705",
+            "Started staining living room trim and frames \ud83c\udfa8"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83d\udfe2 Back at it since 4:00 PM"
+            "4 hrs \u00d7 $50/hr = $200.00 earned",
+            "Living room: fully cleaned up \u2705",
+            "Trim & frames staining: in progress"
           ]
         }
       ],
