@@ -2676,10 +2676,10 @@
       "date": "2026-05-12",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 5.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 31 \u2014 Continuing living room trim & staining",
+      "earned": 275,
+      "tasks": "Day 31 \u2014 Living room trim & staining continued",
       "sections": [
         {
           "title": "Location",
@@ -2693,21 +2693,21 @@
             "Started: 9:30 AM",
             "Break: 11:00 AM \u2014 11:30 AM (30 min)",
             "Lunch: 1:30 PM \u2014 2:30 PM (1 hour)",
-            "Back at it: 2:30 PM",
-            "End time: TBD"
+            "Finished: 4:30 PM",
+            "7 hrs total \u2014 1.5 hrs breaks \u2014 billable: 5.5 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "9:30 AM \u2014 Continuing painting and staining living room trim \ud83c\udfa8"
+            "Continued painting and staining living room trim \ud83c\udfa8 \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 started 9:30 AM",
-            "Hours to be finalized at end of day"
+            "5.5 hrs \u00d7 $50/hr = $275.00 earned",
+            "Living room trim & staining: continued \u2705"
           ]
         }
       ],
