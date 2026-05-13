@@ -2712,6 +2712,54 @@
         }
       ],
       "images": []
+    },
+    {
+      "date": "2026-05-13",
+      "project": "chers-house-painting-job",
+      "category": "painting",
+      "hours": 0,
+      "rate": 50,
+      "earned": 0,
+      "tasks": "Day 32 \u2014 Living room cleanup, office room details, master bedroom/bathroom trim staining",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Cher's house \u2014 Living room, Office room, Master bedroom & bathroom"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 9:00 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Progress",
+          "items": [
+            "9:00 AM \u2014 Cleaning living room leftover tape, scraping floors of tape & paint",
+            "10:00 AM \u2014 Living room cleanup complete \u2705",
+            "10:00 AM \u2014 Started office room detail work \u2014 patching, clean edge lines, small details",
+            "Goal: stain & paint trim in master bedroom & bathroom",
+            "End of day: shift furniture back into living room"
+          ]
+        },
+        {
+          "title": "Note",
+          "items": [
+            "Living room trim & frames: fully stained & painted \u2705 (completed yesterday)"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83c\udfa8 In progress \u2014 started 9:00 AM",
+            "Hours to be finalized at end of day"
+          ]
+        }
+      ],
+      "images": []
     }
   ]
 }
