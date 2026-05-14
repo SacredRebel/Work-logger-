@@ -2784,6 +2784,8 @@
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
+            "Break: 10:30 AM \u2014 11:30 AM (1 hour)",
+            "Back at it: 11:30 AM",
             "End time: TBD"
           ]
         },
@@ -2797,8 +2799,7 @@
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 started 9:30 AM",
-            "Hours to be finalized at end of day"
+            "\ud83d\udfe2 Back at it since 11:30 AM"
           ]
         }
       ],
