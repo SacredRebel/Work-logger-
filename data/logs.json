@@ -2764,6 +2764,45 @@
         }
       ],
       "images": []
+    },
+    {
+      "date": "2026-05-14",
+      "project": "chers-house-painting-job",
+      "category": "painting",
+      "hours": 0,
+      "rate": 50,
+      "earned": 0,
+      "tasks": "Day 33 \u2014 Furniture back in living room, finishing office room",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Cher's house \u2014 Living room & Office room"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 9:30 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Progress",
+          "items": [
+            "9:30 AM \u2014 Putting furniture back into place in living room",
+            "Then: finishing up office room details"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83d\udfe2 In progress \u2014 started 9:30 AM",
+            "Hours to be finalized at end of day"
+          ]
+        }
+      ],
+      "images": []
     }
   ]
 }
