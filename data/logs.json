@@ -2717,10 +2717,10 @@
       "date": "2026-05-13",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 7.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 32 \u2014 Living room cleanup, office room details, master bedroom/bathroom trim staining",
+      "earned": 375,
+      "tasks": "Day 32 \u2014 Living room cleanup, office room almost done, master bedroom trim",
       "sections": [
         {
           "title": "Location",
@@ -2732,17 +2732,19 @@
           "title": "Schedule",
           "items": [
             "Started: 9:00 AM",
-            "End time: TBD"
+            "Lunch: 12:00 PM \u2014 1:00 PM (1 hour)",
+            "Finished: 5:30 PM",
+            "8.5 hrs total \u2014 1 hr break \u2014 billable: 7.5 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "9:00 AM \u2014 Cleaning living room leftover tape, scraping floors of tape & paint",
-            "10:00 AM \u2014 Living room cleanup complete \u2705",
-            "10:00 AM \u2014 Started office room detail work \u2014 patching, clean edge lines, small details",
-            "Goal: stain & paint trim in master bedroom & bathroom",
-            "End of day: shift furniture back into living room"
+            "9:00 AM \u2014 Cleaned living room, scraped tape & paint off floors \u2705",
+            "10:00 AM \u2014 Office room detail work \u2014 patching, clean edges, small details",
+            "Office room: almost fully finished \u2705",
+            "Master bedroom & bathroom trim staining \u2014 in progress \ud83c\udfa8",
+            "End of day: shifted furniture back into living room \u2705"
           ]
         },
         {
@@ -2752,10 +2754,12 @@
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 started 9:00 AM",
-            "Hours to be finalized at end of day"
+            "7.5 hrs \u00d7 $50/hr = $375.00 earned",
+            "Living room: fully cleaned, furniture back \u2705",
+            "Office room: almost complete \u2705",
+            "Master bedroom/bathroom trim: in progress \ud83c\udfa8"
           ]
         }
       ],
