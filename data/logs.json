@@ -2769,10 +2769,10 @@
       "date": "2026-05-14",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 9,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 33 \u2014 Furniture back in living room, finishing office room",
+      "earned": 450,
+      "tasks": "Day 33 \u2014 Living room furniture back, office room finishing",
       "sections": [
         {
           "title": "Location",
@@ -2785,21 +2785,24 @@
           "items": [
             "Started: 9:30 AM",
             "Break: 10:30 AM \u2014 11:30 AM (1 hour)",
-            "Back at it: 11:30 AM",
-            "End time: TBD"
+            "Lunch: 2:00 PM \u2014 2:30 PM (30 min)",
+            "Finished: 8:00 PM",
+            "10.5 hrs total \u2014 1.5 hrs breaks \u2014 billable: 9 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "9:30 AM \u2014 Putting furniture back into place in living room",
-            "Then: finishing up office room details"
+            "Furniture moved back into living room \u2705",
+            "Finished office room details and cleanup \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83d\udfe2 Back at it since 11:30 AM"
+            "9 hrs \u00d7 $50/hr = $450.00 earned",
+            "Living room: furniture back in place \u2705",
+            "Office room: finished \u2705"
           ]
         }
       ],
