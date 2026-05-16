@@ -2812,10 +2812,10 @@
       "date": "2026-05-15",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 8.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 34 \u2014 Painting & staining master bedroom windows & door frames",
+      "earned": 425,
+      "tasks": "Day 34 \u2014 Master bedroom windows & door frames painted & stained",
       "sections": [
         {
           "title": "Location",
@@ -2830,21 +2830,21 @@
             "Smoke break: 10:30 AM \u2014 11:00 AM (30 min)",
             "Lunch & smoke: 2:30 PM \u2014 3:30 PM (1 hour)",
             "Smoke break: 5:00 PM \u2014 5:30 PM (30 min)",
-            "Back at it: 5:30 PM",
-            "End time: TBD"
+            "Finished: 8:00 PM",
+            "10.5 hrs total \u2014 2 hrs breaks \u2014 billable: 8.5 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "9:30 AM \u2014 Painting and staining master bedroom windows & door frames \ud83c\udfa8"
+            "Painted & stained master bedroom windows and door frames \ud83c\udfa8 \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 started 9:30 AM",
-            "Hours to be finalized at end of day"
+            "8.5 hrs \u00d7 $50/hr = $425.00 earned",
+            "Master bedroom windows & door frames: done \u2705"
           ]
         }
       ],
