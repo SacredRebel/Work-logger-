@@ -2854,10 +2854,10 @@
       "date": "2026-05-16",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 5.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 35 \u2014 Finishing master bedroom trim & frames painting/staining",
+      "earned": 275,
+      "tasks": "Day 35 \u2014 Master bedroom trim & frames painting/staining finished",
       "sections": [
         {
           "title": "Location",
@@ -2872,21 +2872,21 @@
             "Break: 11:00 AM \u2014 11:30 AM (30 min)",
             "Break: 1:00 PM \u2014 1:30 PM (30 min)",
             "Lunch: 2:30 PM \u2014 3:30 PM (1 hour)",
-            "Back at it: 3:30 PM",
-            "End time: TBD"
+            "Finished: 5:30 PM",
+            "7.5 hrs total \u2014 2 hrs breaks \u2014 billable: 5.5 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "10:00 AM \u2014 Finishing master bedroom trim & frames painting/staining \ud83c\udfa8"
+            "Finished painting & staining master bedroom trim and frames \ud83c\udfa8 \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 started 10:00 AM",
-            "Hours to be finalized at end of day"
+            "5.5 hrs \u00d7 $50/hr = $275.00 earned",
+            "Master bedroom trim & frames: 100% done \u2705"
           ]
         }
       ],
