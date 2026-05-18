@@ -2914,7 +2914,7 @@
           "items": [
             "Started: 10:30 AM",
             "Lunch: 12:30 PM \u2014 1:00 PM (30 min)",
-            "Back at it: 1:00 PM",
+            "Paused: 2:45 PM \u2014 resuming later",
             "End time: TBD"
           ]
         },
@@ -2927,8 +2927,7 @@
         {
           "title": "Status",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 started 10:30 AM",
-            "Hours to be finalized at end of day"
+            "\ud83d\udfe1 Paused since 2:45 PM \u2014 resuming later"
           ]
         }
       ],
