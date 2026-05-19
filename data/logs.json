@@ -2901,7 +2901,7 @@
       "hours": 0,
       "rate": 50,
       "earned": 0,
-      "tasks": "Day 36 \u2014 Painting master bathroom door",
+      "tasks": "Day 36 \u2014 Bathroom door, window frames, wall patch, cabinet sanding, main door next",
       "sections": [
         {
           "title": "Location",
@@ -2914,20 +2914,27 @@
           "items": [
             "Started: 10:30 AM",
             "Lunch: 12:30 PM \u2014 1:00 PM (30 min)",
-            "Paused: 2:45 PM \u2014 resuming later",
+            "Break (carpet wash): 2:45 PM \u2014 5:00 PM (2 hrs 15 min)",
+            "Back at it: 5:00 PM",
             "End time: TBD"
           ]
         },
         {
           "title": "Progress",
           "items": [
-            "10:30 AM \u2014 Painting master bathroom door \ud83c\udfa8"
+            "10:30 AM \u2014 Painting master bathroom door \ud83c\udfa8",
+            "Retouched window frame details",
+            "Hung window sheets",
+            "Patched wall with wall putty \u2705",
+            "2:45 PM \u2014 Break to wash carpet",
+            "5:00 PM \u2014 Back at it: sanding master bedroom cabinets",
+            "Next: stain & paint master bedroom main door"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe1 Paused since 2:45 PM \u2014 resuming later"
+            "\ud83d\udfe2 Back at it 5:00 PM \u2014 sanding master bedroom cabinets"
           ]
         }
       ],
