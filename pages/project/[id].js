@@ -226,6 +226,182 @@ function ImageGrid({ images: initialImages, color, projectId, date, onImageDelet
 }
 
 
+
+/* ── Work Activity — Timeline / Weekly / Monthly ─────────── */
+function WorkActivity({ entries, color, weekH }) {
+  const [view, setView] = useState('timeline');
+  const [openWeek, setOpenWeek] = useState(null);
+
+  // Group by week (Mon–Sun)
+  const weekMap = {};
+  entries.forEach(e => {
+    const d = new Date(e.date + 'T12:00:00');
+    const day = d.getDay();
+    const mon = new Date(d); mon.setDate(d.getDate() - (day === 0 ? 6 : day - 1));
+    const key = mon.toISOString().split('T')[0];
+    if (!weekMap[key]) weekMap[key] = { start: mon, entries: [] };
+    weekMap[key].entries.push(e);
+  });
+  const weeks = Object.entries(weekMap).sort((a,b) => b[0].localeCompare(a[0]));
+
+  // Group by month
+  const monthMap = {};
+  entries.forEach(e => {
+    const key = e.date.slice(0,7);
+    if (!monthMap[key]) monthMap[key] = [];
+    monthMap[key].push(e);
+  });
+  const months = Object.entries(monthMap).sort((a,b) => b[0].localeCompare(a[0]));
+
+  const fmtD = (d) => d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+  const fmtM = (k) => { const [y,m]=k.split('-'); return new Date(y,m-1,1).toLocaleDateString('en-US',{month:'long',year:'numeric'}); };
+
+  return (
+    <div style={{background:'var(--s1)',borderRadius:18,border:'1px solid var(--bdr)',
+      boxShadow:'var(--shd)',padding:'16px',marginBottom:18}}>
+
+      {/* Header + toggle */}
+      <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',marginBottom:14}}>
+        <div>
+          <div style={{fontSize:11,fontWeight:700,color:'var(--t4)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:2}}>Work Activity</div>
+          <div style={{fontSize:11,color:'var(--t3)'}}>
+            {entries.length} days · {weekH>0?`${weekH.toFixed(1)}h this week`:'no logs this week'}
+          </div>
+        </div>
+        <div style={{display:'flex',background:'var(--s2)',borderRadius:10,padding:'2px',gap:2,border:'1px solid var(--bdr)'}}>
+          {[{k:'timeline',label:'📅'},{k:'weekly',label:'Wk'},{k:'monthly',label:'Mo'}].map(({k,label})=>(
+            <button key={k} onClick={()=>setView(k)} style={{
+              padding:'5px 10px',borderRadius:8,border:'none',cursor:'pointer',
+              fontFamily:'inherit',fontSize:11,fontWeight:700,
+              background:view===k?color:'transparent',
+              color:view===k?'#fff':'var(--t3)',
+              transition:'all 0.15s',
+            }}>{label}</button>
+          ))}
+        </div>
+      </div>
+
+      {/* Timeline / Heatmap */}
+      {view==='timeline' && <Heatmap entries={entries} color={color}/>}
+
+      {/* Weekly view */}
+      {view==='weekly' && (
+        <div style={{display:'flex',flexDirection:'column',gap:8}}>
+          {weeks.map(([key, {start, entries:we}]) => {
+            const end = new Date(start); end.setDate(start.getDate()+6);
+            const totalH = we.reduce((s,e)=>s+(Number(e.hours)||0),0);
+            const totalE = we.reduce((s,e)=>s+(Number(e.earned)||0),0);
+            const isOpen = openWeek===key;
+            return (
+              <div key={key} style={{borderRadius:12,overflow:'hidden',border:'1px solid var(--bdr)'}}>
+                <div onClick={()=>setOpenWeek(isOpen?null:key)} style={{
+                  display:'flex',alignItems:'center',justifyContent:'space-between',
+                  padding:'12px 14px',cursor:'pointer',background:'var(--s2)',
+                }}>
+                  <div>
+                    <div style={{fontSize:12,fontWeight:700,color:'var(--t1)'}}>
+                      {fmtD(start)} — {fmtD(end)}
+                    </div>
+                    <div style={{fontSize:11,color:'var(--t3)',marginTop:2}}>
+                      {we.length} day{we.length!==1?'s':''} · {totalH.toFixed(1)}h
+                    </div>
+                  </div>
+                  <div style={{display:'flex',alignItems:'center',gap:10}}>
+                    <span style={{fontSize:15,fontWeight:800,color:'#22C55E'}}>${totalE.toFixed(0)}</span>
+                    <span style={{fontSize:11,color:'var(--t4)',transition:'transform 0.2s',
+                      display:'inline-block',transform:isOpen?'rotate(180deg)':'rotate(0deg)'}}>▾</span>
+                  </div>
+                </div>
+                {isOpen && (
+                  <div style={{padding:'10px 14px 12px',display:'flex',flexDirection:'column',gap:6,background:'var(--s1)'}}>
+                    {we.sort((a,b)=>b.date.localeCompare(a.date)).map(e=>(
+                      <div key={e.date} style={{display:'flex',alignItems:'center',justifyContent:'space-between',
+                        padding:'9px 12px',borderRadius:10,background:'var(--s2)',border:'1px solid var(--bdr)'}}>
+                        <div>
+                          <div style={{fontSize:12,fontWeight:700,color:'var(--t1)'}}>
+                            {new Date(e.date+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}
+                          </div>
+                          <div style={{fontSize:10,color:'var(--t4)',marginTop:1,maxWidth:180,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>
+                            {e.tasks||''}
+                          </div>
+                        </div>
+                        <div style={{textAlign:'right',flexShrink:0}}>
+                          <div style={{fontSize:13,fontWeight:800,color}}>{Number(e.hours).toFixed(1)}h</div>
+                          <div style={{fontSize:11,fontWeight:700,color:'#22C55E'}}>${Number(e.earned).toFixed(0)}</div>
+                        </div>
+                      </div>
+                    ))}
+                    <div style={{display:'flex',justifyContent:'space-between',padding:'6px 12px',
+                      borderTop:'1px solid var(--bdr)',marginTop:2}}>
+                      <span style={{fontSize:11,fontWeight:700,color:'var(--t3)'}}>Week total</span>
+                      <span style={{fontSize:11,fontWeight:800,color:'var(--t1)'}}>
+                        {totalH.toFixed(1)}h · <span style={{color:'#22C55E'}}>${totalE.toFixed(0)}</span>
+                      </span>
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Monthly view */}
+      {view==='monthly' && (
+        <div style={{display:'flex',flexDirection:'column',gap:10}}>
+          {months.map(([key, me]) => {
+            const totalH = me.reduce((s,e)=>s+(Number(e.hours)||0),0);
+            const totalE = me.reduce((s,e)=>s+(Number(e.earned)||0),0);
+            const maxH = Math.max(...me.map(e=>Number(e.hours)||0),1);
+            return (
+              <div key={key} style={{borderRadius:14,border:'1px solid var(--bdr)',padding:'14px',background:'var(--s2)'}}>
+                <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:12}}>
+                  <div>
+                    <div style={{fontSize:13,fontWeight:800,color:'var(--t1)'}}>{fmtM(key)}</div>
+                    <div style={{fontSize:11,color:'var(--t3)',marginTop:2}}>{me.length} days · {totalH.toFixed(1)} hrs</div>
+                  </div>
+                  <div style={{textAlign:'right'}}>
+                    <div style={{fontSize:22,fontWeight:800,color:'#22C55E',letterSpacing:'-0.04em'}}>${totalE.toLocaleString()}</div>
+                    <div style={{fontSize:10,color:'var(--t4)',fontWeight:600}}>earned</div>
+                  </div>
+                </div>
+                {/* Bar chart */}
+                <div style={{display:'flex',alignItems:'flex-end',gap:3,height:40,marginBottom:10}}>
+                  {me.sort((a,b)=>a.date.localeCompare(b.date)).map(e=>{
+                    const h = Number(e.hours)||0;
+                    const pct = h/maxH;
+                    return (
+                      <div key={e.date} title={`${new Date(e.date+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'})}: ${h}h`}
+                        style={{flex:1,borderRadius:3,minHeight:4,
+                          height:`${Math.max(4,pct*38)}px`,
+                          background:`${color}`,opacity:0.3+pct*0.7,
+                          alignSelf:'flex-end',
+                        }}/>
+                    );
+                  })}
+                </div>
+                {/* Stats */}
+                <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:8}}>
+                  {[
+                    {lbl:'Days',val:me.length},
+                    {lbl:'Avg/day',val:`${(totalH/me.length).toFixed(1)}h`},
+                    {lbl:'Avg/hr',val:`$${totalH>0?(totalE/totalH).toFixed(0):'0'}`},
+                  ].map(({lbl,val})=>(
+                    <div key={lbl} style={{background:'var(--s3)',borderRadius:8,padding:'8px',textAlign:'center',border:'1px solid var(--bdr)'}}>
+                      <div style={{fontSize:14,fontWeight:800,color:'var(--t1)'}}>{val}</div>
+                      <div style={{fontSize:9,color:'var(--t4)',fontWeight:600,textTransform:'uppercase',letterSpacing:'0.06em',marginTop:1}}>{lbl}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* ── Entry card — expand/collapse inline, NO navigation ──── */
 function EntryCard({ entry, categories, color, projectId, onRefresh, payStatus, payments, allEntries }) {
   const [open, setOpen] = useState(false);
@@ -571,19 +747,8 @@ export default function ProjectDetail() {
           ))}
         </div>
 
-        {/* Heatmap */}
-        <div style={{background:'var(--s1)',borderRadius:18,border:'1px solid var(--bdr)',
-          boxShadow:'var(--shd)',padding:'16px',marginBottom:18}}>
-          <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',marginBottom:14}}>
-            <div>
-              <div style={{fontSize:11,fontWeight:700,color:'var(--t4)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:2}}>Work Activity</div>
-              <div style={{fontSize:11,color:'var(--t3)'}}>
-                {pEntries.length} days · {weekH>0?`${weekH.toFixed(1)}h this week`:'no logs this week'}
-              </div>
-            </div>
-          </div>
-          <Heatmap entries={pEntries} color={color}/>
-        </div>
+        {/* Work Activity — Timeline / Weekly / Monthly */}
+        <WorkActivity entries={pEntries} color={color} weekH={weekH}/>
 
         {/* Tabs */}
         <div style={{display:'flex',background:'var(--s2)',borderRadius:14,padding:'3px',gap:2,
