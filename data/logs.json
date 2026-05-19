@@ -2898,10 +2898,10 @@
       "date": "2026-05-18",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 6.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 36 \u2014 Bathroom door, window frames, wall patch, cabinet sanding, main door next",
+      "earned": 325,
+      "tasks": "Day 36 \u2014 Bathroom door, window frames, wall patch, cabinets sanded, main door done",
       "sections": [
         {
           "title": "Location",
@@ -2915,26 +2915,28 @@
             "Started: 10:30 AM",
             "Lunch: 12:30 PM \u2014 1:00 PM (30 min)",
             "Break (carpet wash): 2:45 PM \u2014 5:00 PM (2 hrs 15 min)",
-            "Back at it: 5:00 PM",
-            "End time: TBD"
+            "Finished: 7:45 PM",
+            "9.25 hrs total \u2014 2.75 hrs breaks \u2014 billable: 6.5 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "10:30 AM \u2014 Painting master bathroom door \ud83c\udfa8",
-            "Retouched window frame details",
-            "Hung window sheets",
+            "Painted master bathroom door \ud83c\udfa8 \u2705",
+            "Retouched window frame details \u2705",
+            "Hung window sheets \u2705",
             "Patched wall with wall putty \u2705",
-            "2:45 PM \u2014 Break to wash carpet",
-            "5:00 PM \u2014 Back at it: sanding master bedroom cabinets",
-            "Next: stain & paint master bedroom main door"
+            "Sanded master bedroom cabinets \u2705",
+            "Sanded & painted master bedroom main door \ud83c\udfa8 \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83d\udfe2 Back at it 5:00 PM \u2014 sanding master bedroom cabinets"
+            "6.5 hrs \u00d7 $50/hr = $325.00 earned",
+            "Master bathroom door: painted \u2705",
+            "Master bedroom cabinets: sanded \u2705",
+            "Master bedroom main door: done \u2705"
           ]
         }
       ],
