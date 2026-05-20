@@ -2946,15 +2946,15 @@
       "date": "2026-05-19",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 9,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 37 \u2014 Master bedroom finishing, door sanding, outside door & frame painting",
+      "earned": 450,
+      "tasks": "Day 37 \u2014 Master bedroom finished, outside frames & door painted, indoor door done",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house \u2014 Master bedroom & bathroom"
+            "Cher's house \u2014 Master bedroom & outside"
           ]
         },
         {
@@ -2962,25 +2962,27 @@
           "items": [
             "Started: 10:30 AM",
             "Lunch: 3:30 PM \u2014 4:00 PM (30 min)",
-            "Back at it: 4:00 PM",
-            "End time: TBD"
+            "Smoke break: 5:00 PM \u2014 5:30 PM (30 min)",
+            "Finished: 8:30 PM",
+            "10 hrs total \u2014 1 hr breaks \u2014 billable: 9 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "Master bedroom \u2014 patching, cleaning, mounting items back on walls \u2705",
-            "Sanding master bedroom door",
-            "Painted outside window frames & outdoor door of master bedroom \ud83c\udfa8 \u2705",
-            "7:45 PM \u2014 Outside frames & door painting done \u2705",
-            "Cleanup done",
-            "Now: back to staining & painting indoor master bedroom door"
+            "Master bedroom \u2014 patched, cleaned, mounted items back \u2705",
+            "Sanded master bedroom indoor door \u2705",
+            "Painted outside window frames & outdoor door \ud83c\udfa8 \u2705",
+            "Stained & painted master bedroom indoor door \ud83c\udfa8 \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 staining & painting master bedroom indoor door"
+            "9 hrs \u00d7 $50/hr = $450.00 earned",
+            "Master bedroom: fully finished \u2705",
+            "Outside frames & door: painted \u2705",
+            "Indoor door: stained & painted \u2705"
           ]
         }
       ],
