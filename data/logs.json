@@ -3034,6 +3034,44 @@
         }
       ],
       "images": []
+    },
+    {
+      "date": "2026-05-21",
+      "project": "chers-house-painting-job",
+      "category": "painting",
+      "hours": 0,
+      "rate": 50,
+      "earned": 0,
+      "tasks": "Day 39 \u2014 Fine sanding & finishing details on doors",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Cher's house \u2014 Interior doors"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 10:00 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Progress",
+          "items": [
+            "10:00 AM \u2014 Fine sanding doors and finishing up details \ud83c\udfa8"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83c\udfa8 In progress \u2014 started 10:00 AM",
+            "Hours to be finalized at end of day"
+          ]
+        }
+      ],
+      "images": []
     }
   ]
 }
