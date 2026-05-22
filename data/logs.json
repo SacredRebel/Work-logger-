@@ -3039,15 +3039,15 @@
       "date": "2026-05-21",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 8.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 39 \u2014 Doors stained, now sanding master bathroom cabinet door",
+      "earned": 425,
+      "tasks": "Day 39 \u2014 Doors fine sanded & stained, master bathroom cabinet door sanded",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house \u2014 Interior doors"
+            "Cher's house \u2014 Interior doors & master bathroom"
           ]
         },
         {
@@ -3056,22 +3056,26 @@
             "Started: 10:00 AM",
             "Break: 12:30 PM \u2014 1:30 PM (1 hour)",
             "Break: 3:30 PM \u2014 3:45 PM (15 min)",
-            "Back at it: 3:45 PM",
-            "End time: TBD"
+            "Smoke break: 5:00 PM \u2014 5:30 PM (30 min)",
+            "Break: 7:00 PM \u2014 7:15 PM (15 min)",
+            "Finished: 8:30 PM",
+            "10.5 hrs total \u2014 2 hrs breaks \u2014 billable: 8.5 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "10:00 AM \u2014 Fine sanding & finishing door details \ud83c\udfa8",
-            "3:30 PM \u2014 Door staining complete \u2705",
-            "3:45 PM \u2014 Started sanding master bathroom cabinet folding door"
+            "Fine sanded all doors \u2705",
+            "Stained all doors \u2014 complete \u2705 \ud83c\udfa8",
+            "Sanded master bathroom cabinet folding door \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 sanding master bathroom cabinet folding door"
+            "8.5 hrs \u00d7 $50/hr = $425.00 earned",
+            "All doors: fine sanded & stained \u2705",
+            "Master bathroom cabinet door: sanded \u2705"
           ]
         }
       ],
