@@ -3085,10 +3085,10 @@
       "date": "2026-05-22",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 6,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 40 \u2014 Master bathroom cabinet doors staining, then finish sanding upstairs doors",
+      "earned": 300,
+      "tasks": "Day 40 \u2014 Cabinet doors stained, 3 upstairs doors finished & hung",
       "sections": [
         {
           "title": "Location",
@@ -3102,23 +3102,25 @@
             "Started: 9:30 AM",
             "Smoke break: 12:00 PM \u2014 12:30 PM (30 min)",
             "Lunch: 1:30 PM \u2014 2:00 PM (30 min)",
-            "Back at it: 2:00 PM",
-            "End time: TBD"
+            "Finished: 4:30 PM",
+            "7 hrs total \u2014 1 hr breaks \u2014 billable: 6 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "9:30 AM \u2014 Cleaned & washed master bathroom cabinet folding doors",
-            "12:30 PM \u2014 Staining cabinet folding doors \ud83c\udfa8",
-            "Up next: finish sand the 3 upstairs doors"
+            "Cleaned & washed master bathroom cabinet folding doors \u2705",
+            "Stained master bathroom cabinet folding doors \ud83c\udfa8 \u2705",
+            "Finish sanded all 3 upstairs doors \u2705",
+            "Hung all 3 upstairs doors back in their spots \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 staining master bathroom cabinet doors",
-            "Hours to be finalized at end of day"
+            "6 hrs \u00d7 $50/hr = $300.00 earned",
+            "Master bathroom cabinet doors: stained \u2705",
+            "All 3 upstairs doors: finished & hung \u2705"
           ]
         }
       ],
