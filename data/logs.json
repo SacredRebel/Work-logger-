@@ -3130,9 +3130,9 @@
       "date": "2026-05-25",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 5.5,
+      "hours": 6,
       "rate": 50,
-      "earned": 275,
+      "earned": 300,
       "tasks": "Day 41 \u2014 Bathroom cabinet doors done, kitchen cabinets sanded & cleaned, hinges mounted",
       "sections": [
         {
@@ -3158,13 +3158,14 @@
             "Removed all kitchen cabinet handles",
             "Sanded all kitchen cabinets \u2705",
             "Cleaned & washed most kitchen cabinets \u2705",
-            "Mounted & screwed hinges back on bathroom cabinet folding door \u2705"
+            "Mounted & screwed hinges back on folding door \u2705",
+            "Hung folding doors back into place \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "5.5 hrs \u00d7 $50/hr = $275.00 earned",
+            "6 hrs \u00d7 $50/hr = $300.00 earned",
             "Master bathroom cabinet doors: fully done & hung \u2705",
             "Kitchen cabinets: sanded & cleaned \u2705"
           ]
