@@ -3237,8 +3237,9 @@
           "title": "Schedule",
           "items": [
             "Started: 8:30 AM",
-            "Away for other job: 9:45 AM \u2014 TBD",
-            "Returning later to continue"
+            "Away for other job: 9:45 AM \u2014 2:00 PM",
+            "Back at it: 2:00 PM",
+            "End time: TBD"
           ]
         },
         {
@@ -3252,8 +3253,7 @@
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe1 Away \u2014 returning later to continue",
-            "Hours to be finalized at end of day"
+            "\ud83c\udfa8 Back at it since 2:00 PM \u2014 continuing kitchen cabinets"
           ]
         }
       ],
