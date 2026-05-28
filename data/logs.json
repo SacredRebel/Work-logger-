@@ -87,6 +87,26 @@
           "note": "Paid on the spot by friend"
         }
       ]
+    },
+    {
+      "id": "helping-carol-yard",
+      "name": "Helping Carol \u2014 Yard Work",
+      "client": "Carol",
+      "color": "#10B981",
+      "icon": "\ud83c\udf3f",
+      "rate": 0,
+      "startDate": "2026-05-27",
+      "status": "completed",
+      "description": "Trimmed bushes, pulled weeds, trimmed pomegranate tree at Carol's",
+      "payments": [
+        {
+          "id": "pay-c001",
+          "amount": 50,
+          "date": "2026-05-27",
+          "method": "Cash",
+          "note": "Paid on the spot by Carol"
+        }
+      ]
     }
   ],
   "categories": [
@@ -3222,10 +3242,10 @@
       "date": "2026-05-27",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 6.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 43 \u2014 Kitchen cabinet painting",
+      "earned": 325,
+      "tasks": "Day 43 \u2014 Kitchen cabinets first coat painted",
       "sections": [
         {
           "title": "Location",
@@ -3237,23 +3257,59 @@
           "title": "Schedule",
           "items": [
             "Started: 8:30 AM",
-            "Away for other job: 9:45 AM \u2014 2:00 PM",
+            "Away for other job: 9:45 AM \u2014 2:00 PM (not billed)",
             "Back at it: 2:00 PM",
-            "End time: TBD"
+            "Finished: 7:30 PM",
+            "Billable: 8:30-9:45 AM + 2:00-7:30 PM = 6.5 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "8:30 AM \u2014 Started painting kitchen cabinets \ud83c\udfa8",
-            "9:45 AM \u2014 Had to leave for another job",
-            "Returning later to continue cabinet painting"
+            "Painted kitchen cabinets \u2014 first coat \ud83c\udfa8 \u2705",
+            "First coat complete \u2014 may be sufficient"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 Back at it since 2:00 PM \u2014 continuing kitchen cabinets"
+            "6.5 hrs \u00d7 $50/hr = $325.00 earned",
+            "Kitchen cabinets: first coat done \u2705"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "date": "2026-05-27",
+      "project": "helping-carol-yard",
+      "category": "general",
+      "hours": 0.5,
+      "rate": 0,
+      "earned": 50,
+      "tasks": "Trimmed bushes, pulled weeds, trimmed pomegranate tree",
+      "sections": [
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 11:00 AM",
+            "Finished: 11:30 AM",
+            "Total: 30 min"
+          ]
+        },
+        {
+          "title": "Work Done",
+          "items": [
+            "Trimmed 2 small bushes \u2705",
+            "Pulled out weeds \u2705",
+            "Trimmed smaller pomegranate tree \u2705",
+            "General yard assessment & other job discussion"
+          ]
+        },
+        {
+          "title": "Payment",
+          "items": [
+            "Paid $50 cash on the spot by Carol"
           ]
         }
       ],
