@@ -3319,10 +3319,10 @@
       "date": "2026-05-28",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 9,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 44 \u2014 Kitchen cleanup & reassemble, trimmed bush, outdoor green painting",
+      "earned": 450,
+      "tasks": "Day 44 \u2014 Kitchen reassembled, outdoor green beams & details painted",
       "sections": [
         {
           "title": "Location",
@@ -3337,24 +3337,25 @@
             "Break: 10:00 AM \u2014 10:15 AM (15 min)",
             "Lunch: 12:30 PM \u2014 1:00 PM (30 min)",
             "Break: 3:00 PM \u2014 3:30 PM (30 min)",
-            "Back at it: 3:30 PM",
-            "End time: TBD"
+            "Finished: 6:30 PM",
+            "10.5 hrs total \u2014 1.25 hrs breaks \u2014 billable: 9 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "8:00 AM \u2014 Removed all tape from cabinets, floors & walls",
+            "Removed all tape from cabinets, floors & walls \u2705",
             "Put all cabinet handles back on \u2705",
-            "Trimmed bush outside for deck sanding access \u2705",
-            "10:15 AM \u2014 Now painting outdoor beams & details in green \ud83c\udfa8"
+            "Trimmed bush for deck sanding access \u2705",
+            "Painted outdoor beams & details in green \ud83c\udfa8 \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 painting outdoor beams & details (green)",
-            "Hours to be finalized at end of day"
+            "9 hrs \u00d7 $50/hr = $450.00 earned",
+            "Kitchen: fully cleaned up & reassembled \u2705",
+            "Outdoor green beams & details: painted \u2705"
           ]
         }
       ],
