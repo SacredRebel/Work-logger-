@@ -3368,7 +3368,7 @@
       "hours": 10,
       "rate": 50,
       "earned": 500,
-      "tasks": "Day 45 \u2014 Outdoor green: fascia, beams, rain gutters & trim painted",
+      "tasks": "Day 45 \u2014 Outdoor green: fascia, beams, gutters, window frames & trim painted",
       "sections": [
         {
           "title": "Location",
@@ -3391,6 +3391,7 @@
           "items": [
             "Painted fascia, beams & trim in green \ud83c\udfa8 \u2705",
             "Painted rain gutters in green \ud83c\udfa8 \u2705",
+            "Painted window frames in green \ud83c\udfa8 \u2705",
             "Full focus on outdoor green exterior work all day"
           ]
         },
