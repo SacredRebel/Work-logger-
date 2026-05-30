@@ -3365,10 +3365,10 @@
       "date": "2026-05-29",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 10,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 45 \u2014 Continuing outdoor green painting: trim, fascias & frames",
+      "earned": 500,
+      "tasks": "Day 45 \u2014 Outdoor green: fascia, beams, rain gutters & trim painted",
       "sections": [
         {
           "title": "Location",
@@ -3381,21 +3381,24 @@
           "items": [
             "Started: 9:00 AM",
             "Lunch: 3:00 PM \u2014 3:45 PM (45 min)",
-            "Back at it: 3:45 PM",
-            "End time: TBD"
+            "Smoke break: 5:00 PM \u2014 5:15 PM (15 min)",
+            "Finished: 8:00 PM",
+            "11 hrs total \u2014 1 hr breaks \u2014 billable: 10 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "9:00 AM \u2014 Continuing outdoor trim, fascias & frames in green \ud83c\udfa8"
+            "Painted fascia, beams & trim in green \ud83c\udfa8 \u2705",
+            "Painted rain gutters in green \ud83c\udfa8 \u2705",
+            "Full focus on outdoor green exterior work all day"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 started 9:00 AM",
-            "Hours to be finalized at end of day"
+            "10 hrs \u00d7 $50/hr = $500.00 earned",
+            "Fascia, beams, gutters & trim: painted green \u2705"
           ]
         }
       ],
