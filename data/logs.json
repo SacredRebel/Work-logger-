@@ -3409,9 +3409,9 @@
       "date": "2026-05-30",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 3.5,
       "rate": 50,
-      "earned": 0,
+      "earned": 175,
       "tasks": "Day 46 \u2014 Continuing outdoor green painting",
       "sections": [
         {
@@ -3421,9 +3421,9 @@
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "10:30 AM \u2014 Continuing outdoor green painting \ud83c\udfa8"
+            "Continued outdoor green painting \ud83c\udfa8 \u2705"
           ]
         },
         {
@@ -3432,15 +3432,15 @@
             "Started: 10:30 AM",
             "Break: 11:00 AM \u2014 12:30 PM (1.5 hours)",
             "Lunch: 2:00 PM \u2014 4:00 PM (2 hours)",
-            "Back at it: 4:00 PM",
-            "End time: TBD"
+            "Finished: 5:30 PM",
+            "7 hrs total \u2014 3.5 hrs breaks \u2014 billable: 3.5 hrs"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 started 10:30 AM",
-            "Hours to be finalized at end of day"
+            "3.5 hrs \u00d7 $50/hr = $175.00 earned",
+            "Outdoor green painting: continued \u2705"
           ]
         }
       ],
