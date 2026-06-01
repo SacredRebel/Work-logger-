@@ -3490,6 +3490,46 @@
         }
       ],
       "images": []
+    },
+    {
+      "date": "2026-06-01",
+      "project": "chers-house-painting-job",
+      "category": "painting",
+      "hours": 0,
+      "rate": 50,
+      "earned": 0,
+      "tasks": "Day 48 \u2014 Finished fascia in green, now sanding & painting entrance doors",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Cher's house \u2014 Roof/exterior & entrance doors"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 8:00 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Progress",
+          "items": [
+            "8:00 AM \u2014 Up on roof finishing all fascia in green \ud83c\udfa8",
+            "9:00 AM \u2014 All fascia complete \u2705",
+            "9:00 AM \u2014 Started sanding & painting entrance doors \ud83c\udfa8"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83c\udfa8 In progress \u2014 sanding & painting entrance doors",
+            "Hours to be finalized at end of day"
+          ]
+        }
+      ],
+      "images": []
     }
   ]
 }
