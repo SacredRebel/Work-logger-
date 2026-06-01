@@ -3450,10 +3450,10 @@
       "date": "2026-05-31",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 7.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 47 \u2014 Green painting, tape removed, 2 tile posts painting in black",
+      "earned": 375,
+      "tasks": "Day 47 \u2014 Green painting, tape removed, 2 tile posts painted black",
       "sections": [
         {
           "title": "Location",
@@ -3467,23 +3467,25 @@
             "Started: 10:30 AM",
             "Break: 12:30 PM \u2014 1:00 PM (30 min)",
             "Lunch: 2:00 PM \u2014 2:30 PM (30 min)",
-            "Back at it: 2:30 PM",
-            "End time: TBD"
+            "Finished: 7:00 PM",
+            "8.5 hrs total \u2014 1 hr breaks \u2014 billable: 7.5 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "10:30 AM \u2014 Continued outdoor green painting \ud83c\udfa8",
-            "1:00 PM \u2014 Removed all tape from finished areas & painted windows \u2705",
-            "1:00 PM \u2014 Started painting 2 posts with tiles in black \ud83c\udfa8",
-            "2:30 PM \u2014 Continuing detailing around tiles on the 2 posts"
+            "Continued outdoor green painting \ud83c\udfa8 \u2705",
+            "Removed all tape from finished areas & painted windows \u2705",
+            "Painted 2 tile posts in black with detailed work around tiles \ud83c\udfa8 \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 painting tile posts in black & detailing"
+            "7.5 hrs \u00d7 $50/hr = $375.00 earned",
+            "Outdoor green painting: continued \u2705",
+            "Tape removed from all finished areas \u2705",
+            "2 tile posts: painted black \u2705"
           ]
         }
       ],
