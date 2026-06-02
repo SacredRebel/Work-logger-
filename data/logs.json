@@ -45,6 +45,13 @@
           "date": "2026-05-05",
           "method": "ACH Transfer",
           "note": "Supplies reimbursement \u2014 cost deducted, $50 net remainder"
+        },
+        {
+          "id": "pay-005",
+          "amount": 5000,
+          "date": "2026-06-01",
+          "method": "ACH Transfer",
+          "note": "Payment received June 1"
         }
       ]
     },
