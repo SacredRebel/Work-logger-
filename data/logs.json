@@ -3549,12 +3549,12 @@
       "hours": 0,
       "rate": 50,
       "earned": 0,
-      "tasks": "Day 49 \u2014 Continuing entrance doors painting",
+      "tasks": "Day 49 \u2014 Hand sanding, cleaning, priming & painting 2 entry doors",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house \u2014 Entrance doors"
+            "Cher's house \u2014 2 entry doors"
           ]
         },
         {
@@ -3565,9 +3565,19 @@
           ]
         },
         {
+          "title": "Today's Plan",
+          "items": [
+            "Hand sand last side of both entry doors",
+            "Detailed sanding in all gaps",
+            "Clean up doors",
+            "Prime coat \ud83c\udfa8",
+            "Final real coat \ud83c\udfa8"
+          ]
+        },
+        {
           "title": "Status",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 started 8:30 AM",
+            "\ud83d\udfe2 In progress \u2014 hand sanding entry doors",
             "Hours to be finalized at end of day"
           ]
         }
