@@ -3498,7 +3498,7 @@
       "hours": 11,
       "rate": 50,
       "earned": 550,
-      "tasks": "Day 48 \u2014 Fascia done, entrance doors sanded & painted",
+      "tasks": "Day 48 \u2014 Fascia done, entrance doors sanded",
       "sections": [
         {
           "title": "Location",
@@ -3511,8 +3511,9 @@
           "items": [
             "Started: 8:00 AM",
             "Break: 10:30 AM \u2014 11:00 AM (30 min)",
+            "Lunch: 2:00 PM \u2014 2:30 PM (30 min)",
             "Finished: 8:00 PM",
-            "12 hrs total \u2014 30 min break \u2014 billable: 11 hrs"
+            "12 hrs total \u2014 1 hr breaks \u2014 billable: 11 hrs"
           ]
         },
         {
@@ -3520,7 +3521,7 @@
           "items": [
             "Finished all fascia in green \u2014 on roof \ud83c\udfa8 \u2705",
             "Sanded entrance doors \u2705",
-            "Painted entrance doors \ud83c\udfa8 \u2705"
+            "Painting entrance doors \u2014 continuing next session"
           ]
         },
         {
@@ -3528,7 +3529,7 @@
           "items": [
             "11 hrs \u00d7 $50/hr = $550.00 earned",
             "All fascia: complete \u2705",
-            "Entrance doors: sanded & painted \u2705"
+            "Entrance doors: sanded \u2705 \u2014 painting next"
           ]
         }
       ],
