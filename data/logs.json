@@ -3495,10 +3495,10 @@
       "date": "2026-06-01",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 11,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 48 \u2014 Finished fascia in green, now sanding & painting entrance doors",
+      "earned": 550,
+      "tasks": "Day 48 \u2014 Fascia done, entrance doors sanded & painted",
       "sections": [
         {
           "title": "Location",
@@ -3511,23 +3511,24 @@
           "items": [
             "Started: 8:00 AM",
             "Break: 10:30 AM \u2014 11:00 AM (30 min)",
-            "Back at it: 11:00 AM",
-            "End time: TBD"
+            "Finished: 8:00 PM",
+            "12 hrs total \u2014 30 min break \u2014 billable: 11 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "8:00 AM \u2014 Up on roof finishing all fascia in green \ud83c\udfa8",
-            "9:00 AM \u2014 All fascia complete \u2705",
-            "9:00 AM \u2014 Started sanding & painting entrance doors \ud83c\udfa8"
+            "Finished all fascia in green \u2014 on roof \ud83c\udfa8 \u2705",
+            "Sanded entrance doors \u2705",
+            "Painted entrance doors \ud83c\udfa8 \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 sanding & painting entrance doors",
-            "Hours to be finalized at end of day"
+            "11 hrs \u00d7 $50/hr = $550.00 earned",
+            "All fascia: complete \u2705",
+            "Entrance doors: sanded & painted \u2705"
           ]
         }
       ],
