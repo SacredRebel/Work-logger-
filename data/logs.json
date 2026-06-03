@@ -3594,9 +3594,9 @@
       "date": "2026-06-03",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 8,
+      "hours": 7.5,
       "rate": 50,
-      "earned": 400,
+      "earned": 375,
       "tasks": "Day 50 \u2014 Both entry doors stained & painted, cleanup done",
       "sections": [
         {
@@ -3609,9 +3609,9 @@
           "title": "Schedule",
           "items": [
             "Started: 7:30 AM",
-            "Lunch: 1:30 PM \u2014 2:00 PM (30 min)",
+            "Lunch: 1:30 PM \u2014 2:30 PM (1 hour)",
             "Finished: 4:00 PM",
-            "8.5 hrs total \u2014 30 min break \u2014 billable: 8 hrs"
+            "8.5 hrs total \u2014 1 hr break \u2014 billable: 7.5 hrs"
           ]
         },
         {
@@ -3626,8 +3626,8 @@
         {
           "title": "Summary",
           "items": [
-            "8 hrs \u00d7 $50/hr = $400.00 earned",
-            "Both entry doors: stained & painted \u2705",
+            "7.5 hrs \u00d7 $50/hr = $375.00 earned",
+            "Both entry doors: outdoor primed & painted, indoor oil stained \u2705",
             "Doors drying \u2014 to be hung back next session"
           ]
         }
