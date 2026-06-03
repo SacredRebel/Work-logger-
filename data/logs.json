@@ -3546,39 +3546,45 @@
       "date": "2026-06-02",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 9.5,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 49 \u2014 Hand sanding, cleaning, priming & painting 2 entry doors",
+      "earned": 475,
+      "tasks": "Day 49 \u2014 Entry doors sanded & pressure washed, green/black patching, window screens washed",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house \u2014 2 entry doors"
+            "Cher's house \u2014 Entry doors, exterior, office & master bedroom screens"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 8:30 AM",
-            "End time: TBD"
+            "Break: 4:00 PM \u2014 4:30 PM (30 min)",
+            "Finished: 6:30 PM",
+            "10 hrs total \u2014 30 min break \u2014 billable: 9.5 hrs"
           ]
         },
         {
-          "title": "Today's Plan",
+          "title": "Work Completed",
           "items": [
-            "Hand sand last side of both entry doors",
-            "Detailed sanding in all gaps",
-            "Clean up doors",
-            "Prime coat \ud83c\udfa8",
-            "Final real coat \ud83c\udfa8"
+            "Hand sanded both entry doors \u2014 all gaps & details \u2705",
+            "Pressure washed both entry doors \u2705",
+            "Doors drying \u2014 paint next session",
+            "Patched green paint spots around house \u2705",
+            "Patched black paint spots around house \u2705",
+            "Power washed office room & master bedroom window screens \u2705",
+            "Packed up & finished at 6:30 PM"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 hand sanding entry doors",
-            "Hours to be finalized at end of day"
+            "9.5 hrs \u00d7 $50/hr = $475.00 earned",
+            "Entry doors: sanded & pressure washed \u2705 \u2014 painting next",
+            "Exterior patching: done \u2705",
+            "Window screens: power washed \u2705"
           ]
         }
       ],
