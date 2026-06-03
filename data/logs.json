@@ -3594,10 +3594,10 @@
       "date": "2026-06-03",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 8,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 50 \u2014 Painting entry doors & frame, hanging them back",
+      "earned": 400,
+      "tasks": "Day 50 \u2014 Both entry doors stained & painted, cleanup done",
       "sections": [
         {
           "title": "Location",
@@ -3610,23 +3610,25 @@
           "items": [
             "Started: 7:30 AM",
             "Lunch: 1:30 PM \u2014 2:00 PM (30 min)",
-            "Back at it: 2:00 PM",
-            "End time: TBD"
+            "Finished: 4:00 PM",
+            "8.5 hrs total \u2014 30 min break \u2014 billable: 8 hrs"
           ]
         },
         {
-          "title": "Today's Plan",
+          "title": "Work Completed",
           "items": [
-            "Paint entry doors \ud83c\udfa8",
-            "Paint door frame \ud83c\udfa8",
-            "Hang doors back into place"
+            "Stained both entry doors \ud83c\udfa8 \u2705",
+            "Painted both entry doors \ud83c\udfa8 \u2705",
+            "Doors drying \u2014 hanging back next session",
+            "Cleaned up \u2014 last 30 min \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83c\udfa8 In progress \u2014 started 7:30 AM",
-            "Hours to be finalized at end of day"
+            "8 hrs \u00d7 $50/hr = $400.00 earned",
+            "Both entry doors: stained & painted \u2705",
+            "Doors drying \u2014 to be hung back next session"
           ]
         }
       ],
