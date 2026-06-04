@@ -3638,9 +3638,9 @@
       "date": "2026-06-04",
       "project": "chers-house-painting-job",
       "category": "painting",
-      "hours": 0,
+      "hours": 4.5,
       "rate": 50,
-      "earned": 0,
+      "earned": 225,
       "tasks": "Day 51 \u2014 Entry doors fine sanded, hardware mounted & hung back \u2705",
       "sections": [
         {
@@ -3654,26 +3654,25 @@
           "items": [
             "Started: 10:00 AM",
             "Lunch: 1:00 PM \u2014 2:00 PM (1 hour)",
-            "Back at it: 2:00 PM",
-            "End time: TBD"
+            "Finished: 3:30 PM",
+            "5.5 hrs total \u2014 1 hr break \u2014 billable: 4.5 hrs"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "10:00 AM \u2014 Fine sanded both entry doors \u2705",
+            "Fine sanded both entry doors \u2705",
             "Cleaned up doors \u2705",
-            "Mounted hardware \u2705",
+            "Mounted all hardware \u2705",
             "Hung both doors back into place \u2705",
-            "1:00 PM \u2014 Lunch break",
-            "2:00 PM \u2014 Back at it"
+            "Entry doors 100% complete \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83d\udfe2 Back at it since 2:00 PM",
-            "Entry doors: 100% complete \u2705"
+            "4.5 hrs \u00d7 $50/hr = $225.00 earned",
+            "Both entry doors: fully complete & hung \u2705"
           ]
         }
       ],
