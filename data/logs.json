@@ -97,8 +97,8 @@
     },
     {
       "id": "helping-carol-yard",
-      "name": "Helping Carol \u2014 Yard Work",
-      "client": "Carol",
+      "name": "Helping Karol \u2014 Yard Work",
+      "client": "Karol",
       "color": "#10B981",
       "icon": "\ud83c\udf3f",
       "rate": 0,
@@ -114,6 +114,18 @@
           "note": "Paid on the spot by Carol"
         }
       ]
+    },
+    {
+      "id": "karol-207-landscape",
+      "name": "Karol \u2014 207 Landscape Job",
+      "client": "Karol",
+      "color": "#16A34A",
+      "icon": "\ud83c\udf3f",
+      "rate": 50,
+      "startDate": "2026-06-08",
+      "status": "active",
+      "description": "Landscape job at 207 \u2014 weeding, bush trimming, dirt removal, dump runs",
+      "payments": []
     }
   ],
   "categories": [
@@ -3675,6 +3687,67 @@
           "items": [
             "4.5 hrs \u00d7 $50/hr = $225.00 earned",
             "Both entry doors: fully complete & hung \u2705"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "date": "2026-06-08",
+      "project": "karol-207-landscape",
+      "category": "general",
+      "hours": 6.5,
+      "rate": 50,
+      "earned": 325,
+      "tasks": "Day 1 \u2014 Weeding, bush trimming, dump run, dirt removal",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "207 \u2014 Karol's property"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 10:00 AM",
+            "Finished: 4:30 PM",
+            "Billable: 6.5 hrs"
+          ]
+        },
+        {
+          "title": "Work Completed",
+          "items": [
+            "10:00 AM \u2014 Weeding (~2 hours) \u2705",
+            "12:00 PM \u2014 Trimmed & cut bush (~2 hours) \u2705",
+            "2:00 PM \u2014 Dump run #1 with bush trimmings (~1 hour) \u2705",
+            "3:00 PM \u2014 Shoveled dirt \u2014 3 wheelbarrows into truck \u2705",
+            "4:30 PM \u2014 Cleanup, then dump run #2 (dirt)"
+          ]
+        },
+        {
+          "title": "Projects in this Job",
+          "items": [
+            "1. Weeding \u2705",
+            "2. Bush trimming & cutting \u2705",
+            "3. Dirt pile removal \u2014 in progress (continuing next day)"
+          ]
+        },
+        {
+          "title": "Expenses",
+          "items": [
+            "Dump run #1 \u2014 fee TBD",
+            "Dump run #2 \u2014 fee TBD",
+            "Gas \u2014 TBD",
+            "Note: update with actual amounts"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "6.5 hrs \u00d7 $50/hr = $325.00 labor",
+            "Dump fees + gas: TBD \u2014 to be added",
+            "More days to follow"
           ]
         }
       ],
