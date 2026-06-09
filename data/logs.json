@@ -3759,7 +3759,7 @@
       "hours": 0,
       "rate": 50,
       "earned": 0,
-      "tasks": "Day 2 \u2014 Unloaded dirt, street side weed cleanup, dump run",
+      "tasks": "Day 2 \u2014 Dirt removal (3 loads), dump runs, leveling, rock wall, gravel",
       "sections": [
         {
           "title": "Location",
@@ -3784,15 +3784,16 @@
             "11:30 AM \u2014 Dump run #1 (50 min) \u2705",
             "12:20 PM \u2014 Back \u2014 loaded next 3 wheelbarrows \u2705",
             "12:55 PM \u2014 Finished loading, quick tree pruning (10 min) \u2705",
-            "1:07 PM \u2014 Left for dump run #2",
-            "1:25 PM \u2014 Arrived dump site, unloaded by 1:30 PM \u2705",
-            "1:45 PM \u2014 Back at site \u2014 loading more dirt now"
+            "1:07 PM \u2014 Dump run #2 \u2705",
+            "1:45 PM \u2014 Back at site \u2014 loaded final 3 wheelbarrows",
+            "2:25 PM \u2014 Truck loaded, now leveling area where dirt was removed",
+            "Up next: small rock wall around plant, sweep gravel back onto driveway"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 Back at site 1:45 PM \u2014 loading more dirt"
+            "\ud83d\udfe2 In progress \u2014 leveling, rock wall, gravel sweeping"
           ]
         }
       ],
