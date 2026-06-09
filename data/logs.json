@@ -3751,6 +3751,38 @@
         }
       ],
       "images": []
+    },
+    {
+      "date": "2026-06-09",
+      "project": "karol-207-landscape",
+      "category": "general",
+      "hours": 0,
+      "rate": 50,
+      "earned": 0,
+      "tasks": "Day 2 \u2014 Continuing landscape work at 207",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "207 \u2014 Karol's property"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 10:30 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83d\udfe2 In progress \u2014 started 10:30 AM",
+            "Hours to be finalized at end of day"
+          ]
+        }
+      ],
+      "images": []
     }
   ]
 }
