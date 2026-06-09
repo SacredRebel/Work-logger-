@@ -3780,18 +3780,19 @@
           "title": "Progress",
           "items": [
             "10:30 AM \u2014 Loaded truck with 3 wheelbarrows of dirt \u2705",
-            "11:00 AM \u2014 Cleaned out weeds & debris around street side post \u2705",
+            "11:00 AM \u2014 Cleaned weeds & debris around street side post \u2705",
             "11:30 AM \u2014 Dump run #1 (50 min) \u2705",
-            "12:20 PM \u2014 Back \u2014 loaded next 3 wheelbarrows of dirt \u2705",
-            "12:55 PM \u2014 Dump run #2 started",
-            "1:07 PM \u2014 Quick tree pruning (3 branches, ~10 min) \u2705",
-            "1:07 PM \u2014 Back on road to dump"
+            "12:20 PM \u2014 Back \u2014 loaded next 3 wheelbarrows \u2705",
+            "12:55 PM \u2014 Finished loading, quick tree pruning (10 min) \u2705",
+            "1:07 PM \u2014 Left for dump run #2",
+            "1:25 PM \u2014 Arrived dump site, unloaded by 1:30 PM \u2705",
+            "1:45 PM \u2014 Back at site \u2014 loading more dirt now"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\ude9b On dump run #2 since 12:55 PM"
+            "\ud83d\udfe2 Back at site 1:45 PM \u2014 loading more dirt"
           ]
         }
       ],
