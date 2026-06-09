@@ -3698,7 +3698,7 @@
       "category": "general",
       "hours": 6.5,
       "rate": 50,
-      "earned": 325,
+      "earned": 475,
       "tasks": "Day 1 \u2014 Weeding, bush trimming, dump run, dirt removal",
       "sections": [
         {
@@ -3736,18 +3736,17 @@
         {
           "title": "Expenses",
           "items": [
-            "Dump run #1 \u2014 fee TBD",
-            "Dump run #2 \u2014 fee TBD",
-            "Gas \u2014 TBD",
-            "Note: update with actual amounts"
+            "Dump run #1 \u2014 $75 (dump fee + gas)",
+            "Dump run #2 \u2014 $75 (dump fee + gas)",
+            "Total expenses: $150"
           ]
         },
         {
           "title": "Summary",
           "items": [
             "6.5 hrs \u00d7 $50/hr = $325.00 labor",
-            "Dump fees + gas: TBD \u2014 to be added",
-            "More days to follow"
+            "2 dump runs \u00d7 $75 = $150.00 expenses",
+            "Day 1 total: $475.00"
           ]
         }
       ],
