@@ -3756,10 +3756,10 @@
       "date": "2026-06-09",
       "project": "karol-207-landscape",
       "category": "general",
-      "hours": 0,
+      "hours": 3,
       "rate": 50,
-      "earned": 0,
-      "tasks": "Day 2 \u2014 Dirt removal (3 loads), dump runs, leveling, rock wall, gravel",
+      "earned": 375,
+      "tasks": "Day 2 \u2014 Dirt removal (3 loads), dump runs, leveling, rock wall, pomegranate pruning, gravel",
       "sections": [
         {
           "title": "Location",
@@ -3771,29 +3771,45 @@
           "title": "Schedule",
           "items": [
             "Started: 10:30 AM",
-            "Dump run: 11:30 AM \u2014 12:20 PM (50 min)",
-            "Back at it: 12:20 PM",
-            "End time: TBD"
+            "Dump run #1: 11:30 AM \u2014 12:20 PM",
+            "Dump run #2: 1:07 PM \u2014 1:45 PM",
+            "Dump run #3: ~3:00 PM (after wrap up)",
+            "Finished on site: 3:00 PM",
+            "Billable labor: 3 hrs (site work only, dump runs excluded)"
           ]
         },
         {
-          "title": "Progress",
+          "title": "Work Completed",
           "items": [
-            "10:30 AM \u2014 Loaded truck with 3 wheelbarrows of dirt \u2705",
-            "11:00 AM \u2014 Cleaned weeds & debris around street side post \u2705",
-            "11:30 AM \u2014 Dump run #1 (50 min) \u2705",
-            "12:20 PM \u2014 Back \u2014 loaded next 3 wheelbarrows \u2705",
-            "12:55 PM \u2014 Finished loading, quick tree pruning (10 min) \u2705",
-            "1:07 PM \u2014 Dump run #2 \u2705",
-            "1:45 PM \u2014 Back at site \u2014 loaded final 3 wheelbarrows",
-            "2:25 PM \u2014 Truck loaded, now leveling area where dirt was removed",
-            "Up next: small rock wall around plant, sweep gravel back onto driveway"
+            "Loaded 3 wheelbarrows of dirt \u2014 load #1 \u2705",
+            "Cleaned weeds & debris around street side post \u2705",
+            "Dump run #1 \u2705",
+            "Loaded 3 wheelbarrows of dirt \u2014 load #2 \u2705",
+            "Quick tree pruning (3 branches) \u2705",
+            "Dump run #2 \u2705",
+            "Loaded 3 wheelbarrows of dirt \u2014 load #3 \u2705",
+            "Leveled area where dirt was removed \u2705",
+            "Built small rock wall around plant \ud83e\udea8 \u2705",
+            "Pruned pomegranate tree (few branches) \u2705",
+            "Swept gravel & stones back onto driveway \u2705",
+            "Dump run #3 \u2014 after site wrap up"
           ]
         },
         {
-          "title": "Status",
+          "title": "Expenses",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 leveling, rock wall, gravel sweeping"
+            "Dump run #1 \u2014 $75",
+            "Dump run #2 \u2014 $75",
+            "Dump run #3 \u2014 $75",
+            "Total expenses: $225"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "3 hrs labor \u00d7 $50/hr = $150.00",
+            "3 dump runs \u00d7 $75 = $225.00",
+            "Day 2 total: $375.00"
           ]
         }
       ],
