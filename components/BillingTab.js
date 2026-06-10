@@ -401,13 +401,6 @@ export default function BillingTab({ project, entries, onMarkPaid }) {
         </div>
       )}
 
-      {/* ── Rate Calculator ── */}
-      {outstanding > 0 && (() => {
-        const totalUnpaidHrs = Math.round((outstanding / 50) * 10) / 10;
-        const RATES = [25, 30, 35, 40, 45, 50];
-        return <RateCalculator unpaidHrs={totalUnpaidHrs} color={color} />;
-      })()}
-
       {/* Day by day breakdown */}
       <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--t4)', textTransform: 'uppercase',
         letterSpacing: '0.08em', marginBottom: 10 }}>Days Breakdown</div>
