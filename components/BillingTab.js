@@ -203,24 +203,23 @@ export default function BillingTab({ project, entries, onMarkPaid }) {
             const displayAmt = rateTab==='50' ? outstanding : rateTab==='40' ? unpaidHrs*40 : splitTotal;
             return (
               <>
-                <div style={{display:'flex',justifyContent:'flex-end',marginBottom:6}}>
-                  <div style={{display:'flex',flexDirection:'column',gap:3,alignItems:'stretch'}}>
+                <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:10,marginBottom:6}}>
+                  <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1,
+                    color: '#FBBF24', fontFamily: 'var(--mono)' }}>
+                    ${displayAmt.toFixed(2)}
+                  </div>
+                  <div style={{display:'flex',flexDirection:'column',gap:3,alignItems:'stretch',flexShrink:0}}>
                     {[{k:'50',label:'$50'},{k:'40',label:'$40'},{k:'custom',label:'Custom'}].map(({k,label})=>(
                       <button key={k} onClick={()=>{setRateTab(k);if(k==='custom')setShowCustom(true);else setShowCustom(false);}} style={{
-                        padding:'4px 10px',borderRadius:8,cursor:'pointer',
-                        fontFamily:'inherit',fontSize:10,fontWeight:800,letterSpacing:'0.02em',
+                        padding:'4px 12px',borderRadius:8,cursor:'pointer',
+                        fontFamily:'inherit',fontSize:11,fontWeight:800,
                         border: rateTab===k ? '1.5px solid rgba(251,191,36,0.6)' : '1.5px solid rgba(255,255,255,0.10)',
                         background:rateTab===k?'rgba(251,191,36,0.18)':'rgba(255,255,255,0.04)',
                         color:rateTab===k?'#FBBF24':'rgba(255,255,255,0.35)',
                         transition:'all 0.15s',
-                        letterSpacing:'0.01em',
                       }}>{label}</button>
                     ))}
                   </div>
-                </div>
-                <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.05em', lineHeight: 1,
-                  color: '#FBBF24', fontFamily: 'var(--mono)', marginBottom: 8 }}>
-                  ${displayAmt.toFixed(2)}
                 </div>
                 {(
 
