@@ -123,7 +123,7 @@
       "icon": "\ud83c\udf3f",
       "rate": 50,
       "startDate": "2026-06-08",
-      "status": "active",
+      "status": "completed",
       "description": "Landscape job at 207 \u2014 weeding, bush trimming, dirt removal, dump runs",
       "payments": []
     }
@@ -3810,6 +3810,63 @@
             "3 hrs labor \u00d7 $50/hr = $150.00",
             "3 dump runs \u00d7 $75 = $225.00",
             "Day 2 total: $375.00"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "date": "2026-06-10",
+      "project": "karol-207-landscape",
+      "category": "general",
+      "hours": 2,
+      "rate": 50,
+      "earned": 100,
+      "tasks": "Day 3 \u2014 Hip Vegan roof/AC cleanup, passion fruit trim, 207 tree pruning & rock wall",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Hip Vegan restaurant & 207 \u2014 Karol's property"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 7:45 AM",
+            "Finished: 9:45 AM",
+            "Total: 2 hours"
+          ]
+        },
+        {
+          "title": "Hip Vegan \u2014 Restaurant (~45 min)",
+          "items": [
+            "Blew leaves off the roof \u2705",
+            "Cleaned out outdoor AC room \u2014 blew & removed leaves \u2705",
+            "Cleaned front of restaurant \u2705",
+            "Cleaned back driveway \u2705"
+          ]
+        },
+        {
+          "title": "Hip Vegan \u2014 Trim (~15 min)",
+          "items": [
+            "Trimmed passion fruit vines along fence at AC units \u2705"
+          ]
+        },
+        {
+          "title": "207 Backyard (~1 hour)",
+          "items": [
+            "Pruned tree & built rock wall around it \u2705",
+            "Deep watered the tree \u2705",
+            "Trimmed shrub tree & tied/trained it to grow as single trunk \u2705"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "2 hrs \u00d7 $50/hr = $100.00 earned",
+            "All remaining jobs complete \u2705",
+            "207 Karol landscape job: fully finished \u2705"
           ]
         }
       ],
