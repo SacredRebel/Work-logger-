@@ -204,7 +204,7 @@ export default function BillingTab({ project, entries, onMarkPaid }) {
             return (
               <>
                 <div style={{display:'flex',justifyContent:'flex-end',marginBottom:10}}>
-                  <div style={{display:'flex',gap:6}}>
+                  <div style={{display:'flex',flexDirection:'column',gap:4,alignItems:'stretch'}}>
                     {[{k:'50',label:'$50/hr'},{k:'40',label:'$40/hr'},{k:'custom',label:'✏️ Custom'}].map(({k,label})=>(
                       <button key={k} onClick={()=>{setRateTab(k);if(k==='custom')setShowCustom(true);else setShowCustom(false);}} style={{
                         padding:'6px 11px',borderRadius:10,cursor:'pointer',
