@@ -108,8 +108,8 @@ export default function BillingTab({ project, entries, onMarkPaid }) {
   const [rateTab, setRateTab] = useState('50');
   const [customSplits, setCustomSplits] = useState([
     { hrs: 42, rate: 25 },
+    { hrs: 50, rate: 30 },
     { hrs: 50, rate: 35 },
-    { hrs: 50, rate: 40 },
   ]);
   const [showCustom, setShowCustom] = useState(false);
   const [showPayForm, setShowPayForm] = useState(false);
@@ -203,24 +203,27 @@ export default function BillingTab({ project, entries, onMarkPaid }) {
             const displayAmt = rateTab==='50' ? outstanding : rateTab==='40' ? unpaidHrs*40 : splitTotal;
             return (
               <>
-                <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:8}}>
-                  <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.05em', lineHeight: 1,
-                    color: '#FBBF24', fontFamily: 'var(--mono)' }}>
-                    ${displayAmt.toFixed(2)}
-                  </div>
-                  <div style={{display:'flex',gap:5}}>
-                    {[{k:'50',label:'$50'},{k:'40',label:'$40'},{k:'custom',label:'✏️'}].map(({k,label})=>(
+                <div style={{display:'flex',justifyContent:'flex-end',marginBottom:10}}>
+                  <div style={{display:'flex',gap:6}}>
+                    {[{k:'50',label:'$50/hr'},{k:'40',label:'$40/hr'},{k:'custom',label:'✏️ Custom'}].map(({k,label})=>(
                       <button key={k} onClick={()=>{setRateTab(k);if(k==='custom')setShowCustom(true);else setShowCustom(false);}} style={{
-                        padding:'4px 10px',borderRadius:8,border:'none',cursor:'pointer',
+                        padding:'6px 11px',borderRadius:10,cursor:'pointer',
                         fontFamily:'inherit',fontSize:11,fontWeight:800,
-                        background:rateTab===k?'rgba(251,191,36,0.25)':'rgba(255,255,255,0.07)',
-                        color:rateTab===k?'#FBBF24':'rgba(255,255,255,0.45)',
+                        border: rateTab===k ? '1.5px solid rgba(251,191,36,0.6)' : '1.5px solid rgba(255,255,255,0.12)',
+                        background:rateTab===k?'rgba(251,191,36,0.18)':'rgba(255,255,255,0.05)',
+                        color:rateTab===k?'#FBBF24':'rgba(255,255,255,0.4)',
                         transition:'all 0.15s',
+                        letterSpacing:'0.01em',
                       }}>{label}</button>
                     ))}
                   </div>
                 </div>
-                {rateTab!=='50' && (
+                <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.05em', lineHeight: 1,
+                  color: '#FBBF24', fontFamily: 'var(--mono)', marginBottom: 8 }}>
+                  ${displayAmt.toFixed(2)}
+                </div>
+                {(
+
                   <div style={{fontSize:11,color:'rgba(251,191,36,0.6)',marginBottom:8}}>
                     {rateTab==='40' ? `${unpaidHrs} hrs × $40/hr` : `Custom blend — ${customSplits.reduce((s,r)=>s+r.hrs,0)} hrs`}
                   </div>
