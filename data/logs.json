@@ -121,11 +121,31 @@
       "client": "Karol",
       "color": "#16A34A",
       "icon": "\ud83c\udf3f",
-      "rate": 50,
+      "rate": 35,
       "startDate": "2026-06-08",
       "status": "completed",
       "description": "Landscape job at 207 \u2014 weeding, bush trimming, dirt removal, dump runs",
       "payments": []
+    },
+    {
+      "id": "hip-vegan-cleanup",
+      "name": "Hip Vegan \u2014 Cleanup & Trim",
+      "client": "Hip Vegan",
+      "color": "#7C3AED",
+      "icon": "\ud83c\udf3f",
+      "rate": 30,
+      "startDate": "2026-06-10",
+      "status": "completed",
+      "description": "Roof & AC room cleanup, driveway, passion fruit trim, tree pruning",
+      "payments": [
+        {
+          "id": "pay-hv001",
+          "amount": 45,
+          "date": "2026-06-10",
+          "method": "Cash",
+          "note": "Paid on the spot in cash"
+        }
+      ]
     }
   ],
   "categories": [
@@ -3698,7 +3718,7 @@
       "category": "general",
       "hours": 6.5,
       "rate": 50,
-      "earned": 475,
+      "earned": 377.5,
       "tasks": "Day 1 \u2014 Weeding, bush trimming, dump run, dirt removal",
       "sections": [
         {
@@ -3744,9 +3764,9 @@
         {
           "title": "Summary",
           "items": [
-            "6.5 hrs \u00d7 $50/hr = $325.00 labor",
-            "2 dump runs \u00d7 $75 = $150.00 expenses",
-            "Day 1 total: $475.00"
+            "6.5 hrs \u00d7 $35/hr = $227.50 labor",
+            "2 dump runs \u00d7 $75 = $150.00",
+            "Day 1 total: $377.50"
           ]
         }
       ],
@@ -3758,7 +3778,7 @@
       "category": "general",
       "hours": 3,
       "rate": 50,
-      "earned": 375,
+      "earned": 330,
       "tasks": "Day 2 \u2014 Dirt removal (3 loads), dump runs, leveling, rock wall, pomegranate pruning, gravel",
       "sections": [
         {
@@ -3807,9 +3827,9 @@
         {
           "title": "Summary",
           "items": [
-            "3 hrs labor \u00d7 $50/hr = $150.00",
+            "3 hrs \u00d7 $35/hr = $105.00 labor",
             "3 dump runs \u00d7 $75 = $225.00",
-            "Day 2 total: $375.00"
+            "Day 2 total: $330.00"
           ]
         }
       ],
@@ -3819,55 +3839,85 @@
       "date": "2026-06-10",
       "project": "karol-207-landscape",
       "category": "general",
-      "hours": 2,
+      "hours": 0.5,
       "rate": 50,
-      "earned": 100,
-      "tasks": "Day 3 \u2014 Hip Vegan roof/AC cleanup, passion fruit trim, 207 tree pruning & rock wall",
+      "earned": 17.5,
+      "tasks": "Day 3 \u2014 Tree pruning, rock wall, shrub training at 207",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Hip Vegan restaurant & 207 \u2014 Karol's property"
+            "207 \u2014 Karol's property"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: ~9:30 AM",
+            "Finished: ~10:00 AM",
+            "Billable: 0.5 hrs"
+          ]
+        },
+        {
+          "title": "Work Completed",
+          "items": [
+            "Tree pruned + rock wall built + deep watered \u2705",
+            "Shrub trimmed & trained to single trunk \u2705"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "0.5 hrs \u00d7 $35/hr = $17.50 earned"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "date": "2026-06-10",
+      "project": "hip-vegan-cleanup",
+      "category": "general",
+      "hours": 1.5,
+      "rate": 30,
+      "earned": 45,
+      "tasks": "Hip Vegan \u2014 Roof/AC cleanup, driveway, passion fruit & tree pruning",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Hip Vegan Restaurant"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 7:45 AM",
-            "Finished: 9:45 AM",
-            "Total: 2 hours"
+            "Finished: ~9:30 AM",
+            "Billable: 1.5 hrs"
           ]
         },
         {
-          "title": "Hip Vegan \u2014 Restaurant (~45 min)",
+          "title": "Work Completed",
           "items": [
             "Blew leaves off the roof \u2705",
-            "Cleaned out outdoor AC room \u2014 blew & removed leaves \u2705",
-            "Cleaned front of restaurant \u2705",
-            "Cleaned back driveway \u2705"
+            "Cleaned out outdoor AC room \u2705",
+            "Cleaned front of restaurant & back driveway \u2705",
+            "Trimmed passion fruit vines at AC fence \u2705",
+            "Pruned front sitting area tree (burned leaves) \u2705"
           ]
         },
         {
-          "title": "Hip Vegan \u2014 Trim (~15 min)",
+          "title": "Payment",
           "items": [
-            "Trimmed passion fruit vines along fence at AC units \u2705",
-            "Pruned & trimmed tree in front sitting area (burned leaves) \u2705"
-          ]
-        },
-        {
-          "title": "207 Backyard (~1 hour)",
-          "items": [
-            "Pruned tree & built rock wall around it \u2705",
-            "Deep watered the tree \u2705",
-            "Trimmed shrub tree & tied/trained it to grow as single trunk \u2705"
+            "Paid $45 cash on the spot"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "2 hrs \u00d7 $50/hr = $100.00 earned",
-            "All remaining jobs complete \u2705",
-            "207 Karol landscape job: fully finished \u2705"
+            "1.5 hrs \u00d7 $30/hr = $45.00 earned",
+            "Paid in full \u2705"
           ]
         }
       ],
