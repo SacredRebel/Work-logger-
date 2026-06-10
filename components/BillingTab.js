@@ -263,16 +263,29 @@ export default function BillingTab({ project, entries, onMarkPaid }) {
             );
           })()}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
-            {[
-              { lbl: 'Total earned', val: `$${totalEarned.toFixed(2)}`, c: 'rgba(255,255,255,0.5)' },
-              { lbl: 'Total received', val: `$${totalPaid.toFixed(2)}`, c: '#22C55E' },
-            ].map(({ lbl, val, c }) => (
-              <div key={lbl} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: 10, padding: '10px 12px' }}>
-                <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', fontWeight: 600,
-                  textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: 3 }}>{lbl}</div>
-                <div style={{ fontSize: 18, fontWeight: 800, color: c, letterSpacing: '-0.03em' }}>{val}</div>
-              </div>
-            ))}
+            {(()=>{
+              const unpaidHrs = Math.round(outstanding / 50 * 10) / 10;
+              const splitTotal = customSplits.reduce((s,r)=>s+r.hrs*r.rate,0);
+              const adjustedEarned = rateTab==='50' ? totalEarned
+                : rateTab==='40' ? (totalEarned - outstanding) + unpaidHrs*40
+                : (totalEarned - outstanding) + splitTotal;
+              const earnedChanged = rateTab !== '50';
+              return [
+                { lbl: rateTab==='50' ? 'Total earned' : `Total @ $${rateTab==='40'?'40':'custom'}/hr`, val: `$${adjustedEarned.toFixed(2)}`, c: earnedChanged ? '#FBBF24' : 'rgba(255,255,255,0.5)' },
+                { lbl: 'Total received', val: `$${totalPaid.toFixed(2)}`, c: '#22C55E' },
+              ].map(({ lbl, val, c }) => (
+                <div key={lbl} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: 10, padding: '10px 12px' }}>
+                  <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', fontWeight: 600,
+                    textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: 3 }}>{lbl}</div>
+                  <div style={{ fontSize: 18, fontWeight: 800, color: c, letterSpacing: '-0.03em' }}>{val}</div>
+                  {lbl.includes('Total @') && (
+                    <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.3)', marginTop: 2 }}>
+                      was ${totalEarned.toFixed(0)}
+                    </div>
+                  )}
+                </div>
+              ));
+            })()}
           </div>
         </div>
 
