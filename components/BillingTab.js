@@ -105,6 +105,13 @@ function RateCalculator({ unpaidHrs, color }) {
 }
 
 export default function BillingTab({ project, entries, onMarkPaid }) {
+  const [rateTab, setRateTab] = useState('50');
+  const [customSplits, setCustomSplits] = useState([
+    { hrs: 42, rate: 25 },
+    { hrs: 50, rate: 35 },
+    { hrs: 50, rate: 40 },
+  ]);
+  const [showCustom, setShowCustom] = useState(false);
   const [showPayForm, setShowPayForm] = useState(false);
   const [payNote, setPayNote] = useState('');
   const [payMethod, setPayMethod] = useState('cash');
@@ -188,10 +195,70 @@ export default function BillingTab({ project, entries, onMarkPaid }) {
             color: outstanding > 0 ? 'rgba(251,191,36,0.6)' : 'rgba(34,197,94,0.6)', marginBottom: 4 }}>
             {outstanding > 0 ? 'Outstanding Balance' : overpaid > 0 ? 'Overpaid' : 'Fully Paid ✅'}
           </div>
-          <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.05em', lineHeight: 1,
-            color: outstanding > 0 ? '#FBBF24' : '#22C55E', fontFamily: 'var(--mono)', marginBottom: 16 }}>
-            ${outstanding > 0 ? outstanding.toFixed(2) : overpaid > 0 ? overpaid.toFixed(2) : '0.00'}
-          </div>
+          {/* Rate toggle pills */}
+          {outstanding > 0 && (() => {
+            const unpaidHrs = Math.round(outstanding / 50 * 10) / 10;
+            const RATES = [25,30,35,40,45,50];
+            const splitTotal = customSplits.reduce((s,r)=>s+r.hrs*r.rate,0);
+            const displayAmt = rateTab==='50' ? outstanding : rateTab==='40' ? unpaidHrs*40 : splitTotal;
+            return (
+              <>
+                <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:8}}>
+                  <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.05em', lineHeight: 1,
+                    color: '#FBBF24', fontFamily: 'var(--mono)' }}>
+                    ${displayAmt.toFixed(2)}
+                  </div>
+                  <div style={{display:'flex',gap:5}}>
+                    {[{k:'50',label:'$50'},{k:'40',label:'$40'},{k:'custom',label:'✏️'}].map(({k,label})=>(
+                      <button key={k} onClick={()=>{setRateTab(k);if(k==='custom')setShowCustom(true);else setShowCustom(false);}} style={{
+                        padding:'4px 10px',borderRadius:8,border:'none',cursor:'pointer',
+                        fontFamily:'inherit',fontSize:11,fontWeight:800,
+                        background:rateTab===k?'rgba(251,191,36,0.25)':'rgba(255,255,255,0.07)',
+                        color:rateTab===k?'#FBBF24':'rgba(255,255,255,0.45)',
+                        transition:'all 0.15s',
+                      }}>{label}</button>
+                    ))}
+                  </div>
+                </div>
+                {rateTab!=='50' && (
+                  <div style={{fontSize:11,color:'rgba(251,191,36,0.6)',marginBottom:8}}>
+                    {rateTab==='40' ? `${unpaidHrs} hrs × $40/hr` : `Custom blend — ${customSplits.reduce((s,r)=>s+r.hrs,0)} hrs`}
+                  </div>
+                )}
+                {showCustom && rateTab==='custom' && (
+                  <div style={{background:'rgba(0,0,0,0.2)',borderRadius:10,padding:'10px 12px',marginBottom:8,display:'flex',flexDirection:'column',gap:7}}>
+                    {customSplits.map((row,i)=>(
+                      <div key={i} style={{display:'flex',alignItems:'center',gap:6}}>
+                        <input type="number" value={row.hrs} min={0}
+                          onChange={e=>setCustomSplits(p=>p.map((r,j)=>j===i?{...r,hrs:Number(e.target.value)}:r))}
+                          style={{width:48,padding:'6px',borderRadius:7,border:'1px solid rgba(255,255,255,0.15)',
+                            background:'rgba(255,255,255,0.07)',color:'#fff',fontFamily:'inherit',
+                            fontSize:13,fontWeight:700,textAlign:'center',outline:'none'}}/>
+                        <span style={{fontSize:11,color:'rgba(255,255,255,0.4)',flexShrink:0}}>hrs @</span>
+                        <select value={row.rate} onChange={e=>setCustomSplits(p=>p.map((r,j)=>j===i?{...r,rate:Number(e.target.value)}:r))}
+                          style={{flex:1,padding:'6px 8px',borderRadius:7,border:'1px solid rgba(255,255,255,0.15)',
+                            background:'rgba(255,255,255,0.07)',color:'#fff',fontFamily:'inherit',
+                            fontSize:13,fontWeight:700,outline:'none',cursor:'pointer'}}>
+                          {RATES.map(r=><option key={r} value={r} style={{background:'#1a1a1a'}}>${r}/hr</option>)}
+                        </select>
+                        <span style={{fontSize:12,fontWeight:800,color:'#FBBF24',minWidth:50,textAlign:'right',fontFamily:'var(--mono)'}}>
+                          ${(row.hrs*row.rate).toFixed(0)}
+                        </span>
+                        {customSplits.length>1&&<button onClick={()=>setCustomSplits(p=>p.filter((_,j)=>j!==i))}
+                          style={{width:22,height:22,borderRadius:'50%',border:'none',background:'rgba(239,68,68,0.2)',
+                            color:'#EF4444',cursor:'pointer',fontSize:14,display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>×</button>}
+                      </div>
+                    ))}
+                    <button onClick={()=>setCustomSplits(p=>[...p,{hrs:0,rate:50}])}
+                      style={{padding:'5px',borderRadius:7,border:'1px dashed rgba(251,191,36,0.3)',
+                        background:'transparent',color:'#FBBF24',fontFamily:'inherit',fontSize:11,fontWeight:700,cursor:'pointer'}}>
+                      + Add row
+                    </button>
+                  </div>
+                )}
+              </>
+            );
+          })()}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
             {[
               { lbl: 'Total earned', val: `$${totalEarned.toFixed(2)}`, c: 'rgba(255,255,255,0.5)' },
@@ -317,123 +384,6 @@ export default function BillingTab({ project, entries, onMarkPaid }) {
           ))}
         </div>
       )}
-
-      {/* Rate Calculator */}
-      {outstanding > 0 && (()=>{
-        const unpaidHrs = Math.max(0, outstanding / 50); // approx unpaid hours at $50/hr base
-        const RATES = [25, 30, 35, 40, 45, 50];
-        const [activeTab, setActiveTab] = useState('50');
-        const [splits, setSplits] = useState([
-          { hrs: 42, rate: 25 },
-          { hrs: 50, rate: 35 },
-          { hrs: 50, rate: 40 },
-        ]);
-
-        const totalUnpaidHrs = Math.round(outstanding / 50 * 10) / 10;
-        const at50 = totalUnpaidHrs * 50;
-        const at40 = totalUnpaidHrs * 40;
-
-        const splitTotal = splits.reduce((s, r) => s + r.hrs * r.rate, 0);
-        const splitHrs = splits.reduce((s, r) => s + r.hrs, 0);
-        const hrsMatch = splitHrs === Math.round(totalUnpaidHrs);
-
-        function updateSplit(i, field, val) {
-          setSplits(prev => prev.map((r, idx) => idx === i ? { ...r, [field]: Number(val) } : r));
-        }
-        function addRow() { setSplits(prev => [...prev, { hrs: 0, rate: 50 }]); }
-        function removeRow(i) { setSplits(prev => prev.filter((_, idx) => idx !== i)); }
-
-        const activeTotal = activeTab === '50' ? at50 : activeTab === '40' ? at40 : splitTotal;
-
-        return (
-          <div style={{ marginBottom: 20 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--t4)', textTransform: 'uppercase',
-              letterSpacing: '0.08em', marginBottom: 10 }}>Rate Calculator</div>
-
-            {/* Tab selector */}
-            <div style={{ display: 'flex', background: 'var(--s2)', borderRadius: 12, padding: 3,
-              gap: 3, marginBottom: 14, border: '1px solid var(--bdr)' }}>
-              {[{k:'50',label:'$50/hr'},{k:'40',label:'$40/hr'},{k:'custom',label:'Custom'}].map(({k,label}) => (
-                <button key={k} onClick={() => setActiveTab(k)} style={{
-                  flex: 1, padding: '8px 4px', borderRadius: 9, border: 'none', cursor: 'pointer',
-                  fontFamily: 'inherit', fontSize: 12, fontWeight: 700, transition: 'all 0.15s',
-                  background: activeTab === k ? color : 'transparent',
-                  color: activeTab === k ? '#fff' : 'var(--t3)',
-                }}>{label}</button>
-              ))}
-            </div>
-
-            {/* Result card */}
-            <div style={{ borderRadius: 14, overflow: 'hidden', border: '1px solid var(--bdr)',
-              background: 'var(--s1)', marginBottom: activeTab === 'custom' ? 12 : 0 }}>
-              <div style={{ padding: '14px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div>
-                  <div style={{ fontSize: 11, color: 'var(--t3)', fontWeight: 600, marginBottom: 3 }}>
-                    {activeTab === 'custom' ? `${splitHrs} hrs (custom blend)` : `${totalUnpaidHrs} unpaid hrs × $${activeTab}/hr`}
-                  </div>
-                  <div style={{ fontSize: 28, fontWeight: 800, color: color, letterSpacing: '-0.05em', fontFamily: 'var(--mono)' }}>
-                    ${activeTotal.toFixed(2)}
-                  </div>
-                </div>
-                {activeTab === 'custom' && !hrsMatch && (
-                  <div style={{ fontSize: 11, color: '#FBBF24', fontWeight: 700, textAlign: 'right', maxWidth: 100 }}>
-                    ⚠️ {splitHrs} of {Math.round(totalUnpaidHrs)} hrs assigned
-                  </div>
-                )}
-                {activeTab === 'custom' && hrsMatch && (
-                  <div style={{ fontSize: 11, color: '#22C55E', fontWeight: 700 }}>✅ All hrs set</div>
-                )}
-              </div>
-
-              {/* Custom split rows */}
-              {activeTab === 'custom' && (
-                <div style={{ borderTop: '1px solid var(--bdr)', padding: '10px 14px', display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  {splits.map((row, i) => (
-                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                      {/* Hours input */}
-                      <input
-                        type="number"
-                        value={row.hrs}
-                        min={0}
-                        onChange={e => updateSplit(i, 'hrs', e.target.value)}
-                        style={{ width: 60, padding: '8px', borderRadius: 8, border: '1px solid var(--bdr)',
-                          background: 'var(--s2)', color: 'var(--t1)', fontFamily: 'inherit',
-                          fontSize: 14, fontWeight: 700, textAlign: 'center', outline: 'none' }}
-                      />
-                      <span style={{ fontSize: 12, color: 'var(--t3)', flexShrink: 0 }}>hrs @</span>
-                      {/* Rate dropdown */}
-                      <select
-                        value={row.rate}
-                        onChange={e => updateSplit(i, 'rate', e.target.value)}
-                        style={{ flex: 1, padding: '8px 10px', borderRadius: 8, border: '1px solid var(--bdr)',
-                          background: 'var(--s2)', color: 'var(--t1)', fontFamily: 'inherit',
-                          fontSize: 14, fontWeight: 700, outline: 'none', cursor: 'pointer' }}>
-                        {RATES.map(r => <option key={r} value={r}>${r}/hr</option>)}
-                      </select>
-                      <span style={{ fontSize: 13, fontWeight: 800, color: color, minWidth: 60, textAlign: 'right', fontFamily: 'var(--mono)' }}>
-                        ${(row.hrs * row.rate).toFixed(0)}
-                      </span>
-                      {splits.length > 1 && (
-                        <button onClick={() => removeRow(i)} style={{
-                          width: 26, height: 26, borderRadius: '50%', border: 'none',
-                          background: 'rgba(239,68,68,0.12)', color: '#EF4444',
-                          cursor: 'pointer', fontSize: 14, display: 'flex', alignItems: 'center', justifyContent: 'center',
-                          flexShrink: 0 }}>×</button>
-                      )}
-                    </div>
-                  ))}
-                  <button onClick={addRow} style={{
-                    padding: '7px', borderRadius: 8, border: `1px dashed ${color}50`,
-                    background: `${color}08`, color: color, fontFamily: 'inherit',
-                    fontSize: 12, fontWeight: 700, cursor: 'pointer', marginTop: 4 }}>
-                    + Add row
-                  </button>
-                </div>
-              )}
-            </div>
-          </div>
-        );
-      })()}
 
       {/* ── Rate Calculator ── */}
       {outstanding > 0 && (() => {
