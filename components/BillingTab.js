@@ -104,6 +104,110 @@ function RateCalculator({ unpaidHrs, color }) {
   );
 }
 
+
+/* ── Universal Rate Widget — for all projects except chers-house-painting-job ── */
+function RateWidget({ project, outstanding, color }) {
+  const RATES = [25, 30, 35, 40, 45, 50];
+  const baseRate = project.rate || 50;
+  const [showCustom, setShowCustom] = useState(false);
+  const [customHrs, setCustomHrs] = useState(Math.round(outstanding / baseRate * 10) / 10);
+  const [customRate, setCustomRate] = useState(baseRate);
+  const [saving, setSaving] = useState(false);
+  const [saved, setSaved] = useState(false);
+
+  const unpaidHrs = Math.round(outstanding / baseRate * 10) / 10;
+  const defaultTotal = outstanding;
+  const customTotal = customHrs * customRate;
+  const displayTotal = showCustom ? customTotal : defaultTotal;
+
+  async function saveRate() {
+    setSaving(true);
+    try {
+      await fetch('/api/update-project', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ projectId: project.id, rate: customRate })
+      });
+      setSaved(true);
+      setTimeout(() => setSaved(false), 2000);
+    } catch(e) {}
+    setSaving(false);
+  }
+
+  return (
+    <div>
+      {/* Number + pills row */}
+      <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:10,marginBottom:6}}>
+        <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1,
+          color: '#FBBF24', fontFamily: 'var(--mono)' }}>
+          ${displayTotal.toFixed(2)}
+        </div>
+        <div style={{display:'flex',flexDirection:'column',gap:3,flexShrink:0}}>
+          <button onClick={()=>setShowCustom(false)} style={{
+            padding:'4px 12px',borderRadius:8,cursor:'pointer',fontFamily:'inherit',
+            fontSize:11,fontWeight:800,
+            border: !showCustom ? '1.5px solid rgba(251,191,36,0.6)' : '1.5px solid rgba(255,255,255,0.10)',
+            background: !showCustom ? 'rgba(251,191,36,0.18)' : 'rgba(255,255,255,0.04)',
+            color: !showCustom ? '#FBBF24' : 'rgba(255,255,255,0.35)',
+            transition:'all 0.15s',
+          }}>${baseRate}/hr</button>
+          <button onClick={()=>setShowCustom(true)} style={{
+            padding:'4px 12px',borderRadius:8,cursor:'pointer',fontFamily:'inherit',
+            fontSize:11,fontWeight:800,
+            border: showCustom ? '1.5px solid rgba(251,191,36,0.6)' : '1.5px solid rgba(255,255,255,0.10)',
+            background: showCustom ? 'rgba(251,191,36,0.18)' : 'rgba(255,255,255,0.04)',
+            color: showCustom ? '#FBBF24' : 'rgba(255,255,255,0.35)',
+            transition:'all 0.15s',
+          }}>Custom</button>
+        </div>
+      </div>
+
+      {/* Subtitle */}
+      <div style={{fontSize:11,color:'rgba(251,191,36,0.55)',marginBottom:showCustom?10:0}}>
+        {showCustom ? `${customHrs} hrs × $${customRate}/hr` : `${unpaidHrs} unpaid hrs × $${baseRate}/hr`}
+      </div>
+
+      {/* Custom editor */}
+      {showCustom && (
+        <div style={{background:'rgba(0,0,0,0.2)',borderRadius:10,padding:'12px',marginTop:8,display:'flex',flexDirection:'column',gap:10}}>
+          <div style={{display:'flex',alignItems:'center',gap:8}}>
+            <div style={{flex:1}}>
+              <div style={{fontSize:10,color:'rgba(255,255,255,0.35)',fontWeight:600,textTransform:'uppercase',letterSpacing:'0.06em',marginBottom:4}}>Hours</div>
+              <input type="number" value={customHrs} min={0} step={0.5}
+                onChange={e=>setCustomHrs(Number(e.target.value))}
+                style={{width:'100%',padding:'8px 10px',borderRadius:8,border:'1px solid rgba(255,255,255,0.15)',
+                  background:'rgba(255,255,255,0.07)',color:'#fff',fontFamily:'inherit',
+                  fontSize:16,fontWeight:700,outline:'none',boxSizing:'border-box'}}/>
+            </div>
+            <div style={{flex:1}}>
+              <div style={{fontSize:10,color:'rgba(255,255,255,0.35)',fontWeight:600,textTransform:'uppercase',letterSpacing:'0.06em',marginBottom:4}}>Rate</div>
+              <select value={customRate} onChange={e=>setCustomRate(Number(e.target.value))}
+                style={{width:'100%',padding:'8px 10px',borderRadius:8,border:'1px solid rgba(255,255,255,0.15)',
+                  background:'rgba(255,255,255,0.07)',color:'#fff',fontFamily:'inherit',
+                  fontSize:16,fontWeight:700,outline:'none',cursor:'pointer'}}>
+                {RATES.map(r=><option key={r} value={r} style={{background:'#1a1a1a'}}>${r} / hr</option>)}
+              </select>
+            </div>
+          </div>
+          <div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+            <div style={{fontSize:20,fontWeight:800,color:'#FBBF24',fontFamily:'var(--mono)'}}>
+              = ${customTotal.toFixed(2)}
+            </div>
+            <button onClick={saveRate} disabled={saving} style={{
+              padding:'8px 20px',borderRadius:10,border:'none',cursor:'pointer',
+              fontFamily:'inherit',fontSize:13,fontWeight:800,
+              background: saved ? '#22C55E' : color,
+              color:'#fff',transition:'all 0.2s',opacity:saving?0.6:1,
+            }}>
+              {saving ? 'Saving...' : saved ? '✅ Saved!' : 'Set Rate'}
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function BillingTab({ project, entries, onMarkPaid }) {
   const [rateTab, setRateTab] = useState('50');
   const [customSplits, setCustomSplits] = useState([
@@ -195,13 +299,15 @@ export default function BillingTab({ project, entries, onMarkPaid }) {
             color: outstanding > 0 ? 'rgba(251,191,36,0.6)' : 'rgba(34,197,94,0.6)', marginBottom: 4 }}>
             {outstanding > 0 ? 'Outstanding Balance' : overpaid > 0 ? 'Overpaid' : 'Fully Paid ✅'}
           </div>
-          {/* Rate toggle pills */}
+          {/* Rate widget */}
           {outstanding > 0 && (() => {
             const unpaidHrs = Math.round(outstanding / 50 * 10) / 10;
             const RATES = [25,30,35,40,45,50];
             const splitTotal = customSplits.reduce((s,r)=>s+r.hrs*r.rate,0);
             const displayAmt = rateTab==='50' ? outstanding : rateTab==='40' ? unpaidHrs*40 : splitTotal;
-            return (
+
+            // Cher's job gets the 3-bracket custom calculator
+            if (project.id === 'chers-house-painting-job') return (
               <>
                 <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:10,marginBottom:6}}>
                   <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1,
