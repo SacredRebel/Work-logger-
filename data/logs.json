@@ -125,7 +125,15 @@
       "startDate": "2026-06-08",
       "status": "completed",
       "description": "Landscape job at 207 \u2014 weeding, bush trimming, dirt removal, dump runs",
-      "payments": []
+      "payments": [
+        {
+          "id": "pay-k207-001",
+          "amount": 725,
+          "date": "2026-06-18",
+          "method": "ACH Transfer",
+          "note": "Payment in full"
+        }
+      ]
     },
     {
       "id": "hip-vegan-cleanup",
