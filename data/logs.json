@@ -154,6 +154,18 @@
           "note": "Paid on the spot in cash"
         }
       ]
+    },
+    {
+      "id": "karol-207-june25",
+      "name": "Karol \u2014 207 Landscape Job #2",
+      "client": "Karol",
+      "color": "#16A34A",
+      "icon": "\ud83c\udf3f",
+      "rate": 45,
+      "startDate": "2026-06-25",
+      "status": "active",
+      "description": "Restring jasmine, remove dead tree, feed citrus tree, clean front area",
+      "payments": []
     }
   ],
   "categories": [
@@ -3926,6 +3938,47 @@
           "items": [
             "1.5 hrs \u00d7 $30/hr = $45.00 earned",
             "Paid in full \u2705"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "date": "2026-06-25",
+      "project": "karol-207-june25",
+      "category": "general",
+      "hours": 0,
+      "rate": 45,
+      "earned": 0,
+      "tasks": "Day 1 \u2014 Restring jasmine, remove dead tree, citrus tree, clean front area",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "207 \u2014 Karol's property"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 10:00 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Today's Task List",
+          "items": [
+            "Restring jasmine",
+            "Remove dead tree",
+            "Feed citrus tree \u2014 dig a circle around it with rocks",
+            "Clean front area of 207"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83d\udfe2 In progress \u2014 started 10:00 AM",
+            "Hours to be finalized at end of day"
           ]
         }
       ],
