@@ -163,9 +163,17 @@
       "icon": "\ud83c\udf3f",
       "rate": 45,
       "startDate": "2026-06-25",
-      "status": "active",
+      "status": "completed",
       "description": "Restring jasmine, remove dead tree, feed citrus tree, clean front area",
-      "payments": []
+      "payments": [
+        {
+          "id": "pay-k207b-001",
+          "amount": 200,
+          "date": "2026-06-25",
+          "method": "Cash",
+          "note": "Paid in full on the spot \u2014 includes $20 tip"
+        }
+      ]
     }
   ],
   "categories": [
@@ -3947,10 +3955,10 @@
       "date": "2026-06-25",
       "project": "karol-207-june25",
       "category": "general",
-      "hours": 0,
+      "hours": 4,
       "rate": 45,
-      "earned": 0,
-      "tasks": "Day 1 \u2014 Restring jasmine, remove dead tree, citrus tree, clean front area",
+      "earned": 200,
+      "tasks": "Day 1 \u2014 Restring jasmine, remove dead tree, citrus tree, front cleanup + misc",
       "sections": [
         {
           "title": "Location",
@@ -3962,23 +3970,33 @@
           "title": "Schedule",
           "items": [
             "Started: 10:00 AM",
-            "End time: TBD"
+            "Finished: 2:00 PM",
+            "4 hrs \u00d7 $45/hr = $180 + $20 tip = $200"
           ]
         },
         {
-          "title": "Today's Task List",
+          "title": "Work Completed",
           "items": [
-            "Restring jasmine",
-            "Remove dead tree",
-            "Feed citrus tree \u2014 dig a circle around it with rocks",
-            "Clean front area of 207"
+            "Restrung jasmine \u2705",
+            "Removed dead tree \u2705",
+            "Fed citrus tree \u2014 dug rock circle around it \u2705",
+            "Cleaned front area of 207 \u2705",
+            "Misc \u2014 weeding, pruning, pot moving, general cleanup (~30 min) \u2705"
           ]
         },
         {
-          "title": "Status",
+          "title": "Payment",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 started 10:00 AM",
-            "Hours to be finalized at end of day"
+            "$200 cash \u2014 paid on the spot \u2705",
+            "4 hrs \u00d7 $45/hr = $180 labor + $20 tip"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "4 hrs \u00d7 $45/hr = $180.00 labor",
+            "$20.00 tip",
+            "Total received: $200.00 \u2705 \u2014 Paid in full"
           ]
         }
       ],
