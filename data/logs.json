@@ -8,7 +8,7 @@
       "icon": "\ud83c\udfe0",
       "rate": 50,
       "startDate": "2026-04-07",
-      "status": "active",
+      "status": "completed",
       "description": "Interior painting job \u2014 office room prep, window frames, door frames, full paint",
       "payments": [
         {
@@ -52,6 +52,13 @@
           "date": "2026-06-01",
           "method": "ACH Transfer",
           "note": "Payment received June 1"
+        },
+        {
+          "id": "pay-006",
+          "amount": 1555,
+          "date": "2026-06-26",
+          "method": "ACH Transfer",
+          "note": "Final payment from Johnatan Braniff \u2014 settled at $40/hr \u00d7 360hrs basis. ~$1,000 mentioned as remaining but job considered closed."
         }
       ]
     },
