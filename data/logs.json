@@ -190,9 +190,17 @@
       "icon": "\ud83c\udf3f",
       "rate": 45,
       "startDate": "2026-07-03",
-      "status": "active",
+      "status": "completed",
       "description": "Garage organization + Hip Vegan citrus tree fertilizing",
-      "payments": []
+      "payments": [
+        {
+          "id": "pay-kj3-001",
+          "amount": 100,
+          "date": "2026-07-03",
+          "method": "Cash",
+          "note": "Paid on the spot \u2014 $12.50 waived, Karol has been good to work with"
+        }
+      ]
     }
   ],
   "categories": [
@@ -4056,7 +4064,8 @@
           "title": "Summary",
           "items": [
             "2.5 hrs \u00d7 $45/hr = $112.50 earned",
-            "Payment: TBD"
+            "$100 cash received \u2014 $12.50 waived \u2705",
+            "Job closed \u2014 paid in full"
           ]
         }
       ],
