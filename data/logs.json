@@ -181,6 +181,18 @@
           "note": "Paid in full on the spot \u2014 includes $20 tip"
         }
       ]
+    },
+    {
+      "id": "karol-july3",
+      "name": "Karol \u2014 Garage & Hip Vegan Citrus",
+      "client": "Karol",
+      "color": "#16A34A",
+      "icon": "\ud83c\udf3f",
+      "rate": 45,
+      "startDate": "2026-07-03",
+      "status": "active",
+      "description": "Garage organization + Hip Vegan citrus tree fertilizing",
+      "payments": []
     }
   ],
   "categories": [
@@ -4004,6 +4016,47 @@
             "4 hrs \u00d7 $45/hr = $180.00 labor",
             "$20.00 tip",
             "Total received: $200.00 \u2705 \u2014 Paid in full"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "date": "2026-07-03",
+      "project": "karol-july3",
+      "category": "general",
+      "hours": 2.5,
+      "rate": 45,
+      "earned": 112.5,
+      "tasks": "Garage organization + Hip Vegan citrus trees fertilized",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Karol's \u2014 Garage & Hip Vegan Restaurant"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Arrived: 10:15 AM",
+            "Started working: 10:30 AM",
+            "Finished: 1:00 PM",
+            "Billable: 2.5 hrs"
+          ]
+        },
+        {
+          "title": "Work Completed",
+          "items": [
+            "Organized Karol's garage \u2705",
+            "Fertilized 2 citrus trees at Hip Vegan \u2705"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "2.5 hrs \u00d7 $45/hr = $112.50 earned",
+            "Payment: TBD"
           ]
         }
       ],
