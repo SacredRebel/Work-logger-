@@ -221,6 +221,26 @@
           "note": "Paid on the spot \u2014 $32.50 tip, Karol said it's all good \ud83d\ude4f"
         }
       ]
+    },
+    {
+      "id": "toppa-institute-kali",
+      "name": "Toppa Institute \u2014 Kali (Favor)",
+      "client": "Kali",
+      "color": "#8B5CF6",
+      "icon": "\ud83e\udd1d",
+      "rate": 0,
+      "startDate": "2026-07-09",
+      "status": "completed",
+      "description": "Sealed office window for AC unit \u2014 favor for a friend",
+      "payments": [
+        {
+          "id": "pay-kali-001",
+          "amount": 0,
+          "date": "2026-07-09",
+          "method": "Trade",
+          "note": "Paid in kind \u2014 joint & drink \ud83c\udf3f\ud83e\udd64"
+        }
+      ]
     }
   ],
   "categories": [
@@ -4141,6 +4161,46 @@
             "1.5 hrs \u00d7 $45/hr = $67.50 labor",
             "$100 cash received \u2014 $32.50 tip \u2705",
             "Paid in full \u2014 job closed"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "date": "2026-07-09",
+      "project": "toppa-institute-kali",
+      "category": "general",
+      "hours": 0.5,
+      "rate": 0,
+      "earned": 0,
+      "tasks": "Sealed office window for AC/DAC unit \u2014 favor for Kali",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Toppa Institute \u2014 Kali's office"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Arrived: ~afternoon",
+            "Work done: ~20-30 min",
+            "Left: 4:00 PM",
+            "Hung out after the work"
+          ]
+        },
+        {
+          "title": "Work Done",
+          "items": [
+            "Sealed office window for AC/DAC unit \u2705"
+          ]
+        },
+        {
+          "title": "Payment",
+          "items": [
+            "No charge \u2014 favor for a friend \ud83e\udd1d",
+            "Paid in kind \u2014 joint & drink \ud83c\udf3f\ud83e\udd64"
           ]
         }
       ],
