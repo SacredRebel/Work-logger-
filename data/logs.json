@@ -210,7 +210,7 @@
       "icon": "\ud83c\udf3f",
       "rate": 45,
       "startDate": "2026-07-09",
-      "status": "active",
+      "status": "completed",
       "description": "Passionfruit trim, cedar trees removal, weeding, front cleanup",
       "payments": []
     }
@@ -4087,10 +4087,10 @@
       "date": "2026-07-09",
       "project": "karol-july9",
       "category": "general",
-      "hours": 0,
+      "hours": 1.5,
       "rate": 45,
-      "earned": 0,
-      "tasks": "Passionfruit trim, cedar removal (Hip Vegan), vine removal, front cleanup & plant trimming at 207",
+      "earned": 67.5,
+      "tasks": "Passionfruit, citrus tree, vine, front cleanup, Euphorbia trim, dead plants, pathway & railing",
       "sections": [
         {
           "title": "Location",
@@ -4102,38 +4102,37 @@
           "title": "Schedule",
           "items": [
             "Started: 10:30 AM",
-            "Mid-day update: 11:30 AM",
-            "End time: TBD"
+            "Finished: 12:12 PM",
+            "1hr 42min \u2192 billable: 1.5 hrs",
+            "1.5 hrs \u00d7 $45/hr = $67.50"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
             "Trimmed back passionfruit at Hip Vegan \u2705",
-            "Removed 1 of 2 citrus trees from pot at Hip Vegan entrance \u2705 (2nd pending decision)",
+            "Removed 1 citrus tree from pot at Hip Vegan entrance \u2705 (2nd pending decision)",
             "Removed vine from beds near 207 entrance \u2705",
-            "Cleared front street of 207 \u2014 removed spiky aloe veras, leaves & weeds \u2705",
+            "Cleared front street of 207 \u2014 removed aloe veras, leaves & weeds \u2705",
             "Trimmed 2 Euphorbia tirucalli (Pencil tree) plants at front of 207 \u2705",
-            "General cleanup \u2705"
-          ]
-        },
-        {
-          "title": "In Progress",
-          "items": [
-            "11:30 AM \u2014 Removing dead & dried out plants at front of 207 (Salve Living area)"
+            "Removed dead & dried out plants from front of 207 \u2705",
+            "Restrung railing strings inside 207 (~5-10 min) \u2705",
+            "Broomed & cleaned pathway in front of 207 \u2705",
+            "Cleaned up street side work area \u2705"
           ]
         },
         {
           "title": "Notes",
           "items": [
             "2nd citrus tree at Hip Vegan \u2014 pending owner decision on removal",
-            "Euphorbia tirucalli (Pencil tree / Pencil cactus) \u2014 toxic milky sap, handle with care \u26a0\ufe0f"
+            "Euphorbia tirucalli \u2014 toxic milky sap, handled with gloves \u26a0\ufe0f"
           ]
         },
         {
-          "title": "Status",
+          "title": "Summary",
           "items": [
-            "\ud83d\udfe2 Still in progress \u2014 finalizing end time"
+            "1.5 hrs \u00d7 $45/hr = $67.50 earned",
+            "Payment: TBD"
           ]
         }
       ],
