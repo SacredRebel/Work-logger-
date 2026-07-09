@@ -4090,36 +4090,50 @@
       "hours": 0,
       "rate": 45,
       "earned": 0,
-      "tasks": "Passionfruit trim, cedar trees, weeding, front dead plant removal & cleanup",
+      "tasks": "Passionfruit trim, cedar removal (Hip Vegan), vine removal, front cleanup & plant trimming at 207",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "207 \u2014 Karol's property"
+            "207 \u2014 Karol's property & Hip Vegan Restaurant"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:30 AM",
+            "Mid-day update: 11:30 AM",
             "End time: TBD"
           ]
         },
         {
-          "title": "Today's Task List",
+          "title": "Work Completed",
           "items": [
-            "Trim back passionfruit",
-            "Remove 2 cedar trees from pot",
-            "Weeding",
-            "Remove dead plants from front of 207",
-            "Clean up street front side"
+            "Trimmed back passionfruit at Hip Vegan \u2705",
+            "Removed 1 of 2 citrus trees from pot at Hip Vegan entrance \u2705 (2nd pending decision)",
+            "Removed vine from beds near 207 entrance \u2705",
+            "Cleared front street area of 207 \u2014 removed spiky aloe veras, leaves, weeds \u2705",
+            "Trimmed 2 larger finger bush plants at front of 207 \u2705",
+            "General cleanup & made front look clean \u2705"
+          ]
+        },
+        {
+          "title": "In Progress",
+          "items": [
+            "11:30 AM \u2014 Removing dead & dried out plants at front of 207 (Salve Living area)"
+          ]
+        },
+        {
+          "title": "Notes",
+          "items": [
+            "2nd citrus tree at Hip Vegan \u2014 pending owner decision on removal",
+            "Finger bush plant name \u2014 TBD (update when confirmed)"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 started 10:30 AM",
-            "Hours to be finalized at end of day"
+            "\ud83d\udfe2 Still in progress \u2014 finalizing end time"
           ]
         }
       ],
