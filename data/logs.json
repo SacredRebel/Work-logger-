@@ -212,7 +212,15 @@
       "startDate": "2026-07-09",
       "status": "completed",
       "description": "Passionfruit trim, cedar trees removal, weeding, front cleanup",
-      "payments": []
+      "payments": [
+        {
+          "id": "pay-kj9-001",
+          "amount": 100,
+          "date": "2026-07-09",
+          "method": "Cash",
+          "note": "Paid on the spot \u2014 $32.50 tip, Karol said it's all good \ud83d\ude4f"
+        }
+      ]
     }
   ],
   "categories": [
@@ -4130,8 +4138,9 @@
         {
           "title": "Summary",
           "items": [
-            "1.5 hrs \u00d7 $45/hr = $67.50 earned",
-            "Payment: TBD"
+            "1.5 hrs \u00d7 $45/hr = $67.50 labor",
+            "$100 cash received \u2014 $32.50 tip \u2705",
+            "Paid in full \u2014 job closed"
           ]
         }
       ],
