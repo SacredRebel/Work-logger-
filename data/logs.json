@@ -241,6 +241,26 @@
           "note": "Paid in kind \u2014 joint & drink \ud83c\udf3f\ud83e\udd64"
         }
       ]
+    },
+    {
+      "id": "cher-plant-july12",
+      "name": "Cher \u2014 Plant & Deck July 12",
+      "client": "Cher",
+      "color": "#F97316",
+      "icon": "\ud83e\udeb4",
+      "rate": 0,
+      "startDate": "2026-07-12",
+      "status": "completed",
+      "description": "Transplanted large potted plant into ground, deck cleanup, cat box removal",
+      "payments": [
+        {
+          "id": "pay-cher-j12-001",
+          "amount": 60,
+          "date": "2026-07-12",
+          "method": "Cash",
+          "note": "Left on counter by Cher \u2014 surprise payment, plus a little food (beef) \ud83e\udd69"
+        }
+      ]
     }
   ],
   "categories": [
@@ -4201,6 +4221,59 @@
           "items": [
             "No charge \u2014 favor for a friend \ud83e\udd1d",
             "Paid in kind \u2014 joint & drink \ud83c\udf3f\ud83e\udd64"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "date": "2026-07-12",
+      "project": "cher-plant-july12",
+      "category": "general",
+      "hours": 2.5,
+      "rate": 0,
+      "earned": 60,
+      "tasks": "Transplanted large plant into ground, deck cleanup, cat box removal",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Cher's house \u2014 Backyard & deck"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: ~5:00\u20135:30 PM",
+            "Finished: ~8:00 PM",
+            "~2.5 hrs total"
+          ]
+        },
+        {
+          "title": "Work Completed",
+          "items": [
+            "Removed large plant from pot (knocked over by wind) \u2705",
+            "Dug hole in backyard \u2705",
+            "Transplanted plant into ground & covered \u2705",
+            "Removed excess dirt with wheelbarrow \u2705",
+            "Cleaned up deck \u2705",
+            "Removed cat box \u2014 loaded into truck & tied down with rope \u2705"
+          ]
+        },
+        {
+          "title": "Payment",
+          "items": [
+            "$60 cash \u2014 left on counter by Cher \u2705",
+            "Also received a little food (beef) \ud83e\udd69",
+            "No price was discussed \u2014 Cher came up with the amount herself"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "~2.5 hrs work",
+            "$60 cash received \u2705",
+            "Job closed"
           ]
         }
       ],
