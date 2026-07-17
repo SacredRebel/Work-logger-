@@ -272,7 +272,15 @@
       "startDate": "2026-07-17",
       "status": "completed",
       "description": "Spruce transplant, mound plant removal, jasmine replanting at Sane Living & 207",
-      "payments": []
+      "payments": [
+        {
+          "id": "pay-k717-001",
+          "amount": 160,
+          "date": "2026-07-17",
+          "method": "Cash",
+          "note": "Paid on the spot \u2014 $2.50 tip on $157.50 \u2705"
+        }
+      ]
     }
   ],
   "categories": [
@@ -4297,7 +4305,7 @@
       "category": "general",
       "hours": 3.5,
       "rate": 45,
-      "earned": 157.5,
+      "earned": 160,
       "tasks": "Spruce transplant, mound plant, weeding, diatomaceous earth, garage, Hip Vegan exterior",
       "sections": [
         {
@@ -4330,7 +4338,7 @@
         {
           "title": "Status",
           "items": [
-            "\u2705 Job complete \u2014 3.5 hrs \u00d7 $45/hr = $157.50"
+            "$160 cash received \u2705 \u2014 paid in full, job closed"
           ]
         },
         {
