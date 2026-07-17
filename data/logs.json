@@ -4316,19 +4316,20 @@
           ]
         },
         {
-          "title": "Today's Task List",
+          "title": "Progress",
           "items": [
-            "Remove plant from mound next to sculpture (keep it \u2014 Carol may want it in the Canyon)",
-            "Remove spruce tree & replant to left of tiny house deck at 207",
-            "\u26a0\ufe0f Be careful of blue flowers growing next to spruce \u2014 do not disturb",
-            "Replant jasmine into the earth"
+            "Removed plant from mound next to sculpture \u2705 (kept for Carol/Canyon)",
+            "Removed spruce tree & replanted to left of tiny house deck at 207 \u2705",
+            "\u26a0\ufe0f Blue flowers next to spruce \u2014 undisturbed \u2705",
+            "Weeding at 315 backyard \u2014 pulled tarred weeds \u2705",
+            "Jasmine \u2014 already in ground, consulting Karol on next steps at 10 AM"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 started 8:45 AM",
-            "Hours & rate to be finalized at end of day (~$45/hr expected)"
+            "\ud83d\udfe1 Waiting for Karol at 10 AM \u2014 jasmine consultation",
+            "All other tasks complete"
           ]
         }
       ],
