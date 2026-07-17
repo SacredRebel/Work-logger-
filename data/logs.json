@@ -261,6 +261,18 @@
           "note": "Left on counter by Cher \u2014 surprise payment, plus a little food (beef) \ud83e\udd69"
         }
       ]
+    },
+    {
+      "id": "karol-july17",
+      "name": "Karol \u2014 Sane Living & 207 July 17",
+      "client": "Karol",
+      "color": "#16A34A",
+      "icon": "\ud83c\udf3f",
+      "rate": 45,
+      "startDate": "2026-07-17",
+      "status": "active",
+      "description": "Spruce transplant, mound plant removal, jasmine replanting at Sane Living & 207",
+      "payments": []
     }
   ],
   "categories": [
@@ -4274,6 +4286,49 @@
             "~2.5 hrs work",
             "$60 cash received \u2705",
             "Job closed"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "date": "2026-07-17",
+      "project": "karol-july17",
+      "category": "general",
+      "hours": 0,
+      "rate": 45,
+      "earned": 0,
+      "tasks": "Spruce transplant, mound plant removal, jasmine replanting",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Sane Living \u2014 310 Matilija St & 207"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Arrived: 8:45 AM",
+            "Started working: 8:45 AM",
+            "Karol arriving: ~10:00 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Today's Task List",
+          "items": [
+            "Remove plant from mound next to sculpture (keep it \u2014 Carol may want it in the Canyon)",
+            "Remove spruce tree & replant to left of tiny house deck at 207",
+            "\u26a0\ufe0f Be careful of blue flowers growing next to spruce \u2014 do not disturb",
+            "Replant jasmine into the earth"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83d\udfe2 In progress \u2014 started 8:45 AM",
+            "Hours & rate to be finalized at end of day (~$45/hr expected)"
           ]
         }
       ],
