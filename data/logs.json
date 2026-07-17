@@ -4311,7 +4311,8 @@
           "items": [
             "Arrived: 8:45 AM",
             "Started working: 8:45 AM",
-            "Karol arriving: ~10:00 AM",
+            "Break: 10:00 AM \u2014 11:00 AM (waiting for Karol)",
+            "Back at it: 11:00 AM",
             "End time: TBD"
           ]
         },
@@ -4328,8 +4329,16 @@
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe1 Waiting for Karol at 10 AM \u2014 jasmine consultation",
-            "All other tasks complete"
+            "\ud83d\udfe2 Back at it 11:00 AM \u2014 working on new task list"
+          ]
+        },
+        {
+          "title": "Additional Tasks (from Karol)",
+          "items": [
+            "Apply diatomaceous earth at front of 207 around bug-eaten plants",
+            "Clean out small pot of weeds & leaves (Hip Vegan)",
+            "Put rocks around rose bush at 207",
+            "Organize & clean up garage so Karol can photograph tables & chairs"
           ]
         }
       ],
