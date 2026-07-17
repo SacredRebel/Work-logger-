@@ -270,7 +270,7 @@
       "icon": "\ud83c\udf3f",
       "rate": 45,
       "startDate": "2026-07-17",
-      "status": "active",
+      "status": "completed",
       "description": "Spruce transplant, mound plant removal, jasmine replanting at Sane Living & 207",
       "payments": []
     }
@@ -4295,10 +4295,10 @@
       "date": "2026-07-17",
       "project": "karol-july17",
       "category": "general",
-      "hours": 0,
+      "hours": 3.5,
       "rate": 45,
-      "earned": 0,
-      "tasks": "Spruce transplant, mound plant removal, jasmine replanting",
+      "earned": 157.5,
+      "tasks": "Spruce transplant, mound plant, weeding, diatomaceous earth, garage, Hip Vegan exterior",
       "sections": [
         {
           "title": "Location",
@@ -4310,12 +4310,10 @@
           "title": "Schedule",
           "items": [
             "Arrived: 8:45 AM",
-            "Started working: 8:45 AM",
-            "Break: 10:00 AM \u2014 11:00 AM (waiting for Karol)",
-            "Back at it: 11:00 AM",
-            "Lunch: 12:00 PM \u2014 ~12:30 PM (Karol bought food \ud83d\ude4f)",
-            "Back at it: ~12:30 PM",
-            "End time: TBD"
+            "Break: 10:00 AM \u2014 11:00 AM (1 hour)",
+            "Lunch: 12:00 PM \u2014 12:30 PM (30 min)",
+            "Finished: 1:50 PM",
+            "5hrs 5min total \u2014 1.5hrs breaks \u2014 billable: 3.5 hrs"
           ]
         },
         {
@@ -4331,19 +4329,19 @@
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 Back at it \u2014 brooming Hip Vegan exterior (windows, lamps, spider webs)"
+            "\u2705 Job complete \u2014 3.5 hrs \u00d7 $45/hr = $157.50"
           ]
         },
         {
           "title": "Additional Tasks (from Karol)",
           "items": [
+            "Applied diatomaceous earth at front of 207 around bug-eaten plants \u2705",
+            "Cleaned out small pot of weeds & leaves (Hip Vegan) \u2705",
+            "Put rocks around rose bush at 207 \u2705",
             "Removed large weed/tree with roots from 312 backyard \u2705",
             "Weeded back corner of 312 backyard \u2705",
-            "Apply diatomaceous earth at front of 207 around bug-eaten plants",
-            "Clean out small pot of weeds & leaves (Hip Vegan)",
-            "Put rocks around rose bush at 207",
-            "Organized & cleaned up garage for Karol's photo shoot \u2705",
-            "Brooming Hip Vegan exterior \u2014 windows, lamps, spider webs & dust \ud83e\uddf9"
+            "Organized & cleaned up garage for Karol's photos \u2705",
+            "Broomed Hip Vegan exterior \u2014 windows, lamps, spider webs & dust \u2705"
           ]
         }
       ],
