@@ -281,6 +281,18 @@
           "note": "Paid on the spot \u2014 $2.50 tip on $157.50 \u2705"
         }
       ]
+    },
+    {
+      "id": "karol-july29",
+      "name": "Karol \u2014 Sane Living July 29",
+      "client": "Karol",
+      "color": "#16A34A",
+      "icon": "\ud83c\udf3f",
+      "rate": 45,
+      "startDate": "2026-07-29",
+      "status": "active",
+      "description": "Sanding & linseed oil staining of stone slab benches at Sane Living",
+      "payments": []
     }
   ],
   "categories": [
@@ -4351,6 +4363,46 @@
             "Weeded back corner of 312 backyard \u2705",
             "Organized & cleaned up garage for Karol's photos \u2705",
             "Broomed Hip Vegan exterior \u2014 windows, lamps, spider webs & dust \u2705"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "date": "2026-07-29",
+      "project": "karol-july29",
+      "category": "general",
+      "hours": 0,
+      "rate": 45,
+      "earned": 0,
+      "tasks": "Sanding & linseed oil staining of slab benches at Sane Living",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Sane Living \u2014 Ojai"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Arrived: 7:20 AM",
+            "Started: 7:30 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Today's Plan",
+          "items": [
+            "Sand stone slab benches",
+            "Stain slabs with linseed oil"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83d\udfe2 In progress \u2014 started 7:30 AM",
+            "Hours to be finalized at end of day"
           ]
         }
       ],
