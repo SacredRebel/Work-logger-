@@ -4423,6 +4423,15 @@
           "items": [
             "\ud83d\udfe1 Sanding complete \u2014 returning tomorrow for linseed oil"
           ]
+        },
+        {
+          "title": "Supplies / Expenses",
+          "items": [
+            "Ace Hardware \u2014 brushes & rags for linseed oil application",
+            "Amount: $22.25",
+            "Receipt to be given to Karol tomorrow",
+            "Reimbursement pending \u23f3"
+          ]
         }
       ],
       "images": []
@@ -4431,10 +4440,10 @@
       "date": "2026-07-29",
       "project": "karol-207-july29",
       "category": "general",
-      "hours": 0,
+      "hours": 0.5,
       "rate": 45,
-      "earned": 0,
-      "tasks": "Fill planter bed with soil + trim bush at 207 backyard",
+      "earned": 22.5,
+      "tasks": "Filled planter bed with soil + trimmed bush at 207 backyard",
       "sections": [
         {
           "title": "Location",
@@ -4446,21 +4455,22 @@
           "title": "Schedule",
           "items": [
             "Started: ~11:30 AM",
-            "End time: TBD"
+            "Finished: 12:00 PM",
+            "0.5 hrs \u00d7 $45/hr = $22.50"
           ]
         },
         {
-          "title": "Today's Plan",
+          "title": "Work Completed",
           "items": [
-            "Fill planter bed with bag of soil",
-            "Trim bush in backyard"
+            "Filled planter bed with bag of soil \u2705",
+            "Trimmed bush in backyard \u2705"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 started ~11:30 AM",
-            "Hours to be finalized at end of day"
+            "\u2705 Done \u2014 0.5 hrs \u00d7 $45/hr = $22.50",
+            "Payment: TBD"
           ]
         }
       ],
