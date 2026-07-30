@@ -35,7 +35,8 @@ async function uploadOne(base64, filename, projectId, retries = 2) {
         body: JSON.stringify({ imageBase64: base64.replace(/^data:image\/\w+;base64,/, ''), filename, projectId }),
       });
       if (res.ok) return await res.json();
-      if (attempt === retries) throw new Error(`Upload failed: ${res.status}`);
+      const errBody = await res.json().catch(() => ({}));
+      if (attempt === retries) throw new Error(errBody.error || `Upload failed: ${res.status}`);
     } catch (e) {
       if (attempt === retries) throw e;
       await new Promise(r => setTimeout(r, 600 * (attempt + 1)));
@@ -82,12 +83,14 @@ export default function PhotoUploader({ projectId, date, onUploaded, accentColor
     try {
       const compressed = await Promise.all(Array.from(files).map(f => compressImage(f)));
       const results = [];
-      await Promise.all(compressed.map(async (base64, i) => {
+      // Upload sequentially — GitHub's Contents API rejects/fails concurrent writes to the same branch
+      for (let i = 0; i < compressed.length; i++) {
+        const base64 = compressed[i];
         const filename = `${date}-${type}-${Date.now()}-${i}.jpg`;
         const result = await uploadOne(base64, filename, projectId);
         results.push({ type, url: result.url, caption: finalGroup || '', group: finalGroup || '' });
         setProgress(p => ({ ...p, done: p.done + 1, label: `${p.done + 1}/${files.length}` }));
-      }));
+      }
       const saveRes = await fetch('/api/update-log', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
