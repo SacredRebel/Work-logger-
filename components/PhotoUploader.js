@@ -160,7 +160,7 @@ export default function PhotoUploader({ projectId, date, onUploaded, accentColor
                 value={customGroup}
                 onChange={e => { setCustomGroup(e.target.value); setGroup('__custom__'); }}
                 onKeyDown={e => { if (e.key === 'Enter' && customGroup.trim()) setStep('type'); }}
-                style={{ flex: 1, padding: '9px 12px', borderRadius: 10, border: '1px solid var(--bdr)', background: 'var(--s2)', color: 'var(--t1)', fontFamily: 'inherit', fontSize: 13, outline: 'none' }}
+                style={{ flex: 1, padding: '9px 12px', borderRadius: 10, border: '1px solid var(--bdr)', background: 'var(--s2)', color: 'var(--t1)', fontFamily: 'inherit', fontSize: 16, outline: 'none' }}
               />
               <button
                 onClick={() => { if (finalGroup) setStep('type'); }}
