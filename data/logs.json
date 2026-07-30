@@ -5,18 +5,18 @@
       "name": "Cher's House Painting Job",
       "client": "Cher",
       "color": "#F97316",
-      "icon": "🏠",
+      "icon": "\ud83c\udfe0",
       "rate": 50,
       "startDate": "2026-04-07",
       "status": "completed",
-      "description": "Interior painting job — office room prep, window frames, door frames, full paint",
+      "description": "Interior painting job \u2014 office room prep, window frames, door frames, full paint",
       "payments": [
         {
           "id": "pay-001",
           "amount": 444,
           "date": "2026-04-01",
           "method": "ACH Transfer",
-          "note": "Advance payment before job started — covered Day 1 ($350) + $94 toward Day 2"
+          "note": "Advance payment before job started \u2014 covered Day 1 ($350) + $94 toward Day 2"
         },
         {
           "id": "pay-002",
@@ -44,7 +44,7 @@
           "amount": 50,
           "date": "2026-05-05",
           "method": "ACH Transfer",
-          "note": "Supplies reimbursement — cost deducted, $50 net remainder"
+          "note": "Supplies reimbursement \u2014 cost deducted, $50 net remainder"
         },
         {
           "id": "pay-005",
@@ -58,16 +58,16 @@
           "amount": 1555,
           "date": "2026-06-26",
           "method": "ACH Transfer",
-          "note": "Final payment from Johnatan Braniff — settled at $40/hr × 360hrs basis. ~$1,000 mentioned as remaining but job considered closed."
+          "note": "Final payment from Johnatan Braniff \u2014 settled at $40/hr \u00d7 360hrs basis. ~$1,000 mentioned as remaining but job considered closed."
         }
       ]
     },
     {
       "id": "helping-sparrow-camper",
-      "name": "Helping Sparrow — Camper",
+      "name": "Helping Sparrow \u2014 Camper",
       "client": "Sparrow",
       "color": "#8B5CF6",
-      "icon": "🚐",
+      "icon": "\ud83d\ude90",
       "rate": 0,
       "startDate": "2026-04-11",
       "status": "completed",
@@ -78,16 +78,16 @@
           "amount": 100,
           "date": "2026-04-11",
           "method": "Cash",
-          "note": "Paid on the spot by Sparrow — unprompted"
+          "note": "Paid on the spot by Sparrow \u2014 unprompted"
         }
       ]
     },
     {
       "id": "helping-friend-rugs",
-      "name": "Helping Friend — Unloading Rugs",
+      "name": "Helping Friend \u2014 Unloading Rugs",
       "client": "Friend",
       "color": "#8B5CF6",
-      "icon": "🚚",
+      "icon": "\ud83d\ude9a",
       "rate": 0,
       "startDate": "2026-05-07",
       "status": "completed",
@@ -104,10 +104,10 @@
     },
     {
       "id": "helping-carol-yard",
-      "name": "Helping Karol — Yard Work",
+      "name": "Helping Karol \u2014 Yard Work",
       "client": "Karol",
       "color": "#10B981",
-      "icon": "🌿",
+      "icon": "\ud83c\udf3f",
       "rate": 0,
       "startDate": "2026-05-27",
       "status": "completed",
@@ -124,14 +124,14 @@
     },
     {
       "id": "karol-207-landscape",
-      "name": "Karol — 207 Landscape Job",
+      "name": "Karol \u2014 207 Landscape Job",
       "client": "Karol",
       "color": "#16A34A",
-      "icon": "🌿",
+      "icon": "\ud83c\udf3f",
       "rate": 35,
       "startDate": "2026-06-08",
       "status": "completed",
-      "description": "Landscape job at 207 — weeding, bush trimming, dirt removal, dump runs",
+      "description": "Landscape job at 207 \u2014 weeding, bush trimming, dirt removal, dump runs",
       "payments": [
         {
           "id": "pay-k207-001",
@@ -144,10 +144,10 @@
     },
     {
       "id": "hip-vegan-cleanup",
-      "name": "Hip Vegan — Cleanup & Trim",
+      "name": "Hip Vegan \u2014 Cleanup & Trim",
       "client": "Hip Vegan",
       "color": "#7C3AED",
-      "icon": "🌿",
+      "icon": "\ud83c\udf3f",
       "rate": 30,
       "startDate": "2026-06-10",
       "status": "completed",
@@ -164,10 +164,10 @@
     },
     {
       "id": "karol-207-june25",
-      "name": "Karol — 207 Landscape Job #2",
+      "name": "Karol \u2014 207 Landscape Job #2",
       "client": "Karol",
       "color": "#16A34A",
-      "icon": "🌿",
+      "icon": "\ud83c\udf3f",
       "rate": 45,
       "startDate": "2026-06-25",
       "status": "completed",
@@ -178,16 +178,16 @@
           "amount": 200,
           "date": "2026-06-25",
           "method": "Cash",
-          "note": "Paid in full on the spot — includes $20 tip"
+          "note": "Paid in full on the spot \u2014 includes $20 tip"
         }
       ]
     },
     {
       "id": "karol-july3",
-      "name": "Karol — Garage & Hip Vegan Citrus",
+      "name": "Karol \u2014 Garage & Hip Vegan Citrus",
       "client": "Karol",
       "color": "#16A34A",
-      "icon": "🌿",
+      "icon": "\ud83c\udf3f",
       "rate": 45,
       "startDate": "2026-07-03",
       "status": "completed",
@@ -198,16 +198,16 @@
           "amount": 100,
           "date": "2026-07-03",
           "method": "Cash",
-          "note": "Paid on the spot — $12.50 waived, Karol has been good to work with"
+          "note": "Paid on the spot \u2014 $12.50 waived, Karol has been good to work with"
         }
       ]
     },
     {
       "id": "karol-july9",
-      "name": "Karol — 207 Landscape July 9",
+      "name": "Karol \u2014 207 Landscape July 9",
       "client": "Karol",
       "color": "#16A34A",
-      "icon": "🌿",
+      "icon": "\ud83c\udf3f",
       "rate": 45,
       "startDate": "2026-07-09",
       "status": "completed",
@@ -218,36 +218,36 @@
           "amount": 100,
           "date": "2026-07-09",
           "method": "Cash",
-          "note": "Paid on the spot — $32.50 tip, Karol said it's all good 🙏"
+          "note": "Paid on the spot \u2014 $32.50 tip, Karol said it's all good \ud83d\ude4f"
         }
       ]
     },
     {
       "id": "toppa-institute-kali",
-      "name": "Toppa Institute — Kali (Favor)",
+      "name": "Toppa Institute \u2014 Kali (Favor)",
       "client": "Kali",
       "color": "#8B5CF6",
-      "icon": "🤝",
+      "icon": "\ud83e\udd1d",
       "rate": 0,
       "startDate": "2026-07-09",
       "status": "completed",
-      "description": "Sealed office window for AC unit — favor for a friend",
+      "description": "Sealed office window for AC unit \u2014 favor for a friend",
       "payments": [
         {
           "id": "pay-kali-001",
           "amount": 0,
           "date": "2026-07-09",
           "method": "Trade",
-          "note": "Paid in kind — joint & drink 🌿🥤"
+          "note": "Paid in kind \u2014 joint & drink \ud83c\udf3f\ud83e\udd64"
         }
       ]
     },
     {
       "id": "cher-plant-july12",
-      "name": "Cher — Plant & Deck July 12",
+      "name": "Cher \u2014 Plant & Deck July 12",
       "client": "Cher",
       "color": "#F97316",
-      "icon": "🪴",
+      "icon": "\ud83e\udeb4",
       "rate": 0,
       "startDate": "2026-07-12",
       "status": "completed",
@@ -258,16 +258,16 @@
           "amount": 60,
           "date": "2026-07-12",
           "method": "Cash",
-          "note": "Left on counter by Cher — surprise payment, plus a little food (beef) 🥩"
+          "note": "Left on counter by Cher \u2014 surprise payment, plus a little food (beef) \ud83e\udd69"
         }
       ]
     },
     {
       "id": "karol-july17",
-      "name": "Karol — Sane Living & 207 July 17",
+      "name": "Karol \u2014 Sane Living & 207 July 17",
       "client": "Karol",
       "color": "#16A34A",
-      "icon": "🌿",
+      "icon": "\ud83c\udf3f",
       "rate": 45,
       "startDate": "2026-07-17",
       "status": "completed",
@@ -278,16 +278,16 @@
           "amount": 160,
           "date": "2026-07-17",
           "method": "Cash",
-          "note": "Paid on the spot — $2.50 tip on $157.50 ✅"
+          "note": "Paid on the spot \u2014 $2.50 tip on $157.50 \u2705"
         }
       ]
     },
     {
       "id": "karol-july29",
-      "name": "Karol — Sane Living July 29",
+      "name": "Karol \u2014 Sane Living July 29",
       "client": "Karol",
       "color": "#16A34A",
-      "icon": "🌿",
+      "icon": "\ud83c\udf3f",
       "rate": 45,
       "startDate": "2026-07-29",
       "status": "active",
@@ -296,10 +296,10 @@
     },
     {
       "id": "karol-207-july29",
-      "name": "Karol — 207 July 29",
+      "name": "Karol \u2014 207 July 29",
       "client": "Karol",
       "color": "#16A34A",
-      "icon": "🌿",
+      "icon": "\ud83c\udf3f",
       "rate": 45,
       "startDate": "2026-07-29",
       "status": "active",
@@ -312,31 +312,31 @@
       "id": "painting",
       "name": "Painting",
       "color": "#F97316",
-      "icon": "🖌️"
+      "icon": "\ud83d\udd8c\ufe0f"
     },
     {
       "id": "prep",
       "name": "Prep Work",
       "color": "#FBBF24",
-      "icon": "🔧"
+      "icon": "\ud83d\udd27"
     },
     {
       "id": "client",
       "name": "Client Work",
       "color": "#0A84FF",
-      "icon": "👔"
+      "icon": "\ud83d\udc54"
     },
     {
       "id": "admin",
       "name": "Admin",
       "color": "#22C55E",
-      "icon": "📋"
+      "icon": "\ud83d\udccb"
     },
     {
       "id": "general",
       "name": "General",
       "color": "#98989D",
-      "icon": "⚡"
+      "icon": "\u26a1"
     }
   ],
   "entries": [
@@ -347,12 +347,12 @@
       "hours": 7,
       "rate": 50,
       "earned": 350,
-      "tasks": "Day 1 — Office room prep & wood trim sanding",
+      "tasks": "Day 1 \u2014 Office room prep & wood trim sanding",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Office room — upstairs"
+            "Office room \u2014 upstairs"
           ]
         },
         {
@@ -361,7 +361,7 @@
             "Arrived on site at 9:00 AM",
             "Started working at 9:30 AM",
             "Wrapped up at 6:00 PM",
-            "2 hrs breaks excluded (2× smoke + lunch)"
+            "2 hrs breaks excluded (2\u00d7 smoke + lunch)"
           ]
         },
         {
@@ -371,7 +371,7 @@
             "Covered furniture with plastic wrap and tape",
             "Cleaned all windows in office room",
             "Sanded bottom window frames",
-            "Sanded top window frames — upper office room",
+            "Sanded top window frames \u2014 upper office room",
             "Removed carpet in corners",
             "Sanded door frames and general wood trim throughout office room",
             "Removed all plastic covers from electrical outlets and light switches in the room"
@@ -380,8 +380,8 @@
         {
           "title": "Summary",
           "items": [
-            "9 hrs on site − 2 hrs breaks = 7 hrs billable",
-            "Rate $50/hr — Earned $350.00",
+            "9 hrs on site \u2212 2 hrs breaks = 7 hrs billable",
+            "Rate $50/hr \u2014 Earned $350.00",
             "Focus: full surface prep in office room, ready for paint"
           ]
         }
@@ -433,12 +433,12 @@
       "hours": 7,
       "rate": 50,
       "earned": 350,
-      "tasks": "Day 2 — Office room finish, hallway trim, full bathroom prep",
+      "tasks": "Day 2 \u2014 Office room finish, hallway trim, full bathroom prep",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Office room (upstairs) → Hallway → Bathroom (off office room)"
+            "Office room (upstairs) \u2192 Hallway \u2192 Bathroom (off office room)"
           ]
         },
         {
@@ -452,18 +452,18 @@
           ]
         },
         {
-          "title": "Morning — Office Room & Hallway",
+          "title": "Morning \u2014 Office Room & Hallway",
           "items": [
             "Finished all remaining sanding in the office room",
             "Sanded all wood trim throughout the office room",
-            "Finished window frames — detailed corners with new sanding tool",
+            "Finished window frames \u2014 detailed corners with new sanding tool",
             "Sanded all door frames in office room",
             "Removed all plastic covers from outlets and light switches",
-            "Moved into hallway — sanded all bottom trim"
+            "Moved into hallway \u2014 sanded all bottom trim"
           ]
         },
         {
-          "title": "Afternoon — Full Bathroom Prep",
+          "title": "Afternoon \u2014 Full Bathroom Prep",
           "items": [
             "Moved all furniture to center of bathroom",
             "Removed all items from bathroom walls (lights, mirrors, fixtures)",
@@ -479,10 +479,10 @@
         {
           "title": "Summary",
           "items": [
-            "7 hrs billable × $50/hr = $350.00 earned",
-            "Office room: 100% prepped ✅",
-            "Hallway trim: sanded ✅",
-            "Bathroom: fully prepped and ready for paint ✅"
+            "7 hrs billable \u00d7 $50/hr = $350.00 earned",
+            "Office room: 100% prepped \u2705",
+            "Hallway trim: sanded \u2705",
+            "Bathroom: fully prepped and ready for paint \u2705"
           ]
         }
       ],
@@ -623,22 +623,22 @@
       "hours": 7.5,
       "rate": 50,
       "earned": 375,
-      "tasks": "Day 3 — Bathroom prep, hallway trim & taping",
+      "tasks": "Day 3 \u2014 Bathroom prep, hallway trim & taping",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Upstairs bathroom → Office bathroom → Hallway & stairs"
+            "Upstairs bathroom \u2192 Office bathroom \u2192 Hallway & stairs"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Break 1: 11:40 AM — lunch & smoke (40 min) — back 12:20 PM",
-            "Break 2: 1:40 PM — smoke (20 min) — back 2:00 PM",
+            "Break 1: 11:40 AM \u2014 lunch & smoke (40 min) \u2014 back 12:20 PM",
+            "Break 2: 1:40 PM \u2014 smoke (20 min) \u2014 back 2:00 PM",
             "Finished: 6:00 PM",
-            "On site: 8.5 hrs — breaks: 1 hr — billable: 7.5 hrs"
+            "On site: 8.5 hrs \u2014 breaks: 1 hr \u2014 billable: 7.5 hrs"
           ]
         },
         {
@@ -667,10 +667,10 @@
         {
           "title": "Summary",
           "items": [
-            "7.5 hrs billable × $50/hr = $375.00 earned",
-            "Upstairs bathroom: prepped and taped ✅",
-            "Office bathroom ceiling: washed ✅",
-            "Hallway & stairs: sanded, taped, railings covered ✅"
+            "7.5 hrs billable \u00d7 $50/hr = $375.00 earned",
+            "Upstairs bathroom: prepped and taped \u2705",
+            "Office bathroom ceiling: washed \u2705",
+            "Hallway & stairs: sanded, taped, railings covered \u2705"
           ]
         }
       ],
@@ -799,36 +799,36 @@
       "hours": 8.25,
       "rate": 50,
       "earned": 412.5,
-      "tasks": "Day 4 — Hallway near-finish & sanding the door",
+      "tasks": "Day 4 \u2014 Hallway near-finish & sanding the door",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Hallway → Upstairs door sanding"
+            "Hallway \u2192 Upstairs door sanding"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:45 AM",
-            "Break: 4:30 PM — 5:00 PM (30 min)",
+            "Break: 4:30 PM \u2014 5:00 PM (30 min)",
             "Finished: 6:30 PM",
-            "On site: 8.75 hrs — breaks: 30 min — billable: 8.25 hrs"
+            "On site: 8.75 hrs \u2014 breaks: 30 min \u2014 billable: 8.25 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Morning — nearly finished hallway patching and prep",
+            "Morning \u2014 nearly finished hallway patching and prep",
             "Sanded the upstairs door for the remainder of the day"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "8.25 hrs billable × $50/hr = $412.50 earned",
-            "Hallway: almost fully prepped ✅",
-            "Upstairs door: sanded ✅"
+            "8.25 hrs billable \u00d7 $50/hr = $412.50 earned",
+            "Hallway: almost fully prepped \u2705",
+            "Upstairs door: sanded \u2705"
           ]
         }
       ],
@@ -911,8 +911,8 @@
         {
           "title": "Payment",
           "items": [
-            "Paid $100 cash by Sparrow — unprompted, out of the blue",
-            "Not an hourly job — flat gift payment"
+            "Paid $100 cash by Sparrow \u2014 unprompted, out of the blue",
+            "Not an hourly job \u2014 flat gift payment"
           ]
         }
       ],
@@ -927,12 +927,12 @@
       "hours": 6.5,
       "rate": 50,
       "earned": 325,
-      "tasks": "Day 5 — Sanding the door (almost complete)",
+      "tasks": "Day 5 \u2014 Sanding the door (almost complete)",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — upstairs door"
+            "Cher's house \u2014 upstairs door"
           ]
         },
         {
@@ -948,16 +948,16 @@
           "title": "Work Completed",
           "items": [
             "Continued sanding the upstairs door",
-            "Almost finished — one surface remaining",
+            "Almost finished \u2014 one surface remaining",
             "Final surface to be completed Monday"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "6.5 hrs × $50/hr = $325.00 earned",
-            "Door: ~95% complete ✅",
-            "Remaining: 1 surface — Monday"
+            "6.5 hrs \u00d7 $50/hr = $325.00 earned",
+            "Door: ~95% complete \u2705",
+            "Remaining: 1 surface \u2014 Monday"
           ]
         }
       ],
@@ -996,29 +996,29 @@
       "hours": 10,
       "rate": 50,
       "earned": 500,
-      "tasks": "Day 6 — Door #1 complete, Door #2 almost done",
+      "tasks": "Day 6 \u2014 Door #1 complete, Door #2 almost done",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — upstairs doors"
+            "Cher's house \u2014 upstairs doors"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:00 AM",
-            "Break: 10:15 AM — 10:45 AM (30 min lunch)",
+            "Break: 10:15 AM \u2014 10:45 AM (30 min lunch)",
             "Finished: 7:30 PM",
-            "On site: 10.5 hrs — breaks: 30 min — billable: 10 hrs"
+            "On site: 10.5 hrs \u2014 breaks: 30 min \u2014 billable: 10 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Finished final surface of Door #1 — fully complete ✅",
-            "Sanded Door #2 — almost finished",
-            "2 small squares remaining on Door #2 — hand sanding needed"
+            "Finished final surface of Door #1 \u2014 fully complete \u2705",
+            "Sanded Door #2 \u2014 almost finished",
+            "2 small squares remaining on Door #2 \u2014 hand sanding needed"
           ]
         },
         {
@@ -1031,9 +1031,9 @@
         {
           "title": "Summary",
           "items": [
-            "10 hrs billable × $50/hr = $500.00 earned",
-            "Door #1: 100% complete ✅",
-            "Door #2: ~95% complete — 2 squares left"
+            "10 hrs billable \u00d7 $50/hr = $500.00 earned",
+            "Door #1: 100% complete \u2705",
+            "Door #2: ~95% complete \u2014 2 squares left"
           ]
         }
       ],
@@ -1126,32 +1126,32 @@
       "hours": 9.5,
       "rate": 50,
       "earned": 475,
-      "tasks": "Day 7 — Door #2 done, Door #3 both sides sanded",
+      "tasks": "Day 7 \u2014 Door #2 done, Door #3 both sides sanded",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — upstairs Door #2, downstairs Door #3 (bedroom)"
+            "Cher's house \u2014 upstairs Door #2, downstairs Door #3 (bedroom)"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:00 AM",
-            "Break 1: 10:00 AM — 10:10 AM (10 min smoke)",
-            "Break 2: 1:40 PM — 2:00 PM (20 min lunch)",
+            "Break 1: 10:00 AM \u2014 10:10 AM (10 min smoke)",
+            "Break 2: 1:40 PM \u2014 2:00 PM (20 min lunch)",
             "Finished: 7:00 PM",
-            "On site: 10 hrs — breaks: 30 min — billable: 9.5 hrs"
+            "On site: 10 hrs \u2014 breaks: 30 min \u2014 billable: 9.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "9:00 AM — Finished Door #2 final 2 squares ✅",
-            "10:20 AM — Started Door #3 (Cher's bedroom door, downstairs)",
-            "5:30 PM — Door #3 side 1 complete ✅",
-            "5:30 PM — Started Door #3 side 2",
-            "7:00 PM — Door #3 side 2 complete ✅"
+            "9:00 AM \u2014 Finished Door #2 final 2 squares \u2705",
+            "10:20 AM \u2014 Started Door #3 (Cher's bedroom door, downstairs)",
+            "5:30 PM \u2014 Door #3 side 1 complete \u2705",
+            "5:30 PM \u2014 Started Door #3 side 2",
+            "7:00 PM \u2014 Door #3 side 2 complete \u2705"
           ]
         },
         {
@@ -1164,9 +1164,9 @@
         {
           "title": "Summary",
           "items": [
-            "9.5 hrs billable × $50/hr = $475.00 earned",
-            "Door #2: 100% complete ✅",
-            "Door #3: both sides sanded — detail hand sanding tomorrow"
+            "9.5 hrs billable \u00d7 $50/hr = $475.00 earned",
+            "Door #2: 100% complete \u2705",
+            "Door #3: both sides sanded \u2014 detail hand sanding tomorrow"
           ]
         }
       ],
@@ -1259,29 +1259,29 @@
       "hours": 8,
       "rate": 50,
       "earned": 400,
-      "tasks": "Day 8 — Door #3 done, Door #4 both sides machine sanded",
+      "tasks": "Day 8 \u2014 Door #3 done, Door #4 both sides machine sanded",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Door #3 (bedroom) & Door #4 (upstairs bathroom)"
+            "Cher's house \u2014 Door #3 (bedroom) & Door #4 (upstairs bathroom)"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Lunch break: 1:40 PM — 2:10 PM (30 min)",
+            "Lunch break: 1:40 PM \u2014 2:10 PM (30 min)",
             "Finished: 6:00 PM",
-            "On site: 8.5 hrs — breaks: 30 min — billable: 8 hrs"
+            "On site: 8.5 hrs \u2014 breaks: 30 min \u2014 billable: 8 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "9:30 AM — Hand sanded and finished Door #3 ✅",
-            "2:00 PM — Started Door #4 (upstairs bathroom)",
-            "6:00 PM — Door #4 both sides machine sanded ✅"
+            "9:30 AM \u2014 Hand sanded and finished Door #3 \u2705",
+            "2:00 PM \u2014 Started Door #4 (upstairs bathroom)",
+            "6:00 PM \u2014 Door #4 both sides machine sanded \u2705"
           ]
         },
         {
@@ -1294,9 +1294,9 @@
         {
           "title": "Summary",
           "items": [
-            "8 hrs billable × $50/hr = $400.00 earned",
-            "Door #3: 100% complete ✅",
-            "Door #4: machine sanded both sides — hand sanding squares remaining"
+            "8 hrs billable \u00d7 $50/hr = $400.00 earned",
+            "Door #3: 100% complete \u2705",
+            "Door #4: machine sanded both sides \u2014 hand sanding squares remaining"
           ]
         }
       ],
@@ -1389,44 +1389,44 @@
       "hours": 8,
       "rate": 50,
       "earned": 400,
-      "tasks": "Day 9 — Door #4 side 1, office ceiling prepped & first coat painted",
+      "tasks": "Day 9 \u2014 Door #4 side 1, office ceiling prepped & first coat painted",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Door #4 (upstairs bathroom) & Office room (upstairs)"
+            "Cher's house \u2014 Door #4 (upstairs bathroom) & Office room (upstairs)"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Lunch break: 1:00 PM — 1:30 PM (30 min)",
+            "Lunch break: 1:00 PM \u2014 1:30 PM (30 min)",
             "Finished: 6:00 PM",
-            "On site: 8.5 hrs — breaks: 30 min — billable: 8 hrs"
+            "On site: 8.5 hrs \u2014 breaks: 30 min \u2014 billable: 8 hrs"
           ]
         },
         {
-          "title": "Morning — Door #4",
+          "title": "Morning \u2014 Door #4",
           "items": [
-            "Hand sanded side 1 of Door #4 (upstairs bathroom) ✅",
+            "Hand sanded side 1 of Door #4 (upstairs bathroom) \u2705",
             "Side 2 to be completed tomorrow morning"
           ]
         },
         {
-          "title": "Afternoon — Office Room Ceiling",
+          "title": "Afternoon \u2014 Office Room Ceiling",
           "items": [
-            "1:30 PM — Prepped office room ceiling for paint",
-            "4:00 PM — Started painting ceiling 🎨",
-            "6:00 PM — First coat complete ✅"
+            "1:30 PM \u2014 Prepped office room ceiling for paint",
+            "4:00 PM \u2014 Started painting ceiling \ud83c\udfa8",
+            "6:00 PM \u2014 First coat complete \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "8 hrs billable × $50/hr = $400.00 earned",
-            "Door #4 side 1: hand sanded ✅ — side 2 tomorrow",
-            "Office room ceiling: first coat done ✅"
+            "8 hrs billable \u00d7 $50/hr = $400.00 earned",
+            "Door #4 side 1: hand sanded \u2705 \u2014 side 2 tomorrow",
+            "Office room ceiling: first coat done \u2705"
           ]
         }
       ],
@@ -1543,53 +1543,53 @@
       "hours": 8,
       "rate": 50,
       "earned": 400,
-      "tasks": "Day 10 — All 4 doors done, office ceiling 3 coats complete",
+      "tasks": "Day 10 \u2014 All 4 doors done, office ceiling 3 coats complete",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Door #4 (upstairs bathroom) & Office room ceiling"
+            "Cher's house \u2014 Door #4 (upstairs bathroom) & Office room ceiling"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Lunch break: 3:00 PM — 3:20 PM (20 min)",
-            "Smoke break: 4:45 PM — 4:55 PM (10 min)",
+            "Lunch break: 3:00 PM \u2014 3:20 PM (20 min)",
+            "Smoke break: 4:45 PM \u2014 4:55 PM (10 min)",
             "Finished: 6:00 PM",
-            "On site: 8.5 hrs — breaks: 30 min — billable: 8 hrs"
+            "On site: 8.5 hrs \u2014 breaks: 30 min \u2014 billable: 8 hrs"
           ]
         },
         {
-          "title": "Morning — Ceiling Coat #2",
+          "title": "Morning \u2014 Ceiling Coat #2",
           "items": [
-            "9:30 AM — Painted office room ceiling coat #2 🎨",
-            "11:00 AM — Coat #2 complete ✅"
+            "9:30 AM \u2014 Painted office room ceiling coat #2 \ud83c\udfa8",
+            "11:00 AM \u2014 Coat #2 complete \u2705"
           ]
         },
         {
-          "title": "Midday — Door #4 Final",
+          "title": "Midday \u2014 Door #4 Final",
           "items": [
-            "11:00 AM — Started hand sanding Door #4 side 2",
-            "4:45 PM — Door #4 fully complete ✅",
-            "All 4 doors 100% done ✅"
+            "11:00 AM \u2014 Started hand sanding Door #4 side 2",
+            "4:45 PM \u2014 Door #4 fully complete \u2705",
+            "All 4 doors 100% done \u2705"
           ]
         },
         {
-          "title": "Afternoon — Ceiling Coat #3",
+          "title": "Afternoon \u2014 Ceiling Coat #3",
           "items": [
-            "4:55 PM — Started office room ceiling coat #3 🎨",
-            "6:00 PM — Coat #3 complete ✅",
-            "Office room ceiling fully painted — 3 coats done ✅"
+            "4:55 PM \u2014 Started office room ceiling coat #3 \ud83c\udfa8",
+            "6:00 PM \u2014 Coat #3 complete \u2705",
+            "Office room ceiling fully painted \u2014 3 coats done \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "8 hrs billable × $50/hr = $400.00 earned",
-            "All 4 doors: 100% complete ✅",
-            "Office room ceiling: 3 coats done ✅"
+            "8 hrs billable \u00d7 $50/hr = $400.00 earned",
+            "All 4 doors: 100% complete \u2705",
+            "Office room ceiling: 3 coats done \u2705"
           ]
         }
       ],
@@ -1658,45 +1658,45 @@
       "hours": 6,
       "rate": 50,
       "earned": 300,
-      "tasks": "Day 11 — Bathroom 2 coats, ceiling coat #4, office room edges & corners cut in",
+      "tasks": "Day 11 \u2014 Bathroom 2 coats, ceiling coat #4, office room edges & corners cut in",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Office bathroom & Office room (upstairs)"
+            "Cher's house \u2014 Office bathroom & Office room (upstairs)"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:45 AM",
-            "Break 1: 11:30 AM — 12:30 PM (60 min — smoke & lunch)",
-            "Break 2: 2:15 PM — 2:30 PM (15 min — smoke)",
+            "Break 1: 11:30 AM \u2014 12:30 PM (60 min \u2014 smoke & lunch)",
+            "Break 2: 2:15 PM \u2014 2:30 PM (15 min \u2014 smoke)",
             "Finished: 5:00 PM",
-            "On site: 7.25 hrs — breaks: 1.25 hrs — billable: 6.0 hrs"
+            "On site: 7.25 hrs \u2014 breaks: 1.25 hrs \u2014 billable: 6.0 hrs"
           ]
         },
         {
           "title": "Office Bathroom",
           "items": [
-            "9:45 AM — Prepped floor (15 min)",
-            "10:00 AM — Coat #1 painted 🎨",
-            "12:30 PM — Coat #2 painted 🎨",
-            "Office bathroom: 2 coats complete ✅"
+            "9:45 AM \u2014 Prepped floor (15 min)",
+            "10:00 AM \u2014 Coat #1 painted \ud83c\udfa8",
+            "12:30 PM \u2014 Coat #2 painted \ud83c\udfa8",
+            "Office bathroom: 2 coats complete \u2705"
           ]
         },
         {
           "title": "Office Room Ceiling",
           "items": [
-            "2:30 PM — Coat #4 painted 🎨 ✅"
+            "2:30 PM \u2014 Coat #4 painted \ud83c\udfa8 \u2705"
           ]
         },
         {
-          "title": "Office Room Walls — Cut In",
+          "title": "Office Room Walls \u2014 Cut In",
           "items": [
-            "2:30 PM — Started cutting in edges and corners",
+            "2:30 PM \u2014 Started cutting in edges and corners",
             "Painted all edges, corners, around windows, doors and ceiling",
-            "Detail and precision work done — walls prepped for full roller coat",
+            "Detail and precision work done \u2014 walls prepped for full roller coat",
             "Full wall painting to follow on next session"
           ]
         },
@@ -1705,10 +1705,10 @@
           "items": [
             "9:45 AM to 5:00 PM = 7.25 hrs on site",
             "Breaks: 60 min + 15 min = 1.25 hrs",
-            "7.25 − 1.25 = 6.0 hrs billable × $50 = $300.00 earned",
-            "Office bathroom: 2 coats ✅",
-            "Office ceiling: coat #4 ✅",
-            "Office room walls: edges & corners cut in ✅"
+            "7.25 \u2212 1.25 = 6.0 hrs billable \u00d7 $50 = $300.00 earned",
+            "Office bathroom: 2 coats \u2705",
+            "Office ceiling: coat #4 \u2705",
+            "Office room walls: edges & corners cut in \u2705"
           ]
         }
       ],
@@ -1801,36 +1801,36 @@
       "hours": 9,
       "rate": 50,
       "earned": 450,
-      "tasks": "Day 12 — Office ceiling patched, hallway ceiling coat #1, bedroom cut-in",
+      "tasks": "Day 12 \u2014 Office ceiling patched, hallway ceiling coat #1, bedroom cut-in",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Office room, Hallway, Upstairs bedroom"
+            "Cher's house \u2014 Office room, Hallway, Upstairs bedroom"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Lunch break: 1:30 PM — 2:30 PM (1 hour)",
+            "Lunch break: 1:30 PM \u2014 2:30 PM (1 hour)",
             "Finished: 7:30 PM",
-            "10 hrs total — 1 hr break — billable: 9 hrs"
+            "10 hrs total \u2014 1 hr break \u2014 billable: 9 hrs"
           ]
         },
         {
           "title": "Office Room",
           "items": [
-            "Painted office room walls coat #1 🎨",
-            "Patched office bathroom walls ✅",
-            "Patched office room ceiling ✅"
+            "Painted office room walls coat #1 \ud83c\udfa8",
+            "Patched office bathroom walls \u2705",
+            "Patched office room ceiling \u2705"
           ]
         },
         {
           "title": "Hallway",
           "items": [
-            "Prepped hallway — covered bookshelves and surroundings",
-            "Painted hallway ceiling coat #1 🎨 ✅"
+            "Prepped hallway \u2014 covered bookshelves and surroundings",
+            "Painted hallway ceiling coat #1 \ud83c\udfa8 \u2705"
           ]
         },
         {
@@ -1844,10 +1844,10 @@
         {
           "title": "Summary",
           "items": [
-            "9 hrs × $50/hr = $450.00 earned",
-            "Office ceiling: patched ✅",
-            "Hallway ceiling: coat #1 ✅",
-            "Upstairs bedroom: edges & corners cut in ✅"
+            "9 hrs \u00d7 $50/hr = $450.00 earned",
+            "Office ceiling: patched \u2705",
+            "Hallway ceiling: coat #1 \u2705",
+            "Upstairs bedroom: edges & corners cut in \u2705"
           ]
         }
       ],
@@ -1933,48 +1933,48 @@
       "hours": 8.25,
       "rate": 50,
       "earned": 412.5,
-      "tasks": "Day 13 — Hallway ceilings, bathroom walls, stairs prepped, hallway coat #2",
+      "tasks": "Day 13 \u2014 Hallway ceilings, bathroom walls, stairs prepped, hallway coat #2",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Hallway, Office room, Office bathroom"
+            "Cher's house \u2014 Hallway, Office room, Office bathroom"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Break 1: 11:00 AM — 11:30 AM (30 min)",
-            "Break 2: 5:00 PM — 5:15 PM (15 min smoke)",
+            "Break 1: 11:00 AM \u2014 11:30 AM (30 min)",
+            "Break 2: 5:00 PM \u2014 5:15 PM (15 min smoke)",
             "Finished: 6:30 PM",
-            "9 hrs total — 45 min breaks — billable: 8.25 hrs"
+            "9 hrs total \u2014 45 min breaks \u2014 billable: 8.25 hrs"
           ]
         },
         {
           "title": "Completed",
           "items": [
-            "Finished hallway ceiling coat #1 ✅ 🎨",
+            "Finished hallway ceiling coat #1 \u2705 \ud83c\udfa8",
             "Prepped hallway stairs further down with drop cloths",
-            "Patched and finished office room wall touch-ups ✅",
+            "Patched and finished office room wall touch-ups \u2705",
             "Prepped office bathroom lower wooden walls for white paint",
-            "Painted office bathroom lower wooden walls (white) ✅ 🎨",
+            "Painted office bathroom lower wooden walls (white) \u2705 \ud83c\udfa8",
             "Covered and prepped stairs & downstairs hallway with drop cloths"
           ]
         },
         {
           "title": "Completed (cont.)",
           "items": [
-            "Hallway ceiling coat #2 complete ✅ 🎨"
+            "Hallway ceiling coat #2 complete \u2705 \ud83c\udfa8"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "8.25 hrs × $50/hr = $412.50 earned",
-            "Hallway ceiling: coat #2 done ✅",
-            "Office bathroom lower walls: painted ✅",
-            "Stairs & downstairs hallway: drop cloths down ✅"
+            "8.25 hrs \u00d7 $50/hr = $412.50 earned",
+            "Hallway ceiling: coat #2 done \u2705",
+            "Office bathroom lower walls: painted \u2705",
+            "Stairs & downstairs hallway: drop cloths down \u2705"
           ]
         }
       ],
@@ -2060,46 +2060,46 @@
       "hours": 6,
       "rate": 50,
       "earned": 300,
-      "tasks": "Day 14 — Office bathroom details, hallway/staircase walls cut-in & painted",
+      "tasks": "Day 14 \u2014 Office bathroom details, hallway/staircase walls cut-in & painted",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Office bathroom & Hallway/Staircase"
+            "Cher's house \u2014 Office bathroom & Hallway/Staircase"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Break 1: 11:00 AM — 11:30 AM (30 min)",
-            "Break 2: 1:30 PM — 2:00 PM (30 min)",
-            "Break 3: 3:30 PM — 4:00 PM (30 min)",
+            "Break 1: 11:00 AM \u2014 11:30 AM (30 min)",
+            "Break 2: 1:30 PM \u2014 2:00 PM (30 min)",
+            "Break 3: 3:30 PM \u2014 4:00 PM (30 min)",
             "Finished: 5:00 PM",
-            "7.5 hrs total — 1.5 hrs breaks — billable: 6 hrs"
+            "7.5 hrs total \u2014 1.5 hrs breaks \u2014 billable: 6 hrs"
           ]
         },
         {
           "title": "Office Bathroom",
           "items": [
-            "Cleaned up and painted detailed corners and cracks 🎨",
-            "Patched and painted remaining cracks and details ✅",
+            "Cleaned up and painted detailed corners and cracks \ud83c\udfa8",
+            "Patched and painted remaining cracks and details \u2705",
             "Bathroom cleanup and finishing touches"
           ]
         },
         {
           "title": "Hallway & Staircase",
           "items": [
-            "Cut in all walls at ceiling corners 🎨",
-            "Painted hallway and staircase walls 🎨"
+            "Cut in all walls at ceiling corners \ud83c\udfa8",
+            "Painted hallway and staircase walls \ud83c\udfa8"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "6 hrs × $50/hr = $300.00 earned",
-            "Office bathroom: detailed finishing done ✅",
-            "Hallway/staircase walls: cut-in and painted ✅"
+            "6 hrs \u00d7 $50/hr = $300.00 earned",
+            "Office bathroom: detailed finishing done \u2705",
+            "Hallway/staircase walls: cut-in and painted \u2705"
           ]
         }
       ],
@@ -2112,46 +2112,46 @@
       "hours": 7.5,
       "rate": 50,
       "earned": 375,
-      "tasks": "Day 15 — Office bathroom complete, office room wood trim staining started",
+      "tasks": "Day 15 \u2014 Office bathroom complete, office room wood trim staining started",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Office bathroom & Office room"
+            "Cher's house \u2014 Office bathroom & Office room"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:45 AM",
-            "Break 1: 11:00 AM — 11:30 AM (30 min)",
-            "Break 2: 2:00 PM — 3:00 PM (1 hour)",
-            "Break 3: 4:15 PM — 4:30 PM (15 min smoke)",
+            "Break 1: 11:00 AM \u2014 11:30 AM (30 min)",
+            "Break 2: 2:00 PM \u2014 3:00 PM (1 hour)",
+            "Break 3: 4:15 PM \u2014 4:30 PM (15 min smoke)",
             "Finished: 7:00 PM",
-            "9.25 hrs total — 1.75 hrs breaks — billable: 7.5 hrs"
+            "9.25 hrs total \u2014 1.75 hrs breaks \u2014 billable: 7.5 hrs"
           ]
         },
         {
-          "title": "Office Bathroom — Complete ✅",
+          "title": "Office Bathroom \u2014 Complete \u2705",
           "items": [
             "Full cleanup done",
-            "All items mounted back — lights, mirror, shower curtains, etc.",
-            "Office bathroom 100% complete ✅"
+            "All items mounted back \u2014 lights, mirror, shower curtains, etc.",
+            "Office bathroom 100% complete \u2705"
           ]
         },
         {
-          "title": "Office Room — In Progress",
+          "title": "Office Room \u2014 In Progress",
           "items": [
-            "Staining wood trim, door frames and window frames — halfway done",
+            "Staining wood trim, door frames and window frames \u2014 halfway done",
             "Continuing tomorrow"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "7.5 hrs × $50/hr = $375.00 earned",
-            "Office bathroom: 100% complete ✅",
-            "Office room wood trim staining: 50% done — continuing tomorrow"
+            "7.5 hrs \u00d7 $50/hr = $375.00 earned",
+            "Office bathroom: 100% complete \u2705",
+            "Office room wood trim staining: 50% done \u2014 continuing tomorrow"
           ]
         }
       ],
@@ -2207,29 +2207,29 @@
       "hours": 8.5,
       "rate": 50,
       "earned": 425,
-      "tasks": "Day 16 — Office room trim done, hallway & upstairs bathroom trim & frames stained",
+      "tasks": "Day 16 \u2014 Office room trim done, hallway & upstairs bathroom trim & frames stained",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Office room, Hallway, Upstairs bathroom"
+            "Cher's house \u2014 Office room, Hallway, Upstairs bathroom"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Lunch break: 2:00 PM — 3:00 PM (1 hour)",
+            "Lunch break: 2:00 PM \u2014 3:00 PM (1 hour)",
             "Finished: 7:00 PM",
-            "9.5 hrs total — 1 hr break — billable: 8.5 hrs"
+            "9.5 hrs total \u2014 1 hr break \u2014 billable: 8.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Finished staining office room wood trim ✅",
-            "Stained all hallway trim and frames ✅",
-            "Stained all upstairs bathroom trim and frames ✅"
+            "Finished staining office room wood trim \u2705",
+            "Stained all hallway trim and frames \u2705",
+            "Stained all upstairs bathroom trim and frames \u2705"
           ]
         },
         {
@@ -2241,10 +2241,10 @@
         {
           "title": "Summary",
           "items": [
-            "8.5 hrs × $50/hr = $425.00 earned",
-            "Office room trim: done ✅",
-            "Hallway trim & frames: done ✅",
-            "Upstairs bathroom trim & frames: done ✅",
+            "8.5 hrs \u00d7 $50/hr = $425.00 earned",
+            "Office room trim: done \u2705",
+            "Hallway trim & frames: done \u2705",
+            "Upstairs bathroom trim & frames: done \u2705",
             "Upstairs bedroom: tomorrow"
           ]
         }
@@ -2258,39 +2258,39 @@
       "hours": 4.5,
       "rate": 50,
       "earned": 225,
-      "tasks": "Day 17 — All upstairs staining done, office room blinds installed",
+      "tasks": "Day 17 \u2014 All upstairs staining done, office room blinds installed",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Upstairs bedroom"
+            "Cher's house \u2014 Upstairs bedroom"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Lunch break: 1:30 PM — 2:00 PM (30 min)",
+            "Lunch break: 1:30 PM \u2014 2:00 PM (30 min)",
             "Finished: 2:30 PM",
-            "5 hrs total — 30 min break — billable: 4.5 hrs"
+            "5 hrs total \u2014 30 min break \u2014 billable: 4.5 hrs"
           ]
         },
         {
           "title": "Completed",
           "items": [
-            "Upstairs bedroom trim & frames — stained ✅",
-            "Staircase trim — stained ✅",
-            "Hallway trim — stained ✅",
-            "All upstairs staining complete ✅",
-            "Installed blinds on office room windows ✅"
+            "Upstairs bedroom trim & frames \u2014 stained \u2705",
+            "Staircase trim \u2014 stained \u2705",
+            "Hallway trim \u2014 stained \u2705",
+            "All upstairs staining complete \u2705",
+            "Installed blinds on office room windows \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "4.5 hrs × $50/hr = $225.00 earned",
-            "All upstairs staining: 100% complete ✅",
-            "Office room blinds: installed ✅"
+            "4.5 hrs \u00d7 $50/hr = $225.00 earned",
+            "All upstairs staining: 100% complete \u2705",
+            "Office room blinds: installed \u2705"
           ]
         }
       ],
@@ -2303,37 +2303,37 @@
       "hours": 6.5,
       "rate": 50,
       "earned": 325,
-      "tasks": "Day 18 — Downstairs hallway & bathroom wood trim stained",
+      "tasks": "Day 18 \u2014 Downstairs hallway & bathroom wood trim stained",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Downstairs hallway & bathroom"
+            "Cher's house \u2014 Downstairs hallway & bathroom"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Lunch break: 12:30 PM — 1:00 PM (30 min)",
-            "Smoke break: 3:00 PM — 3:30 PM (30 min)",
+            "Lunch break: 12:30 PM \u2014 1:00 PM (30 min)",
+            "Smoke break: 3:00 PM \u2014 3:30 PM (30 min)",
             "Finished: 5:00 PM",
-            "7.5 hrs total — 1 hr breaks — billable: 6.5 hrs"
+            "7.5 hrs total \u2014 1 hr breaks \u2014 billable: 6.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Stained all downstairs hallway wood trim ✅",
-            "Stained all downstairs bathroom wood trim ✅"
+            "Stained all downstairs hallway wood trim \u2705",
+            "Stained all downstairs bathroom wood trim \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "6.5 hrs × $50/hr = $325.00 earned",
-            "Downstairs hallway trim: done ✅",
-            "Downstairs bathroom trim: done ✅"
+            "6.5 hrs \u00d7 $50/hr = $325.00 earned",
+            "Downstairs hallway trim: done \u2705",
+            "Downstairs bathroom trim: done \u2705"
           ]
         }
       ],
@@ -2346,21 +2346,21 @@
       "hours": 4.5,
       "rate": 50,
       "earned": 225,
-      "tasks": "Day 19 — Laundry room painted, 2 coats + details",
+      "tasks": "Day 19 \u2014 Laundry room painted, 2 coats + details",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Laundry room"
+            "Cher's house \u2014 Laundry room"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:00 AM",
-            "Break 1: 10:30 AM — 11:30 AM (1 hour)",
-            "Lunch break: 1:30 PM — 2:00 PM (30 min)",
-            "Smoke break: 3:30 PM — 5:00 PM (1.5 hours)",
+            "Break 1: 10:30 AM \u2014 11:30 AM (1 hour)",
+            "Lunch break: 1:30 PM \u2014 2:00 PM (30 min)",
+            "Smoke break: 3:30 PM \u2014 5:00 PM (1.5 hours)",
             "Back at it: 5:00 PM",
             "Finished: 5:30 PM",
             "Billable: 4.5 hrs"
@@ -2369,16 +2369,16 @@
         {
           "title": "Work Completed",
           "items": [
-            "Cleaned laundry room ✅",
-            "Painted laundry room walls — coat #1 ✅ 🎨",
-            "Painted laundry room walls — coat #2 + details ✅ 🎨"
+            "Cleaned laundry room \u2705",
+            "Painted laundry room walls \u2014 coat #1 \u2705 \ud83c\udfa8",
+            "Painted laundry room walls \u2014 coat #2 + details \u2705 \ud83c\udfa8"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "4.5 hrs × $50/hr = $225.00 earned",
-            "Laundry room: 2 coats + details complete ✅"
+            "4.5 hrs \u00d7 $50/hr = $225.00 earned",
+            "Laundry room: 2 coats + details complete \u2705"
           ]
         }
       ],
@@ -2391,37 +2391,37 @@
       "hours": 7,
       "rate": 50,
       "earned": 350,
-      "tasks": "Day 20 — Laundry room done, master bedroom prep started",
+      "tasks": "Day 20 \u2014 Laundry room done, master bedroom prep started",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Laundry room"
+            "Cher's house \u2014 Laundry room"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Smoke break: 1:00 PM — 1:30 PM (30 min)",
-            "Lunch break: 2:00 PM — 2:30 PM (30 min)",
+            "Smoke break: 1:00 PM \u2014 1:30 PM (30 min)",
+            "Lunch break: 2:00 PM \u2014 2:30 PM (30 min)",
             "Finished: 5:30 PM",
-            "8 hrs total — 1 hr breaks — billable: 7 hrs"
+            "8 hrs total \u2014 1 hr breaks \u2014 billable: 7 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Finished laundry room trim & frames painting/staining ✅",
-            "Laundry room 100% complete ✅",
+            "Finished laundry room trim & frames painting/staining \u2705",
+            "Laundry room 100% complete \u2705",
             "Started prepping master bedroom for painting"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "7 hrs × $50/hr = $350.00 earned",
-            "Laundry room: 100% complete ✅",
+            "7 hrs \u00d7 $50/hr = $350.00 earned",
+            "Laundry room: 100% complete \u2705",
             "Master bedroom: prep started"
           ]
         }
@@ -2435,27 +2435,27 @@
       "hours": 5,
       "rate": 50,
       "earned": 250,
-      "tasks": "Day 21 — Master bedroom sanding, 2 windows + half trim done",
+      "tasks": "Day 21 \u2014 Master bedroom sanding, 2 windows + half trim done",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Master bedroom"
+            "Cher's house \u2014 Master bedroom"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 11:30 AM",
-            "Lunch break: 3:00 PM — 3:30 PM (30 min)",
+            "Lunch break: 3:00 PM \u2014 3:30 PM (30 min)",
             "Finished: 5:00 PM",
-            "5.5 hrs total — 30 min break — billable: 5 hrs"
+            "5.5 hrs total \u2014 30 min break \u2014 billable: 5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Sanded 2 windows and frames ✅",
+            "Sanded 2 windows and frames \u2705",
             "Sanded half the master bedroom trim"
           ]
         },
@@ -2463,13 +2463,13 @@
           "title": "Up Next",
           "items": [
             "Tomorrow: finish sanding remaining trim",
-            "Clean master bedroom — ready for paint"
+            "Clean master bedroom \u2014 ready for paint"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "5 hrs × $50/hr = $250.00 earned",
+            "5 hrs \u00d7 $50/hr = $250.00 earned",
             "Master bedroom: sanding ~50% done"
           ]
         }
@@ -2483,37 +2483,37 @@
       "hours": 6,
       "rate": 50,
       "earned": 300,
-      "tasks": "Day 22 — Master bedroom + bathroom sanding & cleaning",
+      "tasks": "Day 22 \u2014 Master bedroom + bathroom sanding & cleaning",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Master bedroom & bathroom"
+            "Cher's house \u2014 Master bedroom & bathroom"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Phone call break: 10:30 AM — 12:30 PM (2 hours)",
-            "Lunch break: 2:30 PM — 3:00 PM (30 min)",
-            "Break: 4:00 PM — 4:30 PM (30 min)",
+            "Phone call break: 10:30 AM \u2014 12:30 PM (2 hours)",
+            "Lunch break: 2:30 PM \u2014 3:00 PM (30 min)",
+            "Break: 4:00 PM \u2014 4:30 PM (30 min)",
             "Finished: 6:30 PM",
-            "9 hrs total — 3 hrs breaks — billable: 6 hrs"
+            "9 hrs total \u2014 3 hrs breaks \u2014 billable: 6 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Finished sanding master bedroom trim ✅",
-            "Cleaned master bedroom & bathroom ✅"
+            "Finished sanding master bedroom trim \u2705",
+            "Cleaned master bedroom & bathroom \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "6 hrs × $50/hr = $300.00 earned",
-            "Master bedroom & bathroom: sanded & cleaned ✅"
+            "6 hrs \u00d7 $50/hr = $300.00 earned",
+            "Master bedroom & bathroom: sanded & cleaned \u2705"
           ]
         }
       ],
@@ -2526,36 +2526,36 @@
       "hours": 8,
       "rate": 50,
       "earned": 400,
-      "tasks": "Day 23 — Master bedroom windows/frames sanded, master bathroom started",
+      "tasks": "Day 23 \u2014 Master bedroom windows/frames sanded, master bathroom started",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Master bedroom & master bathroom"
+            "Cher's house \u2014 Master bedroom & master bathroom"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:00 AM",
-            "Break: 12:00 PM — 12:30 PM (30 min)",
-            "Lunch: 5:00 PM — 5:30 PM (30 min)",
+            "Break: 12:00 PM \u2014 12:30 PM (30 min)",
+            "Lunch: 5:00 PM \u2014 5:30 PM (30 min)",
             "Finished: 7:00 PM",
-            "9 hrs total — 1 hr breaks — billable: 8 hrs"
+            "9 hrs total \u2014 1 hr breaks \u2014 billable: 8 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Sanded master bedroom windows and door frames ✅",
+            "Sanded master bedroom windows and door frames \u2705",
             "Started sanding master bathroom"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "8 hrs × $50/hr = $400.00 earned",
-            "Master bedroom windows & frames: done ✅",
+            "8 hrs \u00d7 $50/hr = $400.00 earned",
+            "Master bedroom windows & frames: done \u2705",
             "Master bathroom: sanding in progress"
           ]
         }
@@ -2569,7 +2569,7 @@
       "hours": 3,
       "rate": 50,
       "earned": 150,
-      "tasks": "Day 24 — Master bathroom sanding",
+      "tasks": "Day 24 \u2014 Master bathroom sanding",
       "sections": [
         {
           "title": "Schedule",
@@ -2583,13 +2583,13 @@
         {
           "title": "Work Completed",
           "items": [
-            "Continued sanding master bathroom ✅"
+            "Continued sanding master bathroom \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "3 hrs × $50/hr = $150.00 earned"
+            "3 hrs \u00d7 $50/hr = $150.00 earned"
           ]
         }
       ],
@@ -2602,38 +2602,38 @@
       "hours": 5.5,
       "rate": 50,
       "earned": 275,
-      "tasks": "Day 25 — Master bathroom done, living room taped, scaffolding set up",
+      "tasks": "Day 25 \u2014 Master bathroom done, living room taped, scaffolding set up",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Master bathroom"
+            "Cher's house \u2014 Master bathroom"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 1:00 PM",
-            "Break: 2:45 PM — 3:15 PM (30 min)",
+            "Break: 2:45 PM \u2014 3:15 PM (30 min)",
             "Finished: 7:00 PM",
-            "6 hrs total — 30 min break — billable: 5.5 hrs"
+            "6 hrs total \u2014 30 min break \u2014 billable: 5.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Sanded master bathroom cabinets & shower window frame ✅",
-            "Master bathroom sanding 100% complete ✅",
+            "Sanded master bathroom cabinets & shower window frame \u2705",
+            "Master bathroom sanding 100% complete \u2705",
             "Taped living room ceiling edges and wooden trim",
-            "Set up scaffolding in living room ✅"
+            "Set up scaffolding in living room \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "5.5 hrs × $50/hr = $275.00 earned",
-            "Master bathroom: 100% sanded ✅",
-            "Living room: taped + scaffolding up ✅"
+            "5.5 hrs \u00d7 $50/hr = $275.00 earned",
+            "Master bathroom: 100% sanded \u2705",
+            "Living room: taped + scaffolding up \u2705"
           ]
         }
       ],
@@ -2646,38 +2646,38 @@
       "hours": 7,
       "rate": 50,
       "earned": 350,
-      "tasks": "Day 26 — Living room prepped, 2 coats on right corner walls",
+      "tasks": "Day 26 \u2014 Living room prepped, 2 coats on right corner walls",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Living room"
+            "Cher's house \u2014 Living room"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:00 AM",
-            "Break: 11:45 AM — 1:15 PM (1.5 hours)",
-            "Lunch: 4:30 PM — 5:30 PM (1 hour)",
+            "Break: 11:45 AM \u2014 1:15 PM (1.5 hours)",
+            "Lunch: 4:30 PM \u2014 5:30 PM (1 hour)",
             "Finished: 7:30 PM",
-            "9.5 hrs total — 2.5 hrs breaks — billable: 7 hrs"
+            "9.5 hrs total \u2014 2.5 hrs breaks \u2014 billable: 7 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Taped, prepped & covered living room floors ✅",
-            "Cut in paint at ceiling edges 🎨",
-            "Painted right corner walls — 2 coats ✅ 🎨",
+            "Taped, prepped & covered living room floors \u2705",
+            "Cut in paint at ceiling edges \ud83c\udfa8",
+            "Painted right corner walls \u2014 2 coats \u2705 \ud83c\udfa8",
             "Continuing along living room tomorrow"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "7 hrs × $50/hr = $350.00 earned",
-            "Living room: prepped + right corner walls 2 coats done ✅"
+            "7 hrs \u00d7 $50/hr = $350.00 earned",
+            "Living room: prepped + right corner walls 2 coats done \u2705"
           ]
         }
       ],
@@ -2690,36 +2690,36 @@
       "hours": 9,
       "rate": 50,
       "earned": 450,
-      "tasks": "Day 27 — Deck cleared & prepped, living room painting continued",
+      "tasks": "Day 27 \u2014 Deck cleared & prepped, living room painting continued",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Deck/outside & Living room"
+            "Cher's house \u2014 Deck/outside & Living room"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:00 AM",
-            "Lunch: 2:00 PM — 3:00 PM (1 hour)",
+            "Lunch: 2:00 PM \u2014 3:00 PM (1 hour)",
             "Finished: 7:00 PM",
-            "10 hrs total — 1 hr break — billable: 9 hrs"
+            "10 hrs total \u2014 1 hr break \u2014 billable: 9 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Cleared deck and prepped outside for sanding ✅",
-            "Continued painting living room walls 🎨"
+            "Cleared deck and prepped outside for sanding \u2705",
+            "Continued painting living room walls \ud83c\udfa8"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "9 hrs × $50/hr = $450.00 earned",
-            "Deck: cleared & prepped ✅",
-            "Living room: painting in progress 🎨"
+            "9 hrs \u00d7 $50/hr = $450.00 earned",
+            "Deck: cleared & prepped \u2705",
+            "Living room: painting in progress \ud83c\udfa8"
           ]
         }
       ],
@@ -2732,42 +2732,42 @@
       "hours": 4.5,
       "rate": 50,
       "earned": 225,
-      "tasks": "Day 28 — Hallway/kitchen painted, living room coat #2, touch-ups, putty, tape removed",
+      "tasks": "Day 28 \u2014 Hallway/kitchen painted, living room coat #2, touch-ups, putty, tape removed",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Living room, entrance hallway, kitchen, throughout"
+            "Cher's house \u2014 Living room, entrance hallway, kitchen, throughout"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Break: 11:30 AM — 2:00 PM (2.5 hours)",
+            "Break: 11:30 AM \u2014 2:00 PM (2.5 hours)",
             "Finished: 4:30 PM",
-            "7 hrs total — 2.5 hrs break — billable: 4.5 hrs"
+            "7 hrs total \u2014 2.5 hrs break \u2014 billable: 4.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Painted entrance hallway ✅",
-            "Painted partial kitchen ✅",
-            "Touch-ups throughout house ✅",
-            "Detailed touch-ups upstairs ✅",
-            "Living room walls — coat #2 ✅ 🎨",
-            "Patched holes & cracks with putty throughout ✅",
-            "Removed tape from all frames and trim ✅"
+            "Painted entrance hallway \u2705",
+            "Painted partial kitchen \u2705",
+            "Touch-ups throughout house \u2705",
+            "Detailed touch-ups upstairs \u2705",
+            "Living room walls \u2014 coat #2 \u2705 \ud83c\udfa8",
+            "Patched holes & cracks with putty throughout \u2705",
+            "Removed tape from all frames and trim \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "4.5 hrs × $50/hr = $225.00 earned",
-            "Living room: coat #2 done ✅",
-            "All tape removed ✅",
-            "Holes & cracks patched ✅"
+            "4.5 hrs \u00d7 $50/hr = $225.00 earned",
+            "Living room: coat #2 done \u2705",
+            "All tape removed \u2705",
+            "Holes & cracks patched \u2705"
           ]
         }
       ],
@@ -2801,7 +2801,7 @@
         {
           "title": "Payment",
           "items": [
-            "Paid $90 via Venmo — on the spot"
+            "Paid $90 via Venmo \u2014 on the spot"
           ]
         }
       ],
@@ -2814,36 +2814,36 @@
       "hours": 4,
       "rate": 50,
       "earned": 200,
-      "tasks": "Day 29 — Living room cleaned up, trim & frames staining started",
+      "tasks": "Day 29 \u2014 Living room cleaned up, trim & frames staining started",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Living room"
+            "Cher's house \u2014 Living room"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 11:30 AM",
-            "Break: 1:30 PM — 4:00 PM (2.5 hours)",
+            "Break: 1:30 PM \u2014 4:00 PM (2.5 hours)",
             "Finished: 6:00 PM",
-            "6.5 hrs total — 2.5 hrs break — billable: 4 hrs"
+            "6.5 hrs total \u2014 2.5 hrs break \u2014 billable: 4 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Removed all tape, tarps and cardboard from living room ✅",
-            "Cleaned up living room ✅",
-            "Started staining living room trim and frames 🎨"
+            "Removed all tape, tarps and cardboard from living room \u2705",
+            "Cleaned up living room \u2705",
+            "Started staining living room trim and frames \ud83c\udfa8"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "4 hrs × $50/hr = $200.00 earned",
-            "Living room: fully cleaned up ✅",
+            "4 hrs \u00d7 $50/hr = $200.00 earned",
+            "Living room: fully cleaned up \u2705",
             "Trim & frames staining: in progress"
           ]
         }
@@ -2857,34 +2857,34 @@
       "hours": 6,
       "rate": 50,
       "earned": 300,
-      "tasks": "Day 30 — Living room trim & frames staining",
+      "tasks": "Day 30 \u2014 Living room trim & frames staining",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Living room"
+            "Cher's house \u2014 Living room"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Break: 12:00 PM — 12:30 PM (30 min)",
+            "Break: 12:00 PM \u2014 12:30 PM (30 min)",
             "Finished: 4:00 PM",
-            "6.5 hrs total — 30 min break — billable: 6 hrs"
+            "6.5 hrs total \u2014 30 min break \u2014 billable: 6 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Stained living room trim and frames 🎨 ✅"
+            "Stained living room trim and frames \ud83c\udfa8 \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "6 hrs × $50/hr = $300.00 earned",
-            "Living room trim & frames: staining done ✅"
+            "6 hrs \u00d7 $50/hr = $300.00 earned",
+            "Living room trim & frames: staining done \u2705"
           ]
         }
       ],
@@ -2897,35 +2897,35 @@
       "hours": 5.5,
       "rate": 50,
       "earned": 275,
-      "tasks": "Day 31 — Living room trim & staining continued",
+      "tasks": "Day 31 \u2014 Living room trim & staining continued",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Living room"
+            "Cher's house \u2014 Living room"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Break: 11:00 AM — 11:30 AM (30 min)",
-            "Lunch: 1:30 PM — 2:30 PM (1 hour)",
+            "Break: 11:00 AM \u2014 11:30 AM (30 min)",
+            "Lunch: 1:30 PM \u2014 2:30 PM (1 hour)",
             "Finished: 4:30 PM",
-            "7 hrs total — 1.5 hrs breaks — billable: 5.5 hrs"
+            "7 hrs total \u2014 1.5 hrs breaks \u2014 billable: 5.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Continued painting and staining living room trim 🎨 ✅"
+            "Continued painting and staining living room trim \ud83c\udfa8 \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "5.5 hrs × $50/hr = $275.00 earned",
-            "Living room trim & staining: continued ✅"
+            "5.5 hrs \u00d7 $50/hr = $275.00 earned",
+            "Living room trim & staining: continued \u2705"
           ]
         }
       ],
@@ -2938,46 +2938,46 @@
       "hours": 7.5,
       "rate": 50,
       "earned": 375,
-      "tasks": "Day 32 — Living room cleanup, office room almost done, master bedroom trim",
+      "tasks": "Day 32 \u2014 Living room cleanup, office room almost done, master bedroom trim",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Living room, Office room, Master bedroom & bathroom"
+            "Cher's house \u2014 Living room, Office room, Master bedroom & bathroom"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:00 AM",
-            "Lunch: 12:00 PM — 1:00 PM (1 hour)",
+            "Lunch: 12:00 PM \u2014 1:00 PM (1 hour)",
             "Finished: 5:30 PM",
-            "8.5 hrs total — 1 hr break — billable: 7.5 hrs"
+            "8.5 hrs total \u2014 1 hr break \u2014 billable: 7.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "9:00 AM — Cleaned living room, scraped tape & paint off floors ✅",
-            "10:00 AM — Office room detail work — patching, clean edges, small details",
-            "Office room: almost fully finished ✅",
-            "Master bedroom & bathroom trim staining — in progress 🎨",
-            "End of day: shifted furniture back into living room ✅"
+            "9:00 AM \u2014 Cleaned living room, scraped tape & paint off floors \u2705",
+            "10:00 AM \u2014 Office room detail work \u2014 patching, clean edges, small details",
+            "Office room: almost fully finished \u2705",
+            "Master bedroom & bathroom trim staining \u2014 in progress \ud83c\udfa8",
+            "End of day: shifted furniture back into living room \u2705"
           ]
         },
         {
           "title": "Note",
           "items": [
-            "Living room trim & frames: fully stained & painted ✅ (completed yesterday)"
+            "Living room trim & frames: fully stained & painted \u2705 (completed yesterday)"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "7.5 hrs × $50/hr = $375.00 earned",
-            "Living room: fully cleaned, furniture back ✅",
-            "Office room: almost complete ✅",
-            "Master bedroom/bathroom trim: in progress 🎨"
+            "7.5 hrs \u00d7 $50/hr = $375.00 earned",
+            "Living room: fully cleaned, furniture back \u2705",
+            "Office room: almost complete \u2705",
+            "Master bedroom/bathroom trim: in progress \ud83c\udfa8"
           ]
         }
       ],
@@ -2990,37 +2990,37 @@
       "hours": 9,
       "rate": 50,
       "earned": 450,
-      "tasks": "Day 33 — Living room furniture back, office room finishing",
+      "tasks": "Day 33 \u2014 Living room furniture back, office room finishing",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Living room & Office room"
+            "Cher's house \u2014 Living room & Office room"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Break: 10:30 AM — 11:30 AM (1 hour)",
-            "Lunch: 2:00 PM — 2:30 PM (30 min)",
+            "Break: 10:30 AM \u2014 11:30 AM (1 hour)",
+            "Lunch: 2:00 PM \u2014 2:30 PM (30 min)",
             "Finished: 8:00 PM",
-            "10.5 hrs total — 1.5 hrs breaks — billable: 9 hrs"
+            "10.5 hrs total \u2014 1.5 hrs breaks \u2014 billable: 9 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Furniture moved back into living room ✅",
-            "Finished office room details and cleanup ✅"
+            "Furniture moved back into living room \u2705",
+            "Finished office room details and cleanup \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "9 hrs × $50/hr = $450.00 earned",
-            "Living room: furniture back in place ✅",
-            "Office room: finished ✅"
+            "9 hrs \u00d7 $50/hr = $450.00 earned",
+            "Living room: furniture back in place \u2705",
+            "Office room: finished \u2705"
           ]
         }
       ],
@@ -3033,36 +3033,36 @@
       "hours": 8.5,
       "rate": 50,
       "earned": 425,
-      "tasks": "Day 34 — Master bedroom windows & door frames painted & stained",
+      "tasks": "Day 34 \u2014 Master bedroom windows & door frames painted & stained",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Master bedroom"
+            "Cher's house \u2014 Master bedroom"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Smoke break: 10:30 AM — 11:00 AM (30 min)",
-            "Lunch & smoke: 2:30 PM — 3:30 PM (1 hour)",
-            "Smoke break: 5:00 PM — 5:30 PM (30 min)",
+            "Smoke break: 10:30 AM \u2014 11:00 AM (30 min)",
+            "Lunch & smoke: 2:30 PM \u2014 3:30 PM (1 hour)",
+            "Smoke break: 5:00 PM \u2014 5:30 PM (30 min)",
             "Finished: 8:00 PM",
-            "10.5 hrs total — 2 hrs breaks — billable: 8.5 hrs"
+            "10.5 hrs total \u2014 2 hrs breaks \u2014 billable: 8.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Painted & stained master bedroom windows and door frames 🎨 ✅"
+            "Painted & stained master bedroom windows and door frames \ud83c\udfa8 \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "8.5 hrs × $50/hr = $425.00 earned",
-            "Master bedroom windows & door frames: done ✅"
+            "8.5 hrs \u00d7 $50/hr = $425.00 earned",
+            "Master bedroom windows & door frames: done \u2705"
           ]
         }
       ],
@@ -3075,38 +3075,38 @@
       "hours": 6,
       "rate": 50,
       "earned": 300,
-      "tasks": "Day 35 — Master bedroom trim & frames painting/staining finished",
+      "tasks": "Day 35 \u2014 Master bedroom trim & frames painting/staining finished",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Master bedroom"
+            "Cher's house \u2014 Master bedroom"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:00 AM",
-            "Break: 11:00 AM — 11:30 AM (30 min)",
-            "Break: 1:00 PM — 1:30 PM (30 min)",
-            "Lunch: 2:30 PM — 3:30 PM (1 hour)",
+            "Break: 11:00 AM \u2014 11:30 AM (30 min)",
+            "Break: 1:00 PM \u2014 1:30 PM (30 min)",
+            "Lunch: 2:30 PM \u2014 3:30 PM (1 hour)",
             "Finished: 6:00 PM",
-            "8 hrs total — 2 hrs breaks — billable: 6 hrs"
+            "8 hrs total \u2014 2 hrs breaks \u2014 billable: 6 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Finished painting & staining master bedroom trim and frames 🎨 ✅",
-            "Cleaned up master bedroom ✅"
+            "Finished painting & staining master bedroom trim and frames \ud83c\udfa8 \u2705",
+            "Cleaned up master bedroom \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "6 hrs × $50/hr = $300.00 earned",
-            "Master bedroom trim & frames: 100% done ✅",
-            "Master bedroom: cleaned up ✅"
+            "6 hrs \u00d7 $50/hr = $300.00 earned",
+            "Master bedroom trim & frames: 100% done \u2705",
+            "Master bedroom: cleaned up \u2705"
           ]
         }
       ],
@@ -3119,42 +3119,42 @@
       "hours": 6.5,
       "rate": 50,
       "earned": 325,
-      "tasks": "Day 36 — Bathroom door, window frames, wall patch, cabinets sanded, main door done",
+      "tasks": "Day 36 \u2014 Bathroom door, window frames, wall patch, cabinets sanded, main door done",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Master bathroom"
+            "Cher's house \u2014 Master bathroom"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:30 AM",
-            "Lunch: 12:30 PM — 1:00 PM (30 min)",
-            "Break (carpet wash): 2:45 PM — 5:00 PM (2 hrs 15 min)",
+            "Lunch: 12:30 PM \u2014 1:00 PM (30 min)",
+            "Break (carpet wash): 2:45 PM \u2014 5:00 PM (2 hrs 15 min)",
             "Finished: 7:45 PM",
-            "9.25 hrs total — 2.75 hrs breaks — billable: 6.5 hrs"
+            "9.25 hrs total \u2014 2.75 hrs breaks \u2014 billable: 6.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Painted master bathroom door 🎨 ✅",
-            "Retouched window frame details ✅",
-            "Hung window sheets ✅",
-            "Patched wall with wall putty ✅",
-            "Sanded master bedroom cabinets ✅",
-            "Sanded & painted master bedroom main door 🎨 ✅"
+            "Painted master bathroom door \ud83c\udfa8 \u2705",
+            "Retouched window frame details \u2705",
+            "Hung window sheets \u2705",
+            "Patched wall with wall putty \u2705",
+            "Sanded master bedroom cabinets \u2705",
+            "Sanded & painted master bedroom main door \ud83c\udfa8 \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "6.5 hrs × $50/hr = $325.00 earned",
-            "Master bathroom door: painted ✅",
-            "Master bedroom cabinets: sanded ✅",
-            "Master bedroom main door: done ✅"
+            "6.5 hrs \u00d7 $50/hr = $325.00 earned",
+            "Master bathroom door: painted \u2705",
+            "Master bedroom cabinets: sanded \u2705",
+            "Master bedroom main door: done \u2705"
           ]
         }
       ],
@@ -3167,40 +3167,40 @@
       "hours": 9,
       "rate": 50,
       "earned": 450,
-      "tasks": "Day 37 — Master bedroom finished, outside frames & door painted, indoor door done",
+      "tasks": "Day 37 \u2014 Master bedroom finished, outside frames & door painted, indoor door done",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Master bedroom & outside"
+            "Cher's house \u2014 Master bedroom & outside"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:30 AM",
-            "Lunch: 3:30 PM — 4:00 PM (30 min)",
-            "Smoke break: 5:00 PM — 5:30 PM (30 min)",
+            "Lunch: 3:30 PM \u2014 4:00 PM (30 min)",
+            "Smoke break: 5:00 PM \u2014 5:30 PM (30 min)",
             "Finished: 8:30 PM",
-            "10 hrs total — 1 hr breaks — billable: 9 hrs"
+            "10 hrs total \u2014 1 hr breaks \u2014 billable: 9 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Master bedroom — patched, cleaned, mounted items back ✅",
-            "Sanded master bedroom indoor door ✅",
-            "Painted outside window frames & outdoor door 🎨 ✅",
-            "Stained & painted master bedroom indoor door 🎨 ✅"
+            "Master bedroom \u2014 patched, cleaned, mounted items back \u2705",
+            "Sanded master bedroom indoor door \u2705",
+            "Painted outside window frames & outdoor door \ud83c\udfa8 \u2705",
+            "Stained & painted master bedroom indoor door \ud83c\udfa8 \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "9 hrs × $50/hr = $450.00 earned",
-            "Master bedroom: fully finished ✅",
-            "Outside frames & door: painted ✅",
-            "Indoor door: stained & painted ✅"
+            "9 hrs \u00d7 $50/hr = $450.00 earned",
+            "Master bedroom: fully finished \u2705",
+            "Outside frames & door: painted \u2705",
+            "Indoor door: stained & painted \u2705"
           ]
         }
       ],
@@ -3213,40 +3213,40 @@
       "hours": 6.5,
       "rate": 50,
       "earned": 325,
-      "tasks": "Day 38 — All indoor doors stained, screen door washed & hung",
+      "tasks": "Day 38 \u2014 All indoor doors stained, screen door washed & hung",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Interior doors, master bedroom screen door"
+            "Cher's house \u2014 Interior doors, master bedroom screen door"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:30 AM",
-            "Break: 2:30 PM — 3:30 PM (1 hour)",
-            "Smoke break: 5:00 PM — 5:30 PM (30 min)",
+            "Break: 2:30 PM \u2014 3:30 PM (1 hour)",
+            "Smoke break: 5:00 PM \u2014 5:30 PM (30 min)",
             "Finished: 6:30 PM",
-            "8 hrs total — 1.5 hrs breaks — billable: 6.5 hrs",
+            "8 hrs total \u2014 1.5 hrs breaks \u2014 billable: 6.5 hrs",
             "Note: power washing driveway (6:30-8PM) not billed"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Finished painting master bedroom door 🎨 ✅",
-            "Stained all indoor doors ✅ 🎨",
-            "Power washed screen door ✅",
-            "Hung screen door for master bedroom ✅"
+            "Finished painting master bedroom door \ud83c\udfa8 \u2705",
+            "Stained all indoor doors \u2705 \ud83c\udfa8",
+            "Power washed screen door \u2705",
+            "Hung screen door for master bedroom \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "6.5 hrs × $50/hr = $325.00 earned",
-            "All indoor doors: stained ✅",
-            "Master bedroom screen door: washed & hung ✅",
+            "6.5 hrs \u00d7 $50/hr = $325.00 earned",
+            "All indoor doors: stained \u2705",
+            "Master bedroom screen door: washed & hung \u2705",
             "Driveway power wash: done but not billed"
           ]
         }
@@ -3260,40 +3260,40 @@
       "hours": 8.5,
       "rate": 50,
       "earned": 425,
-      "tasks": "Day 39 — Doors fine sanded & stained, master bathroom cabinet door sanded",
+      "tasks": "Day 39 \u2014 Doors fine sanded & stained, master bathroom cabinet door sanded",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Interior doors & master bathroom"
+            "Cher's house \u2014 Interior doors & master bathroom"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:00 AM",
-            "Break: 12:30 PM — 1:30 PM (1 hour)",
-            "Break: 3:30 PM — 3:45 PM (15 min)",
-            "Smoke break: 5:00 PM — 5:30 PM (30 min)",
-            "Break: 7:00 PM — 7:15 PM (15 min)",
+            "Break: 12:30 PM \u2014 1:30 PM (1 hour)",
+            "Break: 3:30 PM \u2014 3:45 PM (15 min)",
+            "Smoke break: 5:00 PM \u2014 5:30 PM (30 min)",
+            "Break: 7:00 PM \u2014 7:15 PM (15 min)",
             "Finished: 8:30 PM",
-            "10.5 hrs total — 2 hrs breaks — billable: 8.5 hrs"
+            "10.5 hrs total \u2014 2 hrs breaks \u2014 billable: 8.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Fine sanded all doors ✅",
-            "Stained all doors — complete ✅ 🎨",
-            "Sanded master bathroom cabinet folding door ✅"
+            "Fine sanded all doors \u2705",
+            "Stained all doors \u2014 complete \u2705 \ud83c\udfa8",
+            "Sanded master bathroom cabinet folding door \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "8.5 hrs × $50/hr = $425.00 earned",
-            "All doors: fine sanded & stained ✅",
-            "Master bathroom cabinet door: sanded ✅"
+            "8.5 hrs \u00d7 $50/hr = $425.00 earned",
+            "All doors: fine sanded & stained \u2705",
+            "Master bathroom cabinet door: sanded \u2705"
           ]
         }
       ],
@@ -3306,39 +3306,39 @@
       "hours": 6,
       "rate": 50,
       "earned": 300,
-      "tasks": "Day 40 — Cabinet doors stained, 3 upstairs doors finished & hung",
+      "tasks": "Day 40 \u2014 Cabinet doors stained, 3 upstairs doors finished & hung",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Master bathroom & upstairs doors"
+            "Cher's house \u2014 Master bathroom & upstairs doors"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:30 AM",
-            "Smoke break: 12:00 PM — 12:30 PM (30 min)",
-            "Lunch: 1:30 PM — 2:00 PM (30 min)",
+            "Smoke break: 12:00 PM \u2014 12:30 PM (30 min)",
+            "Lunch: 1:30 PM \u2014 2:00 PM (30 min)",
             "Finished: 4:30 PM",
-            "7 hrs total — 1 hr breaks — billable: 6 hrs"
+            "7 hrs total \u2014 1 hr breaks \u2014 billable: 6 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Cleaned & washed master bathroom cabinet folding doors ✅",
-            "Stained master bathroom cabinet folding doors 🎨 ✅",
-            "Finish sanded all 3 upstairs doors ✅",
-            "Hung all 3 upstairs doors back in their spots ✅"
+            "Cleaned & washed master bathroom cabinet folding doors \u2705",
+            "Stained master bathroom cabinet folding doors \ud83c\udfa8 \u2705",
+            "Finish sanded all 3 upstairs doors \u2705",
+            "Hung all 3 upstairs doors back in their spots \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "6 hrs × $50/hr = $300.00 earned",
-            "Master bathroom cabinet doors: stained ✅",
-            "All 3 upstairs doors: finished & hung ✅"
+            "6 hrs \u00d7 $50/hr = $300.00 earned",
+            "Master bathroom cabinet doors: stained \u2705",
+            "All 3 upstairs doors: finished & hung \u2705"
           ]
         }
       ],
@@ -3351,41 +3351,41 @@
       "hours": 6,
       "rate": 50,
       "earned": 300,
-      "tasks": "Day 41 — Bathroom cabinet doors done, kitchen cabinets sanded & cleaned, hinges mounted",
+      "tasks": "Day 41 \u2014 Bathroom cabinet doors done, kitchen cabinets sanded & cleaned, hinges mounted",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Master bathroom & kitchen"
+            "Cher's house \u2014 Master bathroom & kitchen"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:00 AM",
-            "Break: 12:00 PM — 2:30 PM (2.5 hours)",
-            "Break: 5:00 PM — 5:45 PM (45 min)",
+            "Break: 12:00 PM \u2014 2:30 PM (2.5 hours)",
+            "Break: 5:00 PM \u2014 5:45 PM (45 min)",
             "Finished: 7:00 PM",
-            "9 hrs total — 3.25 hrs breaks — billable: 5.5 hrs"
+            "9 hrs total \u2014 3.25 hrs breaks \u2014 billable: 5.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Fine sanded & stained master bathroom cabinet folding doors ✅ 🎨",
+            "Fine sanded & stained master bathroom cabinet folding doors \u2705 \ud83c\udfa8",
             "Removed all kitchen cabinet handles",
-            "Sanded all kitchen cabinets ✅",
-            "Cleaned & washed most kitchen cabinets ✅",
-            "Mounted & screwed hinges back on folding door ✅",
-            "Hung folding doors back into place ✅"
+            "Sanded all kitchen cabinets \u2705",
+            "Cleaned & washed most kitchen cabinets \u2705",
+            "Mounted & screwed hinges back on folding door \u2705",
+            "Hung folding doors back into place \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "6 hrs × $50/hr = $300.00 earned",
-            "Master bathroom cabinet doors: fully done & hung ✅",
-            "Kitchen cabinets: sanded & cleaned ✅"
+            "6 hrs \u00d7 $50/hr = $300.00 earned",
+            "Master bathroom cabinet doors: fully done & hung \u2705",
+            "Kitchen cabinets: sanded & cleaned \u2705"
           ]
         }
       ],
@@ -3398,39 +3398,39 @@
       "hours": 6.5,
       "rate": 50,
       "earned": 325,
-      "tasks": "Day 42 — Outdoor green painting, kitchen cabinets washed & taped for tomorrow",
+      "tasks": "Day 42 \u2014 Outdoor green painting, kitchen cabinets washed & taped for tomorrow",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Exterior (left side) & Kitchen"
+            "Cher's house \u2014 Exterior (left side) & Kitchen"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:00 AM",
-            "Lunch: 2:00 PM — 2:30 PM (30 min)",
-            "Smoke break: 3:00 PM — 3:30 PM (30 min)",
+            "Lunch: 2:00 PM \u2014 2:30 PM (30 min)",
+            "Smoke break: 3:00 PM \u2014 3:30 PM (30 min)",
             "Finished: 5:30 PM",
-            "7.5 hrs total — 1 hr breaks — billable: 6.5 hrs"
+            "7.5 hrs total \u2014 1 hr breaks \u2014 billable: 6.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Painted outdoor window frames, door frames, vertical beams & fascia (green) 🎨",
-            "Left side of house — 2 window frames & beams painted ✅",
-            "Switched to kitchen — washed & taped kitchen cabinets",
-            "Kitchen cabinets fully prepped for painting tomorrow ✅"
+            "Painted outdoor window frames, door frames, vertical beams & fascia (green) \ud83c\udfa8",
+            "Left side of house \u2014 2 window frames & beams painted \u2705",
+            "Switched to kitchen \u2014 washed & taped kitchen cabinets",
+            "Kitchen cabinets fully prepped for painting tomorrow \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "6.5 hrs × $50/hr = $325.00 earned",
-            "Exterior left side: outdoor frames & beams painted ✅",
-            "Kitchen cabinets: washed, taped & ready to paint ✅"
+            "6.5 hrs \u00d7 $50/hr = $325.00 earned",
+            "Exterior left side: outdoor frames & beams painted \u2705",
+            "Kitchen cabinets: washed, taped & ready to paint \u2705"
           ]
         }
       ],
@@ -3443,19 +3443,19 @@
       "hours": 6.5,
       "rate": 50,
       "earned": 325,
-      "tasks": "Day 43 — Kitchen cabinets first coat painted",
+      "tasks": "Day 43 \u2014 Kitchen cabinets first coat painted",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Kitchen"
+            "Cher's house \u2014 Kitchen"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 8:30 AM",
-            "Away for other job: 9:45 AM — 2:00 PM (not billed)",
+            "Away for other job: 9:45 AM \u2014 2:00 PM (not billed)",
             "Back at it: 2:00 PM",
             "Finished: 7:30 PM",
             "Billable: 8:30-9:45 AM + 2:00-7:30 PM = 6.5 hrs"
@@ -3464,15 +3464,15 @@
         {
           "title": "Work Completed",
           "items": [
-            "Painted kitchen cabinets — first coat 🎨 ✅",
-            "First coat complete — may be sufficient"
+            "Painted kitchen cabinets \u2014 first coat \ud83c\udfa8 \u2705",
+            "First coat complete \u2014 may be sufficient"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "6.5 hrs × $50/hr = $325.00 earned",
-            "Kitchen cabinets: first coat done ✅"
+            "6.5 hrs \u00d7 $50/hr = $325.00 earned",
+            "Kitchen cabinets: first coat done \u2705"
           ]
         }
       ],
@@ -3498,9 +3498,9 @@
         {
           "title": "Work Done",
           "items": [
-            "Trimmed 2 small bushes ✅",
-            "Pulled out weeds ✅",
-            "Trimmed smaller pomegranate tree ✅",
+            "Trimmed 2 small bushes \u2705",
+            "Pulled out weeds \u2705",
+            "Trimmed smaller pomegranate tree \u2705",
             "General yard assessment & other job discussion"
           ]
         },
@@ -3520,40 +3520,40 @@
       "hours": 9,
       "rate": 50,
       "earned": 450,
-      "tasks": "Day 44 — Kitchen reassembled, outdoor green beams & details painted",
+      "tasks": "Day 44 \u2014 Kitchen reassembled, outdoor green beams & details painted",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Kitchen & Exterior"
+            "Cher's house \u2014 Kitchen & Exterior"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 8:00 AM",
-            "Break: 10:00 AM — 10:15 AM (15 min)",
-            "Lunch: 12:30 PM — 1:00 PM (30 min)",
-            "Break: 3:00 PM — 3:30 PM (30 min)",
+            "Break: 10:00 AM \u2014 10:15 AM (15 min)",
+            "Lunch: 12:30 PM \u2014 1:00 PM (30 min)",
+            "Break: 3:00 PM \u2014 3:30 PM (30 min)",
             "Finished: 6:30 PM",
-            "10.5 hrs total — 1.25 hrs breaks — billable: 9 hrs"
+            "10.5 hrs total \u2014 1.25 hrs breaks \u2014 billable: 9 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Removed all tape from cabinets, floors & walls ✅",
-            "Put all cabinet handles back on ✅",
-            "Trimmed bush for deck sanding access ✅",
-            "Painted outdoor beams & details in green 🎨 ✅"
+            "Removed all tape from cabinets, floors & walls \u2705",
+            "Put all cabinet handles back on \u2705",
+            "Trimmed bush for deck sanding access \u2705",
+            "Painted outdoor beams & details in green \ud83c\udfa8 \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "9 hrs × $50/hr = $450.00 earned",
-            "Kitchen: fully cleaned up & reassembled ✅",
-            "Outdoor green beams & details: painted ✅"
+            "9 hrs \u00d7 $50/hr = $450.00 earned",
+            "Kitchen: fully cleaned up & reassembled \u2705",
+            "Outdoor green beams & details: painted \u2705"
           ]
         }
       ],
@@ -3566,38 +3566,38 @@
       "hours": 10,
       "rate": 50,
       "earned": 500,
-      "tasks": "Day 45 — Outdoor green: fascia, beams, gutters, window frames & trim painted",
+      "tasks": "Day 45 \u2014 Outdoor green: fascia, beams, gutters, window frames & trim painted",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Exterior"
+            "Cher's house \u2014 Exterior"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 9:00 AM",
-            "Lunch: 3:00 PM — 3:45 PM (45 min)",
-            "Smoke break: 5:00 PM — 5:15 PM (15 min)",
+            "Lunch: 3:00 PM \u2014 3:45 PM (45 min)",
+            "Smoke break: 5:00 PM \u2014 5:15 PM (15 min)",
             "Finished: 8:00 PM",
-            "11 hrs total — 1 hr breaks — billable: 10 hrs"
+            "11 hrs total \u2014 1 hr breaks \u2014 billable: 10 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Painted fascia, beams & trim in green 🎨 ✅",
-            "Painted rain gutters in green 🎨 ✅",
-            "Painted window frames in green 🎨 ✅",
+            "Painted fascia, beams & trim in green \ud83c\udfa8 \u2705",
+            "Painted rain gutters in green \ud83c\udfa8 \u2705",
+            "Painted window frames in green \ud83c\udfa8 \u2705",
             "Full focus on outdoor green exterior work all day"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "10 hrs × $50/hr = $500.00 earned",
-            "Fascia, beams, gutters & trim: painted green ✅"
+            "10 hrs \u00d7 $50/hr = $500.00 earned",
+            "Fascia, beams, gutters & trim: painted green \u2705"
           ]
         }
       ],
@@ -3610,35 +3610,35 @@
       "hours": 3.5,
       "rate": 50,
       "earned": 175,
-      "tasks": "Day 46 — Continuing outdoor green painting",
+      "tasks": "Day 46 \u2014 Continuing outdoor green painting",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Exterior"
+            "Cher's house \u2014 Exterior"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Continued outdoor green painting 🎨 ✅"
+            "Continued outdoor green painting \ud83c\udfa8 \u2705"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:30 AM",
-            "Break: 11:00 AM — 12:30 PM (1.5 hours)",
-            "Lunch: 2:00 PM — 4:00 PM (2 hours)",
+            "Break: 11:00 AM \u2014 12:30 PM (1.5 hours)",
+            "Lunch: 2:00 PM \u2014 4:00 PM (2 hours)",
             "Finished: 5:30 PM",
-            "7 hrs total — 3.5 hrs breaks — billable: 3.5 hrs"
+            "7 hrs total \u2014 3.5 hrs breaks \u2014 billable: 3.5 hrs"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "3.5 hrs × $50/hr = $175.00 earned",
-            "Outdoor green painting: continued ✅"
+            "3.5 hrs \u00d7 $50/hr = $175.00 earned",
+            "Outdoor green painting: continued \u2705"
           ]
         }
       ],
@@ -3651,39 +3651,39 @@
       "hours": 7.5,
       "rate": 50,
       "earned": 375,
-      "tasks": "Day 47 — Green painting, tape removed, 2 tile posts painted black",
+      "tasks": "Day 47 \u2014 Green painting, tape removed, 2 tile posts painted black",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Exterior"
+            "Cher's house \u2014 Exterior"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:30 AM",
-            "Break: 12:30 PM — 1:00 PM (30 min)",
-            "Lunch: 2:00 PM — 2:30 PM (30 min)",
+            "Break: 12:30 PM \u2014 1:00 PM (30 min)",
+            "Lunch: 2:00 PM \u2014 2:30 PM (30 min)",
             "Finished: 7:00 PM",
-            "8.5 hrs total — 1 hr breaks — billable: 7.5 hrs"
+            "8.5 hrs total \u2014 1 hr breaks \u2014 billable: 7.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Continued outdoor green painting 🎨 ✅",
-            "Removed all tape from finished areas & painted windows ✅",
-            "Painted 2 tile posts in black with detailed work around tiles 🎨 ✅"
+            "Continued outdoor green painting \ud83c\udfa8 \u2705",
+            "Removed all tape from finished areas & painted windows \u2705",
+            "Painted 2 tile posts in black with detailed work around tiles \ud83c\udfa8 \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "7.5 hrs × $50/hr = $375.00 earned",
-            "Outdoor green painting: continued ✅",
-            "Tape removed from all finished areas ✅",
-            "2 tile posts: painted black ✅"
+            "7.5 hrs \u00d7 $50/hr = $375.00 earned",
+            "Outdoor green painting: continued \u2705",
+            "Tape removed from all finished areas \u2705",
+            "2 tile posts: painted black \u2705"
           ]
         }
       ],
@@ -3696,38 +3696,38 @@
       "hours": 11,
       "rate": 50,
       "earned": 550,
-      "tasks": "Day 48 — Fascia done, entrance doors sanded",
+      "tasks": "Day 48 \u2014 Fascia done, entrance doors sanded",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Roof/exterior & entrance doors"
+            "Cher's house \u2014 Roof/exterior & entrance doors"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 8:00 AM",
-            "Break: 10:30 AM — 11:00 AM (30 min)",
-            "Lunch: 2:00 PM — 2:30 PM (30 min)",
+            "Break: 10:30 AM \u2014 11:00 AM (30 min)",
+            "Lunch: 2:00 PM \u2014 2:30 PM (30 min)",
             "Finished: 8:00 PM",
-            "12 hrs total — 1 hr breaks — billable: 11 hrs"
+            "12 hrs total \u2014 1 hr breaks \u2014 billable: 11 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Finished all fascia in green — on roof 🎨 ✅",
-            "Sanded entrance doors ✅",
-            "Painting entrance doors — continuing next session"
+            "Finished all fascia in green \u2014 on roof \ud83c\udfa8 \u2705",
+            "Sanded entrance doors \u2705",
+            "Painting entrance doors \u2014 continuing next session"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "11 hrs × $50/hr = $550.00 earned",
-            "All fascia: complete ✅",
-            "Entrance doors: sanded ✅ — painting next"
+            "11 hrs \u00d7 $50/hr = $550.00 earned",
+            "All fascia: complete \u2705",
+            "Entrance doors: sanded \u2705 \u2014 painting next"
           ]
         }
       ],
@@ -3740,42 +3740,42 @@
       "hours": 9.5,
       "rate": 50,
       "earned": 475,
-      "tasks": "Day 49 — Entry doors sanded & pressure washed, green/black patching, window screens washed",
+      "tasks": "Day 49 \u2014 Entry doors sanded & pressure washed, green/black patching, window screens washed",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Entry doors, exterior, office & master bedroom screens"
+            "Cher's house \u2014 Entry doors, exterior, office & master bedroom screens"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 8:30 AM",
-            "Break: 4:00 PM — 4:30 PM (30 min)",
+            "Break: 4:00 PM \u2014 4:30 PM (30 min)",
             "Finished: 6:30 PM",
-            "10 hrs total — 30 min break — billable: 9.5 hrs"
+            "10 hrs total \u2014 30 min break \u2014 billable: 9.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Hand sanded both entry doors — all gaps & details ✅",
-            "Pressure washed both entry doors ✅",
-            "Doors drying — paint next session",
-            "Patched green paint spots around house ✅",
-            "Patched black paint spots around house ✅",
-            "Power washed office room & master bedroom window screens ✅",
+            "Hand sanded both entry doors \u2014 all gaps & details \u2705",
+            "Pressure washed both entry doors \u2705",
+            "Doors drying \u2014 paint next session",
+            "Patched green paint spots around house \u2705",
+            "Patched black paint spots around house \u2705",
+            "Power washed office room & master bedroom window screens \u2705",
             "Packed up & finished at 6:30 PM"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "9.5 hrs × $50/hr = $475.00 earned",
-            "Entry doors: sanded & pressure washed ✅ — painting next",
-            "Exterior patching: done ✅",
-            "Window screens: power washed ✅"
+            "9.5 hrs \u00d7 $50/hr = $475.00 earned",
+            "Entry doors: sanded & pressure washed \u2705 \u2014 painting next",
+            "Exterior patching: done \u2705",
+            "Window screens: power washed \u2705"
           ]
         }
       ],
@@ -3788,38 +3788,38 @@
       "hours": 7.5,
       "rate": 50,
       "earned": 375,
-      "tasks": "Day 50 — Both entry doors stained & painted, cleanup done",
+      "tasks": "Day 50 \u2014 Both entry doors stained & painted, cleanup done",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Entry doors & frame"
+            "Cher's house \u2014 Entry doors & frame"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 7:30 AM",
-            "Lunch: 1:30 PM — 2:30 PM (1 hour)",
+            "Lunch: 1:30 PM \u2014 2:30 PM (1 hour)",
             "Finished: 4:00 PM",
-            "8.5 hrs total — 1 hr break — billable: 7.5 hrs"
+            "8.5 hrs total \u2014 1 hr break \u2014 billable: 7.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Outdoor side — primed & painted both entry doors 🎨 ✅",
-            "Indoor side — oil stained both entry doors ✅",
-            "Doors drying — hanging back next session",
-            "Cleaned up — last 30 min ✅"
+            "Outdoor side \u2014 primed & painted both entry doors \ud83c\udfa8 \u2705",
+            "Indoor side \u2014 oil stained both entry doors \u2705",
+            "Doors drying \u2014 hanging back next session",
+            "Cleaned up \u2014 last 30 min \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "7.5 hrs × $50/hr = $375.00 earned",
-            "Both entry doors: outdoor primed & painted, indoor oil stained ✅",
-            "Doors drying — to be hung back next session"
+            "7.5 hrs \u00d7 $50/hr = $375.00 earned",
+            "Both entry doors: outdoor primed & painted, indoor oil stained \u2705",
+            "Doors drying \u2014 to be hung back next session"
           ]
         }
       ],
@@ -3832,40 +3832,40 @@
       "hours": 4.5,
       "rate": 50,
       "earned": 225,
-      "tasks": "Day 51 — Entry doors fine sanded, hardware mounted & hung back ✅",
+      "tasks": "Day 51 \u2014 Entry doors fine sanded, hardware mounted & hung back \u2705",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Cher's house — Entry doors"
+            "Cher's house \u2014 Entry doors"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:00 AM",
-            "Lunch: 1:00 PM — 2:00 PM (1 hour)",
+            "Lunch: 1:00 PM \u2014 2:00 PM (1 hour)",
             "Finished: 3:30 PM",
-            "5.5 hrs total — 1 hr break — billable: 4.5 hrs"
+            "5.5 hrs total \u2014 1 hr break \u2014 billable: 4.5 hrs"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Fine sanded both entry doors ✅",
-            "Cleaned up doors ✅",
-            "Mounted all hardware ✅",
-            "Hung both doors back into place ✅",
-            "Entry doors 100% complete ✅",
-            "Moved furniture back into place on the deck ✅",
-            "General cleanup ✅"
+            "Fine sanded both entry doors \u2705",
+            "Cleaned up doors \u2705",
+            "Mounted all hardware \u2705",
+            "Hung both doors back into place \u2705",
+            "Entry doors 100% complete \u2705",
+            "Moved furniture back into place on the deck \u2705",
+            "General cleanup \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "4.5 hrs × $50/hr = $225.00 earned",
-            "Both entry doors: fully complete & hung ✅"
+            "4.5 hrs \u00d7 $50/hr = $225.00 earned",
+            "Both entry doors: fully complete & hung \u2705"
           ]
         }
       ],
@@ -3878,12 +3878,12 @@
       "hours": 6.5,
       "rate": 50,
       "earned": 377.5,
-      "tasks": "Day 1 — Weeding, bush trimming, dump run, dirt removal",
+      "tasks": "Day 1 \u2014 Weeding, bush trimming, dump run, dirt removal",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "207 — Karol's property"
+            "207 \u2014 Karol's property"
           ]
         },
         {
@@ -3897,34 +3897,34 @@
         {
           "title": "Work Completed",
           "items": [
-            "10:00 AM — Weeding (~2 hours) ✅",
-            "12:00 PM — Trimmed & cut bush (~2 hours) ✅",
-            "2:00 PM — Dump run #1 with bush trimmings (~1 hour) ✅",
-            "3:00 PM — Shoveled dirt — 3 wheelbarrows into truck ✅",
-            "4:30 PM — Cleanup, then dump run #2 (dirt)"
+            "10:00 AM \u2014 Weeding (~2 hours) \u2705",
+            "12:00 PM \u2014 Trimmed & cut bush (~2 hours) \u2705",
+            "2:00 PM \u2014 Dump run #1 with bush trimmings (~1 hour) \u2705",
+            "3:00 PM \u2014 Shoveled dirt \u2014 3 wheelbarrows into truck \u2705",
+            "4:30 PM \u2014 Cleanup, then dump run #2 (dirt)"
           ]
         },
         {
           "title": "Projects in this Job",
           "items": [
-            "1. Weeding ✅",
-            "2. Bush trimming & cutting ✅",
-            "3. Dirt pile removal — in progress (continuing next day)"
+            "1. Weeding \u2705",
+            "2. Bush trimming & cutting \u2705",
+            "3. Dirt pile removal \u2014 in progress (continuing next day)"
           ]
         },
         {
           "title": "Expenses",
           "items": [
-            "Dump run #1 — $75 (dump fee + gas)",
-            "Dump run #2 — $75 (dump fee + gas)",
+            "Dump run #1 \u2014 $75 (dump fee + gas)",
+            "Dump run #2 \u2014 $75 (dump fee + gas)",
             "Total expenses: $150"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "6.5 hrs × $35/hr = $227.50 labor",
-            "2 dump runs × $75 = $150.00",
+            "6.5 hrs \u00d7 $35/hr = $227.50 labor",
+            "2 dump runs \u00d7 $75 = $150.00",
             "Day 1 total: $377.50"
           ]
         }
@@ -3938,20 +3938,20 @@
       "hours": 3,
       "rate": 50,
       "earned": 330,
-      "tasks": "Day 2 — Dirt removal (3 loads), dump runs, leveling, rock wall, pomegranate pruning, gravel",
+      "tasks": "Day 2 \u2014 Dirt removal (3 loads), dump runs, leveling, rock wall, pomegranate pruning, gravel",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "207 — Karol's property"
+            "207 \u2014 Karol's property"
           ]
         },
         {
           "title": "Schedule",
           "items": [
             "Started: 10:30 AM",
-            "Dump run #1: 11:30 AM — 12:20 PM",
-            "Dump run #2: 1:07 PM — 1:45 PM",
+            "Dump run #1: 11:30 AM \u2014 12:20 PM",
+            "Dump run #2: 1:07 PM \u2014 1:45 PM",
             "Dump run #3: ~3:00 PM (after wrap up)",
             "Finished on site: 3:00 PM",
             "Billable labor: 3 hrs (site work only, dump runs excluded)"
@@ -3960,34 +3960,34 @@
         {
           "title": "Work Completed",
           "items": [
-            "Loaded 3 wheelbarrows of dirt — load #1 ✅",
-            "Cleaned weeds & debris around street side post ✅",
-            "Dump run #1 ✅",
-            "Loaded 3 wheelbarrows of dirt — load #2 ✅",
-            "Quick tree pruning (3 branches) ✅",
-            "Dump run #2 ✅",
-            "Loaded 3 wheelbarrows of dirt — load #3 ✅",
-            "Leveled area where dirt was removed ✅",
-            "Built small rock wall around plant 🪨 ✅",
-            "Pruned pomegranate tree (few branches) ✅",
-            "Swept gravel & stones back onto driveway ✅",
-            "Dump run #3 — after site wrap up"
+            "Loaded 3 wheelbarrows of dirt \u2014 load #1 \u2705",
+            "Cleaned weeds & debris around street side post \u2705",
+            "Dump run #1 \u2705",
+            "Loaded 3 wheelbarrows of dirt \u2014 load #2 \u2705",
+            "Quick tree pruning (3 branches) \u2705",
+            "Dump run #2 \u2705",
+            "Loaded 3 wheelbarrows of dirt \u2014 load #3 \u2705",
+            "Leveled area where dirt was removed \u2705",
+            "Built small rock wall around plant \ud83e\udea8 \u2705",
+            "Pruned pomegranate tree (few branches) \u2705",
+            "Swept gravel & stones back onto driveway \u2705",
+            "Dump run #3 \u2014 after site wrap up"
           ]
         },
         {
           "title": "Expenses",
           "items": [
-            "Dump run #1 — $75",
-            "Dump run #2 — $75",
-            "Dump run #3 — $75",
+            "Dump run #1 \u2014 $75",
+            "Dump run #2 \u2014 $75",
+            "Dump run #3 \u2014 $75",
             "Total expenses: $225"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "3 hrs × $35/hr = $105.00 labor",
-            "3 dump runs × $75 = $225.00",
+            "3 hrs \u00d7 $35/hr = $105.00 labor",
+            "3 dump runs \u00d7 $75 = $225.00",
             "Day 2 total: $330.00"
           ]
         }
@@ -4001,12 +4001,12 @@
       "hours": 0.5,
       "rate": 50,
       "earned": 17.5,
-      "tasks": "Day 3 — Tree pruning, rock wall, shrub training at 207",
+      "tasks": "Day 3 \u2014 Tree pruning, rock wall, shrub training at 207",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "207 — Karol's property"
+            "207 \u2014 Karol's property"
           ]
         },
         {
@@ -4020,14 +4020,14 @@
         {
           "title": "Work Completed",
           "items": [
-            "Tree pruned + rock wall built + deep watered ✅",
-            "Shrub trimmed & trained to single trunk ✅"
+            "Tree pruned + rock wall built + deep watered \u2705",
+            "Shrub trimmed & trained to single trunk \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "0.5 hrs × $35/hr = $17.50 earned"
+            "0.5 hrs \u00d7 $35/hr = $17.50 earned"
           ]
         }
       ],
@@ -4040,7 +4040,7 @@
       "hours": 1.5,
       "rate": 30,
       "earned": 45,
-      "tasks": "Hip Vegan — Roof/AC cleanup, driveway, passion fruit & tree pruning",
+      "tasks": "Hip Vegan \u2014 Roof/AC cleanup, driveway, passion fruit & tree pruning",
       "sections": [
         {
           "title": "Location",
@@ -4059,11 +4059,11 @@
         {
           "title": "Work Completed",
           "items": [
-            "Blew leaves off the roof ✅",
-            "Cleaned out outdoor AC room ✅",
-            "Cleaned front of restaurant & back driveway ✅",
-            "Trimmed passion fruit vines at AC fence ✅",
-            "Pruned front sitting area tree (burned leaves) ✅"
+            "Blew leaves off the roof \u2705",
+            "Cleaned out outdoor AC room \u2705",
+            "Cleaned front of restaurant & back driveway \u2705",
+            "Trimmed passion fruit vines at AC fence \u2705",
+            "Pruned front sitting area tree (burned leaves) \u2705"
           ]
         },
         {
@@ -4075,8 +4075,8 @@
         {
           "title": "Summary",
           "items": [
-            "1.5 hrs × $30/hr = $45.00 earned",
-            "Paid in full ✅"
+            "1.5 hrs \u00d7 $30/hr = $45.00 earned",
+            "Paid in full \u2705"
           ]
         }
       ],
@@ -4089,12 +4089,12 @@
       "hours": 4,
       "rate": 45,
       "earned": 200,
-      "tasks": "Day 1 — Restring jasmine, remove dead tree, citrus tree, front cleanup + misc",
+      "tasks": "Day 1 \u2014 Restring jasmine, remove dead tree, citrus tree, front cleanup + misc",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "207 — Karol's property"
+            "207 \u2014 Karol's property"
           ]
         },
         {
@@ -4102,32 +4102,32 @@
           "items": [
             "Started: 10:00 AM",
             "Finished: 2:00 PM",
-            "4 hrs × $45/hr = $180 + $20 tip = $200"
+            "4 hrs \u00d7 $45/hr = $180 + $20 tip = $200"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Restrung jasmine ✅",
-            "Removed dead tree ✅",
-            "Fed citrus tree — dug rock circle around it ✅",
-            "Cleaned front area of 207 ✅",
-            "Misc — weeding, pruning, pot moving, general cleanup (~30 min) ✅"
+            "Restrung jasmine \u2705",
+            "Removed dead tree \u2705",
+            "Fed citrus tree \u2014 dug rock circle around it \u2705",
+            "Cleaned front area of 207 \u2705",
+            "Misc \u2014 weeding, pruning, pot moving, general cleanup (~30 min) \u2705"
           ]
         },
         {
           "title": "Payment",
           "items": [
-            "$200 cash — paid on the spot ✅",
-            "4 hrs × $45/hr = $180 labor + $20 tip"
+            "$200 cash \u2014 paid on the spot \u2705",
+            "4 hrs \u00d7 $45/hr = $180 labor + $20 tip"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "4 hrs × $45/hr = $180.00 labor",
+            "4 hrs \u00d7 $45/hr = $180.00 labor",
             "$20.00 tip",
-            "Total received: $200.00 ✅ — Paid in full"
+            "Total received: $200.00 \u2705 \u2014 Paid in full"
           ]
         }
       ],
@@ -4145,7 +4145,7 @@
         {
           "title": "Location",
           "items": [
-            "Karol's — Garage & Hip Vegan Restaurant"
+            "Karol's \u2014 Garage & Hip Vegan Restaurant"
           ]
         },
         {
@@ -4160,16 +4160,16 @@
         {
           "title": "Work Completed",
           "items": [
-            "Organized Karol's garage ✅",
-            "Fertilized 2 citrus trees at Hip Vegan ✅"
+            "Organized Karol's garage \u2705",
+            "Fertilized 2 citrus trees at Hip Vegan \u2705"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "2.5 hrs × $45/hr = $112.50 earned",
-            "$100 cash received — $12.50 waived ✅",
-            "Job closed — paid in full"
+            "2.5 hrs \u00d7 $45/hr = $112.50 earned",
+            "$100 cash received \u2014 $12.50 waived \u2705",
+            "Job closed \u2014 paid in full"
           ]
         }
       ],
@@ -4187,7 +4187,7 @@
         {
           "title": "Location",
           "items": [
-            "207 — Karol's property & Hip Vegan Restaurant"
+            "207 \u2014 Karol's property & Hip Vegan Restaurant"
           ]
         },
         {
@@ -4195,36 +4195,36 @@
           "items": [
             "Started: 10:30 AM",
             "Finished: 12:12 PM",
-            "1hr 42min → billable: 1.5 hrs",
-            "1.5 hrs × $45/hr = $67.50"
+            "1hr 42min \u2192 billable: 1.5 hrs",
+            "1.5 hrs \u00d7 $45/hr = $67.50"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Trimmed back passionfruit at Hip Vegan ✅",
-            "Removed 1 citrus tree from pot at Hip Vegan entrance ✅ (2nd pending decision)",
-            "Removed vine from beds near 207 entrance ✅",
-            "Cleared 207 street side front — removed aloe veras, leaves & weeds ✅",
-            "Trimmed 2 Euphorbia tirucalli (Pencil tree) plants at front of 207 ✅",
-            "Removed dead & dried out plants from front of Sane Living ✅",
-            "Restrung railing strings inside 207 (~5-10 min) ✅",
-            "Broomed & cleaned 207 street side front pathway ✅"
+            "Trimmed back passionfruit at Hip Vegan \u2705",
+            "Removed 1 citrus tree from pot at Hip Vegan entrance \u2705 (2nd pending decision)",
+            "Removed vine from beds near 207 entrance \u2705",
+            "Cleared 207 street side front \u2014 removed aloe veras, leaves & weeds \u2705",
+            "Trimmed 2 Euphorbia tirucalli (Pencil tree) plants at front of 207 \u2705",
+            "Removed dead & dried out plants from front of Sane Living \u2705",
+            "Restrung railing strings inside 207 (~5-10 min) \u2705",
+            "Broomed & cleaned 207 street side front pathway \u2705"
           ]
         },
         {
           "title": "Notes",
           "items": [
-            "2nd citrus tree at Hip Vegan — pending owner decision on removal",
-            "Euphorbia tirucalli — toxic milky sap, handled with gloves ⚠️"
+            "2nd citrus tree at Hip Vegan \u2014 pending owner decision on removal",
+            "Euphorbia tirucalli \u2014 toxic milky sap, handled with gloves \u26a0\ufe0f"
           ]
         },
         {
           "title": "Summary",
           "items": [
-            "1.5 hrs × $45/hr = $67.50 labor",
-            "$100 cash received — $32.50 tip ✅",
-            "Paid in full — job closed"
+            "1.5 hrs \u00d7 $45/hr = $67.50 labor",
+            "$100 cash received \u2014 $32.50 tip \u2705",
+            "Paid in full \u2014 job closed"
           ]
         }
       ],
@@ -4237,12 +4237,12 @@
       "hours": 0.5,
       "rate": 0,
       "earned": 0,
-      "tasks": "Sealed office window for AC/DAC unit — favor for Kali",
+      "tasks": "Sealed office window for AC/DAC unit \u2014 favor for Kali",
       "sections": [
         {
           "title": "Location",
           "items": [
-            "Toppa Institute — Kali's office"
+            "Toppa Institute \u2014 Kali's office"
           ]
         },
         {
@@ -4257,14 +4257,14 @@
         {
           "title": "Work Done",
           "items": [
-            "Sealed office window for AC/DAC unit ✅"
+            "Sealed office window for AC/DAC unit \u2705"
           ]
         },
         {
           "title": "Payment",
           "items": [
-            "No charge — favor for a friend 🤝",
-            "Paid in kind — joint & drink 🌿🥤"
+            "No charge \u2014 favor for a friend \ud83e\udd1d",
+            "Paid in kind \u2014 joint & drink \ud83c\udf3f\ud83e\udd64"
           ]
         }
       ],
@@ -4282,13 +4282,13 @@
         {
           "title": "Location",
           "items": [
-            "Cher's house — Backyard & deck"
+            "Cher's house \u2014 Backyard & deck"
           ]
         },
         {
           "title": "Schedule",
           "items": [
-            "Started: ~5:00–5:30 PM",
+            "Started: ~5:00\u20135:30 PM",
             "Finished: ~8:00 PM",
             "~2.5 hrs total"
           ]
@@ -4296,27 +4296,27 @@
         {
           "title": "Work Completed",
           "items": [
-            "Removed large plant from pot (knocked over by wind) ✅",
-            "Dug hole in backyard ✅",
-            "Transplanted plant into ground & covered ✅",
-            "Removed excess dirt with wheelbarrow ✅",
-            "Cleaned up deck ✅",
-            "Removed cat box — loaded into truck & tied down with rope ✅"
+            "Removed large plant from pot (knocked over by wind) \u2705",
+            "Dug hole in backyard \u2705",
+            "Transplanted plant into ground & covered \u2705",
+            "Removed excess dirt with wheelbarrow \u2705",
+            "Cleaned up deck \u2705",
+            "Removed cat box \u2014 loaded into truck & tied down with rope \u2705"
           ]
         },
         {
           "title": "Payment",
           "items": [
-            "$60 cash — left on counter by Cher ✅",
-            "Also received a little food (beef) 🥩",
-            "No price was discussed — Cher came up with the amount herself"
+            "$60 cash \u2014 left on counter by Cher \u2705",
+            "Also received a little food (beef) \ud83e\udd69",
+            "No price was discussed \u2014 Cher came up with the amount herself"
           ]
         },
         {
           "title": "Summary",
           "items": [
             "~2.5 hrs work",
-            "$60 cash received ✅",
+            "$60 cash received \u2705",
             "Job closed"
           ]
         }
@@ -4335,7 +4335,7 @@
         {
           "title": "Location",
           "items": [
-            "Sane Living — 310 Matilija St & 207"
+            "Sane Living \u2014 310 Matilija St & 207"
           ]
         },
         {
@@ -4343,38 +4343,38 @@
           "items": [
             "Arrived: 8:35 AM",
             "Started working: 8:45 AM",
-            "Break: 10:00 AM — 11:00 AM (1 hour)",
-            "Lunch: 12:00 PM — 12:30 PM (30 min)",
+            "Break: 10:00 AM \u2014 11:00 AM (1 hour)",
+            "Lunch: 12:00 PM \u2014 12:30 PM (30 min)",
             "Finished: 1:45 PM",
-            "5hrs total — 1.5hrs breaks — billable: 3.5 hrs"
+            "5hrs total \u2014 1.5hrs breaks \u2014 billable: 3.5 hrs"
           ]
         },
         {
           "title": "Progress",
           "items": [
-            "Removed plant from mound next to sculpture ✅ (kept for Karol/Canyon)",
-            "Removed spruce tree & replanted to left of tiny house deck at 207 ✅",
-            "⚠️ Blue flowers next to spruce — undisturbed ✅",
-            "Weeding at 315 backyard — pulled tarred weeds ✅",
-            "Jasmine — on hold, pending property owner approval before moving ⏸️"
+            "Removed plant from mound next to sculpture \u2705 (kept for Karol/Canyon)",
+            "Removed spruce tree & replanted to left of tiny house deck at 207 \u2705",
+            "\u26a0\ufe0f Blue flowers next to spruce \u2014 undisturbed \u2705",
+            "Weeding at 315 backyard \u2014 pulled tarred weeds \u2705",
+            "Jasmine \u2014 on hold, pending property owner approval before moving \u23f8\ufe0f"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "$160 cash received ✅ — paid in full, job closed"
+            "$160 cash received \u2705 \u2014 paid in full, job closed"
           ]
         },
         {
           "title": "Additional Tasks (from Karol)",
           "items": [
-            "Applied diatomaceous earth at front of 207 around bug-eaten plants ✅",
-            "Cleaned out small pot of weeds & leaves (Hip Vegan) ✅",
-            "Put rocks around rose bush at 207 ✅",
-            "Removed large weed/tree with roots from 312 backyard ✅",
-            "Weeded back corner of 312 backyard ✅",
-            "Organized & cleaned up garage for Karol's photos ✅",
-            "Broomed Hip Vegan exterior — windows, lamps, spider webs & dust ✅"
+            "Applied diatomaceous earth at front of 207 around bug-eaten plants \u2705",
+            "Cleaned out small pot of weeds & leaves (Hip Vegan) \u2705",
+            "Put rocks around rose bush at 207 \u2705",
+            "Removed large weed/tree with roots from 312 backyard \u2705",
+            "Weeded back corner of 312 backyard \u2705",
+            "Organized & cleaned up garage for Karol's photos \u2705",
+            "Broomed Hip Vegan exterior \u2014 windows, lamps, spider webs & dust \u2705"
           ]
         }
       ],
@@ -4392,7 +4392,7 @@
         {
           "title": "Location",
           "items": [
-            "Sane Living — Ojai (front)"
+            "Sane Living \u2014 Ojai (front)"
           ]
         },
         {
@@ -4407,30 +4407,30 @@
         {
           "title": "Work Completed",
           "items": [
-            "Sanded slab benches with 60 grit ✅",
-            "Sanded with 120 grit ✅",
-            "Hand sanded details & edges ✅"
+            "Sanded slab benches with 60 grit \u2705",
+            "Sanded with 120 grit \u2705",
+            "Hand sanded details & edges \u2705"
           ]
         },
         {
           "title": "Pending",
           "items": [
-            "Linseed oil staining — tomorrow morning ⏸️"
+            "Linseed oil staining \u2014 tomorrow morning \u23f8\ufe0f"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "🟡 Sanding complete — returning tomorrow for linseed oil"
+            "\ud83d\udfe1 Sanding complete \u2014 returning tomorrow for linseed oil"
           ]
         },
         {
           "title": "Supplies / Expenses",
           "items": [
-            "Ace Hardware — brushes & rags for linseed oil application",
+            "Ace Hardware \u2014 brushes & rags for linseed oil application",
             "Amount: $22.25",
             "Receipt to be given to Karol tomorrow",
-            "Reimbursement pending ⏳"
+            "Reimbursement pending \u23f3"
           ]
         }
       ],
@@ -4491,7 +4491,7 @@
         {
           "title": "Location",
           "items": [
-            "207 — Karol's property backyard"
+            "207 \u2014 Karol's property backyard"
           ]
         },
         {
@@ -4499,21 +4499,61 @@
           "items": [
             "Started: ~11:30 AM",
             "Finished: 12:00 PM",
-            "0.5 hrs × $45/hr = $22.50"
+            "0.5 hrs \u00d7 $45/hr = $22.50"
           ]
         },
         {
           "title": "Work Completed",
           "items": [
-            "Filled planter bed with bag of soil ✅",
-            "Trimmed bush in backyard ✅"
+            "Filled planter bed with bag of soil \u2705",
+            "Trimmed bush in backyard \u2705"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "✅ Done — 0.5 hrs × $45/hr = $22.50",
+            "\u2705 Done \u2014 0.5 hrs \u00d7 $45/hr = $22.50",
             "Payment: TBD"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "date": "2026-07-30",
+      "project": "karol-july29",
+      "category": "general",
+      "hours": 0,
+      "rate": 45,
+      "earned": 0,
+      "tasks": "Day 2 \u2014 Hand sanding live edges of slab benches",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "Sane Living \u2014 Ojai (front)"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 8:00 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Today's Plan",
+          "items": [
+            "Hand sand live edges & sides of slab benches (detailed work)",
+            "Then apply linseed oil"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83d\udfe2 In progress \u2014 started 8:00 AM",
+            "Live edge hand sanding \u2014 time uncertain, detailed work",
+            "Hours to be finalized at end of day"
           ]
         }
       ],
