@@ -290,7 +290,7 @@
       "icon": "\ud83c\udf3f",
       "rate": 45,
       "startDate": "2026-07-29",
-      "status": "active",
+      "status": "completed",
       "description": "Sanding & linseed oil staining of stone slab benches at Sane Living",
       "payments": []
     },
@@ -4384,9 +4384,9 @@
       "date": "2026-07-29",
       "project": "karol-july29",
       "category": "general",
-      "hours": 0,
+      "hours": 4,
       "rate": 45,
-      "earned": 0,
+      "earned": 180,
       "tasks": "Sanding & linseed oil staining of slab benches at Sane Living",
       "sections": [
         {
@@ -4421,7 +4421,7 @@
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe1 Sanding complete \u2014 returning tomorrow for linseed oil"
+            "\u2705 Sanding complete \u2014 4 hrs \u00d7 $45/hr = $180.00"
           ]
         },
         {
@@ -4523,10 +4523,10 @@
       "date": "2026-07-30",
       "project": "karol-july29",
       "category": "general",
-      "hours": 0,
+      "hours": 2.5,
       "rate": 45,
-      "earned": 0,
-      "tasks": "Day 2 \u2014 Hand sanding live edges of slab benches",
+      "earned": 112.5,
+      "tasks": "Day 2 \u2014 Hand sanded live edges, resurfaced, linseed oil applied",
       "sections": [
         {
           "title": "Location",
@@ -4538,7 +4538,8 @@
           "title": "Schedule",
           "items": [
             "Started: 8:00 AM",
-            "End time: TBD"
+            "Finished: 10:30 AM",
+            "2.5 hrs \u00d7 $45/hr = $112.50"
           ]
         },
         {
@@ -4552,8 +4553,15 @@
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 9:20 AM \u2014 moving to wet rag wipe down",
-            "Next: let dry, then linseed oil application"
+            "\u2705 Job complete \u2014 slabs sealed with linseed oil"
+          ]
+        },
+        {
+          "title": "Final Work",
+          "items": [
+            "Wiped down slabs with wet rag \u2705",
+            "Applied linseed oil to all slabs \u2705",
+            "All slab benches sealed & complete \u2705"
           ]
         }
       ],
