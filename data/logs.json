@@ -292,7 +292,15 @@
       "startDate": "2026-07-29",
       "status": "completed",
       "description": "Sanding & linseed oil staining of stone slab benches at Sane Living",
-      "payments": []
+      "payments": [
+        {
+          "id": "pay-sl-supplies-001",
+          "amount": 22.25,
+          "date": "2026-07-30",
+          "method": "Cash",
+          "note": "Ace Hardware supplies reimbursement \u2014 paid in cash. Labor ($292.50) still pending via ACH."
+        }
+      ]
     },
     {
       "id": "karol-207-july29",
@@ -302,9 +310,17 @@
       "icon": "\ud83c\udf3f",
       "rate": 45,
       "startDate": "2026-07-29",
-      "status": "active",
+      "status": "completed",
       "description": "Fill planter bed with soil, trim bush in backyard",
-      "payments": []
+      "payments": [
+        {
+          "id": "pay-207j29-001",
+          "amount": 22.5,
+          "date": "2026-07-30",
+          "method": "Cash",
+          "note": "Paid in full \u2014 planter & bush job"
+        }
+      ]
     }
   ],
   "categories": [
