@@ -337,7 +337,7 @@
       "icon": "\ud83c\udf3f",
       "rate": 45,
       "startDate": "2026-08-07",
-      "status": "active",
+      "status": "completed",
       "description": "TBD \u2014 new job, tasks to be confirmed",
       "payments": []
     }
@@ -4606,9 +4606,9 @@
       "date": "2026-08-07",
       "project": "karol-aug7",
       "category": "general",
-      "hours": 0,
+      "hours": 2,
       "rate": 45,
-      "earned": 0,
+      "earned": 90,
       "tasks": "207: street cleanup + propane | Sane Living/Hip Vegan: replanting, cleanup, lavender",
       "sections": [
         {
@@ -4617,7 +4617,8 @@
             "Started: 8:45 AM",
             "Break (supply run \u2014 not billable): 10:00 AM \u2014 12:00 PM",
             "Back at it: 12:00 PM",
-            "End time: TBD"
+            "Finished: 12:45 PM",
+            "Billable: 2 hrs \u00d7 $45/hr = $90.00"
           ]
         },
         {
@@ -4638,14 +4639,14 @@
         {
           "title": "Extra",
           "items": [
-            "Throwing away garbage bags (~5 min) \u2014 in progress"
+            "Threw away garbage bags (~5 min) \u2705"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 Almost done \u2014 taking out garbage",
-            "Hours to be finalized at end of day"
+            "\u2705 Job complete \u2014 2 hrs \u00d7 $45/hr = $90.00",
+            "Payment: TBD"
           ]
         }
       ],
