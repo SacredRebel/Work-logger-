@@ -4609,33 +4609,41 @@
       "hours": 0,
       "rate": 45,
       "earned": 0,
-      "tasks": "207 street front cleanup, replanting at Sane Living",
+      "tasks": "207: street cleanup + propane | Sane Living/Hip Vegan: replanting, cleanup, lavender",
       "sections": [
-        {
-          "title": "Location",
-          "items": [
-            "207 street front & Sane Living"
-          ]
-        },
         {
           "title": "Schedule",
           "items": [
             "Started: 8:45 AM",
+            "Break (supply run \u2014 not billable): 10:00 AM \u2014 12:00 PM",
+            "Back at it: 12:00 PM",
             "End time: TBD"
           ]
         },
         {
-          "title": "Work Completed",
+          "title": "\ud83c\udf3f 207",
           "items": [
-            "Cleaned street front of 207 \u2014 leaves & dirt removed \u2705",
-            "Replanted plants at front of Sane Living \u2014 first round done \u2705 (10:00 AM)",
-            "Additional cleanup at front of Sane Living \u2705"
+            "Cleaned street front \u2014 leaves & dirt removed (~30 min) \u2705",
+            "Changed propane tank (~5 min) \u2705"
+          ]
+        },
+        {
+          "title": "\ud83e\udeb4 Sane Living / Hip Vegan",
+          "items": [
+            "Replanted plants at front + additional cleanup (~30 min) \u2705",
+            "Transplanted lavender bush (from nursery) into pot at front of Hip Vegan/Sane Living (~25 min) \u2705"
+          ]
+        },
+        {
+          "title": "Extra",
+          "items": [
+            "Now: helping carry boxes around \u2014 update pending"
           ]
         },
         {
           "title": "Status",
           "items": [
-            "\ud83d\udfe2 In progress \u2014 replanting at Sane Living",
+            "\ud83d\udfe2 In progress \u2014 carrying boxes",
             "Hours to be finalized at end of day"
           ]
         }
