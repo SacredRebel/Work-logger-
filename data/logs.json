@@ -299,6 +299,13 @@
           "date": "2026-07-30",
           "method": "Cash",
           "note": "Ace Hardware supplies reimbursement \u2014 paid in cash. Labor ($292.50) still pending via ACH."
+        },
+        {
+          "id": "pay-sl-labor-001",
+          "amount": 292,
+          "date": "2026-08-04",
+          "method": "ACH Transfer",
+          "note": "Final labor payment for slab bench job \u2014 paid in full \u2705"
         }
       ]
     },
@@ -321,6 +328,18 @@
           "note": "Paid in full \u2014 planter & bush job"
         }
       ]
+    },
+    {
+      "id": "karol-aug7",
+      "name": "Karol \u2014 August 7 Job",
+      "client": "Karol",
+      "color": "#16A34A",
+      "icon": "\ud83c\udf3f",
+      "rate": 45,
+      "startDate": "2026-08-07",
+      "status": "active",
+      "description": "TBD \u2014 new job, tasks to be confirmed",
+      "payments": []
     }
   ],
   "categories": [
@@ -4578,6 +4597,38 @@
             "Wiped down slabs with wet rag \u2705",
             "Applied linseed oil to all slabs \u2705",
             "All slab benches sealed & complete \u2705"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "date": "2026-08-07",
+      "project": "karol-aug7",
+      "category": "general",
+      "hours": 0,
+      "rate": 45,
+      "earned": 0,
+      "tasks": "TBD \u2014 awaiting task details",
+      "sections": [
+        {
+          "title": "Location",
+          "items": [
+            "TBD"
+          ]
+        },
+        {
+          "title": "Schedule",
+          "items": [
+            "Started: 8:00 AM",
+            "End time: TBD"
+          ]
+        },
+        {
+          "title": "Status",
+          "items": [
+            "\ud83d\udfe2 Started \u2014 task details pending",
+            "Will update once tasks are confirmed"
           ]
         }
       ],
