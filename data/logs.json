@@ -307,7 +307,8 @@
           "method": "ACH Transfer",
           "note": "Final labor payment for slab bench job \u2014 paid in full \u2705"
         }
-      ]
+      ],
+      "invoiceUrl": "/documents/Sane-Living-Business-Invoice.docx"
     },
     {
       "id": "karol-207-july29",
@@ -339,7 +340,16 @@
       "startDate": "2026-08-07",
       "status": "completed",
       "description": "TBD \u2014 new job, tasks to be confirmed",
-      "payments": []
+      "payments": [
+        {
+          "id": "pay-aug7-001",
+          "amount": 90,
+          "date": "2026-08-07",
+          "method": "Cash",
+          "note": "Paid in full right after job \u2014 covers both 207 & Sane Living/Hip Vegan"
+        }
+      ],
+      "invoiceUrl": "/documents/Karol-Aug7-Invoice.docx"
     }
   ],
   "categories": [
@@ -4646,7 +4656,8 @@
           "title": "Status",
           "items": [
             "\u2705 Job complete \u2014 2 hrs \u00d7 $45/hr = $90.00",
-            "Payment: TBD"
+            "$90 cash received \u2014 paid in full right after job \u2705",
+            "\ud83d\udcc4 Invoice: /documents/Karol-Aug7-Invoice.docx"
           ]
         }
       ],

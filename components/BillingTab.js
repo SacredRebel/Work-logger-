@@ -394,6 +394,18 @@ export default function BillingTab({ project, entries, onMarkPaid }) {
           </div>
         </div>
 
+        {/* Invoice link */}
+        {project.invoiceUrl && (
+          <a href={project.invoiceUrl} target="_blank" rel="noopener noreferrer" style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
+            width: '100%', padding: '12px', textDecoration: 'none',
+            background: 'rgba(255,255,255,0.05)', borderTop: '1px solid rgba(255,255,255,0.08)',
+            fontFamily: 'inherit', fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.6)',
+          }}>
+            📄 View Invoice
+          </a>
+        )}
+
         {/* Record payment button */}
         {outstanding > 0 && (
           <button onClick={() => setShowPayForm(true)} style={{
